@@ -1,0 +1,31 @@
+---
+slug: "dr-muhammad-qasim"
+name: "Dr. Qasim Iqbal"
+collection_id: "68b2cb42d1ceb4a1b558edd7"
+locale_id: "68a581e57b0d5d6252900e4b"
+item_id: "68b33c7fc6bc26fb51051e14"
+archived: "false"
+draft: "false"
+created_on: "Sat Aug 30 2025 18:01:35 GMT+0000 (Coordinated Universal Time)"
+updated_on: "Tue Jan 20 2026 18:56:42 GMT+0000 (Coordinated Universal Time)"
+published_on: "Tue Jan 20 2026 19:03:56 GMT+0000 (Coordinated Universal Time)"
+short_description: "MBBS | RMP (PMDC) | House job experience in core clinical specialties | Expertise in nutritional advice | Aspiring surgeon."
+specialization: "Clinical & Nutritional Care, Comprehensive Patient Care, Medical & Surgical Care"
+
+registration_number: "945011-01-M"
+profile_image: "https://cdn.prod.website-files.com/68a581e57b0d5d6252900e4c/68cb9b2c71b79dec2208d6d6_Dr%20Qasim.avif"
+whatsapp_link: "https://wa.me/923089854154"
+facebook_link: "https://www.facebook.com/share/1AYri5J15Y/?mibextid=wwXIfr"
+linkdln_link: ""
+services:
+  - "General medical consultation (Adults & Children)"
+  - "Preventive care & lifestyle counseling"
+  - "Pre- and post-operative patient care"
+  - "Basic surgical care & wound management"
+  - "Antenatal, postnatal & women’s health counseling"
+  - "Pediatric care & growth assessment"
+  - "Nutritional assessment & diet counseling"
+  - "Weight management & metabolic disease nutrition (DM, HTN)"
+---
+
+Dr. Muhammad Qasim had done MBBS from SZMC. He is currently doing specilization in General Surgery.

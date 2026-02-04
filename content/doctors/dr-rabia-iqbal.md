@@ -1,0 +1,30 @@
+---
+slug: "dr-rabia-iqbal"
+name: "Dr. Rabia Iqbal"
+collection_id: "68b2cb42d1ceb4a1b558edd7"
+locale_id: "68a581e57b0d5d6252900e4b"
+item_id: "68b33c9da749f198991578c3"
+archived: "false"
+draft: "false"
+created_on: "Sat Aug 30 2025 18:02:05 GMT+0000 (Coordinated Universal Time)"
+updated_on: "Tue Jan 20 2026 19:01:55 GMT+0000 (Coordinated Universal Time)"
+published_on: "Tue Jan 20 2026 19:03:56 GMT+0000 (Coordinated Universal Time)"
+short_description: "Dr. Rabia Iqbal is an experienced MBBS Doctor and specialized in Plastic Surgery. She is also a Star Member of DXN."
+specialization: "Plastic Surgeron and Nutritionist"
+registration_number: "785187-01-M"
+profile_image: "https://cdn.prod.website-files.com/68a581e57b0d5d6252900e4c/68b33cc8fb4f82f391124735_Rabia.avif"
+whatsapp_link: "https://wa.me/923318688393"
+facebook_link: ""
+linkdln_link: ""
+services:
+  - "Cosmetic surgery (Rhinoplasty, Blepharoplasty, Facelift)"
+  - "Breast surgery (Augmentation, Reduction, Reconstruction)"
+  - "Body contouring (Liposuction, Tummy Tuck/Abdominoplasty)"
+  - "Non-surgical aesthetics (Botox, Dermal Fillers, PRP)"
+  - "Burn management and reconstructive scar revision"
+  - "Skin lesion and cyst removal"
+  - "Post-pregnancy body rejuvenation (Mommy Makeover)"
+  - "Hand surgery and trauma management"
+---
+
+Dr Rabia had done MBBS from QAMC. She is currently doing specilization in Plastic Surgery.

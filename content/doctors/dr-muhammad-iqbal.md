@@ -1,0 +1,32 @@
+---
+slug: "dr-muhammad-iqbal"
+name: "Dr. Muhammad Iqbal"
+collection_id: "68b2cb42d1ceb4a1b558edd7"
+locale_id: "68a581e57b0d5d6252900e4b"
+item_id: "68b33c6ae0ae8eda7a87e2ba"
+archived: "false"
+draft: "false"
+created_on: "Sat Aug 30 2025 18:01:14 GMT+0000 (Coordinated Universal Time)"
+updated_on: "Tue Jan 20 2026 19:01:43 GMT+0000 (Coordinated Universal Time)"
+published_on: "Tue Jan 20 2026 19:03:56 GMT+0000 (Coordinated Universal Time)"
+short_description: "Dr. Iqbal Rehmani is an experienced Homeopathic Doctor with 30+ years of experience and Diamond Member of DXN."
+specialization: "General Medicine and Nutrition."
+registration_number: ""
+profile_image: "https://cdn.prod.website-files.com/68a581e57b0d5d6252900e4c/68cb9b098a6738f627df19d8_Dr%20Iqbal.avif"
+whatsapp_link: "https://wa.me/923337476033"
+facebook_link: "https://web.facebook.com/iqbal.rehmani.52056"
+linkdln_link: ""
+services:
+  - "General medical consultation (Adults & Children)"
+  - "Chronic disease management (Arthritis, Asthma, Skin disorders)"
+  - "Preventive care & lifestyle counseling"
+  - "Women’s health counseling (Hormonal balance, Menopause, Antenatal/Postnatal)"
+  - "Pediatric care & growth assessment"
+  - "Geriatric care & age-related wellness"
+  - "Nutritional assessment & diet counseling"
+  - "Weight management & metabolic disease nutrition (DM, HTN)"
+  - "Basic surgical care & wound management"
+  - "Homeopathic constitutional assessment"
+---
+
+Dr. Muhammad Iqbal had done DHMS He is currently doing specilization in General Medicine and Nutrition.
