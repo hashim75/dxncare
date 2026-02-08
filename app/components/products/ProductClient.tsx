@@ -85,14 +85,14 @@ const FAQItem = ({ question, answer, index }: { question: string; answer: string
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="border border-slate-200 rounded-2xl overflow-hidden bg-white mb-4 shadow-sm hover:shadow-lg transition-all duration-300 group"
+      className="border border-slate-200 rounded-xl md:rounded-2xl overflow-hidden bg-white mb-4 shadow-sm hover:shadow-lg transition-all duration-300 group"
     >
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-6 text-left"
+        className="w-full flex items-center justify-between p-4 md:p-6 text-left"
       >
-        <span className={`font-bold text-lg transition-colors font-jakarta ${isOpen ? "text-red-600" : "!text-black"}`}>{question}</span>
-        <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? "bg-red-100 text-red-600 rotate-180" : "bg-slate-100 text-slate-600 group-hover:bg-black group-hover:text-white"}`}>
+        <span className={`font-bold text-base md:text-lg transition-colors font-jakarta pr-4 ${isOpen ? "text-red-600" : "!text-black"}`}>{question}</span>
+        <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 shrink-0 ${isOpen ? "bg-red-100 text-red-600 rotate-180" : "bg-slate-100 text-slate-600 group-hover:bg-black group-hover:text-white"}`}>
             <ChevronDown size={18} />
         </div>
       </button>
@@ -101,7 +101,7 @@ const FAQItem = ({ question, answer, index }: { question: string; answer: string
         animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
         className="overflow-hidden"
       >
-        <div className="p-6 pt-0 !text-black leading-relaxed border-t border-slate-100 bg-slate-50 font-medium text-lg">
+        <div className="p-4 md:p-6 pt-0 !text-black leading-relaxed border-t border-slate-100 bg-slate-50 font-medium text-base md:text-lg">
           {answer}
         </div>
       </motion.div>
@@ -165,24 +165,23 @@ export default function ProductClient({ product }: { product: any }) {
   return (
     <>
       {/* 1. PROGRESS BAR */}
-      <motion.div className="fixed top-0 left-0 right-0 h-2 bg-gradient-to-r from-red-600 to-black origin-left z-[100]" style={{ scaleX }} />
+      <motion.div className="fixed top-0 left-0 right-0 h-1.5 md:h-2 bg-gradient-to-r from-red-600 to-black origin-left z-[100]" style={{ scaleX }} />
 
-      <main className="bg-white min-h-screen pb-32 pt-32">
+      <main className="bg-white min-h-screen pt-24 pb-24 lg:pt-32 lg:pb-32">
         
         {/* HEADER */}
-        <div className="container mx-auto px-4 mb-8">
-            <Link href="/products" className="inline-flex items-center gap-2 text-slate-500 hover:!text-black transition-colors text-sm font-bold uppercase tracking-wider mb-8 group">
+        <div className="container mx-auto px-4 mb-4 md:mb-8">
+            <Link href="/products" className="inline-flex items-center gap-2 text-slate-500 hover:!text-black transition-colors text-xs md:text-sm font-bold uppercase tracking-wider mb-4 md:mb-8 group">
                 <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back to Catalog
             </Link>
         </div>
 
         <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
-            {/* === LEFT: INTERACTIVE GLOWING TOC === */}
+            {/* === LEFT: TOC (Hidden on Mobile) === */}
             <div className="hidden lg:block lg:col-span-3 sticky top-32 z-30">
                 <div className="relative group">
-                    {/* The Glow Effect Background */}
                     <motion.div 
                         variants={glowVariant}
                         initial="initial"
@@ -190,7 +189,6 @@ export default function ProductClient({ product }: { product: any }) {
                         className="absolute -inset-1 bg-gradient-to-r from-teal-400 via-red-400 to-teal-400 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"
                     ></motion.div>
 
-                    {/* The Card */}
                     <div className="relative bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-slate-200 shadow-xl max-h-[70vh] overflow-y-auto custom-scrollbar">
                         <div className="flex items-center gap-2 mb-6 !text-black font-extrabold uppercase text-xs tracking-widest border-b border-slate-300 pb-4">
                             <List size={16} /> Table of Contents
@@ -204,7 +202,6 @@ export default function ProductClient({ product }: { product: any }) {
                                             onClick={() => scrollToId(h.id)}
                                             className={`relative w-full text-left text-sm py-2 px-3 rounded-lg transition-all duration-300 z-10 ${isActive ? "text-red-700 font-bold" : "text-slate-600 hover:!text-black font-medium"}`}
                                         >
-                                            {/* Sliding Active Background */}
                                             {isActive && (
                                                 <motion.div
                                                     layoutId="active-toc-bg"
@@ -212,8 +209,6 @@ export default function ProductClient({ product }: { product: any }) {
                                                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                                 />
                                             )}
-                                            
-                                            {/* Hover Indicator for non-active items */}
                                             <span className={`block truncate transition-transform duration-300 ${isActive ? "translate-x-1" : "group-hover/item:translate-x-1"}`}>
                                                 {h.text}
                                             </span>
@@ -227,26 +222,25 @@ export default function ProductClient({ product }: { product: any }) {
             </div>
 
             {/* === CENTER: CONTENT === */}
-            <div className="lg:col-span-6">
+            <div className="col-span-1 lg:col-span-6">
                 
-                {/* HERO IMAGE (Parallax/Float Effect) */}
+                {/* HERO IMAGE */}
                 <motion.div 
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8 }}
-                    className="bg-slate-50 rounded-[3rem] p-10 mb-12 flex items-center justify-center relative overflow-hidden shadow-inner border border-slate-100 group"
+                    className="bg-slate-50 rounded-3xl md:rounded-[3rem] p-6 md:p-10 mb-8 md:mb-12 flex items-center justify-center relative overflow-hidden shadow-inner border border-slate-100 group"
                 >
-                    {/* Floating Background Blob */}
                     <motion.div 
                         animate={{ y: [0, -20, 0], opacity: [0.5, 0.8, 0.5] }}
                         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute top-0 right-0 w-64 h-64 bg-teal-200/30 rounded-full blur-3xl"
+                        className="absolute top-0 right-0 w-48 h-48 md:w-64 md:h-64 bg-teal-200/30 rounded-full blur-3xl"
                     />
 
                     <motion.div 
                         whileHover={{ scale: 1.05, rotate: 2 }}
                         transition={{ type: "spring", stiffness: 200 }}
-                        className="relative z-10 w-full max-w-sm aspect-square"
+                        className="relative z-10 w-full max-w-[250px] md:max-w-sm aspect-square"
                     >
                         {image ? (
                            <Image src={image} alt={title} fill className="object-contain drop-shadow-2xl" />
@@ -261,76 +255,75 @@ export default function ProductClient({ product }: { product: any }) {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
-                    className="mb-12"
+                    className="mb-8 md:mb-12"
                 >
                     <span className="inline-flex items-center gap-2 bg-red-50 text-red-700 px-3 py-1 rounded-full font-bold uppercase text-[10px] tracking-widest mb-4 border border-red-100">
                         <Zap size={12} fill="currentColor" /> Official DXN Product
                     </span>
-                    <h1 className="text-4xl md:text-5xl font-extrabold font-jakarta !text-black mb-6 leading-tight">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold font-jakarta !text-black mb-4 md:mb-6 leading-tight">
                         {title}
                     </h1>
                     {product.short_description && (
-                        <p className="text-xl !text-black leading-relaxed font-medium border-l-4 border-red-500 pl-6 py-2 bg-gradient-to-r from-slate-50 to-transparent">
+                        <p className="text-lg md:text-xl !text-black leading-relaxed font-medium border-l-4 border-red-500 pl-4 md:pl-6 py-2 bg-gradient-to-r from-slate-50 to-transparent">
                             {product.short_description}
                         </p>
                     )}
                 </motion.div>
 
                 {/* DYNAMIC CONTENT BLOCK */}
-                <div className="space-y-16">
+                <div className="space-y-12 md:space-y-16">
                     
-                    {/* Introduction Card */}
+                    {/* Overview Card */}
                     <motion.div 
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="bg-white border-l-4 !border-black pl-6 py-4 shadow-sm"
+                        className="bg-white border-l-4 !border-black pl-4 md:pl-6 py-4 shadow-sm"
                     >
                         <h3 className="text-sm font-bold !text-black uppercase tracking-widest mb-3 flex items-center gap-2">
                             <BookOpen size={16}/> Overview
                         </h3>
-                        <div className="text-xl font-medium !text-black leading-loose" dangerouslySetInnerHTML={{ __html: product.introduction || "" }} />
+                        <div className="text-lg md:text-xl font-medium !text-black leading-loose" dangerouslySetInnerHTML={{ __html: product.introduction || "" }} />
                     </motion.div>
 
-                    {/* MAIN CONTENT */}
-                    <article className="prose prose-lg max-w-none 
+                    {/* MAIN CONTENT PROSE (Responsive text size) */}
+                    <article className="prose prose-base md:prose-lg max-w-none 
                         !text-black
                         prose-headings:!text-black prose-p:!text-black prose-li:!text-black prose-strong:!text-black
                         prose-headings:font-jakarta prose-headings:font-bold prose-headings:scroll-mt-32
-                        prose-h2:text-4xl prose-h2:mt-16 prose-h2:mb-8 prose-h2:border-b prose-h2:border-slate-200 prose-h2:pb-4
-                        prose-h3:text-3xl prose-h3:mt-10 prose-h3:mb-4
-                        prose-p:leading-loose prose-p:mb-6 prose-p:text-lg
-                        prose-li:marker:text-red-600 prose-li:mb-2 prose-li:text-lg
+                        prose-h2:text-2xl md:prose-h2:text-4xl prose-h2:mt-12 md:prose-h2:mt-16 prose-h2:mb-6 md:prose-h2:mb-8 prose-h2:border-b prose-h2:border-slate-200 prose-h2:pb-4
+                        prose-h3:text-xl md:prose-h3:text-3xl prose-h3:mt-8 md:prose-h3:mt-10 prose-h3:mb-4
+                        prose-p:leading-loose prose-p:mb-6
+                        prose-li:marker:text-red-600 prose-li:mb-2
                         prose-strong:font-extrabold
-                        prose-blockquote:bg-slate-50 prose-blockquote:border-l-red-500 prose-blockquote:!text-black prose-blockquote:not-italic prose-blockquote:py-6 prose-blockquote:px-8 prose-blockquote:rounded-r-xl"
+                        prose-blockquote:bg-slate-50 prose-blockquote:border-l-red-500 prose-blockquote:!text-black prose-blockquote:not-italic prose-blockquote:py-4 md:prose-blockquote:py-6 prose-blockquote:px-6 md:prose-blockquote:px-8 prose-blockquote:rounded-r-xl"
                         dangerouslySetInnerHTML={{ __html: processedContent }} 
                     />
                     
-                    {/* Conclusion */}
+                    {/* Expert Verdict */}
                     <motion.div 
                         initial={{ scale: 0.95, opacity: 0 }}
                         whileInView={{ scale: 1, opacity: 1 }}
                         viewport={{ once: true }}
-                        className="bg-black p-8 md:p-10 rounded-3xl text-white shadow-2xl relative overflow-hidden"
+                        className="bg-black p-6 md:p-10 rounded-2xl md:rounded-3xl text-white shadow-2xl relative overflow-hidden"
                     >
                         <div className="relative z-10">
-                            <h3 className="text-2xl font-bold font-jakarta mb-4 flex items-center gap-3 text-white">
+                            <h3 className="text-xl md:text-2xl font-bold font-jakarta mb-4 flex items-center gap-3 text-white">
                                 <Star className="text-yellow-400 fill-yellow-400" /> Our Expert Verdict
                             </h3>
-                            <div className="prose prose-lg prose-invert max-w-none text-slate-200 leading-loose" dangerouslySetInnerHTML={{ __html: product.conclusion || "" }} />
+                            <div className="prose prose-base md:prose-lg prose-invert max-w-none text-slate-200 leading-loose" dangerouslySetInnerHTML={{ __html: product.conclusion || "" }} />
                         </div>
-                        {/* Shimmer Effect */}
                         <motion.div 
                             animate={{ rotate: 360 }}
                             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                            className="absolute -top-20 -right-20 w-60 h-60 bg-white/5 rounded-[30%] blur-3xl"
+                            className="absolute -top-20 -right-20 w-40 h-40 md:w-60 md:h-60 bg-white/5 rounded-[30%] blur-3xl"
                         />
                     </motion.div>
 
                     {/* FAQs */}
                     {faqs.length > 0 && (
-                        <div className="pt-12 border-t border-slate-200">
-                            <h3 className="text-4xl font-bold !text-black mb-10 font-jakarta">Common Questions</h3>
+                        <div className="pt-8 md:pt-12 border-t border-slate-200">
+                            <h3 className="text-2xl md:text-4xl font-bold !text-black mb-6 md:mb-10 font-jakarta">Common Questions</h3>
                             <div>
                                 {faqs.map((faq, i) => (
                                     <FAQItem key={i} index={i} question={faq.question} answer={faq.answer} />
@@ -341,7 +334,7 @@ export default function ProductClient({ product }: { product: any }) {
                 </div>
             </div>
 
-            {/* === RIGHT: STICKY BUY RAIL === */}
+            {/* === RIGHT: STICKY BUY RAIL (Desktop Only) === */}
             <div className="hidden lg:block lg:col-span-3 relative">
                 <div className="sticky top-32">
                     <motion.div 
@@ -350,7 +343,6 @@ export default function ProductClient({ product }: { product: any }) {
                         transition={{ delay: 0.5 }}
                         className="bg-white rounded-3xl shadow-2xl shadow-slate-200 border border-slate-100 p-6 overflow-hidden relative"
                     >
-                        {/* Top Gradient Line */}
                         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 via-teal-500 to-red-500"></div>
 
                         <div className="text-center mb-6 pt-4">
@@ -405,15 +397,18 @@ export default function ProductClient({ product }: { product: any }) {
             </div>
         </div>
 
-        {/* MOBILE STICKY BAR */}
-        <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-4 z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.1)]">
-            <div className="flex items-center gap-4">
+        {/* MOBILE STICKY BAR (Visible only on lg and below) */}
+        <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-4 z-[90] shadow-[0_-10px_40px_rgba(0,0,0,0.1)] pb-safe">
+            <div className="flex items-center gap-4 max-w-md mx-auto">
                  <div className="flex-1">
-                    <p className="text-xs text-slate-400 font-bold uppercase">Total</p>
-                    <p className="text-xl font-bold !text-black">Rs. {price.toLocaleString()}</p>
+                    <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Total</p>
+                    <p className="text-xl font-extrabold !text-black font-jakarta">Rs. {price.toLocaleString()}</p>
                  </div>
-                 <button onClick={handleAddToCart} className="bg-red-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg active:scale-95 transition-transform">
-                    Add to Cart
+                 <button 
+                    onClick={handleAddToCart} 
+                    className="bg-red-600 text-white px-8 py-3 rounded-xl font-bold shadow-lg shadow-red-600/20 active:scale-95 transition-transform flex items-center gap-2"
+                 >
+                    <ShoppingCart size={18} /> Add to Cart
                  </button>
             </div>
         </div>

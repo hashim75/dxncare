@@ -47,23 +47,25 @@ export default async function OrderPage() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-50 pt-24 pb-10">
+    <main className="min-h-screen bg-slate-50 pt-24 pb-12 md:pt-32 md:pb-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       <div className="container mx-auto px-4">
-        <header className="mb-12 text-center max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-extrabold font-jakarta text-slate-900 mb-4 tracking-tight">
+        
+        {/* Header Section */}
+        <header className="mb-8 md:mb-16 text-center max-w-3xl mx-auto">
+          <h1 className="text-3xl md:text-5xl font-extrabold font-jakarta text-slate-900 mb-3 md:mb-4 tracking-tight leading-tight">
             Invest in Your <span className="text-teal-600">Health</span>
           </h1>
-          <p className="text-lg text-slate-600">
+          <p className="text-base md:text-lg text-slate-600 px-2 leading-relaxed">
             Select your daily essentials. Authentic, fresh, and delivered to your doorstep.
           </p>
         </header>
 
-        {/* Now TypeScript is happy because 'products' is typed as Product[] */}
+        {/* Client Interface (Search & Grid) */}
         <OrderInterface products={products} />
       </div>
     </main>

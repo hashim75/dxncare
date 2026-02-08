@@ -6,27 +6,39 @@ import html from "remark-html";
 
 const contentDirectory = path.join(process.cwd(), "content");
 
-// --- 1. GET SORTED DATA (For lists, blogs, etc.) ---
+// --- 1. GET SORTED DATA (For lists, blogs, health hubs) ---
 export function getSortedData(directory: string) {
   const fullPath = path.join(contentDirectory, directory);
   
-  // Safety check: if folder doesn't exist, return empty array
-  if (!fs.existsSync(fullPath)) return [];
+  // Safety check: if folder doesn't exist, return empty array instead of crashing
+  if (!fs.existsSync(fullPath)) {
+    console.warn(`Directory not found: ${fullPath}`);
+    return [];
+  }
 
   const fileNames = fs.readdirSync(fullPath);
-  const allData = fileNames.map((fileName) => {
-    const id = fileName.replace(/\.md$/, "");
-    const fullPath = path.join(contentDirectory, directory, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const matterResult = matter(fileContents);
+  
+  const allData = fileNames
+    .filter(fileName => fileName.endsWith('.md')) // Only process markdown files
+    .map((fileName) => {
+      const id = fileName.replace(/\.md$/, "");
+      const fullPathFile = path.join(fullPath, fileName);
+      const fileContents = fs.readFileSync(fullPathFile, "utf8");
+      const matterResult = matter(fileContents);
 
-    return {
-      id,
-      ...matterResult.data,
-    };
+      return {
+        id,
+        ...matterResult.data,
+      };
+    });
+
+  // Sort by date (Newest First) if a date field exists
+  return allData.sort((a: any, b: any) => {
+    if (a.date && b.date) {
+      return a.date < b.date ? 1 : -1;
+    }
+    return 0;
   });
-
-  return allData;
 }
 
 // --- 2. GET SINGLE DATA (For individual pages like /products/slug) ---
@@ -53,7 +65,11 @@ export async function getData(directory: string, id: string) {
   };
 }
 
-// --- 3. GET ALL DATA (New function for /order page) ---
+// --- 3. ALIAS FOR COMPATIBILITY (Fixes your Health Page Error) ---
+// Your new Health pages use "getPostData", so we just point it to "getData"
+export const getPostData = getData;
+
+// --- 4. GET ALL DATA (For /order page) ---
 export function getAllData(directory: string) {
   const fullPath = path.join(contentDirectory, directory);
   
@@ -76,8 +92,8 @@ export function getAllData(directory: string) {
 
     // Return object suitable for the order grid
     return {
-      id: slug,      // Use slug as ID
-      slug: slug,    // Explicit slug field
+      id: slug,      
+      slug: slug,    
       ...matterResult.data,
     };
   });
