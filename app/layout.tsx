@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
-import Script from "next/script"; // ✅ Import Next.js Script component
+import Script from "next/script"; 
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
@@ -12,9 +12,17 @@ import HealthBot from "./components/bot/HealthBot";
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
+// ✅ SEO FIX: Added metadataBase and Canonical URL
 export const metadata: Metadata = {
-  title: "DXN Care",
-  description: "Natural Health & Wellness",
+  metadataBase: new URL('https://dxncare.com'), // 👈 Sets the base domain for all links
+  title: {
+    default: "DXN Care Pakistan - Authentic Ganoderma Products",
+    template: "%s | DXN CARE" // Ensures sub-pages look like "Product Name | DXN Care"
+  },
+  description: "Official distributor of DXN products in Pakistan. Shop authentic supplements, coffee, and personal care items with secure cash on delivery.",
+  alternates: {
+    canonical: "./", // 👈 This tells Google: "This URL is the master copy" (Fixes duplicate errors)
+  },
 };
 
 export default function RootLayout({

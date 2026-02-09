@@ -3,44 +3,40 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-      {
-        protocol: "https",
-        hostname: "uploads-ssl.webflow.com", 
-      },
-      {
-        protocol: "https",
-        hostname: "cdn.webflow.com",
-      },
-      {
-        protocol: "https",
-        hostname: "cdn.prod.website-files.com",
-      },
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "uploads-ssl.webflow.com" },
+      { protocol: "https", hostname: "cdn.webflow.com" },
+      { protocol: "https", hostname: "cdn.prod.website-files.com" },
     ],
   },
 
-  // ✅ INTELLIGENT REDIRECTS (Fixing your 404s)
   async redirects() {
     return [
-      // 1. Fix Product Links (Old "/buy/" -> New "/products/")
+      // -------------------------------------------------------
+      // 1. PRODUCT REDIRECTS (Old Webflow "/buy/" -> New "/products/")
+      // -------------------------------------------------------
       {
         source: '/buy/:slug*',
         destination: '/products/:slug*',
-        permanent: true, // 301 Redirect (Passes SEO power to new page)
+        permanent: true,
       },
-
-      // 2. Fix Old Collections Page
       {
         source: '/dxn-care-products',
         destination: '/products',
         permanent: true,
       },
+      // Fix specific broken product link from your screenshot
+      {
+        source: '/products/cordyceps-coffee',
+        destination: '/products/dxn-cordypine', // Redirecting to closest match or /products
+        permanent: true,
+      },
 
-      // 3. Fix Blogs that were previously at the "Root" (domain.com/blog-title -> domain.com/blog/blog-title)
-      // I have extracted these specific URLs from your screenshot
+      // -------------------------------------------------------
+      // 2. BLOG REDIRECTS (Root -> /blog/)
+      // These old pages lived at the root (dxncare.com/post-name)
+      // They must move to dxncare.com/blog/post-name
+      // -------------------------------------------------------
       {
         source: '/the-natural-way-to-boost-immunity-why-you-need-dxn-spirulina',
         destination: '/blog/the-natural-way-to-boost-immunity-why-you-need-dxn-spirulina',
@@ -82,13 +78,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
-      // 4. Fix Broken/Truncated URLs from screenshot (Redirect to main Blog page)
+      // -------------------------------------------------------
+      // 3. BROKEN / DELETED LINKS (From Screenshot)
+      // -------------------------------------------------------
+      // The broken "cancer-" link -> Redirect to your specific cancer blog
       {
         source: '/blog/cancer-',
-        destination: '/blog',
+        destination: '/blog/cancer-prevention-lifestyle-choices-that-lower-your-risk',
         permanent: true,
       },
-      // 5. Catch-all: If an old blog post is truly deleted, redirect to the main blog page so you don't lose the visitor
+      // Old weight loss blog that seems deleted -> Redirect to main blog
       {
         source: '/blog/struggling-with-weight-discover-how-this-dxn-product-can-help',
         destination: '/blog', 
