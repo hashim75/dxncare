@@ -99,7 +99,8 @@ Sent from dxncare.com`;
             </div>
             <h3 className="font-bold text-teal-950 text-lg">Visit Us</h3>
             <p className="text-slate-500 mt-2 text-sm">Come see our wellness center.</p>
-            <p className="text-lg md:text-xl font-bold text-teal-900 mt-4">Wellness Plaza, Islamabad</p>
+            <p className="text-lg md:text-xl font-bold text-teal-900 mt-4">Shahi Road, Khanpur,
+Punjab, Pakistan</p>
           </motion.div>
         </div>
 
