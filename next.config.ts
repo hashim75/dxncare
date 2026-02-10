@@ -12,31 +12,25 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
-      // -------------------------------------------------------
-      // 1. PRODUCT REDIRECTS (Old Webflow "/buy/" -> New "/products/")
-      // -------------------------------------------------------
+      // 1. PRODUCT REDIRECTS
       {
         source: '/buy/:slug*',
         destination: '/products/:slug*',
         permanent: true,
       },
+      // UPDATED: Added /:path* to catch "/dxn-care-products" AND "/dxn-care-products/"
       {
-        source: '/dxn-care-products',
+        source: '/dxn-care-products/:path*',
         destination: '/products',
         permanent: true,
       },
-      // Fix specific broken product link from your screenshot
       {
         source: '/products/cordyceps-coffee',
-        destination: '/products/dxn-cordypine', // Redirecting to closest match or /products
+        destination: '/products/dxn-cordypine',
         permanent: true,
       },
 
-      // -------------------------------------------------------
-      // 2. BLOG REDIRECTS (Root -> /blog/)
-      // These old pages lived at the root (dxncare.com/post-name)
-      // They must move to dxncare.com/blog/post-name
-      // -------------------------------------------------------
+      // 2. BLOG REDIRECTS (unchanged)
       {
         source: '/the-natural-way-to-boost-immunity-why-you-need-dxn-spirulina',
         destination: '/blog/the-natural-way-to-boost-immunity-why-you-need-dxn-spirulina',
@@ -78,16 +72,12 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
-      // -------------------------------------------------------
-      // 3. BROKEN / DELETED LINKS (From Screenshot)
-      // -------------------------------------------------------
-      // The broken "cancer-" link -> Redirect to your specific cancer blog
+      // 3. BROKEN / DELETED LINKS
       {
         source: '/blog/cancer-',
         destination: '/blog/cancer-prevention-lifestyle-choices-that-lower-your-risk',
         permanent: true,
       },
-      // Old weight loss blog that seems deleted -> Redirect to main blog
       {
         source: '/blog/struggling-with-weight-discover-how-this-dxn-product-can-help',
         destination: '/blog', 

@@ -1,11 +1,41 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getSortedData } from "../lib/markdown";
-import { ArrowRight, Stethoscope, MessageCircle, ShieldCheck } from "lucide-react";
+import { getSortedData } from "../lib/markdown"; // Check if path needs to be "../lib/markdown" or "../../" depending on folder depth
+import { ArrowRight, Stethoscope, MessageCircle, ShieldCheck, Video } from "lucide-react";
 
-// Server Component (Async)
+// ✅ 1. DEFINE YOUR EXACT CUSTOM ORDER (Matches filenames in your screenshot)
+const CUSTOM_ORDER = [
+  "dr-muhammad-iqbal",  // 1. Dr. Muhammad Iqbal
+  "dr-muhammad-qasim",  // 2. Dr. Qasim Iqbal (Filename appears to be this)
+  "dr-rabia-iqbal",     // 3. Dr. Rabia Iqbal
+  "dr-zikria-aqeel",    // 4. Dr. Zikria Aqeel
+  "dr-ali-amjad",       // 5. Dr. Ali Amjad
+  "dr-maham-fatima"     // 6. Dr. Maham Fatima
+];
+
 export default async function DoctorsPage() {
-  const doctors = getSortedData("doctors") as any[];
+  // 1. Fetch all data
+  const rawDoctors = getSortedData("doctors") as any[];
+
+  // 2. CUSTOM SORT LOGIC
+  // This forces the doctors to appear in the order defined in CUSTOM_ORDER.
+  // If a doctor isn't in the list, they appear at the end.
+  const doctors = rawDoctors.sort((a, b) => {
+    const indexA = CUSTOM_ORDER.indexOf(a.id); // 'id' usually matches the filename
+    const indexB = CUSTOM_ORDER.indexOf(b.id);
+
+    // If both are in the list, sort by their position in the list
+    if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+    
+    // If only A is in the list, put A first
+    if (indexA !== -1) return -1;
+    
+    // If only B is in the list, put B first
+    if (indexB !== -1) return 1;
+    
+    // If neither is in the list, keep original order
+    return 0;
+  });
 
   return (
     <main className="min-h-screen bg-slate-50 pt-24 pb-16 md:pt-32 md:pb-24">
@@ -25,13 +55,21 @@ export default async function DoctorsPage() {
         </div>
 
         {/* Grid System */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
             {doctors.map((doc) => (
                 <div 
                     key={doc.id} 
                     className="bg-white rounded-[2rem] p-6 md:p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center text-center h-full"
                 >
                     
+                    {/* Status Badge */}
+                    <div className="w-full flex justify-end mb-2">
+                         <span className={`inline-flex items-center gap-1.5 px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide ${doc.isOnline !== false ? 'bg-green-50 text-green-700' : 'bg-slate-50 text-slate-500'}`}>
+                            <span className={`w-1.5 h-1.5 rounded-full ${doc.isOnline !== false ? 'bg-green-500 animate-pulse' : 'bg-slate-400'}`}></span>
+                            {doc.isOnline !== false ? 'Online' : 'Offline'}
+                        </span>
+                    </div>
+
                     {/* Doctor Image */}
                     <div className="relative w-32 h-32 md:w-40 md:h-40 mb-5 md:mb-6 rounded-full overflow-hidden border-4 border-teal-50 shadow-inner group-hover:border-teal-100 transition-colors">
                         <Image 
@@ -49,14 +87,14 @@ export default async function DoctorsPage() {
                     
                     <div className="flex items-center gap-1.5 text-teal-600 font-bold text-xs md:text-sm mb-4 bg-teal-50 px-3 py-1.5 rounded-full uppercase tracking-wide">
                         <Stethoscope size={14} />
-                        {doc.specialization || "General Practitioner"}
+                        {doc.specialization || doc.role || "General Practitioner"}
                     </div>
 
-                    <p className="text-slate-500 text-sm md:text-base line-clamp-3 mb-6 leading-relaxed">
+                    <p className="text-slate-500 text-sm md:text-base line-clamp-2 mb-6 leading-relaxed h-10">
                         {doc.short_description || "Specialist dedicated to providing the best care for patients using holistic and modern approaches."}
                     </p>
 
-                    {/* Actions (Pushed to bottom) */}
+                    {/* Actions */}
                     <div className="mt-auto w-full grid grid-cols-2 gap-3">
                         <Link 
                             href={`/doctors/${doc.slug || doc.id}`} 
@@ -65,19 +103,12 @@ export default async function DoctorsPage() {
                             View Profile <ArrowRight size={14} className="opacity-50" />
                         </Link>
                         
-                        {doc.whatsapp_link ? (
-                            <a 
-                                href={doc.whatsapp_link} 
-                                target="_blank" 
-                                className="py-3 rounded-xl bg-teal-950 text-white font-bold text-xs md:text-sm hover:bg-teal-800 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-teal-900/20"
-                            >
-                                <MessageCircle size={14} /> Consult
-                            </a>
-                        ) : (
-                             <button disabled className="py-3 rounded-xl bg-slate-100 text-slate-400 font-bold text-xs md:text-sm cursor-not-allowed flex items-center justify-center gap-2">
-                                <ShieldCheck size={14} /> Booked
-                            </button>
-                        )}
+                        <Link
+                            href={`/doctors/${doc.slug || doc.id}#book`}
+                            className="py-3 rounded-xl bg-teal-950 text-white font-bold text-xs md:text-sm hover:bg-teal-800 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-teal-900/20"
+                        >
+                            <Video size={14} /> Consult
+                        </Link>
                     </div>
                 </div>
             ))}

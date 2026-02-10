@@ -1,0 +1,36 @@
+---
+slug: "dr-maham-fatima"
+name: "Dr. Maham Fatima"
+collection_id: "68b2cb42d1ceb4a1b558edd7"
+locale_id: "68a581e57b0d5d6252900e4b"
+item_id: "68b33c7fc6bc26fb51051e14"
+archived: "false"
+draft: "false"
+created_on: "Sat Aug 30 2025 18:01:35 GMT+0000 (Coordinated Universal Time)"
+updated_on: "Tue Jan 20 2026 18:56:42 GMT+0000 (Coordinated Universal Time)"
+published_on: "Tue Jan 20 2026 19:03:56 GMT+0000 (Coordinated Universal Time)"
+short_description: "MBBS | RMP (PMDC) | House job experience in core clinical specialties | Aspiring surgeon."
+specialization: "Clinical & Medical Care, WHO in MNH 231/WB "
+
+registration_number: "945808-01-M"
+profile_image: "https://cdn.prod.website-files.com/6833690dd0efea69de65146d/6989f4688036f3fc780f1716_WhatsApp%20Image%202026-02-09%20at%2019.43.57.avif"
+whatsapp_link: "https://wa.me/923099511971"
+facebook_link: "https://www.facebook.com/share/1EAeZ5nTq6/?mibextid=wwXIfr"
+linkdln_link: ""
+services:
+  - "Pediatric medical consultation (Newborns, infants & children)"
+  - "Child growth, development & milestone assessment"
+  - "Preventive pediatric care & parental counseling"
+  - "Management of common childhood illnesses"
+  - "Pediatric nutritional assessment & diet counseling"
+  - "Immunization guidance & follow-up care"
+  - "Gynecological consultation & routine checkups"
+  - "Antenatal & postnatal care counseling"
+  - "Menstrual health & hormonal disorder management"
+  - "Family planning & contraceptive counseling"
+  - "Women’s preventive health & wellness care"
+  - "Weight management & metabolic condition counseling (PCOS, DM, HTN)"
+
+---
+
+Dr. Maham Fatima completed his MBBS from SZMC and provides clinical care focused on pediatrics and women’s health, including child wellness, antenatal and postnatal counseling, and preventive care.

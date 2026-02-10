@@ -27,5 +27,4 @@ services:
   - "Nutritional assessment & diet counseling"
   - "Weight management & metabolic disease nutrition (DM, HTN)"
 ---
-
 Dr. Muhammad Qasim had done MBBS from SZMC. He is currently doing specilization in General Surgery.
