@@ -106,7 +106,7 @@ export default function DoctorSection({ doctors }: { doctors: Doctor[] }) {
         {/* === SLIDER WRAPPER === */}
         <div className="relative group">
             
-            {/* Arrows */}
+            {/* Desktop Arrows (Hidden on Mobile) */}
             <button 
                 onClick={prevSlide} 
                 className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white shadow-lg rounded-full items-center justify-center text-teal-900 hover:bg-teal-600 hover:text-white transition-all border border-slate-100"
@@ -174,15 +174,37 @@ export default function DoctorSection({ doctors }: { doctors: Doctor[] }) {
             </div>
         </div>
 
-        {/* Mobile Dots */}
-        <div className="flex md:hidden justify-center gap-2 mt-8">
-             {Array.from({ length: Math.max(0, totalItems - itemsToShow + 1) }).map((_, i) => (
-                <button 
-                    key={i}
-                    onClick={() => setCurrentIndex(i)}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${i === currentIndex ? "w-8 bg-teal-600" : "w-2 bg-slate-300"}`}
-                />
-             ))}
+        {/* Mobile Navigation (Arrows + Dots) */}
+        <div className="flex md:hidden items-center justify-center gap-4 mt-8">
+            {/* Mobile Left Arrow */}
+            <button 
+                onClick={prevSlide} 
+                className="w-10 h-10 bg-white shadow-md rounded-full flex items-center justify-center text-teal-900 border border-slate-100 active:bg-teal-50 active:scale-95 transition-all"
+                aria-label="Previous Doctor"
+            >
+                <ArrowLeft size={18} />
+            </button>
+
+            {/* Dots */}
+            <div className="flex gap-2">
+                {Array.from({ length: Math.max(0, totalItems - itemsToShow + 1) }).map((_, i) => (
+                    <button 
+                        key={i}
+                        onClick={() => setCurrentIndex(i)}
+                        className={`h-2 rounded-full transition-all duration-300 ${i === currentIndex ? "w-8 bg-teal-600" : "w-2 bg-slate-300"}`}
+                        aria-label={`Go to slide ${i + 1}`}
+                    />
+                ))}
+            </div>
+
+            {/* Mobile Right Arrow */}
+            <button 
+                onClick={nextSlide} 
+                className="w-10 h-10 bg-white shadow-md rounded-full flex items-center justify-center text-teal-900 border border-slate-100 active:bg-teal-50 active:scale-95 transition-all"
+                aria-label="Next Doctor"
+            >
+                <ArrowRight size={18} />
+            </button>
         </div>
 
       </div>

@@ -10,7 +10,7 @@ created_on: "Sat Aug 30 2025 18:01:35 GMT+0000 (Coordinated Universal Time)"
 updated_on: "Tue Jan 20 2026 18:56:42 GMT+0000 (Coordinated Universal Time)"
 published_on: "Tue Jan 20 2026 19:03:56 GMT+0000 (Coordinated Universal Time)"
 short_description: "MBBS | RMP (PMDC) | House job experience in core clinical specialties | Aspiring surgeon."
-specialization: "Clinical & Medical Care, WHO in MNH 231/WB "
+specialization: "Clinical & Medical Care, WMO in MNH 231/WB "
 
 registration_number: "945808-01-M"
 profile_image: "https://cdn.prod.website-files.com/6833690dd0efea69de65146d/6989f4688036f3fc780f1716_WhatsApp%20Image%202026-02-09%20at%2019.43.57.avif"

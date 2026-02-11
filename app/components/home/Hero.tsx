@@ -43,7 +43,7 @@ const Hero = () => {
                 Shop Wellness
               </Link>
               <Link
-                href="#doctors"
+                href="/doctors"
                 className="inline-flex h-14 items-center justify-center rounded-full border border-slate-200 bg-white px-8 text-base font-semibold text-slate-700 shadow-sm transition-all hover:bg-slate-50 hover:border-slate-300 group"
               >
                 Find a Doctor
