@@ -6,7 +6,7 @@ import { ArrowLeft, CheckCircle2, Award, MapPin, Facebook, Linkedin, MessageCirc
 import BookingWidget from "../../components/doctors/BookingWidget"; 
 import ServicesSlider from "../../components/doctors/ServicesSlider"; 
 import { Metadata } from "next";
-import PaymentStatus from "../../components/doctors/PaymentStatus";
+
 import ProtectedBookingArea from "../../components/doctors/ProtectedBookingArea"; 
 
 // --- 1. SEO METADATA ---
@@ -49,7 +49,7 @@ export default async function DoctorDetailPage({ params }: { params: { slug: str
 
   return (
     <main className="bg-slate-50 min-h-screen pt-24 pb-16 md:pt-32 md:pb-24">
-      <PaymentStatus />
+
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="container mx-auto px-4 max-w-7xl">
