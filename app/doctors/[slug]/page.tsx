@@ -8,7 +8,7 @@ import ServicesSlider from "../../components/doctors/ServicesSlider";
 import { Metadata } from "next";
 
 import ProtectedBookingArea from "../../components/doctors/ProtectedBookingArea"; 
-
+export const revalidate = 3600;
 // --- 1. SEO METADATA ---
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const doctors = getSortedData("doctors");

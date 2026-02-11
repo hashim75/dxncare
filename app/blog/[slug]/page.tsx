@@ -5,7 +5,7 @@ import { getSortedData } from "../../lib/markdown";
 import { ArrowLeft, CheckCircle2, Clock, Calendar, HelpCircle, ArrowRight, Sparkles, Stethoscope, Share2 } from "lucide-react";
 import BlogProgress from "../../components/blog/BlogProgress";
 import ShareButtons from "../../components/blog/ShareButtons"; 
-
+export const revalidate = 3600;
 // --- HELPER: Parse Dynamic Fields ---
 const parseDynamicFields = (data: any, prefix: string) => {
   const items = [];

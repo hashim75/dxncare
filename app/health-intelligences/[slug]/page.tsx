@@ -9,7 +9,7 @@ import {
 import BlogProgress from "../../components/blog/BlogProgress";
 import ShareButtons from "../../components/blog/ShareButtons"; // Import ShareButtons
 import { Metadata } from "next";
-
+export const revalidate = 3600;
 // --- SEO METADATA ---
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const articles = getSortedData("health-intelligences");
