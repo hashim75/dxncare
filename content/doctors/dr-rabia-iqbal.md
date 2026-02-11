@@ -14,6 +14,7 @@ specialization: "Plastic Surgeron and Nutritionist"
 registration_number: "785187-01-M"
 profile_image: "https://cdn.prod.website-files.com/68a581e57b0d5d6252900e4c/68b33cc8fb4f82f391124735_Rabia.avif"
 whatsapp_link: "https://wa.me/923318688393"
+plan_tier: "paid"
 facebook_link: ""
 linkdln_link: ""
 services:

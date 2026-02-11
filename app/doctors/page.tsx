@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getSortedData } from "../lib/markdown"; // Check if path needs to be "../lib/markdown" or "../../" depending on folder depth
-import { ArrowRight, Stethoscope, MessageCircle, ShieldCheck, Video } from "lucide-react";
+import { getSortedData } from "../lib/markdown"; 
+import { Stethoscope, Video } from "lucide-react"; // Removed CheckoutButton import, added Video icon
 
-// ✅ 1. DEFINE YOUR EXACT CUSTOM ORDER (Matches filenames in your screenshot)
+// ✅ 1. DEFINE YOUR EXACT CUSTOM ORDER 
 const CUSTOM_ORDER = [
   "dr-muhammad-iqbal",  // 1. Dr. Muhammad Iqbal
-  "dr-muhammad-qasim",  // 2. Dr. Qasim Iqbal (Filename appears to be this)
+  "dr-muhammad-qasim",  // 2. Dr. Qasim Iqbal 
   "dr-rabia-iqbal",     // 3. Dr. Rabia Iqbal
   "dr-zikria-aqeel",    // 4. Dr. Zikria Aqeel
   "dr-ali-amjad",       // 5. Dr. Ali Amjad
@@ -18,22 +18,14 @@ export default async function DoctorsPage() {
   const rawDoctors = getSortedData("doctors") as any[];
 
   // 2. CUSTOM SORT LOGIC
-  // This forces the doctors to appear in the order defined in CUSTOM_ORDER.
-  // If a doctor isn't in the list, they appear at the end.
   const doctors = rawDoctors.sort((a, b) => {
-    const indexA = CUSTOM_ORDER.indexOf(a.id); // 'id' usually matches the filename
+    const indexA = CUSTOM_ORDER.indexOf(a.id); 
     const indexB = CUSTOM_ORDER.indexOf(b.id);
 
-    // If both are in the list, sort by their position in the list
     if (indexA !== -1 && indexB !== -1) return indexA - indexB;
-    
-    // If only A is in the list, put A first
     if (indexA !== -1) return -1;
-    
-    // If only B is in the list, put B first
     if (indexB !== -1) return 1;
     
-    // If neither is in the list, keep original order
     return 0;
   });
 
@@ -94,20 +86,13 @@ export default async function DoctorsPage() {
                         {doc.short_description || "Specialist dedicated to providing the best care for patients using holistic and modern approaches."}
                     </p>
 
-                    {/* Actions */}
-                    <div className="mt-auto w-full grid grid-cols-2 gap-3">
+                    {/* Actions - Now a single button */}
+                    <div className="mt-auto w-full">
                         <Link 
                             href={`/doctors/${doc.slug || doc.id}`} 
-                            className="py-3 rounded-xl bg-slate-50 text-slate-600 font-bold text-xs md:text-sm hover:bg-slate-100 hover:text-slate-900 transition-colors flex items-center justify-center gap-2 border border-slate-100"
+                            className="py-3.5 rounded-xl w-full bg-teal-950 text-white font-bold text-xs md:text-sm hover:bg-teal-800 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-teal-900/20"
                         >
-                            View Profile <ArrowRight size={14} className="opacity-50" />
-                        </Link>
-                        
-                        <Link
-                            href={`/doctors/${doc.slug || doc.id}#book`}
-                            className="py-3 rounded-xl bg-teal-950 text-white font-bold text-xs md:text-sm hover:bg-teal-800 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-teal-900/20"
-                        >
-                            <Video size={14} /> Consult
+                            <Video size={16} /> Consult
                         </Link>
                     </div>
                 </div>

@@ -24,7 +24,8 @@ const ORDERED_KEYS = [
   { id: "rabia", namePart: "Rabia" },       // 3. Dr. Rabia Iqbal
   { id: "zikria", namePart: "Zikria" },     // 4. Dr. Zikria Aqeel
   { id: "ali", namePart: "Ali" },           // 5. Dr. Ali Amjad
-  { id: "maham", namePart: "Maham" },       // 6. Dr. Maham Fatima
+  { id: "maham", namePart: "Maham" },    
+  { id: "saqlain", namePart: "Saqlain" },       
 ];
 
 export default function DoctorSection({ doctors }: { doctors: Doctor[] }) {
