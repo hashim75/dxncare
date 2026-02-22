@@ -1,0 +1,2097 @@
+[
+  {
+    "name": "F-100 tablet 100mg",
+    "category": "MEDICINE",
+    "price": 185
+  },
+  {
+    "name": "F-Clox capsule 500mg",
+    "category": "MEDICINE",
+    "price": 110.72
+  },
+  {
+    "name": "F-Eso capsule 40mg",
+    "category": "MEDICINE",
+    "price": 99
+  },
+  {
+    "name": "F-Nov injection 250mg",
+    "category": "MEDICINE",
+    "price": 100
+  },
+  {
+    "name": "F-Oxacin injection 250mg",
+    "category": "MEDICINE",
+    "price": 125
+  },
+  {
+    "name": "F-Oxacin tablet 500mg",
+    "category": "MEDICINE",
+    "price": 280
+  },
+  {
+    "name": "F-Zole capsule 150mg",
+    "category": "MEDICINE",
+    "price": 130
+  },
+  {
+    "name": "F-Zole suspension 50mg",
+    "category": "MEDICINE",
+    "price": 200
+  },
+  {
+    "name": "Faast capsule 40mg",
+    "category": "MEDICINE",
+    "price": 346
+  },
+  {
+    "name": "Fai-Cam tablet 20mg",
+    "category": "MEDICINE",
+    "price": 85.03
+  },
+  {
+    "name": "Fair & Pink Glow Cream",
+    "category": "OTC",
+    "price": 800
+  },
+  {
+    "name": "Faiza Beauty Soap 100gm",
+    "category": "MEDICINE",
+    "price": 100
+  },
+  {
+    "name": "Falcipar suspension 500mg / 25mg",
+    "category": "MEDICINE",
+    "price": 30
+  },
+  {
+    "name": "Falcipar tablet 500mg / 25mg",
+    "category": "MEDICINE",
+    "price": 580
+  },
+  {
+    "name": "Falgan infusion 1gm",
+    "category": "MEDICINE",
+    "price": 80
+  },
+  {
+    "name": "Famclor tablet 250mg",
+    "category": "MEDICINE",
+    "price": 2000
+  },
+  {
+    "name": "Famila 28 F Tablet",
+    "category": "MEDICINE",
+    "price": 791.45
+  },
+  {
+    "name": "Famila injection 150mg",
+    "category": "MEDICINE",
+    "price": 133.4
+  },
+  {
+    "name": "Famopsin Tablet 20mg",
+    "category": "MEDICINE",
+    "price": 200
+  },
+  {
+    "name": "Famopsin tablet 40mg",
+    "category": "MEDICINE",
+    "price": 200
+  },
+  {
+    "name": "Famoscot suspension 10mg",
+    "category": "MEDICINE",
+    "price": 57
+  },
+  {
+    "name": "Famoscot tablet 20mg",
+    "category": "MEDICINE",
+    "price": 100
+  },
+  {
+    "name": "Famoscot tablet 40mg",
+    "category": "MEDICINE",
+    "price": 140
+  },
+  {
+    "name": "Famot tablet 20mg",
+    "category": "MEDICINE",
+    "price": 234
+  },
+  {
+    "name": "Famot Tablet 40mg",
+    "category": "MEDICINE",
+    "price": 205
+  },
+  {
+    "name": "Famotid tablet 20mg",
+    "category": "MEDICINE",
+    "price": 48
+  },
+  {
+    "name": "Famotid tablet 40mg",
+    "category": "MEDICINE",
+    "price": 130
+  },
+  {
+    "name": "Famvir tablet 250mg",
+    "category": "MEDICINE",
+    "price": 11385.9
+  },
+  {
+    "name": "Fanaze Capsule",
+    "category": "MEDICINE",
+    "price": 220
+  },
+  {
+    "name": "Fanoxin tablet 120mg",
+    "category": "MEDICINE",
+    "price": 116
+  },
+  {
+    "name": "Fansidar suspension 500mg / 25mg",
+    "category": "MEDICINE",
+    "price": 65.4
+  },
+  {
+    "name": "Fansidar suspension 500mg / 25mg",
+    "category": "MEDICINE",
+    "price": 77.14
+  },
+  {
+    "name": "Fansidar tablet 500mg / 25mg",
+    "category": "MEDICINE",
+    "price": 108.18
+  },
+  {
+    "name": "Fantasia tablet 30mg",
+    "category": "MEDICINE",
+    "price": 350
+  },
+  {
+    "name": "Fantasia tablet 45mg",
+    "category": "MEDICINE",
+    "price": 224
+  },
+  {
+    "name": "Farmorubicin injection 50mg",
+    "category": "MEDICINE",
+    "price": 3635.42
+  },
+  {
+    "name": "Farzin tablet 10mg",
+    "category": "MEDICINE",
+    "price": 53
+  },
+  {
+    "name": "Fascar tablet 500mg",
+    "category": "MEDICINE",
+    "price": 207
+  },
+  {
+    "name": "Fasigyn Tablet 500mg",
+    "category": "MEDICINE",
+    "price": 37.81
+  },
+  {
+    "name": "Fastaid Plus Tablet 50mg",
+    "category": "MEDICINE",
+    "price": 159
+  },
+  {
+    "name": "Fastaid tablet 50mg",
+    "category": "MEDICINE",
+    "price": 165
+  },
+  {
+    "name": "Fastaid tablet 75mg",
+    "category": "MEDICINE",
+    "price": 170
+  },
+  {
+    "name": "Fastaid Topical Gel 20g",
+    "category": "MEDICINE",
+    "price": 90
+  },
+  {
+    "name": "Fastaid-R tablet 50mg",
+    "category": "MEDICINE",
+    "price": 162
+  },
+  {
+    "name": "Fastair powder 4 mg",
+    "category": "MEDICINE",
+    "price": 266
+  },
+  {
+    "name": "Fasteso tablet 20mg",
+    "category": "MEDICINE",
+    "price": 230
+  },
+  {
+    "name": "Fasteso tablet 40mg",
+    "category": "MEDICINE",
+    "price": 320
+  },
+  {
+    "name": "Fastic tablet 10mg",
+    "category": "MEDICINE",
+    "price": 30
+  },
+  {
+    "name": "Fastimax injection 500mg",
+    "category": "MEDICINE",
+    "price": 120.77
+  },
+  {
+    "name": "Fastum gel",
+    "category": "MEDICINE",
+    "price": 359.72
+  },
+  {
+    "name": "Faverin tablet 100mg",
+    "category": "MEDICINE",
+    "price": 590.86
+  },
+  {
+    "name": "Faverin tablet 50mg",
+    "category": "MEDICINE",
+    "price": 296.99
+  },
+  {
+    "name": "Favipra tablets 200 mg",
+    "category": "MEDICINE",
+    "price": 600
+  },
+  {
+    "name": "Faxine capsule 75mg",
+    "category": "MEDICINE",
+    "price": 297
+  },
+  {
+    "name": "Fazim injection 500mg",
+    "category": "MEDICINE",
+    "price": 135
+  },
+  {
+    "name": "Fazolin 1gm injection 1gm",
+    "category": "MEDICINE",
+    "price": 110
+  },
+  {
+    "name": "Fb-Said tablet 100mg",
+    "category": "MEDICINE",
+    "price": 175
+  },
+  {
+    "name": "FBI tablet 100mg",
+    "category": "MEDICINE",
+    "price": 180
+  },
+  {
+    "name": "FC Forte syrup",
+    "category": "MEDICINE",
+    "price": 360
+  },
+  {
+    "name": "FCM injection iv 500mg / 10ml",
+    "category": "MEDICINE",
+    "price": 3490
+  },
+  {
+    "name": "Feas capsule 60mg",
+    "category": "MEDICINE",
+    "price": 55
+  },
+  {
+    "name": "Febhil tablet 80mg",
+    "category": "MEDICINE",
+    "price": 475
+  },
+  {
+    "name": "Feboric tablet 40mg",
+    "category": "MEDICINE",
+    "price": 195
+  },
+  {
+    "name": "Febrinol suspension 120mg",
+    "category": "MEDICINE",
+    "price": 24
+  },
+  {
+    "name": "Febrinol tablet 500mg",
+    "category": "MEDICINE",
+    "price": 600
+  },
+  {
+    "name": "Febrol DS suspension 250mg",
+    "category": "MEDICINE",
+    "price": 57.6
+  },
+  {
+    "name": "Febrol fast tablet 37.5 / 325 mg",
+    "category": "MEDICINE",
+    "price": 156.86
+  },
+  {
+    "name": "Febrol SHE tablet 500mg / 25mg",
+    "category": "MEDICINE",
+    "price": 34.52
+  },
+  {
+    "name": "Febrol suspension 120mg",
+    "category": "MEDICINE",
+    "price": 47
+  },
+  {
+    "name": "Febrol Tablet 500mg",
+    "category": "MEDICINE",
+    "price": 17.01
+  },
+  {
+    "name": "Febrol Xtra tablet 500mg / 65mg",
+    "category": "MEDICINE",
+    "price": 19.87
+  },
+  {
+    "name": "Febugout tablet 40mg",
+    "category": "MEDICINE",
+    "price": 360
+  },
+  {
+    "name": "Febugout tablets 80 mg",
+    "category": "MEDICINE",
+    "price": 615
+  },
+  {
+    "name": "Febulous tablet 80mg",
+    "category": "MEDICINE",
+    "price": 153
+  },
+  {
+    "name": "Febux tablet 40mg",
+    "category": "MEDICINE",
+    "price": 350
+  },
+  {
+    "name": "Febuxin tablet 80 mg",
+    "category": "MEDICINE",
+    "price": 450
+  },
+  {
+    "name": "Fedralka syrup 120ml",
+    "category": "MEDICINE",
+    "price": 14.8
+  },
+  {
+    "name": "Fedrox capsule 500mg",
+    "category": "MEDICINE",
+    "price": 180
+  },
+  {
+    "name": "Fedroxim capsule 400mg",
+    "category": "MEDICINE",
+    "price": 324
+  },
+  {
+    "name": "Feelix tablet 500mg",
+    "category": "MEDICINE",
+    "price": 300
+  },
+  {
+    "name": "Fefan DS tablet 300+5mg",
+    "category": "MEDICINE",
+    "price": 739.3
+  },
+  {
+    "name": "Fefan Tablet",
+    "category": "MEDICINE",
+    "price": 41.7
+  },
+  {
+    "name": "Fefol capsule",
+    "category": "MEDICINE",
+    "price": 36
+  },
+  {
+    "name": "Fefol Vit Capsule",
+    "category": "MEDICINE",
+    "price": 435.6
+  },
+  {
+    "name": "Fegix tablet 180mg",
+    "category": "MEDICINE",
+    "price": 211.66
+  },
+  {
+    "name": "Fekom tablet 120mg",
+    "category": "MEDICINE",
+    "price": 108
+  },
+  {
+    "name": "Felbex tablet 20mg",
+    "category": "MEDICINE",
+    "price": 317
+  },
+  {
+    "name": "Felcam capsule 10mg",
+    "category": "MEDICINE",
+    "price": 47.5
+  },
+  {
+    "name": "Feldene capsule 10mg",
+    "category": "MEDICINE",
+    "price": 377.56
+  },
+  {
+    "name": "Feldene Capsule 20mg",
+    "category": "MEDICINE",
+    "price": 664.16
+  },
+  {
+    "name": "Feldene gel",
+    "category": "MEDICINE",
+    "price": 233.15
+  },
+  {
+    "name": "Feldene tablet dispersible 20mg",
+    "category": "MEDICINE",
+    "price": 664.16
+  },
+  {
+    "name": "Feldene Topical Gel 25g",
+    "category": "MEDICINE",
+    "price": 254
+  },
+  {
+    "name": "Felon drops 0.10%",
+    "category": "MEDICINE",
+    "price": 48
+  },
+  {
+    "name": "Fem-X 500mg",
+    "category": "MEDICINE",
+    "price": 1500
+  },
+  {
+    "name": "Fem-X Forte 1000mg",
+    "category": "MEDICINE",
+    "price": 2200
+  },
+  {
+    "name": "Femara 2.5 mg Tablet",
+    "category": "MEDICINE",
+    "price": 10028
+  },
+  {
+    "name": "Femence capsule 50mg",
+    "category": "MEDICINE",
+    "price": 810
+  },
+  {
+    "name": "Femi-Ject injection 50mg / 5mg",
+    "category": "MEDICINE",
+    "price": 51
+  },
+  {
+    "name": "Femicon drops 0.1% / 0.025%",
+    "category": "MEDICINE",
+    "price": 94.13
+  },
+  {
+    "name": "Femicon Eye Drop 5ml",
+    "category": "MEDICINE",
+    "price": 197
+  },
+  {
+    "name": "Femidol Plus tablet 15mg / 500mg / 30mg",
+    "category": "MEDICINE",
+    "price": 50.5
+  },
+  {
+    "name": "Femiroz tablet",
+    "category": "MEDICINE",
+    "price": 64.52
+  },
+  {
+    "name": "Femoston Conti tablet 1mg / 5mg",
+    "category": "MEDICINE",
+    "price": 351.27
+  },
+  {
+    "name": "Femoston tablet 1mg / 10mg",
+    "category": "MEDICINE",
+    "price": 572.29
+  },
+  {
+    "name": "Femsol Syrup 120ml",
+    "category": "MEDICINE",
+    "price": 160
+  },
+  {
+    "name": "Fen tablet 100mg",
+    "category": "MEDICINE",
+    "price": 174
+  },
+  {
+    "name": "Fen-K tablet 100mg",
+    "category": "MEDICINE",
+    "price": 83.33
+  },
+  {
+    "name": "Fen-S tablet 50mg",
+    "category": "MEDICINE",
+    "price": 15
+  },
+  {
+    "name": "Fenac injection 75mg / 3ml",
+    "category": "MEDICINE",
+    "price": 12.9
+  },
+  {
+    "name": "Fenac tablet 100mg",
+    "category": "MEDICINE",
+    "price": 37.29
+  },
+  {
+    "name": "Fenac tablet 50mg",
+    "category": "MEDICINE",
+    "price": 3.2
+  },
+  {
+    "name": "Fenac tablet 50mg (20's Pack)",
+    "category": "MEDICINE",
+    "price": 31.5
+  },
+  {
+    "name": "Fenadex Forte tablet 180mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Fenadin tablet 180mg",
+    "category": "MEDICINE",
+    "price": 172.5
+  },
+  {
+    "name": "Fenadium tablet 50mg",
+    "category": "MEDICINE",
+    "price": 30
+  },
+  {
+    "name": "Fenal tablet 100mg",
+    "category": "MEDICINE",
+    "price": 36.67
+  },
+  {
+    "name": "Fenal tablet 50mg",
+    "category": "MEDICINE",
+    "price": 30
+  },
+  {
+    "name": "Fenamic Forte tablet 500mg",
+    "category": "MEDICINE",
+    "price": 404
+  },
+  {
+    "name": "Fenamic tablet 250mg",
+    "category": "MEDICINE",
+    "price": 480
+  },
+  {
+    "name": "Fenamine tablet 4mg",
+    "category": "MEDICINE",
+    "price": 33
+  },
+  {
+    "name": "Fenap drops 0.10%",
+    "category": "MEDICINE",
+    "price": 280
+  },
+  {
+    "name": "Fenbro 8 Plus",
+    "category": "MEDICINE",
+    "price": 60
+  },
+  {
+    "name": "Fenbro suspension 100mg",
+    "category": "MEDICINE",
+    "price": 36
+  },
+  {
+    "name": "Fendin tablet 120mg",
+    "category": "MEDICINE",
+    "price": 116
+  },
+  {
+    "name": "Fendlevo tablet 5mg",
+    "category": "MEDICINE",
+    "price": 55
+  },
+  {
+    "name": "Fenflex tablet 200mg",
+    "category": "MEDICINE",
+    "price": 5
+  },
+  {
+    "name": "Fenicol capsule 250mg",
+    "category": "MEDICINE",
+    "price": 2500
+  },
+  {
+    "name": "Fenik-K tablet 50mg",
+    "category": "MEDICINE",
+    "price": 37.5
+  },
+  {
+    "name": "Fenofex tablet 120mg",
+    "category": "MEDICINE",
+    "price": 116
+  },
+  {
+    "name": "Fenofex tablet 180mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Fenoget 200mg Capsule",
+    "category": "MEDICINE",
+    "price": 335
+  },
+  {
+    "name": "Fenoget 67mg",
+    "category": "MEDICINE",
+    "price": 730
+  },
+  {
+    "name": "Fenoget Capsule 67mg",
+    "category": "MEDICINE",
+    "price": 532.32
+  },
+  {
+    "name": "Fenoxy tablet 120mg",
+    "category": "MEDICINE",
+    "price": 116
+  },
+  {
+    "name": "Fenram syrup 2mg / 5ml",
+    "category": "MEDICINE",
+    "price": 45
+  },
+  {
+    "name": "Fenram tablet 4mg",
+    "category": "MEDICINE",
+    "price": 215
+  },
+  {
+    "name": "Fensid suspension 500mg / 25mg",
+    "category": "MEDICINE",
+    "price": 36
+  },
+  {
+    "name": "Fensid tablet 500mg / 25mg",
+    "category": "MEDICINE",
+    "price": 38
+  },
+  {
+    "name": "Fenstan Forte tablet 500mg",
+    "category": "MEDICINE",
+    "price": 20
+  },
+  {
+    "name": "Fentos tablet 50mg",
+    "category": "MEDICINE",
+    "price": 60
+  },
+  {
+    "name": "Fentra injection 0.05mg",
+    "category": "MEDICINE",
+    "price": 21.7
+  },
+  {
+    "name": "Ferfer Orange sachet",
+    "category": "MEDICINE",
+    "price": 630
+  },
+  {
+    "name": "Fericit Injection 50mg/ml",
+    "category": "MEDICINE",
+    "price": 3490
+  },
+  {
+    "name": "FerInject Injection 50mg",
+    "category": "MEDICINE",
+    "price": 6941
+  },
+  {
+    "name": "Ferinjectionect 50mg 10ml",
+    "category": "MEDICINE",
+    "price": 9700
+  },
+  {
+    "name": "Fermalac Vaginal capsule",
+    "category": "MEDICINE",
+    "price": 990
+  },
+  {
+    "name": "Fero Syrup 120ml",
+    "category": "MEDICINE",
+    "price": 490
+  },
+  {
+    "name": "Ferocare tablet 15mg",
+    "category": "MEDICINE",
+    "price": 280
+  },
+  {
+    "name": "Ferosoft - FA tablet",
+    "category": "MEDICINE",
+    "price": 259.2
+  },
+  {
+    "name": "Ferosoft drops",
+    "category": "MEDICINE",
+    "price": 197.56
+  },
+  {
+    "name": "Ferosoft syrup",
+    "category": "MEDICINE",
+    "price": 291.94
+  },
+  {
+    "name": "Ferosoft Tablet",
+    "category": "MEDICINE",
+    "price": 283
+  },
+  {
+    "name": "Ferosoft-S injection",
+    "category": "MEDICINE",
+    "price": 1475
+  },
+  {
+    "name": "Ferris injection iv 100mg / 5mL",
+    "category": "MEDICINE",
+    "price": 2350
+  },
+  {
+    "name": "Ferrium Tablet 40mg",
+    "category": "MEDICINE",
+    "price": 602
+  },
+  {
+    "name": "Ferrocite 500 capsule",
+    "category": "MEDICINE",
+    "price": 402.35
+  },
+  {
+    "name": "Ferrous Sulphate tablet",
+    "category": "MEDICINE",
+    "price": 27.5
+  },
+  {
+    "name": "Fersip syrup",
+    "category": "MEDICINE",
+    "price": 140
+  },
+  {
+    "name": "Ferti M Injection",
+    "category": "MEDICINE",
+    "price": 2263
+  },
+  {
+    "name": "Fevadol suspension 160 mg / 5ml",
+    "category": "MEDICINE",
+    "price": 51
+  },
+  {
+    "name": "Fevadol tablet 160 mg",
+    "category": "MEDICINE",
+    "price": 180
+  },
+  {
+    "name": "Fever Al injection 300mg / 2ml",
+    "category": "MEDICINE",
+    "price": 55
+  },
+  {
+    "name": "Fevercare Peads drops 60mg",
+    "category": "MEDICINE",
+    "price": 13
+  },
+  {
+    "name": "Feverol suspension 120mg",
+    "category": "MEDICINE",
+    "price": 25
+  },
+  {
+    "name": "Fevit Tablet",
+    "category": "MEDICINE",
+    "price": 1058
+  },
+  {
+    "name": "Fexet Tablet 120mg",
+    "category": "MEDICINE",
+    "price": 610
+  },
+  {
+    "name": "Fexet Tablet 180mg",
+    "category": "MEDICINE",
+    "price": 770
+  },
+  {
+    "name": "Fexet Tablet 60mg",
+    "category": "MEDICINE",
+    "price": 375
+  },
+  {
+    "name": "Fexet-D Tablet 60mg/120mg",
+    "category": "MEDICINE",
+    "price": 235.29
+  },
+  {
+    "name": "Fexigra tablet 120mg",
+    "category": "MEDICINE",
+    "price": 116
+  },
+  {
+    "name": "Fexigra tablet 60mg",
+    "category": "MEDICINE",
+    "price": 55
+  },
+  {
+    "name": "Fexinol tablet 120mg",
+    "category": "MEDICINE",
+    "price": 108
+  },
+  {
+    "name": "Fexinol tablet 180mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Fexo tablet 120mg",
+    "category": "MEDICINE",
+    "price": 230.28
+  },
+  {
+    "name": "Fexo tablet 180mg",
+    "category": "MEDICINE",
+    "price": 293
+  },
+  {
+    "name": "Fexo tablet 60mg",
+    "category": "MEDICINE",
+    "price": 122.8
+  },
+  {
+    "name": "Fexocare tablet 120mg",
+    "category": "MEDICINE",
+    "price": null
+  },
+  {
+    "name": "Fexofast tablet 120mg",
+    "category": "MEDICINE",
+    "price": 460
+  },
+  {
+    "name": "Fexofast tablet 180mg",
+    "category": "MEDICINE",
+    "price": 320
+  },
+  {
+    "name": "Fexofast tablet 60mg",
+    "category": "MEDICINE",
+    "price": 135
+  },
+  {
+    "name": "Fexofax tablet 60mg",
+    "category": "MEDICINE",
+    "price": 55
+  },
+  {
+    "name": "Fexofin tablet 120mg",
+    "category": "MEDICINE",
+    "price": 116
+  },
+  {
+    "name": "Fexofin tablet 180mg",
+    "category": "MEDICINE",
+    "price": 414
+  },
+  {
+    "name": "Fexoprime tablet 120mg",
+    "category": "MEDICINE",
+    "price": 116
+  },
+  {
+    "name": "Fexoprime tablet 60mg",
+    "category": "MEDICINE",
+    "price": 55
+  },
+  {
+    "name": "Fexorex tablet 120mg",
+    "category": "MEDICINE",
+    "price": 116
+  },
+  {
+    "name": "Fexostat tablet 40mg",
+    "category": "MEDICINE",
+    "price": 615
+  },
+  {
+    "name": "Fibo Sachet",
+    "category": "MEDICINE",
+    "price": 526
+  },
+  {
+    "name": "Fibrocol - Orange powder",
+    "category": "MEDICINE",
+    "price": 295
+  },
+  {
+    "name": "Fibrocol - Strawberry powder",
+    "category": "MEDICINE",
+    "price": 250
+  },
+  {
+    "name": "Filatil injection 300mcg",
+    "category": "MEDICINE",
+    "price": 3300
+  },
+  {
+    "name": "Fildil Tablet 10mg",
+    "category": "MEDICINE",
+    "price": 750
+  },
+  {
+    "name": "Filgen injection 300mcg",
+    "category": "MEDICINE",
+    "price": 3900
+  },
+  {
+    "name": "Finex capsule 400mg",
+    "category": "MEDICINE",
+    "price": 325
+  },
+  {
+    "name": "Finset tablet 1mg",
+    "category": "MEDICINE",
+    "price": 107.53
+  },
+  {
+    "name": "Firax tablet 10mg",
+    "category": "MEDICINE",
+    "price": 42
+  },
+  {
+    "name": "Fist tablet 50mg",
+    "category": "MEDICINE",
+    "price": 60
+  },
+  {
+    "name": "Fist tablet 75mg",
+    "category": "MEDICINE",
+    "price": 90
+  },
+  {
+    "name": "Fitem injection iv/im 1gm",
+    "category": "MEDICINE",
+    "price": 328.51
+  },
+  {
+    "name": "Fitem injection iv/im 250mg",
+    "category": "MEDICINE",
+    "price": 123
+  },
+  {
+    "name": "Fittydent tablet",
+    "category": "MEDICINE",
+    "price": 195.5
+  },
+  {
+    "name": "Fixim capsule 400mg",
+    "category": "MEDICINE",
+    "price": 235
+  },
+  {
+    "name": "Fixim suspension 100mg / 5ml",
+    "category": "MEDICINE",
+    "price": 129
+  },
+  {
+    "name": "Fixim suspension 200mg / 5ml",
+    "category": "MEDICINE",
+    "price": 195
+  },
+  {
+    "name": "Fixime suspension 100mg / 5ml",
+    "category": "MEDICINE",
+    "price": 246
+  },
+  {
+    "name": "Fixitil 200mg/5ml",
+    "category": "MEDICINE",
+    "price": 286.18
+  },
+  {
+    "name": "Fixitil capsule 400mg",
+    "category": "MEDICINE",
+    "price": 388.36
+  },
+  {
+    "name": "Fixitil suspension 100mg / 5ml",
+    "category": "MEDICINE",
+    "price": 198
+  },
+  {
+    "name": "Fixitil t tablet 200mg",
+    "category": "MEDICINE",
+    "price": 345
+  },
+  {
+    "name": "Fixval suspension 100mg / 5ml",
+    "category": "MEDICINE",
+    "price": 221.01
+  },
+  {
+    "name": "Flagyl Infusion 500mg 100ml",
+    "category": "MEDICINE",
+    "price": 201
+  },
+  {
+    "name": "Flagyl Injection 500mg",
+    "category": "MEDICINE",
+    "price": 153.71
+  },
+  {
+    "name": "Flagyl Plus suspension",
+    "category": "MEDICINE",
+    "price": 24.6
+  },
+  {
+    "name": "Flagyl Plus tablet 250mg / 200mg",
+    "category": "MEDICINE",
+    "price": 24.67
+  },
+  {
+    "name": "Flagyl suspension 200mg / 5ml",
+    "category": "MEDICINE",
+    "price": 72.57
+  },
+  {
+    "name": "Flagyl Suspension 200mg/5ml",
+    "category": "MEDICINE",
+    "price": 103.51
+  },
+  {
+    "name": "Flagyl Tablet 400mg",
+    "category": "MEDICINE",
+    "price": 863
+  },
+  {
+    "name": "Flamar tablet 250mg",
+    "category": "MEDICINE",
+    "price": 8.75
+  },
+  {
+    "name": "Flamex tablet 100mg",
+    "category": "MEDICINE",
+    "price": 58.33
+  },
+  {
+    "name": "Flamex tablet 50mg",
+    "category": "MEDICINE",
+    "price": 115
+  },
+  {
+    "name": "Flamex Xr Tablet 100mg",
+    "category": "MEDICINE",
+    "price": 382
+  },
+  {
+    "name": "Flamot tablet 7.5mg",
+    "category": "MEDICINE",
+    "price": 56
+  },
+  {
+    "name": "Flan capsule 30mg",
+    "category": "MEDICINE",
+    "price": 103
+  },
+  {
+    "name": "Flaren injection 75mg / 3ml",
+    "category": "MEDICINE",
+    "price": 25.32
+  },
+  {
+    "name": "Flavoxan tablet 200mg",
+    "category": "MEDICINE",
+    "price": 180
+  },
+  {
+    "name": "Flazol Infusion 500mg/100ml",
+    "category": "MEDICINE",
+    "price": 175.48
+  },
+  {
+    "name": "Flefin tablet 100mg",
+    "category": "MEDICINE",
+    "price": 175
+  },
+  {
+    "name": "Flex-a-min tablet",
+    "category": "MEDICINE",
+    "price": 3900
+  },
+  {
+    "name": "Flexagil tablet",
+    "category": "MEDICINE",
+    "price": 10
+  },
+  {
+    "name": "Flexagil tablet 10mg",
+    "category": "MEDICINE",
+    "price": 115
+  },
+  {
+    "name": "Flexagil tablet 5mg",
+    "category": "MEDICINE",
+    "price": 80.79
+  },
+  {
+    "name": "Flexamine-D Tablet",
+    "category": "MEDICINE",
+    "price": 1534
+  },
+  {
+    "name": "Flexar tablet 35mg / 450mg",
+    "category": "MEDICINE",
+    "price": 35
+  },
+  {
+    "name": "Flexeril capsule 400mg",
+    "category": "MEDICINE",
+    "price": 285
+  },
+  {
+    "name": "Flexeril DS 200mg /5ml",
+    "category": "MEDICINE",
+    "price": 198
+  },
+  {
+    "name": "Flexeril suspension 100mg / 5ml",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Flexin tablet 250mg",
+    "category": "MEDICINE",
+    "price": 203.34
+  },
+  {
+    "name": "Flexin Tablet 500mg",
+    "category": "MEDICINE",
+    "price": 364.28
+  },
+  {
+    "name": "Flexion Moisturizing Lotion",
+    "category": "MEDICINE",
+    "price": 1395
+  },
+  {
+    "name": "Flexiquin Tablet",
+    "category": "MEDICINE",
+    "price": 2300
+  },
+  {
+    "name": "Flexodin tablet 35mg / 450mg",
+    "category": "MEDICINE",
+    "price": 260
+  },
+  {
+    "name": "Flexoren tablet 500mg",
+    "category": "MEDICINE",
+    "price": 71.5
+  },
+  {
+    "name": "Flexosone spray 0.0005",
+    "category": "MEDICINE",
+    "price": 225
+  },
+  {
+    "name": "Flixonase spray 50mcg",
+    "category": "MEDICINE",
+    "price": 636.93
+  },
+  {
+    "name": "Flixotide evohaler 125 mcg",
+    "category": "MEDICINE",
+    "price": 592.5
+  },
+  {
+    "name": "Flixotide evohaler 250mcg",
+    "category": "MEDICINE",
+    "price": 962.81
+  },
+  {
+    "name": "Flixotide evohaler 50 mcg",
+    "category": "MEDICINE",
+    "price": 280
+  },
+  {
+    "name": "Floaid Chew Tablet 10mg",
+    "category": "MEDICINE",
+    "price": 485
+  },
+  {
+    "name": "Floaid Chew Tablet 5mg",
+    "category": "MEDICINE",
+    "price": 410
+  },
+  {
+    "name": "Floaid tablet 10 mg",
+    "category": "MEDICINE",
+    "price": 337.42
+  },
+  {
+    "name": "Floc capsule 150mg",
+    "category": "MEDICINE",
+    "price": 138
+  },
+  {
+    "name": "Flogocid Cream 15g",
+    "category": "MEDICINE",
+    "price": 287.5
+  },
+  {
+    "name": "Flogocid ointment",
+    "category": "MEDICINE",
+    "price": 287.5
+  },
+  {
+    "name": "Florabion-Gx Sachet",
+    "category": "MEDICINE",
+    "price": 1400
+  },
+  {
+    "name": "Floral drops 0.25%",
+    "category": "MEDICINE",
+    "price": 65
+  },
+  {
+    "name": "Floralac suspension 35gm / 5ml",
+    "category": "MEDICINE",
+    "price": 216
+  },
+  {
+    "name": "Floramex capsule 2mg",
+    "category": "MEDICINE",
+    "price": 87.9
+  },
+  {
+    "name": "Florif capsule 250mg",
+    "category": "MEDICINE",
+    "price": 80
+  },
+  {
+    "name": "Florom drops 0.10%",
+    "category": "MEDICINE",
+    "price": 76
+  },
+  {
+    "name": "Florom-N drops 0.1% / 0.35%",
+    "category": "MEDICINE",
+    "price": 80
+  },
+  {
+    "name": "Florozil drops 0.1% / 4%",
+    "category": "MEDICINE",
+    "price": 156
+  },
+  {
+    "name": "Flosure capsule 0.4mg",
+    "category": "MEDICINE",
+    "price": 950
+  },
+  {
+    "name": "Floxer tablet 250mg",
+    "category": "MEDICINE",
+    "price": 130
+  },
+  {
+    "name": "Floxer tablet 500mg",
+    "category": "MEDICINE",
+    "price": 185
+  },
+  {
+    "name": "Floxolev tablet 250mg",
+    "category": "MEDICINE",
+    "price": 187
+  },
+  {
+    "name": "Flu-Z capsule 150mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Flu-Z suspension 50mg",
+    "category": "MEDICINE",
+    "price": 270
+  },
+  {
+    "name": "Fluarix injection 15mcg / 0.5ml",
+    "category": "MEDICINE",
+    "price": 644.64
+  },
+  {
+    "name": "Flubi tablet 100mg",
+    "category": "MEDICINE",
+    "price": 60
+  },
+  {
+    "name": "Flucal capsule 150mg",
+    "category": "MEDICINE",
+    "price": 120
+  },
+  {
+    "name": "Flucanol capsule 150mg",
+    "category": "MEDICINE",
+    "price": 125
+  },
+  {
+    "name": "Flucate injection 25mg",
+    "category": "MEDICINE",
+    "price": 118.84
+  },
+  {
+    "name": "Flucin cream 0.03%",
+    "category": "MEDICINE",
+    "price": 70
+  },
+  {
+    "name": "Fluclox capsule 250mg",
+    "category": "MEDICINE",
+    "price": 127
+  },
+  {
+    "name": "Fluclox capsule 500mg",
+    "category": "MEDICINE",
+    "price": 224
+  },
+  {
+    "name": "Fluclox injection 500mg",
+    "category": "MEDICINE",
+    "price": 70
+  },
+  {
+    "name": "Flucogene capsule 150mg",
+    "category": "MEDICINE",
+    "price": 138
+  },
+  {
+    "name": "Flucon Capsule 150mg",
+    "category": "MEDICINE",
+    "price": 140
+  },
+  {
+    "name": "Flucon capsule 50mg",
+    "category": "MEDICINE",
+    "price": 560
+  },
+  {
+    "name": "Flucon suspension 50mg",
+    "category": "MEDICINE",
+    "price": 288.58
+  },
+  {
+    "name": "Flucort drops 0.10%",
+    "category": "MEDICINE",
+    "price": 52
+  },
+  {
+    "name": "Flucoz capsule 150mg",
+    "category": "MEDICINE",
+    "price": 158.7
+  },
+  {
+    "name": "Fludarabine AHP injection 50mg",
+    "category": "MEDICINE",
+    "price": 9280
+  },
+  {
+    "name": "Fluderm capsule 150mg",
+    "category": "MEDICINE",
+    "price": 205
+  },
+  {
+    "name": "Fluderm capsule 50mg",
+    "category": "MEDICINE",
+    "price": 699
+  },
+  {
+    "name": "Fluin capsule 150mg",
+    "category": "MEDICINE",
+    "price": 118
+  },
+  {
+    "name": "Fluka capsule 150mg",
+    "category": "MEDICINE",
+    "price": 120
+  },
+  {
+    "name": "Fluka suspension 50mg",
+    "category": "MEDICINE",
+    "price": 190
+  },
+  {
+    "name": "Flumetol drops 0.1 / 0.025%",
+    "category": "MEDICINE",
+    "price": 90
+  },
+  {
+    "name": "Flumetol S drops 0.001",
+    "category": "MEDICINE",
+    "price": 93
+  },
+  {
+    "name": "Flunaz capsule 150mg",
+    "category": "MEDICINE",
+    "price": 120
+  },
+  {
+    "name": "Flupenscot injection 40mg",
+    "category": "MEDICINE",
+    "price": 369
+  },
+  {
+    "name": "Flur tablet 100mg",
+    "category": "MEDICINE",
+    "price": 58.33
+  },
+  {
+    "name": "Flurbin tablet 100mg",
+    "category": "MEDICINE",
+    "price": 186
+  },
+  {
+    "name": "Flurfin tablet 100mg",
+    "category": "MEDICINE",
+    "price": 67.08
+  },
+  {
+    "name": "Flurofen tablet 100mg",
+    "category": "MEDICINE",
+    "price": 70
+  },
+  {
+    "name": "Flurone drops 0.10% / 5ml",
+    "category": "MEDICINE",
+    "price": 52
+  },
+  {
+    "name": "Flurozine 0.1% / 0.025% eye drop",
+    "category": "MEDICINE",
+    "price": 80.65
+  },
+  {
+    "name": "Flusid tablet 100mg",
+    "category": "MEDICINE",
+    "price": 58.33
+  },
+  {
+    "name": "Flutet drops 0.1% / 0.025%",
+    "category": "MEDICINE",
+    "price": 53
+  },
+  {
+    "name": "Fluticort cream",
+    "category": "MEDICINE",
+    "price": 57.75
+  },
+  {
+    "name": "Flutivate cream 0.05%",
+    "category": "MEDICINE",
+    "price": null
+  },
+  {
+    "name": "Flux Capsule 20mg",
+    "category": "MEDICINE",
+    "price": 315
+  },
+  {
+    "name": "Flytro Cream 15g",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "FML drops",
+    "category": "MEDICINE",
+    "price": 83
+  },
+  {
+    "name": "FML forte eye drop 0.25%",
+    "category": "MEDICINE",
+    "price": 151
+  },
+  {
+    "name": "Fml Forte Sterile Opth. Suspension",
+    "category": "MEDICINE",
+    "price": 200
+  },
+  {
+    "name": "FML-NEO 0.1% / 0.35% drops",
+    "category": "MEDICINE",
+    "price": 78.79
+  },
+  {
+    "name": "Focalin drops 0.1% / 0.3%",
+    "category": "MEDICINE",
+    "price": 80
+  },
+  {
+    "name": "Focin 1 gm injection iv 1 gm",
+    "category": "MEDICINE",
+    "price": 180.16
+  },
+  {
+    "name": "Focin capsule 500mg",
+    "category": "MEDICINE",
+    "price": 233.04
+  },
+  {
+    "name": "Focin suspension 250mg",
+    "category": "MEDICINE",
+    "price": 210.25
+  },
+  {
+    "name": "Focin Ultra sachet 3gm",
+    "category": "MEDICINE",
+    "price": 449
+  },
+  {
+    "name": "Folic Acid Tablets 5mg",
+    "category": "OTC",
+    "price": 83
+  },
+  {
+    "name": "Folli Care tablets 400 mcg",
+    "category": "MEDICINE",
+    "price": 300
+  },
+  {
+    "name": "Folligro 60ml",
+    "category": "MEDICINE",
+    "price": 1070
+  },
+  {
+    "name": "Fonza tablet 500mg",
+    "category": "MEDICINE",
+    "price": 79
+  },
+  {
+    "name": "Fopera injection 500mg",
+    "category": "MEDICINE",
+    "price": 350
+  },
+  {
+    "name": "Foracort inhaler 200mg / 6mcg",
+    "category": "MEDICINE",
+    "price": 784.15
+  },
+  {
+    "name": "Forane injection 99.90%",
+    "category": "MEDICINE",
+    "price": 2855.91
+  },
+  {
+    "name": "Forax injection 1gm",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Forax injection 500mg",
+    "category": "MEDICINE",
+    "price": 85
+  },
+  {
+    "name": "Foreva Plus tablet 400mcg",
+    "category": "MEDICINE",
+    "price": 513
+  },
+  {
+    "name": "Foreva plus tablet 600mcg",
+    "category": "MEDICINE",
+    "price": 600
+  },
+  {
+    "name": "Forever Living Alluring Eyes - 82 gel",
+    "category": "MEDICINE",
+    "price": 3800
+  },
+  {
+    "name": "Forever Living Forever Aloe Sunscreen",
+    "category": "MEDICINE",
+    "price": 2358
+  },
+  {
+    "name": "Forever Living Forever Arctic Sea - 120 soft gel capsule",
+    "category": "MEDICINE",
+    "price": 4390
+  },
+  {
+    "name": "Formiget capsule 200mcg + 6mcg",
+    "category": "MEDICINE",
+    "price": 315
+  },
+  {
+    "name": "Formiget Capsule 400mcg+12mcg",
+    "category": "MEDICINE",
+    "price": 390.99
+  },
+  {
+    "name": "Foro B12 syrup",
+    "category": "MEDICINE",
+    "price": 399
+  },
+  {
+    "name": "Forsteo penfill injection 20mcg / 80ul",
+    "category": "MEDICINE",
+    "price": 41210
+  },
+  {
+    "name": "Fortazim injection 1gm",
+    "category": "MEDICINE",
+    "price": 315
+  },
+  {
+    "name": "Fortazim injection 250mg",
+    "category": "MEDICINE",
+    "price": 340
+  },
+  {
+    "name": "Fortecin bd tablet 1gm",
+    "category": "MEDICINE",
+    "price": 232.69
+  },
+  {
+    "name": "Fortexone injection 1gm",
+    "category": "MEDICINE",
+    "price": 368
+  },
+  {
+    "name": "Fortexone injection 500mg",
+    "category": "MEDICINE",
+    "price": 197
+  },
+  {
+    "name": "Fortide + Inhaler 200mcg 6mg",
+    "category": "MEDICINE",
+    "price": 1153
+  },
+  {
+    "name": "Fortide MDI Hfa Inh inhaler 6mcg / 200mcg",
+    "category": "MEDICINE",
+    "price": 780
+  },
+  {
+    "name": "Fortius tablet 10mg",
+    "category": "MEDICINE",
+    "price": 240
+  },
+  {
+    "name": "Fortum Injection 1g",
+    "category": "MEDICINE",
+    "price": 427
+  },
+  {
+    "name": "Fortum Injection 1gm",
+    "category": "MEDICINE",
+    "price": 853
+  },
+  {
+    "name": "Fortum injection 250mg",
+    "category": "MEDICINE",
+    "price": 149
+  },
+  {
+    "name": "Fortum injection 500mg",
+    "category": "MEDICINE",
+    "price": 239.76
+  },
+  {
+    "name": "Fortzaar tablet 100mg / 25mg",
+    "category": "MEDICINE",
+    "price": 1160.6
+  },
+  {
+    "name": "Fosamax ow tablet 70mg",
+    "category": "MEDICINE",
+    "price": 2383.56
+  },
+  {
+    "name": "Fosamax tablet 10mg",
+    "category": "MEDICINE",
+    "price": null
+  },
+  {
+    "name": "Fosedic B 0.1 2% cream 15gm",
+    "category": "MEDICINE",
+    "price": 180
+  },
+  {
+    "name": "Fosedic cream 2%",
+    "category": "MEDICINE",
+    "price": 165
+  },
+  {
+    "name": "Fosedic H cream",
+    "category": "MEDICINE",
+    "price": 210
+  },
+  {
+    "name": "Fosfin capsule 500mg",
+    "category": "MEDICINE",
+    "price": 90
+  },
+  {
+    "name": "Fosfin suspension 250mg",
+    "category": "MEDICINE",
+    "price": 88
+  },
+  {
+    "name": "Fosfomycin capsule 500mg",
+    "category": "MEDICINE",
+    "price": 170
+  },
+  {
+    "name": "Fosfomycin IV injection 1gm",
+    "category": "MEDICINE",
+    "price": 125
+  },
+  {
+    "name": "Fosomin capsule 500mg",
+    "category": "MEDICINE",
+    "price": 125
+  },
+  {
+    "name": "Fosomin suspension 250mg",
+    "category": "MEDICINE",
+    "price": 161.45
+  },
+  {
+    "name": "Foster Inhaler 100 / 6 mcg",
+    "category": "MEDICINE",
+    "price": 1436
+  },
+  {
+    "name": "Foster inhaler 200 / 6mcg",
+    "category": "MEDICINE",
+    "price": 1840
+  },
+  {
+    "name": "Fostrum capsule 250mg",
+    "category": "MEDICINE",
+    "price": 84
+  },
+  {
+    "name": "Fostrum suspension 125mg / 5ml",
+    "category": "MEDICINE",
+    "price": 59
+  },
+  {
+    "name": "Fotax injection 250mg",
+    "category": "MEDICINE",
+    "price": 60
+  },
+  {
+    "name": "foxamine (Rifaximin) tablet 200mg",
+    "category": "MEDICINE",
+    "price": 304.5
+  },
+  {
+    "name": "Foxamine tablet 550 mg",
+    "category": "MEDICINE",
+    "price": 877
+  },
+  {
+    "name": "Foxime injection 1gm",
+    "category": "MEDICINE",
+    "price": 160
+  },
+  {
+    "name": "Fozil tablet 10mg",
+    "category": "MEDICINE",
+    "price": 116.48
+  },
+  {
+    "name": "FPR gel 50mg",
+    "category": "MEDICINE",
+    "price": 275
+  },
+  {
+    "name": "FPR spray",
+    "category": "MEDICINE",
+    "price": 325
+  },
+  {
+    "name": "Freac capsule 20mg",
+    "category": "MEDICINE",
+    "price": 670
+  },
+  {
+    "name": "Freal tablet 150mg",
+    "category": "MEDICINE",
+    "price": 380
+  },
+  {
+    "name": "Freckle Cream Pack",
+    "category": "MEDICINE",
+    "price": 500
+  },
+  {
+    "name": "Freehale powder 4mg",
+    "category": "MEDICINE",
+    "price": 20
+  },
+  {
+    "name": "Freehale Tablet 10mg",
+    "category": "MEDICINE",
+    "price": 440.02
+  },
+  {
+    "name": "Freehale tablet 5mg",
+    "category": "MEDICINE",
+    "price": 256
+  },
+  {
+    "name": "Frend tablet 10mg",
+    "category": "MEDICINE",
+    "price": 83.2
+  },
+  {
+    "name": "Fresofol injection",
+    "category": "MEDICINE",
+    "price": 329.8
+  },
+  {
+    "name": "Fri-Cin capsule 250mg",
+    "category": "MEDICINE",
+    "price": 153
+  },
+  {
+    "name": "Fri-Cin capsule 250mg (10's Pack)",
+    "category": "MEDICINE",
+    "price": null
+  },
+  {
+    "name": "Frisium Tablet 10mg",
+    "category": "MEDICINE",
+    "price": 524
+  },
+  {
+    "name": "Froben Gel 50gm",
+    "category": "MEDICINE",
+    "price": 318.18
+  },
+  {
+    "name": "Froben Sr sr capsule 200mg",
+    "category": "MEDICINE",
+    "price": 188.37
+  },
+  {
+    "name": "Froben Tablet 100mg",
+    "category": "MEDICINE",
+    "price": 270.6
+  },
+  {
+    "name": "Fronate tablet 70mg",
+    "category": "MEDICINE",
+    "price": 379
+  },
+  {
+    "name": "Frusemide Injection 20mg",
+    "category": "MEDICINE",
+    "price": 285.52
+  },
+  {
+    "name": "Frusemide Tab tablet 40mg",
+    "category": "MEDICINE",
+    "price": 15
+  },
+  {
+    "name": "Fucicort Cream 15g",
+    "category": "MEDICINE",
+    "price": 516.47
+  },
+  {
+    "name": "Fucidin Cream 15g",
+    "category": "MEDICINE",
+    "price": 388.23
+  },
+  {
+    "name": "Fucidin H Cream",
+    "category": "MEDICINE",
+    "price": 541
+  },
+  {
+    "name": "Fucidin Ointment ointment 15g",
+    "category": "MEDICINE",
+    "price": 427.05
+  },
+  {
+    "name": "Fucidin tablet 250mg",
+    "category": "MEDICINE",
+    "price": 1666
+  },
+  {
+    "name": "Fucithalmic Eye Ointment ointment",
+    "category": "MEDICINE",
+    "price": 265
+  },
+  {
+    "name": "Fudic Cream 15g",
+    "category": "MEDICINE",
+    "price": 399
+  },
+  {
+    "name": "Fumac capsule 150mg",
+    "category": "MEDICINE",
+    "price": 183.42
+  },
+  {
+    "name": "Funfil capsule 150mg",
+    "category": "MEDICINE",
+    "price": 172
+  },
+  {
+    "name": "Funge tablet 250mg",
+    "category": "MEDICINE",
+    "price": 495
+  },
+  {
+    "name": "Fungicure capsule 150mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Fungiderm-1 tablet 500mg",
+    "category": "MEDICINE",
+    "price": 77
+  },
+  {
+    "name": "Fungix capsule 150mg",
+    "category": "MEDICINE",
+    "price": 200
+  },
+  {
+    "name": "Fungone Capsule 150mg",
+    "category": "MEDICINE",
+    "price": 211
+  },
+  {
+    "name": "Funzil capsule 150mg",
+    "category": "MEDICINE",
+    "price": 177
+  },
+  {
+    "name": "Furantin tablet 100mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Furbin tablet 100mg",
+    "category": "MEDICINE",
+    "price": 58.33
+  },
+  {
+    "name": "Furoxone tablet 100 mg",
+    "category": "MEDICINE",
+    "price": 125.95
+  },
+  {
+    "name": "Fusac H Cream 15gm",
+    "category": "MEDICINE",
+    "price": 315.04
+  },
+  {
+    "name": "Fusac Topical cream",
+    "category": "MEDICINE",
+    "price": 292
+  },
+  {
+    "name": "Fusac-H cream 20mg / 10mg",
+    "category": "MEDICINE",
+    "price": 111
+  },
+  {
+    "name": "Fusicare cream",
+    "category": "MEDICINE",
+    "price": 215.95
+  },
+  {
+    "name": "Fusicort cream",
+    "category": "MEDICINE",
+    "price": 391.95
+  },
+  {
+    "name": "Fusiderm 2% ointment",
+    "category": "MEDICINE",
+    "price": 221.44
+  },
+  {
+    "name": "Fusiderm Cream 15g",
+    "category": "MEDICINE",
+    "price": 275
+  },
+  {
+    "name": "Fusiderm H cream",
+    "category": "MEDICINE",
+    "price": 298
+  },
+  {
+    "name": "Fusiderm tablet 250mg",
+    "category": "MEDICINE",
+    "price": 2348.98
+  },
+  {
+    "name": "Fusil - HC cream",
+    "category": "MEDICINE",
+    "price": 260
+  },
+  {
+    "name": "Fusil B Cream 15g",
+    "category": "MEDICINE",
+    "price": 315
+  },
+  {
+    "name": "Fusil Cream 2% 15gm",
+    "category": "MEDICINE",
+    "price": 207
+  },
+  {
+    "name": "Fusimax B Cream 15g",
+    "category": "MEDICINE",
+    "price": 365
+  },
+  {
+    "name": "Fuskin-H cream 15gm",
+    "category": "MEDICINE",
+    "price": 367
+  },
+  {
+    "name": "Fuvelox tablet 500mg",
+    "category": "MEDICINE",
+    "price": 320
+  },
+  {
+    "name": "Fy-Sol Capsule",
+    "category": "MEDICINE",
+    "price": 900
+  },
+  {
+    "name": "Fylone tablet 500mg",
+    "category": "MEDICINE",
+    "price": 416
+  }
+]

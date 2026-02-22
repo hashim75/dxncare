@@ -2,13 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getSortedData } from "../../lib/markdown";
-import { ArrowLeft, CheckCircle2, Award, MapPin, Facebook, Linkedin, MessageCircle, Unlock, Sparkles, Star } from "lucide-react";
+// Added BadgeCheck for the verified look
+import { ArrowLeft, CheckCircle2, Award, MapPin, Facebook, Linkedin, MessageCircle, Unlock, Sparkles, Star, BadgeCheck } from "lucide-react";
 import BookingWidget from "../../components/doctors/BookingWidget"; 
 import ServicesSlider from "../../components/doctors/ServicesSlider"; 
 import { Metadata } from "next";
 
 import ProtectedBookingArea from "../../components/doctors/ProtectedBookingArea"; 
 export const revalidate = 3600;
+
 // --- 1. SEO METADATA ---
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const doctors = getSortedData("doctors");
@@ -32,7 +34,7 @@ export default async function DoctorDetailPage({ params }: { params: { slug: str
 
   if (!doc) notFound();
 
-  // ✅ Check if the doctor is on the Paid plan (defaults to false/free if not explicitly set)
+  // ✅ Check if the doctor is on the Paid plan
   const isPremium = doc.plan_tier === "paid";
 
   const jsonLd = {
@@ -66,7 +68,7 @@ export default async function DoctorDetailPage({ params }: { params: { slug: str
                 <div className="bg-teal-950 p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] text-white flex flex-col items-center text-center relative overflow-hidden shadow-2xl lg:sticky lg:top-32">
                     <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-teal-500 to-transparent"></div>
                     
-                    {/* Premium Badge on Avatar */}
+                    {/* Avatar Container */}
                     <div className="relative w-32 h-32 md:w-48 md:h-48 mb-6 rounded-full overflow-hidden border-4 md:border-8 border-white/10 shadow-2xl z-10">
                         <Image src={doc.profile_image || doc.image || "/images/placeholder-doctor.jpg"} alt={doc.name} fill className="object-cover" priority />
                         {isPremium && (
@@ -76,7 +78,20 @@ export default async function DoctorDetailPage({ params }: { params: { slug: str
                         )}
                     </div>
 
-                    <h1 className="text-2xl md:text-3xl font-bold font-jakarta mb-2 z-10">{doc.name}</h1>
+                    {/* ✅ Name with Verified Badge for Premium Doctors */}
+                    <div className="flex items-center justify-center gap-2 mb-2 z-10">
+                        <h1 className="text-2xl md:text-3xl font-bold font-jakarta">{doc.name}</h1>
+                        {isPremium && (
+                            <div className="group relative">
+                                <BadgeCheck size={26} className="text-blue-400 fill-white" />
+                                {/* Simple Tooltip */}
+                                <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                                    Verified Specialist
+                                </span>
+                            </div>
+                        )}
+                    </div>
+
                     <p className="text-teal-200 font-medium mb-6 z-10">{doc.specialization}</p>
                  
                     <div className="flex flex-wrap justify-center gap-2 mb-6 z-10">
@@ -95,7 +110,7 @@ export default async function DoctorDetailPage({ params }: { params: { slug: str
             {/* --- RIGHT: CONTENT & PAYWALLS --- */}
             <div className="lg:col-span-8 flex flex-col gap-8 md:gap-12">
                 
-                {/* 1. Basic Info (Always Visible for Both Tiers) */}
+                {/* 1. About Section */}
                 <div className="bg-white rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-12 border border-slate-100 shadow-sm">
                     <div className="flex items-center gap-3 mb-6 md:mb-8">
                         <span className="w-1 h-8 md:h-10 bg-teal-500 rounded-full block"></span>
@@ -124,18 +139,15 @@ export default async function DoctorDetailPage({ params }: { params: { slug: str
                     </div>
                 </div>
 
-                {/* --- 2. CONDITIONAL: PREMIUM REWARDS OR FREE UPSELL --- */}
+                {/* --- 2. PREMIUM CONTENT --- */}
                 {isPremium ? (
                     <div className="flex flex-col gap-8 md:gap-12 animate-in fade-in">
-                        
-                        {/* 🌟 PAID DOCTOR: Show Services Slider */}
                         {doc.services && doc.services.length > 0 && (
                             <div className="w-full">
-    <ServicesSlider services={doc.services} />
-</div>
+                                <ServicesSlider services={doc.services} />
+                            </div>
                         )}
 
-                        {/* 🌟 PAID DOCTOR: Social Links Unlocked & Fully Visible */}
                         {(doc.whatsapp_link || doc.facebook_link || doc.linkdln_link) && (
                             <div className="bg-teal-50 rounded-[2rem] p-6 md:p-10 text-center border border-teal-100 shadow-inner flex flex-col items-center">
                                 <h3 className="font-bold text-teal-900 mb-6 flex items-center justify-center gap-2 text-lg md:text-xl">
@@ -162,32 +174,25 @@ export default async function DoctorDetailPage({ params }: { params: { slug: str
                         )}
                     </div>
                 ) : (
-                    /* 🎯 FREE DOCTOR: The Marketing Upsell Banner */
+                    /* FREE DOCTOR UPSELL */
                     <div className="bg-gradient-to-br from-teal-900 to-teal-950 rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-12 text-white shadow-xl relative overflow-hidden flex flex-col items-center text-center border border-teal-800">
-                        {/* Decorative glow */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl pointer-events-none"></div>
-                        
                         <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-sm border border-white/10">
                             <Sparkles size={32} className="text-yellow-400" />
                         </div>
-                        
-                        <h3 className="text-2xl md:text-3xl font-bold font-jakarta mb-4">
-                            Are you {doc.name}?
-                        </h3>
+                        <h3 className="text-2xl md:text-3xl font-bold font-jakarta mb-4">Are you {doc.name}?</h3>
                         <p className="text-teal-100/80 mb-8 max-w-lg leading-relaxed text-sm md:text-base">
-                            This is a basic profile. Upgrade to the <strong>DXN Premium Provider Plan</strong> to unlock your interactive services slider, display direct social media/WhatsApp links, and multiply your patient bookings.
+                            Upgrade to <strong>DXN Premium Provider</strong> for the verified badge and to multiply your bookings.
                         </p>
-
                         <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-                            <Link href="/contact" className="px-8 py-4 bg-yellow-400 text-yellow-950 font-bold rounded-xl hover:bg-yellow-300 transition-all flex items-center justify-center gap-2 shadow-lg shadow-yellow-500/20">
+                            <Link href="/join-as-a-doctor" className="px-8 py-4 bg-yellow-400 text-yellow-950 font-bold rounded-xl hover:bg-yellow-300 transition-all flex items-center justify-center gap-2 shadow-lg shadow-yellow-500/20">
                                 <Star size={18} /> Claim & Upgrade Profile
                             </Link>
                         </div>
                     </div>
                 )}
 
-                {/* --- 3. PATIENT PAYWALL (Calendar ONLY) --- */}
-                {/* The Calendar is ALWAYS locked behind the patient paywall regardless of doctor tier */}
+                {/* --- 3. BOOKING AREA --- */}
                 <ProtectedBookingArea doctorId={doc.slug || doc.id} fee={doc.consultation_fee || 1500}>
                     <div className="bg-white rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-12 border border-slate-100 shadow-sm w-full">
                         <div className="text-center mb-8 md:mb-12">
@@ -195,7 +200,6 @@ export default async function DoctorDetailPage({ params }: { params: { slug: str
                             <h2 className="text-3xl md:text-4xl font-bold text-teal-950 mt-2 font-jakarta">Book Your Slot</h2>
                             <p className="text-slate-500 mt-3 text-sm md:text-base">Lock in your consultation time with {doc.name}.</p>
                         </div>
-                        
                         <div className="flex justify-center w-full">
                             <BookingWidget doctorId={doc.id} doctorName={doc.name} />
                         </div>

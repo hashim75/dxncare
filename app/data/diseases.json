@@ -1,0 +1,1042 @@
+{
+  "metadata": {
+    "created_by": "Gemini",
+    "description": "Expanded, detailed medical database for DXN Care health triage. Educational reference only — not a substitute for professional medical advice.",
+    "version": "1.1",
+    "notes": [
+      "Symptoms lists are illustrative and not exhaustive.",
+      "Onset / severity labels (e.g., early, common, severe) are general guides and may vary by patient.",
+      "If in doubt clinically, advise urgent medical evaluation."
+    ]
+  },
+  "diseases": [
+    {
+      "name": "Common cold (viral upper respiratory infection)",
+      "category": "Infectious - viral",
+      "detailed_symptoms": {
+        "onset": "gradual over 1-3 days",
+        "common": [
+          "runny or stuffy nose (rhinorrhea)",
+          "sore or scratchy throat",
+          "sneezing",
+          "mild cough",
+          "mild headache",
+          "malaise (general low energy)",
+          "low-grade fever (more common in children)"
+        ],
+        "associated": [
+          "watery eyes",
+          "reduced sense of smell/taste (mild)",
+          "mild voice hoarseness"
+        ],
+        "complications": [
+          "secondary bacterial sinusitis",
+          "otitis media (children)",
+          "exacerbation of asthma or COPD"
+        ]
+      }
+    },
+    {
+      "name": "Influenza (seasonal flu)",
+      "category": "Infectious - viral",
+      "detailed_symptoms": {
+        "onset": "sudden, often within hours",
+        "common": [
+          "high fever (≥38°C / 100.4°F)",
+          "chills and rigors",
+          "severe myalgia (muscle aches)",
+          "headache",
+          "severe fatigue and weakness",
+          "dry cough",
+          "sore throat",
+          "nasal congestion"
+        ],
+        "respiratory": [
+          "shortness of breath (if lower respiratory involvement)",
+          "wheezing (possible)"
+        ],
+        "complications": [
+          "viral or secondary bacterial pneumonia",
+          "myocarditis (rare)",
+          "worsening of chronic medical conditions (e.g., heart failure)"
+        ]
+      }
+    },
+    {
+      "name": "COVID-19 (SARS-CoV-2 infection)",
+      "category": "Infectious - viral",
+      "detailed_symptoms": {
+        "onset": "variable (2-14 days incubation typical)",
+        "common": [
+          "fever or chills",
+          "dry cough",
+          "fatigue",
+          "loss of taste or smell (anosmia)",
+          "shortness of breath or difficulty breathing",
+          "muscle/body aches",
+          "sore throat",
+          "headache"
+        ],
+        "gastrointestinal": [
+          "nausea",
+          "vomiting",
+          "diarrhea"
+        ],
+        "severe": [
+          "persistent chest pain",
+          "confusion",
+          "hypoxia (low oxygen saturation)",
+          "multisystem inflammatory syndrome (rare)"
+        ],
+        "long_term_possible": [
+          "prolonged fatigue",
+          "brain fog",
+          "breathlessness",
+          "post-exertional malaise"
+        ]
+      }
+    },
+    {
+      "name": "Streptococcal pharyngitis (Strep throat)",
+      "category": "Infectious - bacterial",
+      "detailed_symptoms": {
+        "onset": "rapid over 24-48 hours",
+        "common": [
+          "severe sore throat",
+          "painful swallowing (odynophagia)",
+          "fever (often >38°C)",
+          "tender anterior cervical lymphadenopathy",
+          "tonsillar exudates or white patches"
+        ],
+        "absent": ["cough (often absent)"],
+        "complications": [
+          "peritonsillar abscess",
+          "rheumatic fever (if untreated, rare in modern settings)",
+          "post-streptococcal glomerulonephritis"
+        ]
+      }
+    },
+    {
+      "name": "Sinusitis (acute rhinosinusitis)",
+      "category": "Infectious / inflammatory",
+      "detailed_symptoms": {
+        "onset": "often after common cold, days to weeks",
+        "common": [
+          "facial pain or pressure (worse when bending forward)",
+          "nasal congestion",
+          "thick yellow/green nasal discharge",
+          "reduced or absent sense of smell",
+          "postnasal drip",
+          "cough (worse at night)"
+        ],
+        "systemic": ["malaise", "low-grade fever"],
+        "complications": [
+          "orbital cellulitis (rare)",
+          "cranial extension (rare)"
+        ]
+      }
+    },
+    {
+      "name": "Acute bronchitis",
+      "category": "Infectious - respiratory",
+      "detailed_symptoms": {
+        "onset": "often follows URI",
+        "common": [
+          "persistent cough (can be dry or productive)",
+          "sputum production (clear/yellow/green)",
+          "wheeze or chest tightness",
+          "low-grade fever",
+          "fatigue"
+        ],
+        "duration": "cough can persist for 2–3 weeks or longer",
+        "complications": ["progression to pneumonia in high-risk individuals"]
+      }
+    },
+    {
+      "name": "Pneumonia (community-acquired)",
+      "category": "Infectious - bacterial/viral/fungal",
+      "detailed_symptoms": {
+        "onset": "acute to subacute",
+        "common": [
+          "fever and chills",
+          "productive cough (purulent sputum; may be blood-tinged)",
+          "pleuritic chest pain (worse with inspiration)",
+          "shortness of breath",
+          "tachypnea (rapid breathing)"
+        ],
+        "systemic": ["fatigue", "confusion in elderly"],
+        "severe": [
+          "hypoxia",
+          "sepsis"
+        ],
+        "risk_factors": [
+          "advanced age",
+          "chronic lung disease",
+          "immunosuppression"
+        ]
+      }
+    },
+    {
+      "name": "Gastroenteritis (viral/bacterial)",
+      "category": "Infectious - gastrointestinal",
+      "detailed_symptoms": {
+        "onset": "sudden (hours to days)",
+        "common": [
+          "nausea and vomiting",
+          "watery diarrhea",
+          "abdominal cramps and bloating",
+          "low-grade fever"
+        ],
+        "dehydration_signs": [
+          "thirst",
+          "reduced urine output",
+          "dizziness",
+          "dry mucous membranes"
+        ],
+        "complications": ["severe dehydration, electrolyte imbalance"]
+      }
+    },
+    {
+      "name": "Food poisoning (toxin-mediated / infectious)",
+      "category": "Infectious / toxic",
+      "detailed_symptoms": {
+        "onset": "very rapid to hours/days depending on pathogen/toxin",
+        "common": [
+          "sudden nausea",
+          "forceful vomiting",
+          "diarrhea (may be watery or bloody)",
+          "abdominal cramps",
+          "fever (variable)"
+        ],
+        "severe": [
+          "bloody diarrhea (dysentery)",
+          "high fever",
+          "dehydration",
+          "neurologic symptoms with some toxins (rare)"
+        ]
+      }
+    },
+    {
+      "name": "Urinary tract infection (lower UTI / cystitis)",
+      "category": "Infectious - bacterial",
+      "detailed_symptoms": {
+        "onset": "rapid (hours to days)",
+        "common": [
+          "dysuria (burning on urination)",
+          "urinary frequency and urgency",
+          "suprapubic discomfort",
+          "cloudy or foul-smelling urine"
+        ],
+        "possible": ["low-grade fever"],
+        "complications": [
+          "pyelonephritis (fever, flank pain, nausea/vomiting)",
+          "urosepsis (severe)"
+        ]
+      }
+    },
+    {
+      "name": "Pyelonephritis (kidney infection)",
+      "category": "Infectious - bacterial (upper urinary tract)",
+      "detailed_symptoms": {
+        "onset": "acute",
+        "common": [
+          "high fever and chills",
+          "flank pain (costovertebral angle tenderness)",
+          "nausea and vomiting",
+          "urinary symptoms (dysuria, frequency)"
+        ],
+        "severe": ["sepsis", "renal dysfunction"]
+      }
+    },
+    {
+      "name": "Hypertension (high blood pressure)",
+      "category": "Chronic - cardiovascular",
+      "detailed_symptoms": {
+        "presentation": ["often asymptomatic"],
+        "possible_symptoms_if_severe_or_acute": [
+          "headache (especially occipital)",
+          "dizziness",
+          "visual disturbance",
+          "nosebleeds (epistaxis)",
+          "shortness of breath (with cardiac complications)"
+        ],
+        "long_term_complications": [
+          "stroke",
+          "heart attack",
+          "chronic kidney disease",
+          "retinopathy"
+        ]
+      }
+    },
+    {
+      "name": "Coronary artery disease (stable / unstable angina)",
+      "category": "Chronic - cardiovascular",
+      "detailed_symptoms": {
+        "stable_angina": [
+          "exertional chest pressure or squeezing",
+          "shortness of breath with activity",
+          "relief with rest or nitroglycerin"
+        ],
+        "unstable_angina_or_acs": [
+          "chest pain at rest or increasing frequency",
+          "sweating, nausea, lightheadedness",
+          "pain radiating to jaw, neck, left arm"
+        ],
+        "complications": ["myocardial infarction (heart attack)"]
+      }
+    },
+    {
+      "name": "Myocardial infarction (heart attack)",
+      "category": "Acute - cardiovascular",
+      "detailed_symptoms": {
+        "classic": [
+          "intense chest pain or pressure (often >20 minutes)",
+          "pain radiating to left arm, neck, jaw, or back",
+          "diaphoresis (heavy sweating)",
+          "shortness of breath",
+          "nausea or vomiting",
+          "lightheadedness or syncope"
+        ],
+        "atypical_presentations": [
+          "epigastric pain",
+          "isolated shortness of breath",
+          "fatigue (more common in elderly and diabetics)"
+        ],
+        "urgent": ["seek emergency care immediately"]
+      }
+    },
+    {
+      "name": "Stroke (ischemic or hemorrhagic)",
+      "category": "Acute - neurological",
+      "detailed_symptoms": {
+        "sudden_onset": [
+          "facial droop (usually one side)",
+          "arm weakness or drift (one side)",
+          "speech disturbance (slurred or unable to speak)",
+          "sudden vision loss or double vision",
+          "sudden severe headache (more common in hemorrhagic stroke)",
+          "loss of balance or coordination"
+        ],
+        "note": ["FAST: Face, Arms, Speech, Time — emergency"]
+      }
+    },
+    {
+      "name": "Type 2 diabetes mellitus",
+      "category": "Chronic - endocrine/metabolic",
+      "detailed_symptoms": {
+        "early": [
+          "polyuria (frequent urination)",
+          "polydipsia (increased thirst)",
+          "polyphagia (increased hunger)",
+          "fatigue"
+        ],
+        "progressive": [
+          "slow-healing wounds",
+          "recurrent infections",
+          "blurred vision",
+          "peripheral neuropathy (numbness/tingling in feet)"
+        ],
+        "long_term_complications": [
+          "cardiovascular disease",
+          "diabetic nephropathy",
+          "retinopathy",
+          "foot ulcers"
+        ]
+      }
+    },
+    {
+      "name": "Hypothyroidism",
+      "category": "Chronic - endocrine",
+      "detailed_symptoms": {
+        "common": [
+          "fatigue and lethargy",
+          "weight gain or difficulty losing weight",
+          "cold intolerance",
+          "constipation",
+          "dry skin",
+          "hair thinning",
+          "menstrual irregularities"
+        ],
+        "severe": [
+          "bradycardia (slow heart rate)",
+          "myxedema (severe hypothyroid state)",
+          "mental slowing or depression"
+        ]
+      }
+    },
+    {
+      "name": "Hyperthyroidism (e.g., Graves disease)",
+      "category": "Chronic - endocrine",
+      "detailed_symptoms": {
+        "common": [
+          "weight loss despite normal or increased appetite",
+          "heat intolerance",
+          "tremor (fine)",
+          "palpitations and tachycardia",
+          "anxiety and irritability",
+          "increased sweating",
+          "sleep disturbance"
+        ],
+        "specific": ["eye signs (exophthalmos) in Graves disease"],
+        "complications": ["thyroid storm (life-threatening)"]
+      }
+    },
+    {
+      "name": "Asthma",
+      "category": "Chronic - respiratory",
+      "detailed_symptoms": {
+        "common": [
+          "wheezing (expiratory)",
+          "shortness of breath",
+          "chest tightness",
+          "cough (often worse at night or with exercise)"
+        ],
+        "triggers": [
+          "allergens (pollen, dust mites, pet dander)",
+          "exercise",
+          "respiratory infections",
+          "cold air, smoke, strong odors"
+        ],
+        "severe_exacerbation": [
+          "inability to speak full sentences",
+          "use of accessory muscles to breathe",
+          "cyanosis (late sign)"
+        ]
+      }
+    },
+    {
+      "name": "Chronic obstructive pulmonary disease (COPD)",
+      "category": "Chronic - respiratory",
+      "detailed_symptoms": {
+        "early": [
+          "chronic productive cough",
+          "mucus production",
+          "exertional breathlessness"
+        ],
+        "progressive": [
+          "resting dyspnea",
+          "frequent chest infections",
+          "wheezing",
+          "weight loss or muscle wasting in advanced disease"
+        ],
+        "acute_exacerbation": ["increased sputum purulence, volume, worsening breathlessness"]
+      }
+    },
+    {
+      "name": "Allergic rhinitis (hay fever)",
+      "category": "Allergic / immunologic",
+      "detailed_symptoms": {
+        "seasonal_or_perennial": [
+          "sneezing",
+          "itchy, watery eyes",
+          "runny or congested nose",
+          "postnasal drip",
+          "nasal itching"
+        ],
+        "associated": ["fatigue", "sinus pressure", "co-existing asthma"]
+      }
+    },
+    {
+      "name": "Atopic dermatitis (eczema)",
+      "category": "Dermatologic / allergic",
+      "detailed_symptoms": {
+        "common": [
+          "intensely itchy skin",
+          "dry, scaly, red patches",
+          "lichenification (thickened skin) from chronic scratching"
+        ],
+        "distribution": ["flexural areas in adults, face/cheeks in infants"],
+        "complications": ["secondary bacterial infection (weeping, crusting)"]
+      }
+    },
+    {
+      "name": "Acne vulgaris",
+      "category": "Dermatologic",
+      "detailed_symptoms": {
+        "presentation": [
+          "comedones (blackheads/whiteheads)",
+          "inflammatory papules and pustules",
+          "nodules or cysts in severe cases",
+          "scarring or post-inflammatory hyperpigmentation"
+        ],
+        "triggers": ["androgens, certain medications, occlusive cosmetics"]
+      }
+    },
+    {
+      "name": "Psoriasis",
+      "category": "Dermatologic - autoimmune",
+      "detailed_symptoms": {
+        "common": [
+          "well-demarcated red plaques with silvery scale",
+          "itching or burning sensation",
+          "nail changes (pitting, onycholysis)"
+        ],
+        "distribution": ["elbows, knees, scalp, lower back"],
+        "associated": ["psoriatic arthritis (joint pain/swelling)"]
+      }
+    },
+    {
+      "name": "Osteoarthritis",
+      "category": "Chronic - musculoskeletal",
+      "detailed_symptoms": {
+        "common": [
+          "joint pain worsened by use",
+          "stiffness after rest (brief)",
+          "reduced range of motion",
+          "crepitus (grating on movement)"
+        ],
+        "typically_affected": ["knees, hips, hands, spine"],
+        "late": ["joint deformity, functional limitation"]
+      }
+    },
+    {
+      "name": "Rheumatoid arthritis",
+      "category": "Chronic - autoimmune",
+      "detailed_symptoms": {
+        "common": [
+          "symmetric joint pain and swelling (small joints of hands/feet)",
+          "morning stiffness lasting >30 minutes",
+          "fatigue, low-grade fever"
+        ],
+        "extra_articular": ["nodules, lung involvement, vasculitis (rare)"],
+        "long_term": ["joint erosions and deformity"]
+      }
+    },
+    {
+      "name": "Low back pain (non-specific)",
+      "category": "Musculoskeletal",
+      "detailed_symptoms": {
+        "presentation": [
+          "localized aching or stiffness in lower back",
+          "pain worse with bending, lifting, prolonged sitting",
+          "radiation to buttock or posterior thigh if nerve root irritation"
+        ],
+        "red_flags": [
+          "fever, unexplained weight loss",
+          "progressive neurologic deficit (weakness, numbness)",
+          "loss of bowel/bladder control — urgent evaluation"
+        ]
+      }
+    },
+    {
+      "name": "Migraine headache",
+      "category": "Neurological - primary headache",
+      "detailed_symptoms": {
+        "attack": [
+          "moderate-to-severe unilateral throbbing or pulsatile headache",
+          "photophobia (light sensitivity) and phonophobia (sound sensitivity)",
+          "nausea and/or vomiting",
+          "worse with routine physical activity"
+        ],
+        "aura": ["transient visual disturbances, sensory symptoms, speech difficulty in some patients"],
+        "triggers": ["sleep disruption, certain foods, hormonal changes, stress"]
+      }
+    },
+    {
+      "name": "Tension-type headache",
+      "category": "Neurological - primary headache",
+      "detailed_symptoms": {
+        "presentation": [
+          "bilateral pressing/tightening pain",
+          "mild-to-moderate intensity",
+          "typically not aggravated by routine activity",
+          "typically absent significant nausea"
+        ],
+        "chronic": ["frequent episodes leading to persistent pain"]
+      }
+    },
+    {
+      "name": "Anemia (iron-deficiency common)",
+      "category": "Hematologic / nutritional",
+      "detailed_symptoms": {
+        "common": [
+          "fatigue and weakness",
+          "pallor (pale skin or mucous membranes)",
+          "shortness of breath on exertion",
+          "dizziness or lightheadedness"
+        ],
+        "specific": ["pica (craving non-food substances) in iron deficiency"],
+        "severe": ["tachycardia, chest pain, syncope"]
+      }
+    },
+    {
+      "name": "Depression (major depressive disorder)",
+      "category": "Psychiatric",
+      "detailed_symptoms": {
+        "emotional": [
+          "persistent depressed mood",
+          "loss of interest or pleasure (anhedonia)",
+          "feelings of worthlessness or excessive guilt"
+        ],
+        "cognitive_and_physical": [
+          "difficulty concentrating",
+          "changes in appetite or weight",
+          "sleep disturbances (insomnia or hypersomnia)",
+          "fatigue or loss of energy"
+        ],
+        "severe": ["recurrent thoughts of death or suicidal ideation — urgent evaluation required"]
+      }
+    },
+    {
+      "name": "Generalized anxiety disorder (GAD)",
+      "category": "Psychiatric",
+      "detailed_symptoms": {
+        "psychological": [
+          "excessive, uncontrollable worry about multiple domains",
+          "restlessness, feeling keyed up"
+        ],
+        "physical": [
+          "muscle tension",
+          "sleep disturbance",
+          "palpitations or rapid heartbeat"
+        ],
+        "functional_impact": ["difficulty concentrating, avoidance behaviors"]
+      }
+    },
+    {
+      "name": "Insomnia (chronic)",
+      "category": "Sleep disorder",
+      "detailed_symptoms": {
+        "night": [
+          "difficulty initiating sleep",
+          "difficulty maintaining sleep",
+          "early morning awakening with inability to return to sleep"
+        ],
+        "daytime": ["fatigue, sleepiness, impaired concentration, mood disturbance"]
+      }
+    },
+    {
+      "name": "Urinary calculus (kidney stone)",
+      "category": "Urologic",
+      "detailed_symptoms": {
+        "acute": [
+          "sudden, severe flank pain radiating to groin",
+          "nausea and vomiting",
+          "hematuria (blood in urine)",
+          "urinary urgency or frequency if stone migrates"
+        ],
+        "complications": ["obstruction leading to hydronephrosis, infection"]
+      }
+    },
+    {
+      "name": "Urinary incontinence (stress/urge/mixed)",
+      "category": "Urologic",
+      "detailed_symptoms": {
+        "stress_type": ["urine leakage with coughing, sneezing, laughing, or exertion"],
+        "urge_type": ["sudden strong urge to urinate followed by involuntary leakage"],
+        "mixed": ["features of both stress and urge incontinence"]
+      }
+    },
+    {
+      "name": "Otitis media (middle ear infection)",
+      "category": "Infectious - ENT",
+      "detailed_symptoms": {
+        "common_in_children": [
+          "ear pain (otalgia)",
+          "fever",
+          "irritability",
+          "reduced hearing or ear tugging"
+        ],
+        "complications": ["tympanic membrane perforation, chronic otitis media with effusion"]
+      }
+    },
+    {
+      "name": "Conjunctivitis (pink eye)",
+      "category": "Infectious / allergic - ophthalmologic",
+      "detailed_symptoms": {
+        "infectious": [
+          "red or bloodshot eyes",
+          "eye discharge (watery in viral, purulent in bacterial)",
+          "crusting of eyelids on waking"
+        ],
+        "allergic": ["itchy, watery eyes with seasonality"],
+        "complications": ["corneal involvement (rare)"]
+      }
+    },
+    {
+      "name": "Dental caries / gingivitis",
+      "category": "Dental / oral health",
+      "detailed_symptoms": {
+        "dental_caries": [
+          "tooth pain or sensitivity to hot/cold/sweet",
+          "visible pits or holes in teeth",
+          "discoloration"
+        ],
+        "gingivitis": [
+          "red, swollen, bleeding gums",
+          "bad breath (halitosis)"
+        ],
+        "complications": ["periodontitis, tooth loss, dental abscess"]
+      }
+    },
+    {
+      "name": "Fungal skin infections (tinea, candidiasis)",
+      "category": "Infectious - fungal",
+      "detailed_symptoms": {
+        "cutaneous_tinea": [
+          "ring-shaped scaly rash (tinea corporis)",
+          "itching, peeling between toes (tinea pedis)",
+          "scaly scalp lesions (tinea capitis)"
+        ],
+        "candidiasis": [
+          "white patches in mouth (oral thrush)",
+          "vaginal itching and cottage-cheese discharge (vaginal candidiasis)"
+        ],
+        "complications": ["secondary bacterial infection from scratching"]
+      }
+    },
+    {
+      "name": "Tuberculosis (TB)",
+      "category": "Infectious - bacterial",
+      "detailed_symptoms": {
+        "early": [
+          "persistent cough >3 weeks",
+          "low-grade fever",
+          "night sweats",
+          "fatigue",
+          "loss of appetite"
+        ],
+        "advanced": [
+          "hemoptysis (coughing blood)",
+          "chest pain",
+          "progressive weight loss",
+          "shortness of breath"
+        ],
+        "systemic": ["generalized weakness, chills, lymphadenopathy (if extrapulmonary)"],
+        "note": ["consider high-risk exposures, travel, immunosuppression"]
+      }
+    },
+    {
+      "name": "Typhoid fever (enteric fever)",
+      "category": "Infectious - bacterial",
+      "detailed_symptoms": {
+        "early": [
+          "prolonged high fever (stepwise)",
+          "headache",
+          "weakness",
+          "abdominal pain"
+        ],
+        "gastrointestinal": [
+          "constipation or diarrhea",
+          "loss of appetite",
+          "nausea",
+          "rose-colored macular rash (rare)"
+        ],
+        "severe": ["intestinal bleeding or perforation, delirium"],
+        "note": ["associated with contaminated food/water exposures"]
+      }
+    },
+    {
+      "name": "Malaria",
+      "category": "Infectious - parasitic",
+      "detailed_symptoms": {
+        "cyclical": [
+          "high fever with chills and rigors (cyclical fevers in some species)",
+          "profuse sweating",
+          "rigors (shivering)"
+        ],
+        "general": ["headache", "myalgia", "nausea", "fatigue"],
+        "severe": ["anemia, jaundice, acute kidney injury, seizures, coma"],
+        "note": ["travel history to endemic area important"]
+      }
+    },
+    {
+      "name": "Dengue fever",
+      "category": "Infectious - viral",
+      "detailed_symptoms": {
+        "common": [
+          "sudden high fever",
+          "severe headache (often retro-orbital)",
+          "severe muscle and joint pain ('breakbone fever')",
+          "rash (maculopapular)"
+        ],
+        "warning_signs": [
+          "severe abdominal pain",
+          "persistent vomiting",
+          "mucosal bleeding (gums, nose)",
+          "easy bruising",
+          "lethargy or restlessness"
+        ],
+        "severe_dengue": [
+          "plasma leakage leading to shock",
+          "severe bleeding",
+          "organ impairment"
+        ]
+      }
+    },
+    {
+      "name": "Chronic kidney disease (CKD)",
+      "category": "Chronic - renal",
+      "detailed_symptoms": {
+        "early": [
+          "often asymptomatic",
+          "fatigue",
+          "edema (ankle/leg swelling)",
+          "nocturia (frequent urination at night)"
+        ],
+        "advanced": [
+          "shortness of breath (fluid overload or anemia)",
+          "persistent itching (uremic pruritus)",
+          "muscle cramps",
+          "confusion or reduced alertness"
+        ],
+        "complications": ["electrolyte abnormalities, anemia, bone disease"]
+      }
+    },
+    {
+      "name": "Liver cirrhosis",
+      "category": "Chronic - hepatic",
+      "detailed_symptoms": {
+        "early": ["fatigue", "loss of appetite", "nausea"],
+        "progressive": [
+          "jaundice (yellowing of skin/eyes)",
+          "ascites (abdominal swelling)",
+          "easy bruising and bleeding",
+          "pruritus (itching)",
+          "encephalopathy (confusion)"
+        ],
+        "complications": ["portal hypertension, variceal bleeding, hepatocellular carcinoma"]
+      }
+    },
+    {
+      "name": "Peptic ulcer disease (gastric / duodenal ulcers)",
+      "category": "Gastrointestinal",
+      "detailed_symptoms": {
+        "common": [
+          "epigastric burning or gnawing pain (may be relieved or worsened by food)",
+          "bloating, belching",
+          "heartburn (acid reflux)",
+          "nausea"
+        ],
+        "complications": ["upper GI bleeding (hematemesis), melena (black stools), perforation with severe abdominal pain"]
+      }
+    },
+    {
+      "name": "Gallstones (cholelithiasis) / biliary colic",
+      "category": "Gastrointestinal / hepatobiliary",
+      "detailed_symptoms": {
+        "typical": [
+          "sudden onset right upper quadrant or epigastric pain",
+          "pain can radiate to right shoulder or back",
+          "nausea and vomiting"
+        ],
+        "complicated": ["fever and jaundice suggest acute cholangitis or cholecystitis — urgent"],
+        "note": ["pain often occurs after fatty meals"]
+      }
+    },
+    {
+      "name": "Epilepsy (seizure disorders)",
+      "category": "Neurological",
+      "detailed_symptoms": {
+        "seizure_types": [
+          "generalized tonic-clonic seizures (convulsions, loss of consciousness)",
+          "absence seizures (brief staring spells)",
+          "focal seizures (local motor or sensory symptoms, altered awareness)"
+        ],
+        "postictal": ["confusion, somnolence, headache"],
+        "risks": ["injury during seizure, status epilepticus (prolonged seizures)"]
+      }
+    },
+    {
+      "name": "Parkinson's disease",
+      "category": "Neurological - degenerative",
+      "detailed_symptoms": {
+        "motor": [
+          "resting tremor (pill-rolling)",
+          "bradykinesia (slowness of movement)",
+          "rigidity (stiffness)",
+          "postural instability (balance problems)"
+        ],
+        "non_motor": [
+          "constipation",
+          "sleep disturbances (REM behavior disorder)",
+          "anosmia (loss of smell)",
+          "depression and cognitive changes"
+        ]
+      }
+    },
+    {
+      "name": "Alzheimer's disease (and other dementias)",
+      "category": "Neurological - degenerative",
+      "detailed_symptoms": {
+        "early": [
+          "short-term memory loss (recent events)",
+          "difficulty finding words",
+          "misplacing items"
+        ],
+        "progressive": [
+          "disorientation to time/place",
+          "impaired judgment and problem-solving",
+          "behavioral and personality changes",
+          "loss of ability for activities of daily living"
+        ],
+        "note": ["gradual onset over months to years"]
+      }
+    },
+    {
+      "name": "Systemic lupus erythematosus (SLE)",
+      "category": "Autoimmune",
+      "detailed_symptoms": {
+        "general": ["fatigue", "fever, malaise", "arthralgia/joint pain"],
+        "cutaneous": ["butterfly (malar) rash on face", "photosensitivity", "discoid lesions"],
+        "other": ["oral ulcers", "renal involvement (nephritis)", "serositis (pleuritis/pericarditis)"],
+        "note": ["multi-system disease; flares and remissions common"]
+      }
+    },
+    {
+      "name": "Celiac disease",
+      "category": "Autoimmune - gastrointestinal",
+      "detailed_symptoms": {
+        "digestive": [
+          "chronic diarrhea or steatorrhea",
+          "abdominal pain and bloating",
+          "weight loss or failure to thrive in children"
+        ],
+        "extraintestinal": [
+          "iron-deficiency anemia",
+          "dermatitis herpetiformis (itchy vesicular rash)",
+          "osteopenia/osteoporosis"
+        ],
+        "trigger": ["gluten ingestion (wheat, barley, rye)"]
+      }
+    },
+    {
+      "name": "Gout (acute gouty arthritis)",
+      "category": "Metabolic - musculoskeletal",
+      "detailed_symptoms": {
+        "acute_attack": [
+          "sudden, severe joint pain (classically first metatarsophalangeal joint - big toe)",
+          "marked swelling, redness and warmth of the joint",
+          "pain often peaks within 24 hours"
+        ],
+        "chronic": ["tophi (urate crystal deposits), chronic joint damage"],
+        "risk_factors": ["hyperuricemia, alcohol, certain diuretics, high-purine diet"]
+      }
+    },
+    {
+      "name": "Obesity (and associated metabolic syndrome)",
+      "category": "Metabolic",
+      "detailed_symptoms": {
+        "presentation": [
+          "excess body weight / elevated BMI",
+          "reduced exercise tolerance",
+          "joint pain (weight-bearing joints)",
+          "sleep-disordered breathing (snoring, sleep apnea)"
+        ],
+        "associated_conditions": [
+          "type 2 diabetes",
+          "hypertension",
+          "dyslipidemia",
+          "non-alcoholic fatty liver disease"
+        ]
+      }
+    },
+    {
+      "name": "Sleep apnea (obstructive)",
+      "category": "Sleep disorder",
+      "detailed_symptoms": {
+        "nighttime": [
+          "loud habitual snoring",
+          "witnessed apneas (pauses in breathing)",
+          "gasping or choking episodes during sleep"
+        ],
+        "daytime": ["excessive daytime sleepiness", "morning headache", "poor concentration"],
+        "complications": ["cardiovascular disease, daytime accidents"]
+      }
+    },
+    {
+      "name": "Polycystic ovary syndrome (PCOS)",
+      "category": "Endocrine - reproductive",
+      "detailed_symptoms": {
+        "menstrual": ["oligomenorrhea or amenorrhea", "irregular cycles"],
+        "androgenic": ["hirsutism (excess hair), acne, male-pattern hair loss"],
+        "metabolic": ["insulin resistance, weight gain, difficulty conceiving"]
+      }
+    },
+    {
+      "name": "Benign prostatic hyperplasia (BPH)",
+      "category": "Urological",
+      "detailed_symptoms": {
+        "lower_urinary_tract_symptoms": [
+          "urinary frequency and urgency",
+          "weak urinary stream",
+          "hesitancy starting urination",
+          "feeling of incomplete bladder emptying",
+          "nocturia (nighttime urination)"
+        ],
+        "complications": ["acute urinary retention, recurrent UTIs"]
+      }
+    },
+    {
+      "name": "Hepatitis B (acute and chronic)",
+      "category": "Infectious - viral",
+      "detailed_symptoms": {
+        "acute": [
+          "fatigue, anorexia",
+          "nausea and vomiting",
+          "jaundice (yellow eyes/skin)",
+          "dark urine and pale stools",
+          "right upper quadrant discomfort"
+        ],
+        "chronic": ["may be asymptomatic for years, progressive liver disease leading to cirrhosis"],
+        "transmission": ["bloodborne, sexual, perinatal"]
+      }
+    },
+    {
+      "name": "HIV infection / AIDS",
+      "category": "Infectious - viral (retrovirus)",
+      "detailed_symptoms": {
+        "acute_seroconversion": ["fever, sore throat, rash, lymphadenopathy, flu-like illness"],
+        "chronic": ["weight loss, persistent generalized lymphadenopathy, recurrent infections"],
+        "advanced_aids": ["opportunistic infections (e.g., PCP, TB), malignancies (Kaposi sarcoma)"]
+      }
+    },
+    {
+      "name": "Cellulitis (bacterial skin infection)",
+      "category": "Infectious - bacterial (dermal/subcutaneous)",
+      "detailed_symptoms": {
+        "presentation": [
+          "rapidly spreading erythema (redness)",
+          "warmth and tenderness of affected skin",
+          "swelling",
+          "fever and systemic signs in more severe cases"
+        ],
+        "complications": ["abscess formation, sepsis if untreated"]
+      }
+    },
+    {
+      "name": "Shingles (Herpes zoster)",
+      "category": "Infectious - viral (varicella zoster reactivation)",
+      "detailed_symptoms": {
+        "prodrome": ["localized burning or tingling pain, hypersensitivity of skin"],
+        "rash": [
+          "unilateral vesicular rash in a dermatomal distribution",
+          "pain precedes rash in many cases"
+        ],
+        "complications": ["postherpetic neuralgia (persistent nerve pain)"]
+      }
+    },
+    {
+      "name": "Appendicitis (acute)",
+      "category": "Acute - gastrointestinal/surgical",
+      "detailed_symptoms": {
+        "early": ["periumbilical pain migrating to right lower quadrant (RLQ)"],
+        "common": ["anorexia, nausea, vomiting, low-grade fever", "RLQ tenderness, rebound tenderness"],
+        "complications": ["perforation leading to peritonitis, sepsis"]
+      }
+    },
+    {
+      "name": "Acute pancreatitis",
+      "category": "Acute - gastrointestinal",
+      "detailed_symptoms": {
+        "presentation": [
+          "sudden severe epigastric pain radiating to the back",
+          "nausea and persistent vomiting",
+          "abdominal tenderness",
+          "fever, tachycardia in severe cases"
+        ],
+        "complications": ["necrosis, pseudocyst formation, systemic inflammatory response syndrome (SIRS)"]
+      }
+    }
+  ]
+}

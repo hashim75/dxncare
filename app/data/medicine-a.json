@@ -1,0 +1,4222 @@
+[
+  {
+    "name": "A Leaf Syrup 120ml",
+    "category": "MEDICINE",
+    "price": 190
+  },
+  {
+    "name": "A MAX (Vitamin A) drops 10ml",
+    "category": "MEDICINE",
+    "price": 380
+  },
+  {
+    "name": "A-fenac Plus injection 75mg / 2ml",
+    "category": "MEDICINE",
+    "price": 32
+  },
+  {
+    "name": "A-Flox capsule 500mg",
+    "category": "MEDICINE",
+    "price": 36
+  },
+  {
+    "name": "A-Flox injection 500mg",
+    "category": "MEDICINE",
+    "price": 77
+  },
+  {
+    "name": "A-Glip tablets 50mg",
+    "category": "MEDICINE",
+    "price": 360
+  },
+  {
+    "name": "A-Pnamic tablet 500mg",
+    "category": "MEDICINE",
+    "price": 133
+  },
+  {
+    "name": "A&D Drops 10ml",
+    "category": "MEDICINE",
+    "price": 500
+  },
+  {
+    "name": "A2A tablet 25mg",
+    "category": "MEDICINE",
+    "price": 266.2
+  },
+  {
+    "name": "A2A tablet 50mg",
+    "category": "MEDICINE",
+    "price": 504.68
+  },
+  {
+    "name": "Aaram injection",
+    "category": "MEDICINE",
+    "price": 125
+  },
+  {
+    "name": "Abacus Syrup 40mg/5ml 50ml Suspension",
+    "category": "MEDICINE",
+    "price": 400
+  },
+  {
+    "name": "Abapen capsule 300mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Abdol tablet 20mg",
+    "category": "MEDICINE",
+    "price": 144
+  },
+  {
+    "name": "Abex injection 1gm",
+    "category": "MEDICINE",
+    "price": 200
+  },
+  {
+    "name": "Abex injection 250mg",
+    "category": "MEDICINE",
+    "price": 65
+  },
+  {
+    "name": "Abex injection 500mg",
+    "category": "MEDICINE",
+    "price": 180
+  },
+  {
+    "name": "Abidine capsule 500mg",
+    "category": "MEDICINE",
+    "price": 170
+  },
+  {
+    "name": "Abifix suspension 100mg / 5ml",
+    "category": "MEDICINE",
+    "price": 120
+  },
+  {
+    "name": "Abnil capsule 120mg",
+    "category": "MEDICINE",
+    "price": 1533.74
+  },
+  {
+    "name": "Abocal tablet effervescent",
+    "category": "MEDICINE",
+    "price": 196.79
+  },
+  {
+    "name": "Abocran Sachet 250mg",
+    "category": "OTC",
+    "price": 35
+  },
+  {
+    "name": "Abri Flex Adult Pull-up - Extra Large diapers",
+    "category": "MEDICINE",
+    "price": 6900
+  },
+  {
+    "name": "Abriva Plus tablet 400 / 100 mg",
+    "category": "MEDICINE",
+    "price": 12344.1
+  },
+  {
+    "name": "Abro tablet 10mg",
+    "category": "MEDICINE",
+    "price": 95
+  },
+  {
+    "name": "Abwo Vaginal Cream 40mg",
+    "category": "MEDICINE",
+    "price": 575
+  },
+  {
+    "name": "Abxicam tablet 20mg",
+    "category": "MEDICINE",
+    "price": 74
+  },
+  {
+    "name": "Acabel injection 8mg / 2ml",
+    "category": "MEDICINE",
+    "price": 85
+  },
+  {
+    "name": "Acabel tablet 4mg",
+    "category": "MEDICINE",
+    "price": 125
+  },
+  {
+    "name": "Acabel Tablet 8mg",
+    "category": "MEDICINE",
+    "price": 200
+  },
+  {
+    "name": "Acasia capsule 250mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Accred tablet 50mg",
+    "category": "MEDICINE",
+    "price": 37.5
+  },
+  {
+    "name": "Accred tablet 50mg (200's Pack)",
+    "category": "MEDICINE",
+    "price": 690
+  },
+  {
+    "name": "Accupril tablet 10mg",
+    "category": "MEDICINE",
+    "price": 351.44
+  },
+  {
+    "name": "Accupril tablet 20mg",
+    "category": "MEDICINE",
+    "price": 701.91
+  },
+  {
+    "name": "Accupril tablet 5mg",
+    "category": "MEDICINE",
+    "price": 245.71
+  },
+  {
+    "name": "Accure capsule 20mg",
+    "category": "MEDICINE",
+    "price": 2127
+  },
+  {
+    "name": "Accutane capsule 20 mg",
+    "category": "MEDICINE",
+    "price": 695
+  },
+  {
+    "name": "Acdermin Gel 20g",
+    "category": "MEDICINE",
+    "price": 306.28
+  },
+  {
+    "name": "Aceartin tablet 50mg",
+    "category": "MEDICINE",
+    "price": 100
+  },
+  {
+    "name": "Acebex capsule",
+    "category": "MEDICINE",
+    "price": 280
+  },
+  {
+    "name": "Acef capsule 250mg",
+    "category": "MEDICINE",
+    "price": 233
+  },
+  {
+    "name": "Acef capsule 500mg",
+    "category": "MEDICINE",
+    "price": 410
+  },
+  {
+    "name": "Acefen tablet 100mg",
+    "category": "MEDICINE",
+    "price": 250
+  },
+  {
+    "name": "Acefyl Syrup 125ml",
+    "category": "MEDICINE",
+    "price": 98
+  },
+  {
+    "name": "Acelar tablet 5mg",
+    "category": "MEDICINE",
+    "price": 25
+  },
+  {
+    "name": "Acelish tablet 100mg",
+    "category": "MEDICINE",
+    "price": 171.99
+  },
+  {
+    "name": "Acelo sr capsule 200mg",
+    "category": "MEDICINE",
+    "price": 265
+  },
+  {
+    "name": "Acelo tablet 100mg",
+    "category": "MEDICINE",
+    "price": 275
+  },
+  {
+    "name": "Acemed tablet 100mg",
+    "category": "MEDICINE",
+    "price": 110
+  },
+  {
+    "name": "Acenac gel 20gm",
+    "category": "MEDICINE",
+    "price": 88
+  },
+  {
+    "name": "Acenac injection 150mg",
+    "category": "MEDICINE",
+    "price": 210
+  },
+  {
+    "name": "Acenac sr capsule 200mg",
+    "category": "MEDICINE",
+    "price": 426.99
+  },
+  {
+    "name": "Acenac Tablet 100mg",
+    "category": "MEDICINE",
+    "price": 348
+  },
+  {
+    "name": "Acepol suspension 120mg",
+    "category": "MEDICINE",
+    "price": 12
+  },
+  {
+    "name": "Acetamol suspension 120mg",
+    "category": "MEDICINE",
+    "price": 15
+  },
+  {
+    "name": "Acetin capsule 10mg",
+    "category": "MEDICINE",
+    "price": 193.33
+  },
+  {
+    "name": "Acetin capsule 25mg",
+    "category": "MEDICINE",
+    "price": 1910.01
+  },
+  {
+    "name": "Acetofen Tablet 35mg/450mg",
+    "category": "MEDICINE",
+    "price": 349
+  },
+  {
+    "name": "Acetofin tablet 500mg",
+    "category": "MEDICINE",
+    "price": 5
+  },
+  {
+    "name": "Acetopril tablet 25 mg",
+    "category": "MEDICINE",
+    "price": 115.32
+  },
+  {
+    "name": "Acetra tablet 37.5mg / 325mg",
+    "category": "MEDICINE",
+    "price": 130.4
+  },
+  {
+    "name": "Acezole capsule 20mg",
+    "category": "MEDICINE",
+    "price": 144
+  },
+  {
+    "name": "Acicon Dry Suspension 60ml",
+    "category": "MEDICINE",
+    "price": 87
+  },
+  {
+    "name": "Acicon tablet 40 mg",
+    "category": "MEDICINE",
+    "price": 258
+  },
+  {
+    "name": "Acid Citro syrup 450ml",
+    "category": "MEDICINE",
+    "price": 46
+  },
+  {
+    "name": "Acifre capsule 20mg",
+    "category": "MEDICINE",
+    "price": 59.5
+  },
+  {
+    "name": "Acifre capsule 40mg",
+    "category": "MEDICINE",
+    "price": 99
+  },
+  {
+    "name": "Aciloc capsule 20mg",
+    "category": "MEDICINE",
+    "price": 112
+  },
+  {
+    "name": "Aciloc capsule 40mg",
+    "category": "MEDICINE",
+    "price": 168
+  },
+  {
+    "name": "Acim capsule 250mg",
+    "category": "MEDICINE",
+    "price": 153
+  },
+  {
+    "name": "Acireg capsule 40mg",
+    "category": "MEDICINE",
+    "price": 412
+  },
+  {
+    "name": "Acitra syrup 120ml",
+    "category": "MEDICINE",
+    "price": 28
+  },
+  {
+    "name": "Acizol capsule 40mg",
+    "category": "MEDICINE",
+    "price": 270.4
+  },
+  {
+    "name": "Aclasta injection 5mg",
+    "category": "MEDICINE",
+    "price": 32000
+  },
+  {
+    "name": "Aclofen tablet 100mg",
+    "category": "MEDICINE",
+    "price": 35
+  },
+  {
+    "name": "Aclonac tablet 50mg",
+    "category": "MEDICINE",
+    "price": 60
+  },
+  {
+    "name": "Aclor syrup 250mg / 5ml",
+    "category": "MEDICINE",
+    "price": 245
+  },
+  {
+    "name": "Acne Pearl Tropical cream 0.10%",
+    "category": "MEDICINE",
+    "price": 140
+  },
+  {
+    "name": "Acne Soft cleanser 100ml",
+    "category": "MEDICINE",
+    "price": 550
+  },
+  {
+    "name": "Acne-Lene Cream 15g",
+    "category": "MEDICINE",
+    "price": 197
+  },
+  {
+    "name": "Acne-Lene gel",
+    "category": "MEDICINE",
+    "price": 341
+  },
+  {
+    "name": "Acne-Lene super gel 0.001",
+    "category": "MEDICINE",
+    "price": 720
+  },
+  {
+    "name": "Acneclin lotion 1%",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Acnemycin cream 40gm",
+    "category": "MEDICINE",
+    "price": 320
+  },
+  {
+    "name": "Acnes Scar Care Gel",
+    "category": "MEDICINE",
+    "price": 404
+  },
+  {
+    "name": "Acnewin capsule 20mg",
+    "category": "MEDICINE",
+    "price": 616
+  },
+  {
+    "name": "Acno capsule 10mg",
+    "category": "MEDICINE",
+    "price": 182
+  },
+  {
+    "name": "Acno capsule 10mg (10's Pack)",
+    "category": "MEDICINE",
+    "price": 365
+  },
+  {
+    "name": "Acno capsule 20mg",
+    "category": "MEDICINE",
+    "price": 608
+  },
+  {
+    "name": "Acnoren capsule 20mg",
+    "category": "MEDICINE",
+    "price": 1850
+  },
+  {
+    "name": "Acnot tablet 2mg",
+    "category": "MEDICINE",
+    "price": 292.21
+  },
+  {
+    "name": "Acnotin gel 0.0005",
+    "category": "MEDICINE",
+    "price": 95
+  },
+  {
+    "name": "Acort Cream 10g",
+    "category": "MEDICINE",
+    "price": 180
+  },
+  {
+    "name": "Acsolve Gel 10g",
+    "category": "MEDICINE",
+    "price": 210.02
+  },
+  {
+    "name": "Acsolve Lotion 30ml",
+    "category": "MEDICINE",
+    "price": 217
+  },
+  {
+    "name": "Acsolve Topical Lotion",
+    "category": "MEDICINE",
+    "price": 217
+  },
+  {
+    "name": "ACT-HIB injection 10mcg / 5ml",
+    "category": "MEDICINE",
+    "price": 1116
+  },
+  {
+    "name": "Act-On tablet 10mg",
+    "category": "MEDICINE",
+    "price": 43
+  },
+  {
+    "name": "Acti-joint capsule 500mg / 400mg",
+    "category": "MEDICINE",
+    "price": 800
+  },
+  {
+    "name": "Actidil Syrup",
+    "category": "MEDICINE",
+    "price": 30
+  },
+  {
+    "name": "Actif capsule 20mg",
+    "category": "MEDICINE",
+    "price": 34
+  },
+  {
+    "name": "Actifed P Syrup",
+    "category": "MEDICINE",
+    "price": 93.79
+  },
+  {
+    "name": "Actifed-DM Syrup",
+    "category": "MEDICINE",
+    "price": 122
+  },
+  {
+    "name": "Actifed-P Cold tablet",
+    "category": "MEDICINE",
+    "price": 24.67
+  },
+  {
+    "name": "Actiflor Sachet 250mg",
+    "category": "MEDICINE",
+    "price": 425.1
+  },
+  {
+    "name": "Actim tablet 10mg",
+    "category": "MEDICINE",
+    "price": 223.83
+  },
+  {
+    "name": "Actim Tablet 2.5mg",
+    "category": "MEDICINE",
+    "price": 30.34
+  },
+  {
+    "name": "Actim tablet 5mg",
+    "category": "MEDICINE",
+    "price": 144.54
+  },
+  {
+    "name": "Activated Charcoal soft gel capsule 260mg",
+    "category": "MEDICINE",
+    "price": 4594.25
+  },
+  {
+    "name": "Actonel tablet 35mg",
+    "category": "MEDICINE",
+    "price": 1900
+  },
+  {
+    "name": "Actrac capsule 20 mg",
+    "category": "MEDICINE",
+    "price": 2034.99
+  },
+  {
+    "name": "Actrapid HM 100iu",
+    "category": "MEDICINE",
+    "price": 1818.65
+  },
+  {
+    "name": "Actrapid HM injection 100IU",
+    "category": "MEDICINE",
+    "price": 856
+  },
+  {
+    "name": "Actrapid Hm Vial 10ml",
+    "category": "MEDICINE",
+    "price": 975
+  },
+  {
+    "name": "Actum injection 1000mg / 1000mg",
+    "category": "MEDICINE",
+    "price": 350
+  },
+  {
+    "name": "Acugesic capsule 50mg",
+    "category": "MEDICINE",
+    "price": 101.05
+  },
+  {
+    "name": "Acuron injection 10mg",
+    "category": "MEDICINE",
+    "price": 147.07
+  },
+  {
+    "name": "Acuron injection iv 10 mg",
+    "category": "MEDICINE",
+    "price": 352.99
+  },
+  {
+    "name": "Acyclovir injection iv 500mg",
+    "category": "MEDICINE",
+    "price": 1190.99
+  },
+  {
+    "name": "Acyclovir Vial 500mg",
+    "category": "MEDICINE",
+    "price": 1651
+  },
+  {
+    "name": "Acylex ointment 5%",
+    "category": "MEDICINE",
+    "price": 202
+  },
+  {
+    "name": "ACYLEX suspension 200mg / 5ml",
+    "category": "MEDICINE",
+    "price": 452
+  },
+  {
+    "name": "Acylex tablet 200mg / 200mg",
+    "category": "MEDICINE",
+    "price": 394
+  },
+  {
+    "name": "Acylex tablet 400mg",
+    "category": "MEDICINE",
+    "price": 504
+  },
+  {
+    "name": "Acylex Topical Ointment 5g",
+    "category": "MEDICINE",
+    "price": 283
+  },
+  {
+    "name": "Aczon injection 1gm",
+    "category": "MEDICINE",
+    "price": 260
+  },
+  {
+    "name": "AD Folic tablet 300mcg",
+    "category": "MEDICINE",
+    "price": 309.99
+  },
+  {
+    "name": "AD Folic tablet 600mcg",
+    "category": "MEDICINE",
+    "price": 552
+  },
+  {
+    "name": "AD3 Supreme Vitamin D3 capsule",
+    "category": "MEDICINE",
+    "price": 110
+  },
+  {
+    "name": "Ada Cef suspension 125mg / 5ml",
+    "category": "MEDICINE",
+    "price": 65
+  },
+  {
+    "name": "Adablizer tablet 10mg",
+    "category": "MEDICINE",
+    "price": 399.24
+  },
+  {
+    "name": "Adablizer tablet 15mg",
+    "category": "MEDICINE",
+    "price": 532.29
+  },
+  {
+    "name": "Adalat CC Tab tablet 60 mg",
+    "category": "MEDICINE",
+    "price": 812
+  },
+  {
+    "name": "Adalat LA tablet 30mg",
+    "category": "MEDICINE",
+    "price": 322
+  },
+  {
+    "name": "Adalat LA tablet 60 mg",
+    "category": "MEDICINE",
+    "price": 828.32
+  },
+  {
+    "name": "Adalat Retard tablet",
+    "category": "MEDICINE",
+    "price": 56.97
+  },
+  {
+    "name": "Adapco Cream 15g",
+    "category": "MEDICINE",
+    "price": 248
+  },
+  {
+    "name": "Adapco Forte Gel 3mg",
+    "category": "MEDICINE",
+    "price": 475.51
+  },
+  {
+    "name": "Adapco Gel 15g",
+    "category": "MEDICINE",
+    "price": 248
+  },
+  {
+    "name": "Adenuric tablet 40mg",
+    "category": "MEDICINE",
+    "price": 175
+  },
+  {
+    "name": "Adenuric tablet 80mg",
+    "category": "MEDICINE",
+    "price": 615
+  },
+  {
+    "name": "Adgen tablet 10mg",
+    "category": "MEDICINE",
+    "price": 1700
+  },
+  {
+    "name": "Adicos Syrup",
+    "category": "MEDICINE",
+    "price": 59.27
+  },
+  {
+    "name": "Adin tablet 10mg",
+    "category": "MEDICINE",
+    "price": 72
+  },
+  {
+    "name": "Adine tablet 120mg",
+    "category": "MEDICINE",
+    "price": 116
+  },
+  {
+    "name": "Adine tablet 180mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Adipen capsule 10 mg",
+    "category": "MEDICINE",
+    "price": 109.95
+  },
+  {
+    "name": "Admit tablets 50mg",
+    "category": "MEDICINE",
+    "price": 356.5
+  },
+  {
+    "name": "Adora Tablet",
+    "category": "MEDICINE",
+    "price": 375
+  },
+  {
+    "name": "Adoxa Tablet 100mg",
+    "category": "MEDICINE",
+    "price": 219.99
+  },
+  {
+    "name": "Adoxil capsule 500mg",
+    "category": "MEDICINE",
+    "price": 180
+  },
+  {
+    "name": "Adrance tablet 10 mg",
+    "category": "MEDICINE",
+    "price": 308
+  },
+  {
+    "name": "Adrance tablets 25 mg",
+    "category": "MEDICINE",
+    "price": 460
+  },
+  {
+    "name": "Adrance tablets 25mg",
+    "category": "MEDICINE",
+    "price": 460
+  },
+  {
+    "name": "Adrance-M tablets 12.5 mg / 850 mg",
+    "category": "MEDICINE",
+    "price": 320
+  },
+  {
+    "name": "Adrance-M tablets 12.5mg / 1000mg",
+    "category": "MEDICINE",
+    "price": 352
+  },
+  {
+    "name": "Adrance-M tablets 12.5mg / 500 mg",
+    "category": "MEDICINE",
+    "price": 352
+  },
+  {
+    "name": "Adrance-M tablets 5mg / 850 mg",
+    "category": "MEDICINE",
+    "price": 250
+  },
+  {
+    "name": "Adriblastina injection rd 50mg",
+    "category": "MEDICINE",
+    "price": 2754
+  },
+  {
+    "name": "Adronil injection 3mg / 3ml",
+    "category": "MEDICINE",
+    "price": 1844
+  },
+  {
+    "name": "Adronil tablet 150mg",
+    "category": "MEDICINE",
+    "price": 590
+  },
+  {
+    "name": "Advacort 0.1% cream 10g",
+    "category": "MEDICINE",
+    "price": 240.02
+  },
+  {
+    "name": "Advacort Lotion 60ml",
+    "category": "MEDICINE",
+    "price": 549
+  },
+  {
+    "name": "Advacort Ointment 5g",
+    "category": "MEDICINE",
+    "price": 133.07
+  },
+  {
+    "name": "Advance capsule 20mg",
+    "category": "MEDICINE",
+    "price": 140
+  },
+  {
+    "name": "Advant tablet 16mg",
+    "category": "MEDICINE",
+    "price": 415
+  },
+  {
+    "name": "Advant Tablet 8mg",
+    "category": "MEDICINE",
+    "price": 335
+  },
+  {
+    "name": "Advantan Cream 10g",
+    "category": "MEDICINE",
+    "price": 295
+  },
+  {
+    "name": "Advantan Fatty Ointment",
+    "category": "MEDICINE",
+    "price": 265
+  },
+  {
+    "name": "Advantan Ointment 0.10%",
+    "category": "MEDICINE",
+    "price": 265
+  },
+  {
+    "name": "Advantec tablet 16mg / 12.5mg",
+    "category": "MEDICINE",
+    "price": 925
+  },
+  {
+    "name": "Advil tablet 500mg",
+    "category": "MEDICINE",
+    "price": 10
+  },
+  {
+    "name": "Advit-D 200,000 IU injection im",
+    "category": "MEDICINE",
+    "price": 162
+  },
+  {
+    "name": "Aerius tablet 10mg",
+    "category": "MEDICINE",
+    "price": 168.56
+  },
+  {
+    "name": "Aerius tablet 10mg (10's Pack)",
+    "category": "MEDICINE",
+    "price": 100
+  },
+  {
+    "name": "Aerokast Powder Sachet 4mg",
+    "category": "MEDICINE",
+    "price": 21.85
+  },
+  {
+    "name": "Aerokast tablet 10mg",
+    "category": "MEDICINE",
+    "price": 388.3
+  },
+  {
+    "name": "Aerokast tablet 5mg",
+    "category": "MEDICINE",
+    "price": 302
+  },
+  {
+    "name": "Aerolin tablet 2mg",
+    "category": "MEDICINE",
+    "price": 452.3
+  },
+  {
+    "name": "Aerolin tablet 4 mg",
+    "category": "MEDICINE",
+    "price": 18
+  },
+  {
+    "name": "Aerolin tablet 4 mg (1000's Pack)",
+    "category": "MEDICINE",
+    "price": 698.3
+  },
+  {
+    "name": "Aeromax tablet 10 mg",
+    "category": "MEDICINE",
+    "price": 200
+  },
+  {
+    "name": "Aeromax tablet 5 mg",
+    "category": "MEDICINE",
+    "price": 130
+  },
+  {
+    "name": "Aerotec tablet 50mg / 0.2mg",
+    "category": "MEDICINE",
+    "price": 138.5
+  },
+  {
+    "name": "Aerotec tablet 75mg / 0.2mg",
+    "category": "MEDICINE",
+    "price": 230
+  },
+  {
+    "name": "Afdol tablet 10 mg",
+    "category": "MEDICINE",
+    "price": 460
+  },
+  {
+    "name": "Afex tablet 120mg",
+    "category": "MEDICINE",
+    "price": 115
+  },
+  {
+    "name": "Afloxan capsule 150mg",
+    "category": "MEDICINE",
+    "price": 102
+  },
+  {
+    "name": "Afloxan tablet 300mg",
+    "category": "MEDICINE",
+    "price": 625.08
+  },
+  {
+    "name": "Afran injection 500mg",
+    "category": "MEDICINE",
+    "price": 110
+  },
+  {
+    "name": "Ag-Cin suspension 250mg / 5ml",
+    "category": "MEDICINE",
+    "price": 89
+  },
+  {
+    "name": "Ag-drox capsule 500mg",
+    "category": "MEDICINE",
+    "price": 125
+  },
+  {
+    "name": "Ag-drox suspension 250mg / 5ml",
+    "category": "MEDICINE",
+    "price": 186
+  },
+  {
+    "name": "Ag-drox tablet 1 gm",
+    "category": "MEDICINE",
+    "price": 400
+  },
+  {
+    "name": "Ag-fix capsule 400mg",
+    "category": "MEDICINE",
+    "price": 325
+  },
+  {
+    "name": "Agcetam /ml Oral Solution 100mg",
+    "category": "MEDICINE",
+    "price": 600
+  },
+  {
+    "name": "Agcetam Tablet 500mg",
+    "category": "MEDICINE",
+    "price": 600
+  },
+  {
+    "name": "Agile tablet 2mg",
+    "category": "MEDICINE",
+    "price": 261
+  },
+  {
+    "name": "Agnar tablet 400IU / 90mcg / 500mg",
+    "category": "MEDICINE",
+    "price": 900
+  },
+  {
+    "name": "Agolix syrup 100 mg / 5 ml",
+    "category": "MEDICINE",
+    "price": 104.85
+  },
+  {
+    "name": "Agolix tablet 400 mg",
+    "category": "MEDICINE",
+    "price": 222.6
+  },
+  {
+    "name": "Agout tablet 300mg",
+    "category": "MEDICINE",
+    "price": 70
+  },
+  {
+    "name": "Agrippal S1 injection 15mcg / 0.5ml",
+    "category": "MEDICINE",
+    "price": 747.5
+  },
+  {
+    "name": "Agusta Tablet (500/20mg)",
+    "category": "MEDICINE",
+    "price": 300
+  },
+  {
+    "name": "AHT tablet 150mg",
+    "category": "MEDICINE",
+    "price": 200
+  },
+  {
+    "name": "Aidra tablet 100mg",
+    "category": "MEDICINE",
+    "price": 350
+  },
+  {
+    "name": "Aidra tablet 10mg",
+    "category": "MEDICINE",
+    "price": 560
+  },
+  {
+    "name": "Aidra tablet 20mg",
+    "category": "MEDICINE",
+    "price": 1200
+  },
+  {
+    "name": "Aireez sachet 4mg",
+    "category": "MEDICINE",
+    "price": 19
+  },
+  {
+    "name": "Aireez tablet 10mg",
+    "category": "MEDICINE",
+    "price": 780
+  },
+  {
+    "name": "Aireez tablet 4 mg",
+    "category": "MEDICINE",
+    "price": 266
+  },
+  {
+    "name": "Airex tablet 10 mg",
+    "category": "MEDICINE",
+    "price": 310
+  },
+  {
+    "name": "Airflo tablet 10mg",
+    "category": "MEDICINE",
+    "price": 112
+  },
+  {
+    "name": "Airflo tablet 5mg",
+    "category": "MEDICINE",
+    "price": 100
+  },
+  {
+    "name": "Airin syrup 2 mg /5ml",
+    "category": "MEDICINE",
+    "price": 23
+  },
+  {
+    "name": "Airtal ER Tablet 200mg",
+    "category": "MEDICINE",
+    "price": 320
+  },
+  {
+    "name": "Airtal Tablet 100mg",
+    "category": "MEDICINE",
+    "price": 363
+  },
+  {
+    "name": "Airvent powder 4 mg",
+    "category": "MEDICINE",
+    "price": 168
+  },
+  {
+    "name": "Aknal injection 10mg",
+    "category": "MEDICINE",
+    "price": 768.1
+  },
+  {
+    "name": "Aknefin capsule 20mg",
+    "category": "MEDICINE",
+    "price": 616.67
+  },
+  {
+    "name": "Akso-D suspension 88 mg / 5 ml",
+    "category": "MEDICINE",
+    "price": 32.99
+  },
+  {
+    "name": "Aksocam capsule 20mg",
+    "category": "MEDICINE",
+    "price": 67.86
+  },
+  {
+    "name": "Aksozine tablet 10mg",
+    "category": "MEDICINE",
+    "price": 34.24
+  },
+  {
+    "name": "Alar tablet 20mg / 120mg",
+    "category": "MEDICINE",
+    "price": 126
+  },
+  {
+    "name": "Alar tablet 40mg / 240mg",
+    "category": "MEDICINE",
+    "price": 274
+  },
+  {
+    "name": "Alar tablet 80mg / 480mg",
+    "category": "MEDICINE",
+    "price": 220
+  },
+  {
+    "name": "Alba tablet 200mg",
+    "category": "MEDICINE",
+    "price": 15
+  },
+  {
+    "name": "Albendazole Tablet 200mg",
+    "category": "MEDICINE",
+    "price": 10
+  },
+  {
+    "name": "Albendo tablet 200mg",
+    "category": "MEDICINE",
+    "price": 13
+  },
+  {
+    "name": "Albendol tablet 200mg",
+    "category": "MEDICINE",
+    "price": 10
+  },
+  {
+    "name": "Albenza tablet 200mg",
+    "category": "MEDICINE",
+    "price": 17
+  },
+  {
+    "name": "Alboflox tablet 250mg",
+    "category": "MEDICINE",
+    "price": 250
+  },
+  {
+    "name": "Albonate tablet 10mg",
+    "category": "MEDICINE",
+    "price": 414
+  },
+  {
+    "name": "Albonate tablet 70mg",
+    "category": "MEDICINE",
+    "price": 1500
+  },
+  {
+    "name": "Albrotran tablet 80mg / 400mg",
+    "category": "MEDICINE",
+    "price": 13.5
+  },
+  {
+    "name": "Albumin Human infusion 100ml",
+    "category": "MEDICINE",
+    "price": 26080
+  },
+  {
+    "name": "Albumin Human infusion 50ml / 20%",
+    "category": "MEDICINE",
+    "price": 7387
+  },
+  {
+    "name": "Alcaine drops",
+    "category": "MEDICINE",
+    "price": 213
+  },
+  {
+    "name": "Alce tablet 10mg",
+    "category": "MEDICINE",
+    "price": 42
+  },
+  {
+    "name": "Alcuflex Tablet 550mg",
+    "category": "MEDICINE",
+    "price": 238
+  },
+  {
+    "name": "Aldactazide tablet (Searle) 25mg / 25mg",
+    "category": "MEDICINE",
+    "price": 51.99
+  },
+  {
+    "name": "Aldactazide tablet 50mg / 50mg",
+    "category": "MEDICINE",
+    "price": 80.7
+  },
+  {
+    "name": "Aldactone tablet 100mg",
+    "category": "MEDICINE",
+    "price": 116
+  },
+  {
+    "name": "Aldactone-A tablet 25mg",
+    "category": "MEDICINE",
+    "price": 250.13
+  },
+  {
+    "name": "Aldomet Tablet 250mg",
+    "category": "MEDICINE",
+    "price": 1493
+  },
+  {
+    "name": "Aldopa tablet 250mg",
+    "category": "MEDICINE",
+    "price": 35
+  },
+  {
+    "name": "Alegra tablet 10mg",
+    "category": "MEDICINE",
+    "price": 35
+  },
+  {
+    "name": "Alendrate tablet 10mg",
+    "category": "MEDICINE",
+    "price": 154
+  },
+  {
+    "name": "Alenor tablet 5mg",
+    "category": "MEDICINE",
+    "price": 99
+  },
+  {
+    "name": "Alerfex tablet 120mg",
+    "category": "MEDICINE",
+    "price": 116
+  },
+  {
+    "name": "Alerfree tablet 10mg",
+    "category": "MEDICINE",
+    "price": 50
+  },
+  {
+    "name": "Alergifen injection 25mg",
+    "category": "MEDICINE",
+    "price": 190
+  },
+  {
+    "name": "Alergino tablet 120mg",
+    "category": "MEDICINE",
+    "price": 100
+  },
+  {
+    "name": "Alergo syrup 1mg / ml",
+    "category": "MEDICINE",
+    "price": 27
+  },
+  {
+    "name": "Alergo tablet 10mg",
+    "category": "MEDICINE",
+    "price": 116
+  },
+  {
+    "name": "Alergo tablet 10mg (10's Pack)",
+    "category": "MEDICINE",
+    "price": 40
+  },
+  {
+    "name": "Alerid syrup 1mg",
+    "category": "MEDICINE",
+    "price": 30.88
+  },
+  {
+    "name": "Alerid tablet 10mg",
+    "category": "MEDICINE",
+    "price": 73.51
+  },
+  {
+    "name": "Alerwise tablet 10mg",
+    "category": "MEDICINE",
+    "price": 40
+  },
+  {
+    "name": "Aleve tablet 50mg",
+    "category": "MEDICINE",
+    "price": 30
+  },
+  {
+    "name": "Alevia tablet",
+    "category": "MEDICINE",
+    "price": 540
+  },
+  {
+    "name": "Alexon injection 500mg",
+    "category": "MEDICINE",
+    "price": 170
+  },
+  {
+    "name": "Alfa-D tablet 0.5mcg",
+    "category": "MEDICINE",
+    "price": 230
+  },
+  {
+    "name": "Alfa-D tablet 1mcg",
+    "category": "MEDICINE",
+    "price": 354.5
+  },
+  {
+    "name": "Alfalor tablet 10mg",
+    "category": "MEDICINE",
+    "price": 120
+  },
+  {
+    "name": "Alfur injection 750mg",
+    "category": "MEDICINE",
+    "price": 100
+  },
+  {
+    "name": "Algac tablet 10mg",
+    "category": "MEDICINE",
+    "price": 60
+  },
+  {
+    "name": "Algixim injection 1gm",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Algocin Tablet 500mg",
+    "category": "MEDICINE",
+    "price": 400
+  },
+  {
+    "name": "Alidase tablet 500mg",
+    "category": "MEDICINE",
+    "price": 143
+  },
+  {
+    "name": "Alide capsule 250mg",
+    "category": "MEDICINE",
+    "price": 255
+  },
+  {
+    "name": "Alide capsule 500mg",
+    "category": "MEDICINE",
+    "price": 125
+  },
+  {
+    "name": "Alide dry suspension 200mg",
+    "category": "MEDICINE",
+    "price": 147.06
+  },
+  {
+    "name": "Aligant tablet 250mg",
+    "category": "MEDICINE",
+    "price": 110
+  },
+  {
+    "name": "Aliz tablet 200mg",
+    "category": "MEDICINE",
+    "price": 17
+  },
+  {
+    "name": "Alkacitron syrup 120ml",
+    "category": "MEDICINE",
+    "price": 42.12
+  },
+  {
+    "name": "Alkacitron syrup 450ml",
+    "category": "MEDICINE",
+    "price": 36.84
+  },
+  {
+    "name": "Alkeris Tablet 100mg",
+    "category": "MEDICINE",
+    "price": 80
+  },
+  {
+    "name": "Alkeris-SR tablet 200mg",
+    "category": "MEDICINE",
+    "price": 101.43
+  },
+  {
+    "name": "All Purpose Nipple Ointment (APNO) 0.1% / 2% / 2%",
+    "category": "MEDICINE",
+    "price": 500
+  },
+  {
+    "name": "All-D drops",
+    "category": "MEDICINE",
+    "price": 300
+  },
+  {
+    "name": "Allergex syrup 2mg / 5ml",
+    "category": "MEDICINE",
+    "price": 19.22
+  },
+  {
+    "name": "Allergia tablet 120mg",
+    "category": "MEDICINE",
+    "price": 172
+  },
+  {
+    "name": "Allergia tablet 180mg",
+    "category": "MEDICINE",
+    "price": 222
+  },
+  {
+    "name": "Allergid tablet 10mg",
+    "category": "MEDICINE",
+    "price": null
+  },
+  {
+    "name": "Allergon syrup 2m / 5ml",
+    "category": "MEDICINE",
+    "price": 25
+  },
+  {
+    "name": "Allergy Lotion 80ml",
+    "category": "MEDICINE",
+    "price": 500
+  },
+  {
+    "name": "Allergy Ointment 35g",
+    "category": "MEDICINE",
+    "price": 450
+  },
+  {
+    "name": "Allergycare syrup 2mg / 5ml",
+    "category": "MEDICINE",
+    "price": 25
+  },
+  {
+    "name": "Allerkast tablet 10 mg",
+    "category": "MEDICINE",
+    "price": 310
+  },
+  {
+    "name": "Allermine syrup 2mg / 5ml",
+    "category": "MEDICINE",
+    "price": 40
+  },
+  {
+    "name": "Allermine syrup 2mg / 5ml (120ml pack)",
+    "category": "MEDICINE",
+    "price": 21
+  },
+  {
+    "name": "Allermine tablet 4mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Allerphene syrup 2mg / 5ml",
+    "category": "MEDICINE",
+    "price": 29
+  },
+  {
+    "name": "Allerwood tablet 10mg",
+    "category": "MEDICINE",
+    "price": 107.18
+  },
+  {
+    "name": "Allerzin syrup 1mg / ml",
+    "category": "MEDICINE",
+    "price": 27
+  },
+  {
+    "name": "Allerzin tablet 10mg",
+    "category": "MEDICINE",
+    "price": 42
+  },
+  {
+    "name": "Allest capsule 30mg",
+    "category": "MEDICINE",
+    "price": 206
+  },
+  {
+    "name": "Allos tablet 10mg",
+    "category": "MEDICINE",
+    "price": 28.08
+  },
+  {
+    "name": "Almed suspension 100mg",
+    "category": "MEDICINE",
+    "price": 16
+  },
+  {
+    "name": "Aloc capsule 60mg",
+    "category": "MEDICINE",
+    "price": 91
+  },
+  {
+    "name": "Aloc tablet 120mg",
+    "category": "MEDICINE",
+    "price": 170
+  },
+  {
+    "name": "Aloc tablet 180mg",
+    "category": "MEDICINE",
+    "price": 200
+  },
+  {
+    "name": "Alofex tablet 120mg",
+    "category": "MEDICINE",
+    "price": 146.74
+  },
+  {
+    "name": "Alogel Soft Gel capsules",
+    "category": "MEDICINE",
+    "price": 295
+  },
+  {
+    "name": "Alogen suspension 3.35gm / 5ml",
+    "category": "MEDICINE",
+    "price": 142
+  },
+  {
+    "name": "Aloret tablet 5mg",
+    "category": "MEDICINE",
+    "price": 110
+  },
+  {
+    "name": "Alp Tablet 0.25mg",
+    "category": "MEDICINE",
+    "price": 51.31
+  },
+  {
+    "name": "Alp Tablet 0.5mg",
+    "category": "MEDICINE",
+    "price": 71.62
+  },
+  {
+    "name": "Alphagan eye drop",
+    "category": "MEDICINE",
+    "price": 609.73
+  },
+  {
+    "name": "Alprazolam Tablet 0.5mg",
+    "category": "MEDICINE",
+    "price": 63.09
+  },
+  {
+    "name": "Alten tablet 10mg",
+    "category": "MEDICINE",
+    "price": 43
+  },
+  {
+    "name": "Altin-Met tablet 1000mg / 50mg",
+    "category": "MEDICINE",
+    "price": 415
+  },
+  {
+    "name": "Alufa tablet 20mg / 120mg",
+    "category": "MEDICINE",
+    "price": null
+  },
+  {
+    "name": "Alumax tablet 20mg / 120mg",
+    "category": "MEDICINE",
+    "price": 320
+  },
+  {
+    "name": "Alumax tablet 40mg / 240mg",
+    "category": "MEDICINE",
+    "price": 264
+  },
+  {
+    "name": "Always Cotton Soft Maxi Thick Sanitary 6 Pads",
+    "category": "MEDICINE",
+    "price": 130.02
+  },
+  {
+    "name": "Always Diamond Ultra Thin sanitary napkins",
+    "category": "MEDICINE",
+    "price": 380
+  },
+  {
+    "name": "Alwel tablet 100mg",
+    "category": "MEDICINE",
+    "price": 33
+  },
+  {
+    "name": "Alzilo tablet 20mg / 120mg",
+    "category": "MEDICINE",
+    "price": 306.49
+  },
+  {
+    "name": "AM-Descol tablet 5 / 10mg",
+    "category": "MEDICINE",
+    "price": 350
+  },
+  {
+    "name": "Am-Telsan tablet 10mg / 40mg",
+    "category": "MEDICINE",
+    "price": 398
+  },
+  {
+    "name": "Am-Telsan tablet 5 / 80mg",
+    "category": "MEDICINE",
+    "price": 470
+  },
+  {
+    "name": "AM-Telsan tablet 5mg / 40mg",
+    "category": "MEDICINE",
+    "price": 370
+  },
+  {
+    "name": "Am-Telsan tablets 10 mg / 80 mg",
+    "category": "MEDICINE",
+    "price": 485
+  },
+  {
+    "name": "Amadol Extra tablet 500mg / 65mg",
+    "category": "MEDICINE",
+    "price": 400
+  },
+  {
+    "name": "Amadol injection 300mg / 2ml",
+    "category": "MEDICINE",
+    "price": 12
+  },
+  {
+    "name": "Amak injection 100 mg / 2 ml",
+    "category": "MEDICINE",
+    "price": 277.91
+  },
+  {
+    "name": "Amak injection 50 mg / 1 ml",
+    "category": "MEDICINE",
+    "price": 139.05
+  },
+  {
+    "name": "Amak injection 500 mg / 2 ml",
+    "category": "MEDICINE",
+    "price": 183.8
+  },
+  {
+    "name": "Amalar tablet 20mg / 120mg",
+    "category": "MEDICINE",
+    "price": 160
+  },
+  {
+    "name": "Amarit Plus tablet 2mg / 500mg",
+    "category": "MEDICINE",
+    "price": 57.33
+  },
+  {
+    "name": "Amaryl M S.R tablet 1mg / 500mg",
+    "category": "MEDICINE",
+    "price": 477.33
+  },
+  {
+    "name": "Amaryl tablet 1mg",
+    "category": "MEDICINE",
+    "price": 235
+  },
+  {
+    "name": "Amaryl Tablet 2mg",
+    "category": "MEDICINE",
+    "price": null
+  },
+  {
+    "name": "Amaryl tablet 3mg",
+    "category": "MEDICINE",
+    "price": 700
+  },
+  {
+    "name": "Amaryl tablet 4mg",
+    "category": "MEDICINE",
+    "price": 932
+  },
+  {
+    "name": "Amaryl-M sr tablet 2mg / 500mg",
+    "category": "MEDICINE",
+    "price": 859.14
+  },
+  {
+    "name": "Amax Oral 2666 IU drops",
+    "category": "MEDICINE",
+    "price": 400
+  },
+  {
+    "name": "Amber capsule 400mg",
+    "category": "MEDICINE",
+    "price": 300
+  },
+  {
+    "name": "Amber suspension 100mg / 5ml",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Ambit capsule 500mg",
+    "category": "MEDICINE",
+    "price": 546.67
+  },
+  {
+    "name": "Ambra 1000 drop",
+    "category": "MEDICINE",
+    "price": 1190
+  },
+  {
+    "name": "Ambrofen suspension 100mg",
+    "category": "MEDICINE",
+    "price": 80
+  },
+  {
+    "name": "Ambrogesic tablet 35mg / 450mg",
+    "category": "MEDICINE",
+    "price": 350
+  },
+  {
+    "name": "Amclav tablet 1 gm",
+    "category": "MEDICINE",
+    "price": 278.84
+  },
+  {
+    "name": "Amclav tablet 375mg",
+    "category": "MEDICINE",
+    "price": 128.28
+  },
+  {
+    "name": "Amclav Tablet 625mg",
+    "category": "MEDICINE",
+    "price": 187
+  },
+  {
+    "name": "Amclav-DS Suspension 312.5mg/5ml",
+    "category": "MEDICINE",
+    "price": 170.52
+  },
+  {
+    "name": "Amdaquin tablet 150mg",
+    "category": "MEDICINE",
+    "price": 20.61
+  },
+  {
+    "name": "Amdipine Tablet 10mg",
+    "category": "MEDICINE",
+    "price": 407
+  },
+  {
+    "name": "Amdipine Tablet 5mg",
+    "category": "MEDICINE",
+    "price": 300
+  },
+  {
+    "name": "Ame-Fenac injection 75mg / 3ml",
+    "category": "MEDICINE",
+    "price": 2.35
+  },
+  {
+    "name": "Amfac capsule 50mg",
+    "category": "MEDICINE",
+    "price": 30
+  },
+  {
+    "name": "Amgydex Eye Drop 5ml",
+    "category": "MEDICINE",
+    "price": 189.29
+  },
+  {
+    "name": "Amgydex ointment 0.1% / 0.3%",
+    "category": "MEDICINE",
+    "price": 208.22
+  },
+  {
+    "name": "Amibazol tablet 500mg / 400mg",
+    "category": "MEDICINE",
+    "price": 50
+  },
+  {
+    "name": "Amic tablet 500mg",
+    "category": "MEDICINE",
+    "price": 390
+  },
+  {
+    "name": "Amicin injection 250mg",
+    "category": "MEDICINE",
+    "price": 82
+  },
+  {
+    "name": "Amicin injection 500mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Amidol Extra tablet 500mg / 65mg",
+    "category": "MEDICINE",
+    "price": 218.5
+  },
+  {
+    "name": "Amikacin injection 100mg",
+    "category": "MEDICINE",
+    "price": 41.59
+  },
+  {
+    "name": "Amikacin injection 1gm",
+    "category": "MEDICINE",
+    "price": 200
+  },
+  {
+    "name": "Amikacin injection 250mg",
+    "category": "MEDICINE",
+    "price": 87.66
+  },
+  {
+    "name": "Amikacin injection 500mg",
+    "category": "MEDICINE",
+    "price": 160.78
+  },
+  {
+    "name": "Amikin injection 100mg",
+    "category": "MEDICINE",
+    "price": 168.41
+  },
+  {
+    "name": "Amikin injection 500mg",
+    "category": "MEDICINE",
+    "price": 533.9
+  },
+  {
+    "name": "Aminoleban Liquid injection",
+    "category": "MEDICINE",
+    "price": 921.32
+  },
+  {
+    "name": "Aminoleban-Oral Nutrition Supplement powder",
+    "category": "MEDICINE",
+    "price": 4537.56
+  },
+  {
+    "name": "Aminomux injection 15mg",
+    "category": "MEDICINE",
+    "price": 1068
+  },
+  {
+    "name": "Aminomux injection 30mg",
+    "category": "MEDICINE",
+    "price": 2752.94
+  },
+  {
+    "name": "Aminomux injection 90mg",
+    "category": "MEDICINE",
+    "price": null
+  },
+  {
+    "name": "Aminophylline injection 250 mg",
+    "category": "MEDICINE",
+    "price": 520
+  },
+  {
+    "name": "Aminophylline tablet 100 mg",
+    "category": "MEDICINE",
+    "price": 91.76
+  },
+  {
+    "name": "Aminophylline tablet 100 mg (unexo)",
+    "category": "MEDICINE",
+    "price": 236
+  },
+  {
+    "name": "Amis tablets 100mg",
+    "category": "MEDICINE",
+    "price": 282
+  },
+  {
+    "name": "Amis tablets 400 mg",
+    "category": "MEDICINE",
+    "price": 845
+  },
+  {
+    "name": "Amisped tablet 10 mg",
+    "category": "MEDICINE",
+    "price": 252
+  },
+  {
+    "name": "Amisped tablet 4 mg",
+    "category": "MEDICINE",
+    "price": 168
+  },
+  {
+    "name": "Amity tablet 250mg",
+    "category": "MEDICINE",
+    "price": 180
+  },
+  {
+    "name": "Amizin injection 100mg",
+    "category": "MEDICINE",
+    "price": 41
+  },
+  {
+    "name": "Amizin injection 500mg",
+    "category": "MEDICINE",
+    "price": 125
+  },
+  {
+    "name": "Amizole suspension 250mg / 200mg",
+    "category": "MEDICINE",
+    "price": 36
+  },
+  {
+    "name": "Amizole tablet 250mg / 200mg",
+    "category": "MEDICINE",
+    "price": 73.5
+  },
+  {
+    "name": "Amizone injection 1gm",
+    "category": "MEDICINE",
+    "price": 321
+  },
+  {
+    "name": "Amizone injection 250mg",
+    "category": "MEDICINE",
+    "price": 101
+  },
+  {
+    "name": "Amizone injection 500mg",
+    "category": "MEDICINE",
+    "price": 170
+  },
+  {
+    "name": "Amkay Injection 250mg/2ml",
+    "category": "MEDICINE",
+    "price": 161
+  },
+  {
+    "name": "Amkay injection 500mg",
+    "category": "MEDICINE",
+    "price": 211.2
+  },
+  {
+    "name": "Amlo-Q tablet 10mg",
+    "category": "MEDICINE",
+    "price": 212
+  },
+  {
+    "name": "Amlo-Q Tablet 5mg",
+    "category": "MEDICINE",
+    "price": 123.86
+  },
+  {
+    "name": "Amlocard 10 tablet",
+    "category": "MEDICINE",
+    "price": 359.1
+  },
+  {
+    "name": "Amlocard 5 tablet 5mg",
+    "category": "MEDICINE",
+    "price": 208.68
+  },
+  {
+    "name": "Amlortan tablet 5mg / 160mg",
+    "category": "MEDICINE",
+    "price": 398.5
+  },
+  {
+    "name": "Amlortan tablet 5mg / 80mg",
+    "category": "MEDICINE",
+    "price": 238
+  },
+  {
+    "name": "Amnic tablet 250mg",
+    "category": "MEDICINE",
+    "price": 515
+  },
+  {
+    "name": "Amo-Clav injection 1gm / 200mg",
+    "category": "MEDICINE",
+    "price": 155
+  },
+  {
+    "name": "Amo-Clav injection 500mg / 100mg",
+    "category": "MEDICINE",
+    "price": 79
+  },
+  {
+    "name": "Amodip tablet 10mg",
+    "category": "MEDICINE",
+    "price": 400
+  },
+  {
+    "name": "Amodip tablet 5mg",
+    "category": "MEDICINE",
+    "price": 137
+  },
+  {
+    "name": "Amodip-V tablet 5mg / 160mg",
+    "category": "MEDICINE",
+    "price": 404
+  },
+  {
+    "name": "Amodip-V tablet 5mg / 80mg",
+    "category": "MEDICINE",
+    "price": 325
+  },
+  {
+    "name": "Amole Plus tablet 500mg / 65mg",
+    "category": "MEDICINE",
+    "price": 220
+  },
+  {
+    "name": "Amole tablet 500mg",
+    "category": "MEDICINE",
+    "price": 10
+  },
+  {
+    "name": "Amop capsule 20mg",
+    "category": "MEDICINE",
+    "price": 144
+  },
+  {
+    "name": "Amorin tablet 50mg",
+    "category": "MEDICINE",
+    "price": 1246
+  },
+  {
+    "name": "Amoxi- Clav tablet 1gm",
+    "category": "MEDICINE",
+    "price": 164.69
+  },
+  {
+    "name": "Amoxi-Clav injection 1.2gm",
+    "category": "MEDICINE",
+    "price": 180
+  },
+  {
+    "name": "Amoxi-Clav suspension 250mg / 62mg",
+    "category": "MEDICINE",
+    "price": 181.6
+  },
+  {
+    "name": "Amoxi-Clav tablet 375mg",
+    "category": "MEDICINE",
+    "price": 112.85
+  },
+  {
+    "name": "Amoxi-Clav tablet 625mg",
+    "category": "MEDICINE",
+    "price": 165.15
+  },
+  {
+    "name": "Amoxi-Clav tablet 875mg / 125mg",
+    "category": "MEDICINE",
+    "price": 213
+  },
+  {
+    "name": "Amoxil Capsule 250mg",
+    "category": "MEDICINE",
+    "price": 975
+  },
+  {
+    "name": "Amoxil Capsule 500mg",
+    "category": "MEDICINE",
+    "price": 1843.6
+  },
+  {
+    "name": "Amoxil Drops 125 mg",
+    "category": "MEDICINE",
+    "price": 86.48
+  },
+  {
+    "name": "AMOXIL FORTE SYP suspension 250mg / 90 ML / 250mg",
+    "category": "MEDICINE",
+    "price": 129.48
+  },
+  {
+    "name": "Amoxil suspension 125mg",
+    "category": "MEDICINE",
+    "price": 99.33
+  },
+  {
+    "name": "Amper tablet 4mg / 10mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Amper tablet 4mg / 5mg",
+    "category": "MEDICINE",
+    "price": 244
+  },
+  {
+    "name": "Amphyll injection 250 mg",
+    "category": "MEDICINE",
+    "price": 84.72
+  },
+  {
+    "name": "Ampiclox Capsule 250mg",
+    "category": "MEDICINE",
+    "price": 1275
+  },
+  {
+    "name": "Ampiclox capsule 500mg",
+    "category": "MEDICINE",
+    "price": 1150.2
+  },
+  {
+    "name": "Ampiclox Syrup suspension 250mg / 5ml / 250mg",
+    "category": "MEDICINE",
+    "price": 189.74
+  },
+  {
+    "name": "Amplus injection 500mg",
+    "category": "MEDICINE",
+    "price": 1937.5
+  },
+  {
+    "name": "Amplus injection iv/im 500mg",
+    "category": "MEDICINE",
+    "price": 87.51
+  },
+  {
+    "name": "Ampress Tablet 10mg",
+    "category": "MEDICINE",
+    "price": 318.72
+  },
+  {
+    "name": "Ampress tablet 5mg",
+    "category": "MEDICINE",
+    "price": 159.34
+  },
+  {
+    "name": "Amro Injection",
+    "category": "MEDICINE",
+    "price": 775
+  },
+  {
+    "name": "Amrovil IM/IV Injection 2ml",
+    "category": "MEDICINE",
+    "price": 770
+  },
+  {
+    "name": "Amstan tablet 10mg / 160mg",
+    "category": "MEDICINE",
+    "price": 1063.72
+  },
+  {
+    "name": "Amstan tablet 5mg / 160mg",
+    "category": "MEDICINE",
+    "price": 1063.72
+  },
+  {
+    "name": "Amstan Tablet 5mg/80mg",
+    "category": "MEDICINE",
+    "price": 699
+  },
+  {
+    "name": "Amtas tablet 10 mg / 40 mg",
+    "category": "MEDICINE",
+    "price": 182.5
+  },
+  {
+    "name": "Amtas tablet 5 mg / 80 mg",
+    "category": "MEDICINE",
+    "price": 238
+  },
+  {
+    "name": "Amtas tablet 5mg / 40mg",
+    "category": "MEDICINE",
+    "price": 175
+  },
+  {
+    "name": "Amtec tablet 50mg",
+    "category": "MEDICINE",
+    "price": 1200
+  },
+  {
+    "name": "Amtraxa injection 1gm",
+    "category": "MEDICINE",
+    "price": 407
+  },
+  {
+    "name": "Amtril tablet 80mg / 400mg",
+    "category": "MEDICINE",
+    "price": 117.65
+  },
+  {
+    "name": "Amural syrup 120ml",
+    "category": "MEDICINE",
+    "price": 17
+  },
+  {
+    "name": "Amvax-B injection 20mcg",
+    "category": "MEDICINE",
+    "price": 300
+  },
+  {
+    "name": "Amygra tablet 60mg",
+    "category": "MEDICINE",
+    "price": 151.8
+  },
+  {
+    "name": "Amyline Tablet 25mg",
+    "category": "MEDICINE",
+    "price": 213
+  },
+  {
+    "name": "Amzine syrup 1mg / ml",
+    "category": "MEDICINE",
+    "price": 42
+  },
+  {
+    "name": "Anac tablet 50mg",
+    "category": "MEDICINE",
+    "price": 30
+  },
+  {
+    "name": "Anacaine injection 1%",
+    "category": "MEDICINE",
+    "price": 1.4
+  },
+  {
+    "name": "Anacaine injection 2% / 10ml",
+    "category": "MEDICINE",
+    "price": 13.6
+  },
+  {
+    "name": "Anaf tablet 100mg",
+    "category": "MEDICINE",
+    "price": 55.67
+  },
+  {
+    "name": "Anaf tablet 100mg (10's Pack)",
+    "category": "MEDICINE",
+    "price": 167
+  },
+  {
+    "name": "Anafortan Plus injection",
+    "category": "MEDICINE",
+    "price": 558.06
+  },
+  {
+    "name": "Anafortan Plus Tablet",
+    "category": "MEDICINE",
+    "price": 621
+  },
+  {
+    "name": "Analar tablet 2mg",
+    "category": "MEDICINE",
+    "price": 133.88
+  },
+  {
+    "name": "Analgesic Balm 30g",
+    "category": "MEDICINE",
+    "price": 300
+  },
+  {
+    "name": "Analgesic cream",
+    "category": "MEDICINE",
+    "price": 140
+  },
+  {
+    "name": "Analid tablet 100mg",
+    "category": "MEDICINE",
+    "price": 71.58
+  },
+  {
+    "name": "Analin injection 10mg",
+    "category": "MEDICINE",
+    "price": 90.9
+  },
+  {
+    "name": "Analin injection 20 mg",
+    "category": "MEDICINE",
+    "price": 76.8
+  },
+  {
+    "name": "Anamol suspension 120mg",
+    "category": "MEDICINE",
+    "price": 40
+  },
+  {
+    "name": "Anapaz drops 125mcg / 10ml",
+    "category": "MEDICINE",
+    "price": 54.46
+  },
+  {
+    "name": "Anapen Forte tablet 500mg",
+    "category": "MEDICINE",
+    "price": 6.44
+  },
+  {
+    "name": "Anaprox tablet 500mg",
+    "category": "MEDICINE",
+    "price": 71.5
+  },
+  {
+    "name": "Anaren tablet 50mg",
+    "category": "MEDICINE",
+    "price": 19.9
+  },
+  {
+    "name": "Anaren tablet 50mg (20's Pack)",
+    "category": "MEDICINE",
+    "price": 21
+  },
+  {
+    "name": "Anarom tablet 20mg",
+    "category": "MEDICINE",
+    "price": 3680
+  },
+  {
+    "name": "Andrex Capsule 40mg",
+    "category": "MEDICINE",
+    "price": 872
+  },
+  {
+    "name": "Androcur tablet 50mg",
+    "category": "MEDICINE",
+    "price": 527.2
+  },
+  {
+    "name": "Anfotericina FADA injection 50mg",
+    "category": "MEDICINE",
+    "price": 750
+  },
+  {
+    "name": "Angesic tablet 35mg / 450mg",
+    "category": "MEDICINE",
+    "price": 19
+  },
+  {
+    "name": "Angilock tablet 50mg",
+    "category": "MEDICINE",
+    "price": 125
+  },
+  {
+    "name": "Angiocard SR capsule 2.5mg",
+    "category": "MEDICINE",
+    "price": 119.84
+  },
+  {
+    "name": "Angipro tablet 75mg",
+    "category": "MEDICINE",
+    "price": 10
+  },
+  {
+    "name": "Angised Tablet 0.5mg",
+    "category": "MEDICINE",
+    "price": 79.02
+  },
+  {
+    "name": "Angiwell - XR tablet 500 mg",
+    "category": "MEDICINE",
+    "price": 243
+  },
+  {
+    "name": "Anhibit Plus tablet 50mg / 12.5mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Anifed Tab Retard tablet",
+    "category": "MEDICINE",
+    "price": 187
+  },
+  {
+    "name": "Anizol tablet 500mg / 400mg",
+    "category": "MEDICINE",
+    "price": 24.67
+  },
+  {
+    "name": "Anmol capsule 20mg",
+    "category": "MEDICINE",
+    "price": 72
+  },
+  {
+    "name": "Anmol capsule 40mg",
+    "category": "MEDICINE",
+    "price": 125
+  },
+  {
+    "name": "Ann-Vil injection 25mg",
+    "category": "MEDICINE",
+    "price": 9.41
+  },
+  {
+    "name": "Ann-Vil tablet 25mg",
+    "category": "MEDICINE",
+    "price": 5.5
+  },
+  {
+    "name": "Annuva Tablet 50mg",
+    "category": "MEDICINE",
+    "price": 155
+  },
+  {
+    "name": "Anplag tablet 60 mg",
+    "category": "MEDICINE",
+    "price": 506
+  },
+  {
+    "name": "Anplag tablet 90mg",
+    "category": "MEDICINE",
+    "price": 1336
+  },
+  {
+    "name": "Ansaid Tablet 100mg",
+    "category": "MEDICINE",
+    "price": 381.99
+  },
+  {
+    "name": "Anso capsule 15mg",
+    "category": "MEDICINE",
+    "price": 85
+  },
+  {
+    "name": "Anso capsule 30mg",
+    "category": "MEDICINE",
+    "price": 206
+  },
+  {
+    "name": "Anthex suspension 100mg",
+    "category": "MEDICINE",
+    "price": 22
+  },
+  {
+    "name": "Anthracin injection 10mg",
+    "category": "MEDICINE",
+    "price": 670
+  },
+  {
+    "name": "Antial syrup",
+    "category": "MEDICINE",
+    "price": 62.21
+  },
+  {
+    "name": "Antial Tablet 10mg",
+    "category": "MEDICINE",
+    "price": 195
+  },
+  {
+    "name": "Antifen syrup 0.2mg",
+    "category": "MEDICINE",
+    "price": 43
+  },
+  {
+    "name": "Antiflam tablet 50mg",
+    "category": "MEDICINE",
+    "price": 50
+  },
+  {
+    "name": "Antiflam tablet 50mg (30's Pack)",
+    "category": "MEDICINE",
+    "price": 219.99
+  },
+  {
+    "name": "Antiflam tablet 75mg",
+    "category": "MEDICINE",
+    "price": 83.34
+  },
+  {
+    "name": "Antimal Plus tablet 20mg / 120mg",
+    "category": "MEDICINE",
+    "price": 160
+  },
+  {
+    "name": "Antine tablet 10mg",
+    "category": "MEDICINE",
+    "price": 180
+  },
+  {
+    "name": "Antine tablet 10mg (20's Pack)",
+    "category": "MEDICINE",
+    "price": 180
+  },
+  {
+    "name": "Antine tablet 20mg",
+    "category": "MEDICINE",
+    "price": 120.5
+  },
+  {
+    "name": "Antixin tablet 20mg",
+    "category": "MEDICINE",
+    "price": 175
+  },
+  {
+    "name": "Anton tablet 500mg",
+    "category": "MEDICINE",
+    "price": 244
+  },
+  {
+    "name": "Anvil Off tablet 40mg",
+    "category": "MEDICINE",
+    "price": 99
+  },
+  {
+    "name": "Anvol tablet 2.5mg",
+    "category": "MEDICINE",
+    "price": 118.07
+  },
+  {
+    "name": "Anvol tablet 5mg",
+    "category": "MEDICINE",
+    "price": 218.5
+  },
+  {
+    "name": "Anzatax injection 150mg",
+    "category": "MEDICINE",
+    "price": 22500
+  },
+  {
+    "name": "Apaurin tablet 2mg",
+    "category": "MEDICINE",
+    "price": 1.53
+  },
+  {
+    "name": "Apcom tablet 300mg / 200mg",
+    "category": "MEDICINE",
+    "price": 3.5
+  },
+  {
+    "name": "Apidra 100IU injection",
+    "category": "MEDICINE",
+    "price": 933.11
+  },
+  {
+    "name": "Apidra 100IU solostar injection",
+    "category": "MEDICINE",
+    "price": 4961.2
+  },
+  {
+    "name": "Apimate tablet 25mg",
+    "category": "MEDICINE",
+    "price": 80
+  },
+  {
+    "name": "Apiton tablet 4mg",
+    "category": "MEDICINE",
+    "price": 3
+  },
+  {
+    "name": "Apizyt syrup 120ml",
+    "category": "MEDICINE",
+    "price": 280
+  },
+  {
+    "name": "Apolex tablet 25mg",
+    "category": "MEDICINE",
+    "price": 65
+  },
+  {
+    "name": "Apranax Tablet 550mg",
+    "category": "MEDICINE",
+    "price": 290
+  },
+  {
+    "name": "Apro tablet 500mg",
+    "category": "MEDICINE",
+    "price": 445
+  },
+  {
+    "name": "Aprovel tablet 150mg",
+    "category": "MEDICINE",
+    "price": 1331
+  },
+  {
+    "name": "Aprovel tablet 300mg",
+    "category": "MEDICINE",
+    "price": 1997.56
+  },
+  {
+    "name": "Aproxen DS 550mg",
+    "category": "MEDICINE",
+    "price": 271.06
+  },
+  {
+    "name": "Aproxen tablet 250mg",
+    "category": "MEDICINE",
+    "price": 237
+  },
+  {
+    "name": "Aproxen tablet 275mg",
+    "category": "MEDICINE",
+    "price": 237
+  },
+  {
+    "name": "Apsin tablet 40mg",
+    "category": "MEDICINE",
+    "price": 188.55
+  },
+  {
+    "name": "Aptil tablet 25mg",
+    "category": "MEDICINE",
+    "price": 44.5
+  },
+  {
+    "name": "Aqua D drops 400IU",
+    "category": "MEDICINE",
+    "price": 385
+  },
+  {
+    "name": "Aquasin injection 20mg",
+    "category": "MEDICINE",
+    "price": 165
+  },
+  {
+    "name": "Aquavit sachet",
+    "category": "MEDICINE",
+    "price": 157.9
+  },
+  {
+    "name": "Aquavit Sugar Free Powder",
+    "category": "MEDICINE",
+    "price": 240
+  },
+  {
+    "name": "Aquazole cream",
+    "category": "MEDICINE",
+    "price": 101.6
+  },
+  {
+    "name": "Araam tablet 100mg",
+    "category": "MEDICINE",
+    "price": null
+  },
+  {
+    "name": "Araam tablet 50mg",
+    "category": "MEDICINE",
+    "price": null
+  },
+  {
+    "name": "Arbev tablet 100 mg",
+    "category": "MEDICINE",
+    "price": 40
+  },
+  {
+    "name": "Arbi D Tablet 150/12.5mg",
+    "category": "MEDICINE",
+    "price": 435
+  },
+  {
+    "name": "Arbi D Tablet 300/12.5mg",
+    "category": "MEDICINE",
+    "price": 643
+  },
+  {
+    "name": "Arbi D Tablet 300/25mg",
+    "category": "MEDICINE",
+    "price": 900
+  },
+  {
+    "name": "Arcalion tablet 200mg",
+    "category": "MEDICINE",
+    "price": 850
+  },
+  {
+    "name": "Arceva suspension 15mg / 90mg",
+    "category": "MEDICINE",
+    "price": 152.54
+  },
+  {
+    "name": "Arceva tablet 20mg / 120mg",
+    "category": "MEDICINE",
+    "price": 550.6
+  },
+  {
+    "name": "Arceva Ds suspension 30mg / 180mg",
+    "category": "MEDICINE",
+    "price": 254
+  },
+  {
+    "name": "Arceva suspension 15mg / 90mg",
+    "category": "MEDICINE",
+    "price": 254.67
+  },
+  {
+    "name": "Arceva tablet 40mg / 240mg",
+    "category": "MEDICINE",
+    "price": 373.53
+  },
+  {
+    "name": "Arceva Tablet 80mg/480mg",
+    "category": "MEDICINE",
+    "price": 516.22
+  },
+  {
+    "name": "Arcox tablet 60mg",
+    "category": "MEDICINE",
+    "price": 238
+  },
+  {
+    "name": "Arcozid tablet 2mg",
+    "category": "MEDICINE",
+    "price": 111.74
+  },
+  {
+    "name": "Ardi tablet 75mg",
+    "category": "MEDICINE",
+    "price": 51.33
+  },
+  {
+    "name": "Ardi-K tablet 75mg",
+    "category": "MEDICINE",
+    "price": 127
+  },
+  {
+    "name": "Aredia injection 15mg",
+    "category": "MEDICINE",
+    "price": 1812.98
+  },
+  {
+    "name": "Arex tablet 10mg",
+    "category": "MEDICINE",
+    "price": 30
+  },
+  {
+    "name": "Aria syrup 0.2mg / ml",
+    "category": "MEDICINE",
+    "price": 65
+  },
+  {
+    "name": "Aria tablet 1mg",
+    "category": "MEDICINE",
+    "price": 45.1
+  },
+  {
+    "name": "Aricef injection 1gm",
+    "category": "MEDICINE",
+    "price": 250
+  },
+  {
+    "name": "Aricef injection 500mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Aridol tablet 500mg / 65mg",
+    "category": "MEDICINE",
+    "price": 18
+  },
+  {
+    "name": "Ariflam capsule 100mg",
+    "category": "MEDICINE",
+    "price": 120
+  },
+  {
+    "name": "Ariflam capsule 50mg",
+    "category": "MEDICINE",
+    "price": 60
+  },
+  {
+    "name": "Arimidex tablet 1mg",
+    "category": "MEDICINE",
+    "price": 10441.14
+  },
+  {
+    "name": "Arinac Forte Tablet 400mg/60mg",
+    "category": "MEDICINE",
+    "price": 1276
+  },
+  {
+    "name": "Arinac Syrup 120ml",
+    "category": "MEDICINE",
+    "price": 153
+  },
+  {
+    "name": "Arinac Tablet 200mg/30mg",
+    "category": "MEDICINE",
+    "price": 604
+  },
+  {
+    "name": "Aripan tablet 20 mg",
+    "category": "MEDICINE",
+    "price": 474.99
+  },
+  {
+    "name": "Aripip tablet 10mg",
+    "category": "MEDICINE",
+    "price": 362.01
+  },
+  {
+    "name": "Aripip tablet 15mg",
+    "category": "MEDICINE",
+    "price": 483.93
+  },
+  {
+    "name": "Ariva tablet 20mg",
+    "category": "MEDICINE",
+    "price": 660
+  },
+  {
+    "name": "Arix syrup 1mg / ml",
+    "category": "MEDICINE",
+    "price": 75.2
+  },
+  {
+    "name": "Arix tablet 10mg",
+    "category": "MEDICINE",
+    "price": 184.56
+  },
+  {
+    "name": "Arixtra Pre filled Syringe injection 2.5mg / 5ml",
+    "category": "MEDICINE",
+    "price": 435
+  },
+  {
+    "name": "Arizon injection 1gm",
+    "category": "MEDICINE",
+    "price": 321
+  },
+  {
+    "name": "Arizon injection 500mg",
+    "category": "MEDICINE",
+    "price": 170
+  },
+  {
+    "name": "Arket tablet 250mg",
+    "category": "MEDICINE",
+    "price": 308.7
+  },
+  {
+    "name": "Arket tablet 500mg",
+    "category": "MEDICINE",
+    "price": 445
+  },
+  {
+    "name": "Armer tablet 20mg / 120mg",
+    "category": "MEDICINE",
+    "price": 160
+  },
+  {
+    "name": "Armex tablet 15mg",
+    "category": "MEDICINE",
+    "price": 93
+  },
+  {
+    "name": "Armex tablet 7.5mg",
+    "category": "MEDICINE",
+    "price": 56
+  },
+  {
+    "name": "Arnil tablet 50mg",
+    "category": "MEDICINE",
+    "price": 50
+  },
+  {
+    "name": "Arnil tablet 75mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Aromek Tablet 2.5mg",
+    "category": "MEDICINE",
+    "price": 791.45
+  },
+  {
+    "name": "Aropen capsule 300mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Arozine tablet 10mg",
+    "category": "MEDICINE",
+    "price": 36.3
+  },
+  {
+    "name": "Artecxin plus tablet 80mg / 480mg",
+    "category": "MEDICINE",
+    "price": 330
+  },
+  {
+    "name": "Artedoxin tablet 100mg / 500mg / 25mg",
+    "category": "MEDICINE",
+    "price": 105
+  },
+  {
+    "name": "Artelac Advanced 0.2% liquid",
+    "category": "MEDICINE",
+    "price": 662.66
+  },
+  {
+    "name": "Artelac Nighttime gel 2mg / gm",
+    "category": "MEDICINE",
+    "price": 975
+  },
+  {
+    "name": "Artelum Forte tablet 40mg / 240mg",
+    "category": "MEDICINE",
+    "price": 264
+  },
+  {
+    "name": "Artem DS Plus tablet 40mg / 240mg",
+    "category": "MEDICINE",
+    "price": 455
+  },
+  {
+    "name": "Artem DS Plus tablet 80mg / 480mg",
+    "category": "MEDICINE",
+    "price": 570
+  },
+  {
+    "name": "Artem injection 80mg",
+    "category": "MEDICINE",
+    "price": 211.7
+  },
+  {
+    "name": "Artem Plus dry suspension 30mg / 180mg",
+    "category": "MEDICINE",
+    "price": 272
+  },
+  {
+    "name": "Artem Plus suspension 60ml 15mg / 90mg",
+    "category": "MEDICINE",
+    "price": 327.4
+  },
+  {
+    "name": "Artem Plus tablet 20mg / 120mg",
+    "category": "MEDICINE",
+    "price": 276
+  },
+  {
+    "name": "Artemax Ds tablet 40mg / 240mg",
+    "category": "MEDICINE",
+    "price": 235
+  },
+  {
+    "name": "Artemef DS tablet 80mg / 480mg",
+    "category": "MEDICINE",
+    "price": 330
+  },
+  {
+    "name": "Artequine capsule 40mg / 320mg",
+    "category": "MEDICINE",
+    "price": 575
+  },
+  {
+    "name": "Artequine powder 15mg / 120mg",
+    "category": "MEDICINE",
+    "price": 35.94
+  },
+  {
+    "name": "Artesul tablet 50mg / 500mg / 25mg",
+    "category": "MEDICINE",
+    "price": 60.86
+  },
+  {
+    "name": "Artex tablet 15mg",
+    "category": "MEDICINE",
+    "price": 117
+  },
+  {
+    "name": "Artex tablet 7.5mg",
+    "category": "MEDICINE",
+    "price": 67.5
+  },
+  {
+    "name": "Arteza injection 80mg",
+    "category": "MEDICINE",
+    "price": 37.68
+  },
+  {
+    "name": "Arth capsule 500mg",
+    "category": "MEDICINE",
+    "price": 70
+  },
+  {
+    "name": "Artheget tablet 80 mg / 480 mg",
+    "category": "MEDICINE",
+    "price": 482
+  },
+  {
+    "name": "Artheget-DS + 2 tablet 40 mg / 240 mg",
+    "category": "MEDICINE",
+    "price": 386
+  },
+  {
+    "name": "Arther Forte tablet 80mg / 480mg",
+    "category": "MEDICINE",
+    "price": 220
+  },
+  {
+    "name": "Arther suspension 15mg / 90mg",
+    "category": "MEDICINE",
+    "price": 175
+  },
+  {
+    "name": "Arthicare tablet 500mg / 400mg",
+    "category": "MEDICINE",
+    "price": 1390
+  },
+  {
+    "name": "Artho tablet 75mg / 0.2mg",
+    "category": "MEDICINE",
+    "price": 239
+  },
+  {
+    "name": "Artho tablet 50mg / 0.2mg",
+    "category": "MEDICINE",
+    "price": 292
+  },
+  {
+    "name": "Arthonil tablet 50mg",
+    "category": "MEDICINE",
+    "price": 29.5
+  },
+  {
+    "name": "Arthroflex Max powder 500mg / 400mg",
+    "category": "MEDICINE",
+    "price": 54
+  },
+  {
+    "name": "Arthron tablet 50mg",
+    "category": "MEDICINE",
+    "price": 63.86
+  },
+  {
+    "name": "Arthrotec tablet 50mg / 0.2mg",
+    "category": "MEDICINE",
+    "price": 158.52
+  },
+  {
+    "name": "Arthrox tablet 500mg",
+    "category": "MEDICINE",
+    "price": 37
+  },
+  {
+    "name": "Arti Ds tablet 40mg / 240mg",
+    "category": "MEDICINE",
+    "price": 264
+  },
+  {
+    "name": "Arti Forte tablet 80mg / 480mg",
+    "category": "MEDICINE",
+    "price": 325.1
+  },
+  {
+    "name": "Arti tablet 20mg / 120mg",
+    "category": "MEDICINE",
+    "price": 161.25
+  },
+  {
+    "name": "Artic tablet 500mg",
+    "category": "MEDICINE",
+    "price": 94
+  },
+  {
+    "name": "Articure injection 75mg / 2ml / 20mg / 2ml",
+    "category": "MEDICINE",
+    "price": 24
+  },
+  {
+    "name": "Artifen injection 75mg / 3ml",
+    "category": "MEDICINE",
+    "price": 125.56
+  },
+  {
+    "name": "Artifen Tablet 50mg",
+    "category": "MEDICINE",
+    "price": 627.8
+  },
+  {
+    "name": "Artiflex capsule 200mg",
+    "category": "MEDICINE",
+    "price": 235.29
+  },
+  {
+    "name": "Artijesic suspension 100mg",
+    "category": "MEDICINE",
+    "price": 36
+  },
+  {
+    "name": "Artimet injection 40mg",
+    "category": "MEDICINE",
+    "price": 60
+  },
+  {
+    "name": "Artimov-K tablet 100mg",
+    "category": "MEDICINE",
+    "price": 101.2
+  },
+  {
+    "name": "Artimov-K tablet 50mg",
+    "category": "MEDICINE",
+    "price": 109.96
+  },
+  {
+    "name": "Artinex injection 80mg",
+    "category": "MEDICINE",
+    "price": 75
+  },
+  {
+    "name": "Artinil-K tablet 50mg",
+    "category": "MEDICINE",
+    "price": 62
+  },
+  {
+    "name": "Artinil-K tablet 75mg",
+    "category": "MEDICINE",
+    "price": 71.25
+  },
+  {
+    "name": "Artrodar capsule 50mg",
+    "category": "MEDICINE",
+    "price": 275.4
+  },
+  {
+    "name": "Arutox tablet 500mg",
+    "category": "MEDICINE",
+    "price": 8.5
+  },
+  {
+    "name": "Arynoin Capsule 20mg",
+    "category": "MEDICINE",
+    "price": 2995
+  },
+  {
+    "name": "Arynoin Plus Gel 10g",
+    "category": "MEDICINE",
+    "price": 393
+  },
+  {
+    "name": "Arysa capsule 20mg",
+    "category": "MEDICINE",
+    "price": 175
+  },
+  {
+    "name": "Arysa capsule 40mg",
+    "category": "MEDICINE",
+    "price": 292
+  },
+  {
+    "name": "ASA tablet 150mg",
+    "category": "MEDICINE",
+    "price": 33
+  },
+  {
+    "name": "ASA tablet 75mg",
+    "category": "MEDICINE",
+    "price": 23
+  },
+  {
+    "name": "Asalkar syrup 2 mg / 5ml",
+    "category": "MEDICINE",
+    "price": 19
+  },
+  {
+    "name": "Ascard Plus tablet 81mg / 75mg",
+    "category": "MEDICINE",
+    "price": 210
+  },
+  {
+    "name": "Ascard Tablet 150mg",
+    "category": "MEDICINE",
+    "price": 71.4
+  },
+  {
+    "name": "Ascard tablet 300mg",
+    "category": "MEDICINE",
+    "price": 17.33
+  },
+  {
+    "name": "Ascard Tablet 75mg",
+    "category": "MEDICINE",
+    "price": 83
+  },
+  {
+    "name": "Asfen syrup 1mg / 5 ml",
+    "category": "MEDICINE",
+    "price": 45.99
+  },
+  {
+    "name": "Asfen tablet 1mg",
+    "category": "MEDICINE",
+    "price": 79.98
+  },
+  {
+    "name": "Asilix tablet 250mg",
+    "category": "MEDICINE",
+    "price": 190
+  },
+  {
+    "name": "Asilix tablet 500mg",
+    "category": "MEDICINE",
+    "price": 250
+  },
+  {
+    "name": "Aslow-81 Tablet",
+    "category": "MEDICINE",
+    "price": 33
+  },
+  {
+    "name": "Asmakast tablet 10 mg",
+    "category": "MEDICINE",
+    "price": 252
+  },
+  {
+    "name": "Asmakast tablet 5mg",
+    "category": "MEDICINE",
+    "price": 140
+  },
+  {
+    "name": "Asmax tablet 10 mg",
+    "category": "MEDICINE",
+    "price": 310
+  },
+  {
+    "name": "Asmax tablet 5 mg",
+    "category": "MEDICINE",
+    "price": 240
+  },
+  {
+    "name": "Asmofen tablet 1mg",
+    "category": "MEDICINE",
+    "price": 57.33
+  },
+  {
+    "name": "Asmolin tablet 100 mg",
+    "category": "MEDICINE",
+    "price": 250
+  },
+  {
+    "name": "Aspen tablet 120mg",
+    "category": "MEDICINE",
+    "price": 116
+  },
+  {
+    "name": "Aspirin Compd tablet 200mg / 300mg / 30mg",
+    "category": "MEDICINE",
+    "price": 8
+  },
+  {
+    "name": "Aspirin tablet 200mg / 300mg / 30mg",
+    "category": "MEDICINE",
+    "price": 135
+  },
+  {
+    "name": "Aspirin tablet 300mg",
+    "category": "MEDICINE",
+    "price": 125
+  },
+  {
+    "name": "Aspirin tablet 300mg (Amros)",
+    "category": "MEDICINE",
+    "price": 130
+  },
+  {
+    "name": "Aspirin tablet 300mg (Euro Pharma)",
+    "category": "MEDICINE",
+    "price": 300
+  },
+  {
+    "name": "Aspirin tablet 300mg (Gaba)",
+    "category": "MEDICINE",
+    "price": 28
+  },
+  {
+    "name": "Aspirin tablet 300mg (Irza)",
+    "category": "MEDICINE",
+    "price": 20
+  },
+  {
+    "name": "Aspirin tablet 300mg (Nawab sons)",
+    "category": "MEDICINE",
+    "price": 135
+  },
+  {
+    "name": "Aspirin tablet 300mg (Pharmacare)",
+    "category": "MEDICINE",
+    "price": 80
+  },
+  {
+    "name": "Aspirin tablet 300mg / 200mg",
+    "category": "MEDICINE",
+    "price": 350
+  },
+  {
+    "name": "Asset capsule 25mg",
+    "category": "MEDICINE",
+    "price": 2043.81
+  },
+  {
+    "name": "Astadol tablet 37.5 / 325mg",
+    "category": "MEDICINE",
+    "price": 95
+  },
+  {
+    "name": "Astaxan tablet",
+    "category": "MEDICINE",
+    "price": 995
+  },
+  {
+    "name": "Astel tablet 10 mg",
+    "category": "MEDICINE",
+    "price": 310
+  },
+  {
+    "name": "Asthacure syrup 0.2mg",
+    "category": "MEDICINE",
+    "price": 43
+  },
+  {
+    "name": "Asthalin tablet 350 mg",
+    "category": "MEDICINE",
+    "price": 13
+  },
+  {
+    "name": "Asthanil syrup 0.2mg",
+    "category": "MEDICINE",
+    "price": 39
+  },
+  {
+    "name": "Asthiven Tablet 10mg",
+    "category": "MEDICINE",
+    "price": 209.86
+  },
+  {
+    "name": "Asthiven tablet 5 mg",
+    "category": "MEDICINE",
+    "price": 139.99
+  },
+  {
+    "name": "Asthotifen syrup 0.2mg",
+    "category": "MEDICINE",
+    "price": 76.3
+  },
+  {
+    "name": "Asthotifen tablet 1mg",
+    "category": "MEDICINE",
+    "price": 79.02
+  },
+  {
+    "name": "Asunra tablet dispersible 400mg",
+    "category": "MEDICINE",
+    "price": 2127.04
+  },
+  {
+    "name": "Atarax Tablet 10mg",
+    "category": "MEDICINE",
+    "price": 56
+  },
+  {
+    "name": "Atarax Tablet 25 mg",
+    "category": "MEDICINE",
+    "price": 121
+  },
+  {
+    "name": "Atasart tablet 16mg",
+    "category": "MEDICINE",
+    "price": 197.5
+  },
+  {
+    "name": "Atasart tablet 8mg",
+    "category": "MEDICINE",
+    "price": 109
+  },
+  {
+    "name": "Atcam tablet 8mg",
+    "category": "MEDICINE",
+    "price": 200
+  },
+  {
+    "name": "Atcoflox tablet 250mg",
+    "category": "MEDICINE",
+    "price": 138.29
+  },
+  {
+    "name": "Atcomid tablet 100mg",
+    "category": "MEDICINE",
+    "price": 635
+  },
+  {
+    "name": "Atcomid tablet 50mg",
+    "category": "MEDICINE",
+    "price": 380
+  },
+  {
+    "name": "Atcon capsule 100mg",
+    "category": "MEDICINE",
+    "price": 300
+  },
+  {
+    "name": "Atcopram tablet 10mg",
+    "category": "MEDICINE",
+    "price": 250.89
+  },
+  {
+    "name": "Atem Nebuliser Solution 0.025%",
+    "category": "MEDICINE",
+    "price": 1542
+  },
+  {
+    "name": "Atem Nebuliser Solution 250mcg 1ml",
+    "category": "MEDICINE",
+    "price": 1052
+  },
+  {
+    "name": "Atem nebulizer solution 0.00025",
+    "category": "MEDICINE",
+    "price": 1052
+  },
+  {
+    "name": "Ateno-Heart tablet 100mg",
+    "category": "MEDICINE",
+    "price": 40
+  },
+  {
+    "name": "Ateno-Heart tablet 50mg",
+    "category": "MEDICINE",
+    "price": 37
+  },
+  {
+    "name": "Atenolol tablet 100mg",
+    "category": "MEDICINE",
+    "price": 100.16
+  },
+  {
+    "name": "Atenolol tablet 50mg",
+    "category": "MEDICINE",
+    "price": 91.97
+  },
+  {
+    "name": "Atenorm tablet 50mg",
+    "category": "MEDICINE",
+    "price": 115
+  },
+  {
+    "name": "Ativan tablet 1mg",
+    "category": "MEDICINE",
+    "price": 20
+  },
+  {
+    "name": "Ativan tablet 2mg",
+    "category": "MEDICINE",
+    "price": 16.99
+  },
+  {
+    "name": "Atiza Syrup 2.5mg/5ml",
+    "category": "MEDICINE",
+    "price": 56.45
+  },
+  {
+    "name": "Atiza tablet 5mg",
+    "category": "MEDICINE",
+    "price": 245.01
+  },
+  {
+    "name": "Atizor suspension 200 mg / 5 ml",
+    "category": "MEDICINE",
+    "price": 315
+  },
+  {
+    "name": "Atizor tablet 250 mg",
+    "category": "MEDICINE",
+    "price": 241.96
+  },
+  {
+    "name": "Atizor tablet 500 mg",
+    "category": "MEDICINE",
+    "price": 443.59
+  },
+  {
+    "name": "ATL tablet 50mg",
+    "category": "MEDICINE",
+    "price": 35
+  },
+  {
+    "name": "Atmos syrup 5mg",
+    "category": "MEDICINE",
+    "price": 99
+  },
+  {
+    "name": "Atmos tablet 10mg",
+    "category": "MEDICINE",
+    "price": 140
+  },
+  {
+    "name": "Atmos tablet 20mg",
+    "category": "MEDICINE",
+    "price": 220
+  },
+  {
+    "name": "ATN tablet 50mg",
+    "category": "MEDICINE",
+    "price": 58.5
+  },
+  {
+    "name": "Atomin tablet 25mg",
+    "category": "MEDICINE",
+    "price": 51
+  },
+  {
+    "name": "Atopalm Moisturizing Body Wash 300ml",
+    "category": "MEDICINE",
+    "price": 2925
+  },
+  {
+    "name": "Atorva Tablet 10mg",
+    "category": "MEDICINE",
+    "price": 308
+  },
+  {
+    "name": "Atorva tablet 20mg",
+    "category": "MEDICINE",
+    "price": 498.73
+  },
+  {
+    "name": "Atorva tablet 40mg",
+    "category": "MEDICINE",
+    "price": 551.93
+  },
+  {
+    "name": "Atoxan tablet 30mg",
+    "category": "MEDICINE",
+    "price": 110
+  },
+  {
+    "name": "Atractin capsule 20mg",
+    "category": "MEDICINE",
+    "price": 2049.99
+  },
+  {
+    "name": "Atrelax injection 50mg",
+    "category": "MEDICINE",
+    "price": 229.9
+  },
+  {
+    "name": "Atril tablet 100mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Atropine Injection",
+    "category": "MEDICINE",
+    "price": 784
+  },
+  {
+    "name": "Atrotil tablet 2.5mg / 0.025mg",
+    "category": "MEDICINE",
+    "price": 4
+  },
+  {
+    "name": "Augmentin 457mg",
+    "category": "MEDICINE",
+    "price": 331.44
+  },
+  {
+    "name": "Augmentin 600 mg",
+    "category": "MEDICINE",
+    "price": 100
+  },
+  {
+    "name": "Augmentin BD 1000mg 1g Tablet",
+    "category": "MEDICINE",
+    "price": 362.54
+  },
+  {
+    "name": "Augmentin bd suspension 457mg",
+    "category": "MEDICINE",
+    "price": 175.56
+  },
+  {
+    "name": "Augmentin DS suspension 312.50mg",
+    "category": "MEDICINE",
+    "price": 312.56
+  },
+  {
+    "name": "Augmentin Infant Drops 62.5mg / ml",
+    "category": "MEDICINE",
+    "price": 182.66
+  },
+  {
+    "name": "Augmentin injection 1.2g",
+    "category": "MEDICINE",
+    "price": 1802
+  },
+  {
+    "name": "Augmentin injection 1.2gm",
+    "category": "MEDICINE",
+    "price": 1802
+  },
+  {
+    "name": "Augmentin suspension 156.25mg",
+    "category": "MEDICINE",
+    "price": 192.16
+  },
+  {
+    "name": "Augmentin suspension 312.5mg",
+    "category": "MEDICINE",
+    "price": 109
+  },
+  {
+    "name": "Augmentin Tablet 375mg",
+    "category": "MEDICINE",
+    "price": 269
+  },
+  {
+    "name": "Augmentin Tablet 625mg",
+    "category": "MEDICINE",
+    "price": 546
+  },
+  {
+    "name": "Aurora tablet 10mg",
+    "category": "MEDICINE",
+    "price": 277
+  },
+  {
+    "name": "Aurora tablet 20mg",
+    "category": "MEDICINE",
+    "price": 425
+  },
+  {
+    "name": "Aurora tablet 5mg",
+    "category": "MEDICINE",
+    "price": 154
+  },
+  {
+    "name": "Auspogen injection",
+    "category": "MEDICINE",
+    "price": 790
+  },
+  {
+    "name": "Auspogen injection 300ug",
+    "category": "MEDICINE",
+    "price": 2304
+  },
+  {
+    "name": "Austa-Z tablet 250mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "AV-Sartan tablet 10mg / 160mg",
+    "category": "MEDICINE",
+    "price": 458.3
+  },
+  {
+    "name": "Avaam tablet 5 mg / 160 mg",
+    "category": "MEDICINE",
+    "price": 500
+  },
+  {
+    "name": "Avamys spray",
+    "category": "MEDICINE",
+    "price": 875
+  },
+  {
+    "name": "Avanep 0.1% eye drop",
+    "category": "MEDICINE",
+    "price": 451.66
+  },
+  {
+    "name": "Avec syrup 5mg / 5ml",
+    "category": "MEDICINE",
+    "price": 64
+  },
+  {
+    "name": "Avec tablet 10mg",
+    "category": "MEDICINE",
+    "price": 66.5
+  },
+  {
+    "name": "Avecol capsule 200mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Avecol capsule 400mg",
+    "category": "MEDICINE",
+    "price": 325
+  },
+  {
+    "name": "Avedex injection 25mg",
+    "category": "MEDICINE",
+    "price": 294.11
+  },
+  {
+    "name": "Avelox Infusion 400mg 250ml",
+    "category": "MEDICINE",
+    "price": 2071
+  },
+  {
+    "name": "Avelox Tablet 400mg",
+    "category": "MEDICINE",
+    "price": 1042.51
+  },
+  {
+    "name": "Aventriax injection 1gm",
+    "category": "MEDICINE",
+    "price": 441.78
+  },
+  {
+    "name": "Aventriax injection 250mg",
+    "category": "MEDICINE",
+    "price": 129.91
+  },
+  {
+    "name": "Aventriax injection 500mg",
+    "category": "MEDICINE",
+    "price": 218.67
+  },
+  {
+    "name": "Aventriax injection im 500mg",
+    "category": "MEDICINE",
+    "price": 218.67
+  },
+  {
+    "name": "Avetron 1gm injection 1gm",
+    "category": "MEDICINE",
+    "price": 285
+  },
+  {
+    "name": "Avifix tablet 10mg",
+    "category": "MEDICINE",
+    "price": 215
+  },
+  {
+    "name": "Avil Injection 25mg",
+    "category": "MEDICINE",
+    "price": 8.54
+  },
+  {
+    "name": "Avil syrup 15mg / 5ml",
+    "category": "MEDICINE",
+    "price": 37.88
+  },
+  {
+    "name": "Avil Syrup 90ml",
+    "category": "MEDICINE",
+    "price": 112.66
+  },
+  {
+    "name": "Avil Tablet 25mg",
+    "category": "MEDICINE",
+    "price": 392.3
+  },
+  {
+    "name": "Avil tablet 75mg",
+    "category": "MEDICINE",
+    "price": 16.2
+  },
+  {
+    "name": "Avilon injection 25mg",
+    "category": "MEDICINE",
+    "price": 1.65
+  },
+  {
+    "name": "Avinol elixir 15mg / 5ml",
+    "category": "MEDICINE",
+    "price": 12.94
+  },
+  {
+    "name": "Avinza capsule 40mg",
+    "category": "MEDICINE",
+    "price": null
+  },
+  {
+    "name": "Avodart capsule 0.5mg",
+    "category": "MEDICINE",
+    "price": 2693.16
+  },
+  {
+    "name": "Avomine tablet 25mg",
+    "category": "MEDICINE",
+    "price": 11.69
+  },
+  {
+    "name": "Avor tablet 1mg",
+    "category": "MEDICINE",
+    "price": 13.22
+  },
+  {
+    "name": "Avorek tablet fc 50mg",
+    "category": "MEDICINE",
+    "price": 96.78
+  },
+  {
+    "name": "Avsar Plus tablet 10mg / 160mg / 25mg",
+    "category": "MEDICINE",
+    "price": 376
+  },
+  {
+    "name": "Avsar Plus tablet 160 / 10 / 12.5mg",
+    "category": "MEDICINE",
+    "price": 371
+  },
+  {
+    "name": "Avsar Plus tablet 5 mg / 12.5mg / 160 mg",
+    "category": "MEDICINE",
+    "price": 350
+  },
+  {
+    "name": "Avsar tablet 160mg / 10mg",
+    "category": "MEDICINE",
+    "price": 484.4
+  },
+  {
+    "name": "Avsar tablet 5mg / 160mg",
+    "category": "MEDICINE",
+    "price": 415.4
+  },
+  {
+    "name": "Avsar Tablet 5mg/80mg",
+    "category": "MEDICINE",
+    "price": 345.04
+  },
+  {
+    "name": "Awa-Block capsule 40mg",
+    "category": "MEDICINE",
+    "price": 79
+  },
+  {
+    "name": "Awakast tablet 10 mg",
+    "category": "MEDICINE",
+    "price": 155
+  },
+  {
+    "name": "Awardin Plus capsule 50mg",
+    "category": "MEDICINE",
+    "price": 526.24
+  },
+  {
+    "name": "Awatrox injection 500mg",
+    "category": "MEDICINE",
+    "price": 170
+  },
+  {
+    "name": "Axal tablet 0.25mg",
+    "category": "MEDICINE",
+    "price": 36.66
+  },
+  {
+    "name": "Axal tablet 0.5mg",
+    "category": "MEDICINE",
+    "price": 66.33
+  },
+  {
+    "name": "Axalor tablet 10mg",
+    "category": "MEDICINE",
+    "price": 72
+  },
+  {
+    "name": "Axamol extra tablet 500 mg / 65 mg",
+    "category": "MEDICINE",
+    "price": 10
+  },
+  {
+    "name": "Axamol tablet 500 mg",
+    "category": "MEDICINE",
+    "price": 7
+  },
+  {
+    "name": "Axcin tablet 500mg",
+    "category": "MEDICINE",
+    "price": 320
+  },
+  {
+    "name": "Axesom capsule 20mg",
+    "category": "MEDICINE",
+    "price": 189
+  },
+  {
+    "name": "Axesom Capsule 40mg",
+    "category": "MEDICINE",
+    "price": 315
+  },
+  {
+    "name": "Axflam injection 75mg / 3ml",
+    "category": "MEDICINE",
+    "price": 24
+  },
+  {
+    "name": "Axid Neo capsule 20mg",
+    "category": "MEDICINE",
+    "price": 189.34
+  },
+  {
+    "name": "Axid Neo capsule 40mg",
+    "category": "MEDICINE",
+    "price": 347
+  },
+  {
+    "name": "Axifen tablet 100mg",
+    "category": "MEDICINE",
+    "price": 180
+  },
+  {
+    "name": "Axifen tablet 50mg",
+    "category": "MEDICINE",
+    "price": 60
+  },
+  {
+    "name": "Axodine tablet 120mg",
+    "category": "MEDICINE",
+    "price": 155
+  },
+  {
+    "name": "Axolox tablet 500mg",
+    "category": "MEDICINE",
+    "price": 260
+  },
+  {
+    "name": "Az-Ko tablet 250mg",
+    "category": "MEDICINE",
+    "price": 58.82
+  },
+  {
+    "name": "AZAFRINE tablet 50mg",
+    "category": "MEDICINE",
+    "price": 1248
+  },
+  {
+    "name": "Azal tablet 250mg",
+    "category": "MEDICINE",
+    "price": 210
+  },
+  {
+    "name": "Azaltic tablet 250mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Azelide dry suspension 200mg",
+    "category": "MEDICINE",
+    "price": 170
+  },
+  {
+    "name": "Azelide tablet 250mg",
+    "category": "MEDICINE",
+    "price": 160
+  },
+  {
+    "name": "Azene tablet 20mg",
+    "category": "MEDICINE",
+    "price": 41.5
+  },
+  {
+    "name": "Azibac capsule 250mg",
+    "category": "MEDICINE",
+    "price": 255
+  },
+  {
+    "name": "Azibac dry suspension 200mg",
+    "category": "MEDICINE",
+    "price": 165
+  },
+  {
+    "name": "Azibect capsule 250mg",
+    "category": "MEDICINE",
+    "price": 205.78
+  },
+  {
+    "name": "Azibect capsule 500mg",
+    "category": "MEDICINE",
+    "price": 173.42
+  },
+  {
+    "name": "Azibect dry suspension 200mg",
+    "category": "MEDICINE",
+    "price": 228.9
+  },
+  {
+    "name": "Azicure capsule 250mg",
+    "category": "MEDICINE",
+    "price": 192
+  },
+  {
+    "name": "Azicure capsule 500mg",
+    "category": "MEDICINE",
+    "price": 366
+  },
+  {
+    "name": "Azicure dry suspension 200mg",
+    "category": "MEDICINE",
+    "price": 206
+  },
+  {
+    "name": "Azidose capsule 250mg",
+    "category": "MEDICINE",
+    "price": 153
+  },
+  {
+    "name": "Azigood capsule 250mg",
+    "category": "MEDICINE",
+    "price": 255
+  },
+  {
+    "name": "Azilite capsule 250mg",
+    "category": "MEDICINE",
+    "price": 255
+  },
+  {
+    "name": "Azilite capsule 500mg",
+    "category": "MEDICINE",
+    "price": 275
+  },
+  {
+    "name": "Azilite tablet 250mg",
+    "category": "MEDICINE",
+    "price": 255
+  },
+  {
+    "name": "Azimycin dry suspension 200mg",
+    "category": "MEDICINE",
+    "price": 135
+  },
+  {
+    "name": "Azimycin tablet 250mg",
+    "category": "MEDICINE",
+    "price": 208
+  },
+  {
+    "name": "Azineu tablet 250mg",
+    "category": "MEDICINE",
+    "price": 187
+  },
+  {
+    "name": "Azineu tablet 500mg",
+    "category": "MEDICINE",
+    "price": 300
+  },
+  {
+    "name": "Azirol tablet 250mg",
+    "category": "MEDICINE",
+    "price": 156
+  },
+  {
+    "name": "Azirom tablet 250mg",
+    "category": "MEDICINE",
+    "price": 170
+  },
+  {
+    "name": "Azit capsule 250mg",
+    "category": "MEDICINE",
+    "price": 119.9
+  },
+  {
+    "name": "Azit dry suspension 200mg",
+    "category": "MEDICINE",
+    "price": 119.9
+  },
+  {
+    "name": "Azitab tablet 250mg",
+    "category": "MEDICINE",
+    "price": 233
+  },
+  {
+    "name": "Azitek tablet 250mg",
+    "category": "MEDICINE",
+    "price": 250
+  },
+  {
+    "name": "Azitma Tablet 500mg",
+    "category": "MEDICINE",
+    "price": 480
+  },
+  {
+    "name": "Azitral capsule 250mg",
+    "category": "MEDICINE",
+    "price": 255
+  },
+  {
+    "name": "Azitral dry suspension 200mg",
+    "category": "MEDICINE",
+    "price": 165
+  },
+  {
+    "name": "Azizox tablet 250mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Azo capsule 250mg",
+    "category": "MEDICINE",
+    "price": 172.8
+  },
+  {
+    "name": "Azobrain tablet 250mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Azocin capsule 250mg",
+    "category": "MEDICINE",
+    "price": 350.44
+  },
+  {
+    "name": "Azolam Tablet 0.5mg",
+    "category": "MEDICINE",
+    "price": 55.5
+  },
+  {
+    "name": "Azom capsule 250mg",
+    "category": "MEDICINE",
+    "price": 255
+  },
+  {
+    "name": "Azomax 200mg Suspension 15ml",
+    "category": "MEDICINE",
+    "price": 375
+  },
+  {
+    "name": "Azomax Capsule 250mg",
+    "category": "MEDICINE",
+    "price": 770
+  },
+  {
+    "name": "Azomax dry suspension 200mg / 5ml",
+    "category": "MEDICINE",
+    "price": 415
+  },
+  {
+    "name": "Azomax Tablet 500mg",
+    "category": "MEDICINE",
+    "price": 532
+  },
+  {
+    "name": "Azomexin capsule 250mg",
+    "category": "MEDICINE",
+    "price": 255
+  },
+  {
+    "name": "Azomexin tablet 500mg",
+    "category": "MEDICINE",
+    "price": 275
+  },
+  {
+    "name": "Azomycin capsule 250mg",
+    "category": "MEDICINE",
+    "price": 255
+  },
+  {
+    "name": "Azopik tablet 500mg",
+    "category": "MEDICINE",
+    "price": 275
+  },
+  {
+    "name": "Azopt drops",
+    "category": "MEDICINE",
+    "price": 1112.91
+  },
+  {
+    "name": "Azotag capsule 250mg",
+    "category": "MEDICINE",
+    "price": 153
+  },
+  {
+    "name": "Azotek Tablet 250mg",
+    "category": "MEDICINE",
+    "price": 436
+  },
+  {
+    "name": "Azotek tablet 500mg",
+    "category": "MEDICINE",
+    "price": 436.14
+  },
+  {
+    "name": "Azotine capsule 250mg",
+    "category": "MEDICINE",
+    "price": 255
+  },
+  {
+    "name": "Azotine capsule 500mg",
+    "category": "MEDICINE",
+    "price": 125
+  },
+  {
+    "name": "Azour capsule 500mg",
+    "category": "MEDICINE",
+    "price": 258
+  },
+  {
+    "name": "Azrocin capsule 250mg",
+    "category": "MEDICINE",
+    "price": 252.7
+  },
+  {
+    "name": "Azrowin capsule 500mg",
+    "category": "MEDICINE",
+    "price": 125
+  },
+  {
+    "name": "Azure capsule 250mg",
+    "category": "MEDICINE",
+    "price": 250
+  },
+  {
+    "name": "Azure capsule 500mg",
+    "category": "MEDICINE",
+    "price": 275
+  },
+  {
+    "name": "Azure suspension 200mg",
+    "category": "MEDICINE",
+    "price": 165
+  },
+  {
+    "name": "Azvac Tablet",
+    "category": "MEDICINE",
+    "price": 599
+  },
+  {
+    "name": "Azwin tablet 250mg",
+    "category": "MEDICINE",
+    "price": null
+  },
+  {
+    "name": "Azza capsule 250mg",
+    "category": "MEDICINE",
+    "price": 255
+  }
+]

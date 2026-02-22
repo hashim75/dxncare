@@ -1,0 +1,442 @@
+[
+  {
+    "name": "X-BONE tablet 5 mcg",
+    "category": "MEDICINE",
+    "price": 600
+  },
+  {
+    "name": "X-Gen drops",
+    "category": "MEDICINE",
+    "price": 250
+  },
+  {
+    "name": "X-Gen tablet 400 mg",
+    "category": "MEDICINE",
+    "price": 385
+  },
+  {
+    "name": "X-Plended 10mg Tablet",
+    "category": "MEDICINE",
+    "price": 309
+  },
+  {
+    "name": "X-plended tablet 20mg",
+    "category": "MEDICINE",
+    "price": 470
+  },
+  {
+    "name": "X-plended tablet 5mg",
+    "category": "MEDICINE",
+    "price": 185
+  },
+  {
+    "name": "Xadine Tablet 120mg",
+    "category": "MEDICINE",
+    "price": 434.08
+  },
+  {
+    "name": "Xalacom 0.005%/0.5% drops 2.5ml",
+    "category": "MEDICINE",
+    "price": 1620.15
+  },
+  {
+    "name": "Xalacom Eye Drop 2.5ml",
+    "category": "MEDICINE",
+    "price": 2099
+  },
+  {
+    "name": "Xalatan 0.00005 drops 2.5ml",
+    "category": "MEDICINE",
+    "price": 1796.4
+  },
+  {
+    "name": "Xalatan Eye Drop 2.5ml",
+    "category": "MEDICINE",
+    "price": 1732
+  },
+  {
+    "name": "Xaltide Hfa inhaler 100mcg / 50mcg",
+    "category": "MEDICINE",
+    "price": 500
+  },
+  {
+    "name": "Xanax tablet 0.25mg",
+    "category": "MEDICINE",
+    "price": 60
+  },
+  {
+    "name": "Xanax Tablet 0.5mg",
+    "category": "MEDICINE",
+    "price": 92.67
+  },
+  {
+    "name": "Xanax tablet 1mg",
+    "category": "MEDICINE",
+    "price": 167.46
+  },
+  {
+    "name": "Xarelto tablet 10mg",
+    "category": "MEDICINE",
+    "price": 1525
+  },
+  {
+    "name": "Xarelto tablet 15mg",
+    "category": "MEDICINE",
+    "price": 4270
+  },
+  {
+    "name": "Xarelto tablet 20mg",
+    "category": "MEDICINE",
+    "price": 4270
+  },
+  {
+    "name": "Xaroban tablet 10mg",
+    "category": "MEDICINE",
+    "price": 331
+  },
+  {
+    "name": "Xatral LP tablet 10mg",
+    "category": "MEDICINE",
+    "price": 1715.5
+  },
+  {
+    "name": "Xatral SR tablet 5mg",
+    "category": "MEDICINE",
+    "price": 1168.48
+  },
+  {
+    "name": "XAVOR DIU forte tablet 100mg / 25mg",
+    "category": "MEDICINE",
+    "price": 279
+  },
+  {
+    "name": "Xavor tablet 25mg",
+    "category": "MEDICINE",
+    "price": 198.4
+  },
+  {
+    "name": "Xavor Tablet 50mg",
+    "category": "MEDICINE",
+    "price": 205
+  },
+  {
+    "name": "Xavor-DIU tablet 50mg / 12.5mg",
+    "category": "MEDICINE",
+    "price": 205
+  },
+  {
+    "name": "Xcept Tablet 10mg",
+    "category": "MEDICINE",
+    "price": 484
+  },
+  {
+    "name": "Xcept Tablet 15mg",
+    "category": "MEDICINE",
+    "price": 650
+  },
+  {
+    "name": "Xcept tablet 20mg",
+    "category": "MEDICINE",
+    "price": 770
+  },
+  {
+    "name": "Xcid tablet 15mg",
+    "category": "MEDICINE",
+    "price": 96
+  },
+  {
+    "name": "Xcid tablet 7.5mg",
+    "category": "MEDICINE",
+    "price": 56
+  },
+  {
+    "name": "Xecomb Ear Drops",
+    "category": "MEDICINE",
+    "price": 87
+  },
+  {
+    "name": "Xefecta tablet 400mg",
+    "category": "MEDICINE",
+    "price": 425
+  },
+  {
+    "name": "Xeflox tablet 500mg",
+    "category": "MEDICINE",
+    "price": 241
+  },
+  {
+    "name": "Xelite Skin Brightening Cream",
+    "category": "MEDICINE",
+    "price": 1199
+  },
+  {
+    "name": "Xemox Eye Drop 5ml",
+    "category": "MEDICINE",
+    "price": 257
+  },
+  {
+    "name": "Xenecor tablet 10mg",
+    "category": "MEDICINE",
+    "price": 280
+  },
+  {
+    "name": "Xenecor tablet 5mg",
+    "category": "MEDICINE",
+    "price": 147
+  },
+  {
+    "name": "Xenglu Tablet 10mg",
+    "category": "MEDICINE",
+    "price": 340
+  },
+  {
+    "name": "Xenglu tablets 25 mg",
+    "category": "MEDICINE",
+    "price": 520
+  },
+  {
+    "name": "Xenglu-Met 12.5mg/500mg",
+    "category": "MEDICINE",
+    "price": 455
+  },
+  {
+    "name": "Xenglu-Met tablets 12.5mg / 850mg",
+    "category": "MEDICINE",
+    "price": 455
+  },
+  {
+    "name": "Xenglu-Met tablets 5mg / 500mg",
+    "category": "MEDICINE",
+    "price": 310
+  },
+  {
+    "name": "Xenglu-met XR tablets 25mg / 1000mg",
+    "category": "MEDICINE",
+    "price": 539
+  },
+  {
+    "name": "Xepat Forte Eye Drop",
+    "category": "MEDICINE",
+    "price": 579.09
+  },
+  {
+    "name": "Xepat Forte Hcl 0.2% 5ml",
+    "category": "MEDICINE",
+    "price": 600
+  },
+  {
+    "name": "Xeron tablet 500mg",
+    "category": "MEDICINE",
+    "price": 71.5
+  },
+  {
+    "name": "Xeticam tablet 500mg",
+    "category": "MEDICINE",
+    "price": 509
+  },
+  {
+    "name": "Xi-Xicam tablet 15mg",
+    "category": "MEDICINE",
+    "price": 96
+  },
+  {
+    "name": "Xiben suspension 100mg",
+    "category": "MEDICINE",
+    "price": 60.27
+  },
+  {
+    "name": "Xiben tablet 400mg",
+    "category": "MEDICINE",
+    "price": 260
+  },
+  {
+    "name": "Xifaxa tablet 550mg",
+    "category": "MEDICINE",
+    "price": 740
+  },
+  {
+    "name": "Xiga tablet 10mg",
+    "category": "MEDICINE",
+    "price": 454
+  },
+  {
+    "name": "Xiga tablet 5mg",
+    "category": "MEDICINE",
+    "price": 306
+  },
+  {
+    "name": "Xiga-Met tablet 5mg / 1000mg",
+    "category": "MEDICINE",
+    "price": 369
+  },
+  {
+    "name": "Xiga-Met tablet 5mg / 850mg",
+    "category": "MEDICINE",
+    "price": 357
+  },
+  {
+    "name": "Xika Rapid Tablet 8mg",
+    "category": "MEDICINE",
+    "price": 243
+  },
+  {
+    "name": "Xilica capsule 75mg",
+    "category": "MEDICINE",
+    "price": 350
+  },
+  {
+    "name": "Xim capsule 400mg",
+    "category": "MEDICINE",
+    "price": 325
+  },
+  {
+    "name": "Xobix 15 mg Tablet",
+    "category": "MEDICINE",
+    "price": 228
+  },
+  {
+    "name": "Xobix Tablet 7.5mg",
+    "category": "MEDICINE",
+    "price": 131
+  },
+  {
+    "name": "Xolair injection 150mg",
+    "category": "MEDICINE",
+    "price": 38000
+  },
+  {
+    "name": "Xoni-Fast tablet 8mg",
+    "category": "MEDICINE",
+    "price": 230.67
+  },
+  {
+    "name": "Xormet tablet 1gm",
+    "category": "MEDICINE",
+    "price": 15
+  },
+  {
+    "name": "Xostat tablet 40mg",
+    "category": "MEDICINE",
+    "price": 288
+  },
+  {
+    "name": "Xovat tablet 5mg",
+    "category": "MEDICINE",
+    "price": 165
+  },
+  {
+    "name": "Xultophy injection",
+    "category": "MEDICINE",
+    "price": 7609.69
+  },
+  {
+    "name": "Xurin-k tablet 573mg / 0.5mg",
+    "category": "MEDICINE",
+    "price": 73.05
+  },
+  {
+    "name": "Xycam Tablet 20mg",
+    "category": "MEDICINE",
+    "price": 100
+  },
+  {
+    "name": "Xyloaid 2% injection 10ml",
+    "category": "MEDICINE",
+    "price": 24.75
+  },
+  {
+    "name": "Xyloaid Adrenaline Injection 2%",
+    "category": "MEDICINE",
+    "price": 1700
+  },
+  {
+    "name": "Xyloaid FA ointment",
+    "category": "MEDICINE",
+    "price": 78
+  },
+  {
+    "name": "Xyloaid jelly",
+    "category": "MEDICINE",
+    "price": 55.54
+  },
+  {
+    "name": "Xyloaid ointment 10g",
+    "category": "MEDICINE",
+    "price": 67.5
+  },
+  {
+    "name": "Xyloaid Ointment 5% 20g",
+    "category": "MEDICINE",
+    "price": 72.78
+  },
+  {
+    "name": "Xylocain injection 0.02",
+    "category": "MEDICINE",
+    "price": 22.01
+  },
+  {
+    "name": "Xylocaine ointment 5%",
+    "category": "MEDICINE",
+    "price": 56.6
+  },
+  {
+    "name": "Xylocaine with Adrenaline injection 2%",
+    "category": "MEDICINE",
+    "price": 18.63
+  },
+  {
+    "name": "Xylor Syrup",
+    "category": "MEDICINE",
+    "price": 70.39
+  },
+  {
+    "name": "Xylor tablet 10mg",
+    "category": "MEDICINE",
+    "price": 491.34
+  },
+  {
+    "name": "Xynap tablet 500mg",
+    "category": "MEDICINE",
+    "price": 143
+  },
+  {
+    "name": "Xynosine Child Nasal Drop 15ml",
+    "category": "MEDICINE",
+    "price": 56
+  },
+  {
+    "name": "Xynosine Children's Formula drops 15 ml",
+    "category": "MEDICINE",
+    "price": 42.55
+  },
+  {
+    "name": "Xynosine Nasal Adult Spray 15ml",
+    "category": "MEDICINE",
+    "price": 70
+  },
+  {
+    "name": "Xynosine Nasal Spray",
+    "category": "MEDICINE",
+    "price": 54
+  },
+  {
+    "name": "Xynosine Saline Nasal Spray 0.65%",
+    "category": "MEDICINE",
+    "price": 20.85
+  },
+  {
+    "name": "Xyquil DR Tablet",
+    "category": "MEDICINE",
+    "price": 220
+  },
+  {
+    "name": "XYSTER tablet 500mcg",
+    "category": "MEDICINE",
+    "price": 83.66
+  },
+  {
+    "name": "Xyzal Tablet 5mg",
+    "category": "MEDICINE",
+    "price": 86.96
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Yaz Tablet 0.02mg/3mg",
+    "category": "MEDICINE",
+    "price": 1388
+  },
+  {
+    "name": "Yellow Fever Vaccine 1000 mouse LD50 units injection 0.5ml",
+    "category": "MEDICINE",
+    "price": null
+  },
+  {
+    "name": "YMS Disposable 10cc-21Gx1 syringe",
+    "category": "MEDICINE",
+    "price": 30
+  },
+  {
+    "name": "YMS Uriflo-Urine Drainage Bag 2000ml",
+    "category": "MEDICINE",
+    "price": 140
+  },
+  {
+    "name": "Yorker injection 1gm",
+    "category": "MEDICINE",
+    "price": 195
+  },
+  {
+    "name": "Yorker injection 250mg",
+    "category": "MEDICINE",
+    "price": 98.48
+  },
+  {
+    "name": "Yorker injection 500mg",
+    "category": "MEDICINE",
+    "price": 148.36
+  },
+  {
+    "name": "YTIG Plus Tablet",
+    "category": "OTC",
+    "price": 1239
+  },
+  {
+    "name": "YTIG Tablet",
+    "category": "OTC",
+    "price": 1638
+  }
+]

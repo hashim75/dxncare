@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
-import { Facebook, Map, Mail, Phone, MapPin, ArrowRight, Loader2, Send } from "lucide-react";
+import { Facebook, Map, Mail, Phone, MapPin, ArrowRight, Loader2, Send, Linkedin } from "lucide-react";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -90,6 +90,15 @@ const Footer = () => {
                 aria-label="Google Maps Location"
               >
                 <Map size={20} className="text-teal-100 group-hover:text-white" />
+              </a>
+              <a 
+                href="https://www.linkedin.com/company/dxn-care/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-teal-900/50 p-3 rounded-xl hover:bg-[#34A853] hover:text-white transition-all duration-300 border border-teal-800 hover:border-[#34A853] group"
+                aria-label="Google Maps Location"
+              >
+                <Linkedin size={20} className="text-teal-100 group-hover:text-white" />
               </a>
             </div>
           </div>

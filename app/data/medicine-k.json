@@ -1,0 +1,727 @@
+[
+  {
+    "name": "K Tablet",
+    "category": "MEDICINE",
+    "price": 810
+  },
+  {
+    "name": "K-Kort injection 40MG",
+    "category": "MEDICINE",
+    "price": 78.36
+  },
+  {
+    "name": "K-lac injection 30 mg",
+    "category": "MEDICINE",
+    "price": 430
+  },
+  {
+    "name": "K-Lot Paed Im/iv Oral 2mg",
+    "category": "MEDICINE",
+    "price": 147
+  },
+  {
+    "name": "K.U Mitomycin C injection 10 mg",
+    "category": "MEDICINE",
+    "price": 3000
+  },
+  {
+    "name": "Kadin tablet 2mg",
+    "category": "MEDICINE",
+    "price": 83
+  },
+  {
+    "name": "Kafenac tablet 50mg",
+    "category": "MEDICINE",
+    "price": 30
+  },
+  {
+    "name": "Kairo suspension 125mg / 5ml",
+    "category": "MEDICINE",
+    "price": 275.75
+  },
+  {
+    "name": "Kairo tablet 250mg",
+    "category": "MEDICINE",
+    "price": 300
+  },
+  {
+    "name": "Kairo tablet 500mg",
+    "category": "MEDICINE",
+    "price": 500
+  },
+  {
+    "name": "Kalasave tablet 500mg",
+    "category": "MEDICINE",
+    "price": 445
+  },
+  {
+    "name": "Kaletra capsule 133.3mg",
+    "category": "MEDICINE",
+    "price": 23000
+  },
+  {
+    "name": "Kalfen tablet 75mg",
+    "category": "MEDICINE",
+    "price": 60
+  },
+  {
+    "name": "KalSob tablet",
+    "category": "MEDICINE",
+    "price": 620
+  },
+  {
+    "name": "Kalv Tablet",
+    "category": "MEDICINE",
+    "price": 1206.17
+  },
+  {
+    "name": "Kami injection 100mg",
+    "category": "MEDICINE",
+    "price": 119
+  },
+  {
+    "name": "Kami injection 500mg",
+    "category": "MEDICINE",
+    "price": 382
+  },
+  {
+    "name": "Kamic Forte Tablet 500mg",
+    "category": "MEDICINE",
+    "price": 216
+  },
+  {
+    "name": "Kamic Tablet 250mg",
+    "category": "MEDICINE",
+    "price": 235
+  },
+  {
+    "name": "Kamic Tablet 500mg",
+    "category": "MEDICINE",
+    "price": 216
+  },
+  {
+    "name": "Kanadex Tablet 0.5mg",
+    "category": "MEDICINE",
+    "price": 200
+  },
+  {
+    "name": "Kanadex-N Cream 15g",
+    "category": "MEDICINE",
+    "price": 100
+  },
+  {
+    "name": "Kanagen tablet 200mg",
+    "category": "MEDICINE",
+    "price": 262
+  },
+  {
+    "name": "Kanlor tablet 8mg",
+    "category": "MEDICINE",
+    "price": 130
+  },
+  {
+    "name": "Kapdex DR Capsules capsule 60 mg",
+    "category": "MEDICINE",
+    "price": 696
+  },
+  {
+    "name": "Kapen capsule 300mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Kapri tablet 200mg / 300mg / 30mg",
+    "category": "MEDICINE",
+    "price": 3.27
+  },
+  {
+    "name": "Kaptin suspension 486.6 / 43.3 mg",
+    "category": "MEDICINE",
+    "price": 52.58
+  },
+  {
+    "name": "Kaptin suspension 486.6mg",
+    "category": "MEDICINE",
+    "price": 12.81
+  },
+  {
+    "name": "Kare tablet 200mg",
+    "category": "MEDICINE",
+    "price": 180
+  },
+  {
+    "name": "Karika Sugar Free Syrup 120 ml",
+    "category": "MEDICINE",
+    "price": 350
+  },
+  {
+    "name": "Karmel tablet 50mg",
+    "category": "MEDICINE",
+    "price": 37.5
+  },
+  {
+    "name": "Karmol infusion 1 gm",
+    "category": "MEDICINE",
+    "price": 80
+  },
+  {
+    "name": "Karty capsule 50mg",
+    "category": "MEDICINE",
+    "price": 1091
+  },
+  {
+    "name": "Kast tablet 10 mg",
+    "category": "MEDICINE",
+    "price": 320
+  },
+  {
+    "name": "Kastol tablet 10 mg",
+    "category": "MEDICINE",
+    "price": 272
+  },
+  {
+    "name": "Kaydrox capsule 500mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Kaylan capsule 30mg",
+    "category": "MEDICINE",
+    "price": 182
+  },
+  {
+    "name": "Kedronico injection 4mg",
+    "category": "MEDICINE",
+    "price": 16150
+  },
+  {
+    "name": "KefenTech patch 30mg",
+    "category": "MEDICINE",
+    "price": 388
+  },
+  {
+    "name": "Kefentech sheets 30 mg",
+    "category": "MEDICINE",
+    "price": 600
+  },
+  {
+    "name": "Keflex capsule 250mg",
+    "category": "MEDICINE",
+    "price": 141.57
+  },
+  {
+    "name": "Keflex capsule 500mg",
+    "category": "MEDICINE",
+    "price": 278.1
+  },
+  {
+    "name": "Keflex drops 100mg / ml",
+    "category": "MEDICINE",
+    "price": 104.07
+  },
+  {
+    "name": "Keflex suspension 125mg",
+    "category": "MEDICINE",
+    "price": 93.54
+  },
+  {
+    "name": "Keflex suspension 250mg / 5ml",
+    "category": "MEDICINE",
+    "price": 162.26
+  },
+  {
+    "name": "Keforal tablet 500mg",
+    "category": "MEDICINE",
+    "price": 146
+  },
+  {
+    "name": "Keforal tablet 500mg (12's pack)",
+    "category": "MEDICINE",
+    "price": 146
+  },
+  {
+    "name": "Keften syrup 0.2mg",
+    "category": "MEDICINE",
+    "price": 43
+  },
+  {
+    "name": "Kefzol injection 1gm",
+    "category": "MEDICINE",
+    "price": 235.89
+  },
+  {
+    "name": "Kefzol injection 500mg",
+    "category": "MEDICINE",
+    "price": 85.97
+  },
+  {
+    "name": "Kemadrin tablet 5 mg",
+    "category": "MEDICINE",
+    "price": 181.11
+  },
+  {
+    "name": "Kemipan Plus tablet 75mg",
+    "category": "MEDICINE",
+    "price": 45
+  },
+  {
+    "name": "Kemocarb injection 150 mg / 15 ml",
+    "category": "MEDICINE",
+    "price": 2225
+  },
+  {
+    "name": "Kemocarb injection 450mg / 45 ml",
+    "category": "MEDICINE",
+    "price": 4450
+  },
+  {
+    "name": "Kempro Tablet 5mg",
+    "category": "MEDICINE",
+    "price": 344
+  },
+  {
+    "name": "Kenac tablet 50mg",
+    "category": "MEDICINE",
+    "price": 30
+  },
+  {
+    "name": "Kenac tablet 75mg",
+    "category": "MEDICINE",
+    "price": 52.9
+  },
+  {
+    "name": "Kenacomb Cream 20g",
+    "category": "MEDICINE",
+    "price": 359.65
+  },
+  {
+    "name": "Kenalog orabase ointment",
+    "category": "MEDICINE",
+    "price": 134.85
+  },
+  {
+    "name": "Kenalog Orabase ointment",
+    "category": "MEDICINE",
+    "price": 102.33
+  },
+  {
+    "name": "Kepinol Forte tablet 160mg / 800mg",
+    "category": "MEDICINE",
+    "price": 9.1
+  },
+  {
+    "name": "Keplin tablet 15mg",
+    "category": "MEDICINE",
+    "price": 1123
+  },
+  {
+    "name": "Keppra tablet 250mg",
+    "category": "MEDICINE",
+    "price": 471.3
+  },
+  {
+    "name": "Keppra tablet 500mg",
+    "category": "MEDICINE",
+    "price": 781
+  },
+  {
+    "name": "Kestine liquid 5mg",
+    "category": "MEDICINE",
+    "price": 120.4
+  },
+  {
+    "name": "Kestine Tablet 10mg",
+    "category": "MEDICINE",
+    "price": 297.3
+  },
+  {
+    "name": "Kestine Tablet 20mg",
+    "category": "MEDICINE",
+    "price": 475
+  },
+  {
+    "name": "Kestore Tablet 10mg",
+    "category": "MEDICINE",
+    "price": 149.9
+  },
+  {
+    "name": "Kestore tablets 20mg",
+    "category": "MEDICINE",
+    "price": 249.9
+  },
+  {
+    "name": "Ketacon tablet 200mg",
+    "category": "MEDICINE",
+    "price": 155
+  },
+  {
+    "name": "Ketagesic tablet 75mg",
+    "category": "MEDICINE",
+    "price": 55
+  },
+  {
+    "name": "Ketamax injection 500mg",
+    "category": "MEDICINE",
+    "price": 125
+  },
+  {
+    "name": "Ketamine injection 500mg",
+    "category": "MEDICINE",
+    "price": 117.65
+  },
+  {
+    "name": "Ketasol injection 100mg",
+    "category": "MEDICINE",
+    "price": 38.4
+  },
+  {
+    "name": "Ketasol injection 250mg",
+    "category": "MEDICINE",
+    "price": 65.29
+  },
+  {
+    "name": "Ketawin tablet 50mg",
+    "category": "MEDICINE",
+    "price": 30
+  },
+  {
+    "name": "Ketek tablet 250mg",
+    "category": "MEDICINE",
+    "price": 169
+  },
+  {
+    "name": "Ketoflex tablet 200mg",
+    "category": "MEDICINE",
+    "price": 97.5
+  },
+  {
+    "name": "Ketogesic capsule 200mg",
+    "category": "MEDICINE",
+    "price": 90
+  },
+  {
+    "name": "Ketogesic injection 100mg",
+    "category": "MEDICINE",
+    "price": 25
+  },
+  {
+    "name": "Ketolac injection 30mg",
+    "category": "MEDICINE",
+    "price": 430
+  },
+  {
+    "name": "Ketomed injection 30 mg",
+    "category": "MEDICINE",
+    "price": 430
+  },
+  {
+    "name": "Ketone tablet 200mg",
+    "category": "MEDICINE",
+    "price": 169
+  },
+  {
+    "name": "Ketoplus syrup 0.2mg / ml",
+    "category": "MEDICINE",
+    "price": 48
+  },
+  {
+    "name": "Ketor injection 30mg / ml",
+    "category": "MEDICINE",
+    "price": 578
+  },
+  {
+    "name": "Ketor tablet 200mg",
+    "category": "MEDICINE",
+    "price": 189
+  },
+  {
+    "name": "Ketorex Scalp Lotion 60ml",
+    "category": "MEDICINE",
+    "price": 320
+  },
+  {
+    "name": "Ketosteril tablet",
+    "category": "MEDICINE",
+    "price": 827.4
+  },
+  {
+    "name": "Ketoval lotion",
+    "category": "MEDICINE",
+    "price": 275.82
+  },
+  {
+    "name": "Ketoval tablet 200mg",
+    "category": "MEDICINE",
+    "price": 249.76
+  },
+  {
+    "name": "Ketowise injection 30 mg",
+    "category": "MEDICINE",
+    "price": 430
+  },
+  {
+    "name": "Ketress Syrup 15ml",
+    "category": "MEDICINE",
+    "price": 66
+  },
+  {
+    "name": "Ketress Tablet 40mg",
+    "category": "MEDICINE",
+    "price": 352
+  },
+  {
+    "name": "Ketro drops 0.50%",
+    "category": "MEDICINE",
+    "price": 137.76
+  },
+  {
+    "name": "Keynet tablet 250mg",
+    "category": "MEDICINE",
+    "price": 425
+  },
+  {
+    "name": "Kilbac capsule 250mg",
+    "category": "MEDICINE",
+    "price": 194
+  },
+  {
+    "name": "Kilbac suspension 250mg / 5ml",
+    "category": "MEDICINE",
+    "price": 256
+  },
+  {
+    "name": "Kinetic tablet 10mg",
+    "category": "MEDICINE",
+    "price": null
+  },
+  {
+    "name": "Kinra tablet 250mg",
+    "category": "MEDICINE",
+    "price": 175
+  },
+  {
+    "name": "Kinz injection 20mg /ml",
+    "category": "MEDICINE",
+    "price": 658.15
+  },
+  {
+    "name": "Klabid tablet 250mg",
+    "category": "MEDICINE",
+    "price": 200
+  },
+  {
+    "name": "Klabid tablet 500mg",
+    "category": "MEDICINE",
+    "price": 360
+  },
+  {
+    "name": "Klacid suspension 125mg",
+    "category": "MEDICINE",
+    "price": 223
+  },
+  {
+    "name": "Klacid tablet 250mg",
+    "category": "MEDICINE",
+    "price": 273
+  },
+  {
+    "name": "Klacid tablet 500mg",
+    "category": "MEDICINE",
+    "price": 498
+  },
+  {
+    "name": "Klaribact suspension 125mg",
+    "category": "MEDICINE",
+    "price": 293
+  },
+  {
+    "name": "Klaribact tablet 250mg",
+    "category": "MEDICINE",
+    "price": 337.8
+  },
+  {
+    "name": "Klaribact tablet 500mg",
+    "category": "MEDICINE",
+    "price": 605.94
+  },
+  {
+    "name": "Klaricid DS Syrup 60ml",
+    "category": "MEDICINE",
+    "price": 934
+  },
+  {
+    "name": "Klaricid DS-Granules ds suspension 250mg",
+    "category": "MEDICINE",
+    "price": 737.19
+  },
+  {
+    "name": "Klaricid injection iv 500mg",
+    "category": "MEDICINE",
+    "price": 360.34
+  },
+  {
+    "name": "Klaricid l suspension",
+    "category": "MEDICINE",
+    "price": 384.81
+  },
+  {
+    "name": "Klaricid suspension 125mg / 5ml",
+    "category": "MEDICINE",
+    "price": 192.79
+  },
+  {
+    "name": "Klaricid tablet 250mg",
+    "category": "MEDICINE",
+    "price": 482.6
+  },
+  {
+    "name": "Klaricid Tablet 500mg",
+    "category": "MEDICINE",
+    "price": 960
+  },
+  {
+    "name": "Klaricid XL Tablet 500mg",
+    "category": "MEDICINE",
+    "price": 435.64
+  },
+  {
+    "name": "Klarifine tablet 250mg",
+    "category": "MEDICINE",
+    "price": 250
+  },
+  {
+    "name": "Klary tablet 250mg",
+    "category": "MEDICINE",
+    "price": 250
+  },
+  {
+    "name": "Klash tablet 500mg",
+    "category": "MEDICINE",
+    "price": 370
+  },
+  {
+    "name": "Kleen Enema liquid 135ml",
+    "category": "MEDICINE",
+    "price": 77.38
+  },
+  {
+    "name": "Klemat tablet 2mg",
+    "category": "MEDICINE",
+    "price": 25.1
+  },
+  {
+    "name": "Klencin Vaginal cream 40gm",
+    "category": "MEDICINE",
+    "price": 287
+  },
+  {
+    "name": "Kleric tablet 250mg",
+    "category": "MEDICINE",
+    "price": 240
+  },
+  {
+    "name": "Klevra tablet 250mg",
+    "category": "MEDICINE",
+    "price": 1020
+  },
+  {
+    "name": "Klevra tablet 500mg",
+    "category": "MEDICINE",
+    "price": 1680
+  },
+  {
+    "name": "Klic tablet 50mg",
+    "category": "MEDICINE",
+    "price": 135
+  },
+  {
+    "name": "Klic tablet 75mg",
+    "category": "MEDICINE",
+    "price": 70
+  },
+  {
+    "name": "Klodic tablet 50mg",
+    "category": "MEDICINE",
+    "price": 73.12
+  },
+  {
+    "name": "Klust tablet 500mg",
+    "category": "MEDICINE",
+    "price": 220
+  },
+  {
+    "name": "KM-Lidocaine injection 2%",
+    "category": "MEDICINE",
+    "price": 676
+  },
+  {
+    "name": "Kofnil Syrup 120ml",
+    "category": "MEDICINE",
+    "price": 218.3
+  },
+  {
+    "name": "Kolac syrup 3.35gm / 5ml",
+    "category": "MEDICINE",
+    "price": 216.31
+  },
+  {
+    "name": "Kombat capsule 500mg",
+    "category": "MEDICINE",
+    "price": 170
+  },
+  {
+    "name": "Komfort tablet 50mg",
+    "category": "MEDICINE",
+    "price": 32.5
+  },
+  {
+    "name": "Konac drops 0.10%",
+    "category": "MEDICINE",
+    "price": 141.87
+  },
+  {
+    "name": "Koncept capsule 40mg",
+    "category": "MEDICINE",
+    "price": 198
+  },
+  {
+    "name": "Korat tablet 10mg",
+    "category": "MEDICINE",
+    "price": 110
+  },
+  {
+    "name": "Korzin tablet 5mg",
+    "category": "MEDICINE",
+    "price": 130
+  },
+  {
+    "name": "Kosart tablet 50mg",
+    "category": "MEDICINE",
+    "price": 100
+  },
+  {
+    "name": "Kosnate - D Plus powder",
+    "category": "MEDICINE",
+    "price": 526.95
+  },
+  {
+    "name": "Kosnate-D Plus Sachets Orange",
+    "category": "MEDICINE",
+    "price": 650
+  },
+  {
+    "name": "Kovex injection 100mg",
+    "category": "MEDICINE",
+    "price": 62.97
+  },
+  {
+    "name": "Kraze capsule 250mg",
+    "category": "MEDICINE",
+    "price": 310
+  },
+  {
+    "name": "Kroff syrup",
+    "category": "MEDICINE",
+    "price": 280
+  }
+]

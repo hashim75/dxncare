@@ -5,14 +5,14 @@ import { useCartStore } from "../store/cartStore";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import emailjs from "@emailjs/browser"; // Import EmailJS
-import { ArrowLeft, CheckCircle2, Truck, ShieldCheck, Loader2 } from "lucide-react";
+import emailjs from "@emailjs/browser"; 
+import { ArrowLeft, CheckCircle2, Truck, ShieldCheck, Loader2, Pill } from "lucide-react"; // Added Pill icon
 
 // --- CONFIGURATION ---
 const EMAILJS_CONFIG = {
   publicKey: "ykMzk7yOAMHR1Ip8o",
   serviceId: "service_bhpyljt",
-  templateId: "template_vkr09eu", // Ensure this template accepts {{message}}, {{from_name}}, etc.
+  templateId: "template_vkr09eu", 
 };
 
 export default function CheckoutPage() {
@@ -22,12 +22,11 @@ export default function CheckoutPage() {
 
   // === 1. CALCULATIONS ===
   const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const shipping = 250; // Standard Delivery
-  const taxRate = 0.04; // 4% Tax
+  const shipping = 250; 
+  const taxRate = 0.04; 
   const tax = Math.round(subtotal * taxRate);
   const finalTotal = subtotal + shipping + tax;
 
-  // Form State
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -41,15 +40,17 @@ export default function CheckoutPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // === 2. SUBMIT LOGIC (EMAIL + WHATSAPP) ===
+  // === 2. SUBMIT LOGIC ===
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // --- A. PREPARE ORDER DATA ---
-    const orderItemsText = items.map(item => 
-      `• ${item.name} (x${item.quantity}) - Rs. ${(item.price * item.quantity).toLocaleString()}`
-    ).join('\n');
+    // --- A. PREPARE ORDER DATA (Tagged for Allopathic) ---
+    const orderItemsText = items.map(item => {
+      // @ts-ignore
+      const isMedicine = item.image === "allopathic-icon" || item.category === "Allopathic";
+      return `• ${item.name} ${isMedicine ? '(Allopathic)' : ''} (x${item.quantity}) - Rs. ${(item.price * item.quantity).toLocaleString()}`;
+    }).join('\n');
 
     const fullOrderMessage = `
       NEW ORDER RECEIVED 🛍️
@@ -63,25 +64,23 @@ export default function CheckoutPage() {
       ${orderItemsText}
       
       -------------------------
-      Subtotal: Rs. ${subtotal}
-      Shipping: Rs. ${shipping}
-      Tax: Rs. ${tax}
-      GRAND TOTAL: Rs. ${finalTotal}
+      Subtotal: Rs. ${subtotal.toLocaleString()}
+      Shipping: Rs. ${shipping.toLocaleString()}
+      Tax: Rs. ${tax.toLocaleString()}
+      GRAND TOTAL: Rs. ${finalTotal.toLocaleString()}
       
       Notes: ${formData.notes || "None"}
     `;
 
     try {
-      // --- B. SEND EMAIL VIA EMAILJS ---
       await emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, {
-        from_name: formData.name,       // Matches {{from_name}} in template
-        from_email: formData.email,     // Matches {{from_email}} in template
-        message: fullOrderMessage,      // Matches {{message}} in template
-        doctor_name: "DXN Sales Team",  // Optional field if your template requires it
-        booking_date: new Date().toLocaleDateString() // Optional
+        from_name: formData.name,       
+        from_email: formData.email,     
+        message: fullOrderMessage,      
+        doctor_name: "DXN Sales Team",  
+        booking_date: new Date().toLocaleDateString() 
       }, EMAILJS_CONFIG.publicKey);
 
-      // --- C. PREPARE WHATSAPP MESSAGE ---
       const myPhoneNumber = "923338656601"; 
       const whatsappMessage = `*NEW ORDER FROM WEBSITE* 🛍️
     
@@ -107,36 +106,30 @@ _Please confirm my order._`;
 
       const whatsappUrl = `https://wa.me/${myPhoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
-      // --- D. SUCCESS ACTIONS ---
-      window.open(whatsappUrl, "_blank"); // Open WhatsApp
+      window.open(whatsappUrl, "_blank"); 
       setIsSuccess(true);
       clearCart();
       
     } catch (error) {
       console.error("FAILED to send order:", error);
-      alert("Something went wrong. Please try again or contact us directly on WhatsApp.");
+      alert("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  // === SUCCESS STATE ===
   if (isSuccess) {
     return (
       <main className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
-        <motion.div 
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          className="bg-white p-8 md:p-12 rounded-[2.5rem] text-center max-w-lg w-full shadow-2xl border border-slate-100"
-        >
+        <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-white p-8 md:p-12 rounded-[2.5rem] text-center max-w-lg w-full shadow-2xl border border-slate-100">
           <div className="w-20 h-20 md:w-24 md:h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle2 size={40} className="text-green-600 md:w-12 md:h-12" />
           </div>
           <h1 className="text-3xl md:text-4xl font-bold font-jakarta text-teal-950 mb-4">Order Placed!</h1>
           <p className="text-base md:text-lg text-slate-600 mb-8 leading-relaxed">
-            Thank you, <strong>{formData.name}</strong>. We have received your order via Email & WhatsApp. We will contact you shortly to confirm delivery.
+            Thank you, <strong>{formData.name}</strong>. We have received your order. We will contact you shortly to confirm delivery.
           </p>
-          <Link href="/products" className="inline-block bg-teal-950 text-white px-8 py-4 rounded-xl font-bold hover:bg-red-600 transition-colors w-full md:w-auto">
+          <Link href="/products" className="inline-block bg-teal-950 text-white px-8 py-4 rounded-xl font-bold hover:bg-red-600 transition-colors w-full md:w-auto font-jakarta uppercase tracking-widest text-sm">
             Continue Shopping
           </Link>
         </motion.div>
@@ -144,18 +137,12 @@ _Please confirm my order._`;
     );
   }
 
-  // === EMPTY CART STATE ===
   if (items.length === 0) {
     return (
         <main className="min-h-screen bg-slate-50 pt-32 pb-20 px-4 text-center flex flex-col items-center justify-center">
-            <div className="w-20 h-20 bg-slate-200 rounded-full flex items-center justify-center mb-6 text-slate-400">
-                <Truck size={40} />
-            </div>
+            <Truck size={40} className="text-slate-300 mb-6" />
             <h1 className="text-3xl font-bold text-teal-950 mb-4">Your Cart is Empty</h1>
-            <p className="text-slate-500 mb-8 max-w-md mx-auto">Looks like you haven't added any supplements yet. Browse our catalog to find what you need.</p>
-            <Link href="/products" className="bg-red-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-red-700 transition-colors">
-                Browse Products
-            </Link>
+            <Link href="/products" className="bg-red-600 text-white px-8 py-3 rounded-xl font-bold">Browse Products</Link>
         </main>
     );
   }
@@ -168,57 +155,49 @@ _Please confirm my order._`;
             <ArrowLeft size={14} /> Back to Shopping
         </Link>
 
-        <h1 className="text-3xl md:text-5xl font-bold font-jakarta text-teal-950 mb-8 md:mb-12">Secure Checkout</h1>
+        <h1 className="text-3xl md:text-5xl font-bold font-jakarta text-teal-950 mb-8 md:mb-12 leading-tight">Secure Checkout</h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start font-jakarta">
           
           {/* === LEFT: SHIPPING FORM === */}
           <div className="lg:col-span-7 order-2 lg:order-1">
-            <div className="bg-white p-6 md:p-8 rounded-3xl md:rounded-[2rem] shadow-sm border border-slate-100">
-                <div className="flex items-center gap-3 mb-6 md:mb-8 border-b border-slate-100 pb-4">
+            <div className="bg-white p-6 md:p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                <div className="flex items-center gap-3 mb-8 border-b border-slate-100 pb-4">
                     <Truck className="text-red-600" size={24} />
-                    <h2 className="text-xl md:text-2xl font-bold text-black font-jakarta">Shipping Details</h2>
+                    <h2 className="text-xl md:text-2xl font-bold text-black">Shipping Details</h2>
                 </div>
 
-                <form id="checkout-form" onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+                <form id="checkout-form" onSubmit={handleSubmit} className="space-y-4 md:space-y-6 font-jakarta">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         <div>
-                            <label className="block text-xs md:text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Full Name</label>
-                            <input required name="name" onChange={handleChange} type="text" placeholder="e.g. Ali Khan" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all text-sm md:text-base" />
+                            <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide">Full Name</label>
+                            <input required name="name" onChange={handleChange} type="text" placeholder="e.g. Ali Khan" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all" />
                         </div>
                         <div>
-                            <label className="block text-xs md:text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Phone Number</label>
-                            <input required name="phone" onChange={handleChange} type="tel" placeholder="0300 1234567" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all text-sm md:text-base" />
+                            <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide">Phone Number</label>
+                            <input required name="phone" onChange={handleChange} type="tel" placeholder="0300 1234567" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all" />
                         </div>
                     </div>
 
                     <div>
-                        <label className="block text-xs md:text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Email Address</label>
-                        <input required name="email" onChange={handleChange} type="email" placeholder="ali@example.com" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all text-sm md:text-base" />
+                        <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide">Email Address</label>
+                        <input required name="email" onChange={handleChange} type="email" placeholder="ali@example.com" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all" />
                     </div>
 
                     <div>
-                        <label className="block text-xs md:text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Shipping Address</label>
-                        <textarea required name="address" onChange={handleChange} rows={3} placeholder="House #, Street #, Area..." className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all text-sm md:text-base"></textarea>
+                        <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide">Shipping Address</label>
+                        <textarea required name="address" onChange={handleChange} rows={3} placeholder="House #, Street #, Area..." className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all"></textarea>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div><label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide">City</label><input required name="city" onChange={handleChange} type="text" placeholder="e.g. Lahore" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all" /></div>
                         <div>
-                            <label className="block text-xs md:text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">City</label>
-                            <input required name="city" onChange={handleChange} type="text" placeholder="e.g. Lahore" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all text-sm md:text-base" />
-                        </div>
-                        <div>
-                             <label className="block text-xs md:text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Payment Method</label>
+                             <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide">Payment Method</label>
                              <div className="w-full bg-teal-50 border border-teal-200 rounded-xl px-4 py-3 flex items-center gap-3">
                                 <div className="w-4 h-4 rounded-full bg-teal-600 border-[3px] border-white ring-1 ring-teal-600 shrink-0"></div>
-                                <span className="font-bold text-teal-900 text-sm md:text-base">Cash on Delivery (COD)</span>
+                                <span className="font-bold text-teal-900 text-sm">Cash on Delivery (COD)</span>
                              </div>
                         </div>
-                    </div>
-
-                    <div>
-                        <label className="block text-xs md:text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Order Notes (Optional)</label>
-                        <textarea name="notes" onChange={handleChange} rows={2} placeholder="Any special instructions..." className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all text-sm md:text-base"></textarea>
                     </div>
                 </form>
             </div>
@@ -226,69 +205,53 @@ _Please confirm my order._`;
 
           {/* === RIGHT: ORDER SUMMARY === */}
           <div className="lg:col-span-5 order-1 lg:order-2">
-            <div className="bg-white p-6 md:p-8 rounded-3xl md:rounded-[2rem] shadow-xl shadow-slate-200 border border-slate-100 sticky top-32">
-                <div className="flex items-center gap-3 mb-6 md:mb-8 border-b border-slate-100 pb-4">
+            <div className="bg-white p-6 md:p-8 rounded-[2rem] shadow-xl shadow-slate-200 border border-slate-100 sticky top-32">
+                <div className="flex items-center gap-3 mb-8 border-b border-slate-100 pb-4">
                     <ShieldCheck className="text-teal-600" size={24} />
-                    <h2 className="text-xl md:text-2xl font-bold text-black font-jakarta">Order Summary</h2>
+                    <h2 className="text-xl md:text-2xl font-bold text-black">Order Summary</h2>
                 </div>
 
                 <div className="space-y-4 max-h-[300px] overflow-y-auto custom-scrollbar mb-6 pr-2">
                     {items.map((item) => (
-                        <div key={item.id} className="flex gap-3 md:gap-4 items-center">
-                            <div className="relative w-14 h-14 md:w-16 md:h-16 bg-slate-50 rounded-lg overflow-hidden shrink-0 border border-slate-100">
-                                {item.image && <Image src={item.image} alt={item.name} fill className="object-cover" />}
+                        <div key={item.id} className="flex gap-4 items-center">
+                            <div className="relative w-14 h-14 md:w-16 md:h-16 bg-slate-50 rounded-xl overflow-hidden shrink-0 border border-slate-100 flex items-center justify-center">
+                                {/* --- FIX: Conditional Logic for Allopathic Icon --- */}
+                                {/* @ts-ignore */}
+                                {item.image === "allopathic-icon" || item.category === "Allopathic" ? (
+                                  <div className="bg-teal-50 w-full h-full flex items-center justify-center">
+                                    <Pill className="w-8 h-8 text-teal-600" />
+                                  </div>
+                                ) : (
+                                  <Image 
+                                    src={item.image || "/placeholder.jpg"} 
+                                    alt={item.name} 
+                                    fill 
+                                    className="object-contain p-2 mix-blend-multiply" 
+                                  />
+                                )}
                             </div>
                             <div className="flex-1 min-w-0">
-                                <h4 className="font-bold text-black text-sm line-clamp-1">{item.name}</h4>
-                                <p className="text-xs text-slate-500">Qty: {item.quantity}</p>
+                                <h4 className="font-bold text-black text-sm line-clamp-2 leading-tight">{item.name}</h4>
+                                <p className="text-xs text-slate-500 font-bold mt-1">Qty: {item.quantity}</p>
                             </div>
                             <p className="font-bold text-black text-sm whitespace-nowrap">Rs. {(item.price * item.quantity).toLocaleString()}</p>
                         </div>
                     ))}
                 </div>
 
-                <div className="border-t border-slate-100 pt-6 space-y-3 mb-8 text-sm md:text-base">
-                    <div className="flex justify-between text-slate-500 font-medium">
-                        <span>Subtotal</span>
-                        <span>Rs. {subtotal.toLocaleString()}</span>
-                    </div>
-                    <div className="flex justify-between text-slate-500 font-medium">
-                        <span>Delivery Fee</span>
-                        <span className="text-black font-bold">Rs. {shipping.toLocaleString()}</span>
-                    </div>
-                    <div className="flex justify-between text-slate-500 font-medium">
-                        <span>Govt Tax (4%)</span>
-                        <span className="text-black font-bold">Rs. {tax.toLocaleString()}</span>
-                    </div>
-                    <div className="flex justify-between text-lg md:text-xl font-extrabold text-teal-950 pt-4 border-t border-slate-100">
-                        <span>Total</span>
-                        <span>Rs. {finalTotal.toLocaleString()}</span>
-                    </div>
+                <div className="border-t border-slate-100 pt-6 space-y-3 mb-8 text-sm">
+                    <div className="flex justify-between text-slate-500 font-medium"><span>Subtotal</span><span>Rs. {subtotal.toLocaleString()}</span></div>
+                    <div className="flex justify-between text-slate-500 font-medium"><span>Delivery Fee</span><span className="text-black font-bold">Rs. {shipping.toLocaleString()}</span></div>
+                    <div className="flex justify-between text-slate-500 font-medium"><span>Govt Tax (4%)</span><span className="text-black font-bold">Rs. {tax.toLocaleString()}</span></div>
+                    <div className="flex justify-between text-lg md:text-xl font-extrabold text-teal-950 pt-4 border-t border-slate-100"><span>Total</span><span>Rs. {finalTotal.toLocaleString()}</span></div>
                 </div>
 
-                <button 
-                    form="checkout-form"
-                    disabled={isSubmitting}
-                    type="submit"
-                    className="w-full bg-red-600 text-white py-3 md:py-4 rounded-xl font-bold text-base md:text-lg shadow-lg shadow-red-500/30 hover:bg-red-700 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95"
-                >
-                    {isSubmitting ? (
-                        <>
-                            <Loader2 className="animate-spin" /> Processing...
-                        </>
-                    ) : (
-                        <>
-                            Place Order (COD)
-                        </>
-                    )}
+                <button form="checkout-form" disabled={isSubmitting} type="submit" className="w-full bg-red-600 text-white py-4 rounded-xl font-bold text-lg shadow-lg shadow-red-500/30 hover:bg-red-700 transition-all flex items-center justify-center gap-2 disabled:opacity-50 active:scale-95">
+                    {isSubmitting ? <><Loader2 className="animate-spin" /> Processing...</> : "Place Order (COD)"}
                 </button>
-                
-                <p className="text-center text-[10px] md:text-xs text-slate-400 mt-4 flex items-center justify-center gap-2">
-                    <ShieldCheck size={12}/> Secure Payment via COD
-                </p>
+                <p className="text-center text-[10px] text-slate-400 mt-4 flex items-center justify-center gap-2 font-bold uppercase tracking-widest"><ShieldCheck size={12}/> Secure checkout via WhatsApp</p>
             </div>
           </div>
-
         </div>
       </div>
     </main>

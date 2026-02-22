@@ -6,20 +6,28 @@ import html from "remark-html";
 
 const contentDirectory = path.join(process.cwd(), "content");
 
-// --- 1. GET SORTED DATA (For lists, blogs, health hubs) ---
-export function getSortedData(directory: string) {
+// --- TYPE DEFINITION ---
+export interface MarkdownData {
+  id: string;
+  slug: string;
+  contentHtml?: string;
+  [key: string]: any;
+}
+
+// --- 1. GET SORTED DATA ---
+// Used for: Success Stories, Doctors, and Blog lists
+export function getSortedData(directory: string): MarkdownData[] {
   const fullPath = path.join(contentDirectory, directory);
   
-  // Safety check: if folder doesn't exist, return empty array instead of crashing
   if (!fs.existsSync(fullPath)) {
-    console.warn(`Directory not found: ${fullPath}`);
+    console.warn(`⚠️ Marketing Alert: Directory not found at ${fullPath}. Create this folder to fix build errors.`);
     return [];
   }
 
   const fileNames = fs.readdirSync(fullPath);
   
   const allData = fileNames
-    .filter(fileName => fileName.endsWith('.md')) // Only process markdown files
+    .filter(fileName => fileName.endsWith('.md'))
     .map((fileName) => {
       const id = fileName.replace(/\.md$/, "");
       const fullPathFile = path.join(fullPath, fileName);
@@ -28,12 +36,13 @@ export function getSortedData(directory: string) {
 
       return {
         id,
+        slug: id,
         ...matterResult.data,
-      };
+      } as MarkdownData;
     });
 
-  // Sort by date (Newest First) if a date field exists
-  return allData.sort((a: any, b: any) => {
+  // Sort by date (Newest First)
+  return allData.sort((a, b) => {
     if (a.date && b.date) {
       return a.date < b.date ? 1 : -1;
     }
@@ -41,18 +50,19 @@ export function getSortedData(directory: string) {
   });
 }
 
-// --- 2. GET SINGLE DATA (For individual pages like /products/slug) ---
-export async function getData(directory: string, id: string) {
+// --- 2. GET SINGLE DATA ---
+// Used for: Individual profile pages, product details, and success stories
+export async function getData(directory: string, id: string): Promise<MarkdownData> {
   const fullPath = path.join(contentDirectory, directory, `${id}.md`);
   
   if (!fs.existsSync(fullPath)) {
-    throw new Error(`File not found: ${fullPath}`);
+    throw new Error(`Critical Error: Content file missing at ${fullPath}`);
   }
 
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
 
-  // Process the content body into HTML
+  // Convert Markdown body to HTML for the "About" and "Bio" sections
   const processedContent = await remark()
     .use(html)
     .process(matterResult.content);
@@ -60,43 +70,55 @@ export async function getData(directory: string, id: string) {
 
   return {
     id,
+    slug: id,
     contentHtml,
-    ...matterResult.data, // Access frontmatter fields like price, main_image, etc.
+    ...matterResult.data,
   };
 }
 
-// --- 3. ALIAS FOR COMPATIBILITY (Fixes your Health Page Error) ---
-// Your new Health pages use "getPostData", so we just point it to "getData"
+// --- 3. ALIAS FOR COMPATIBILITY ---
 export const getPostData = getData;
 
-// --- 4. GET ALL DATA (For /order page) ---
-export function getAllData(directory: string) {
-  const fullPath = path.join(contentDirectory, directory);
+// --- 4. GET DATA BY CATEGORY (Fixes Health Hub Errors) ---
+// This handles nested folders like content/health/heart-health/index.md
+export function getDataByCategory(category: string): MarkdownData[] {
+  const fullPath = path.join(contentDirectory, "health", category);
   
   if (!fs.existsSync(fullPath)) {
     return [];
   }
 
   const fileNames = fs.readdirSync(fullPath);
+  return fileNames
+    .filter(file => file.endsWith('.md'))
+    .map(fileName => {
+      const id = fileName.replace(/\.md$/, "");
+      const fileContents = fs.readFileSync(path.join(fullPath, fileName), "utf8");
+      const { data } = matter(fileContents);
+      return { id, slug: id, ...data } as MarkdownData;
+    });
+}
 
-  const allData = fileNames.map((fileName) => {
-    // Remove ".md" to get the slug/id
-    const slug = fileName.replace(/\.md$/, "");
+// --- 5. GET ALL DATA (For Order/Sitemap) ---
+export function getAllData(directory: string): MarkdownData[] {
+  const fullPath = path.join(contentDirectory, directory);
+  
+  if (!fs.existsSync(fullPath)) return [];
 
-    // Read the file
-    const filePath = path.join(contentDirectory, directory, fileName);
-    const fileContents = fs.readFileSync(filePath, "utf8");
+  const fileNames = fs.readdirSync(fullPath);
 
-    // Parse frontmatter
-    const matterResult = matter(fileContents);
+  return fileNames
+    .filter(file => file.endsWith('.md'))
+    .map((fileName) => {
+      const slug = fileName.replace(/\.md$/, "");
+      const filePath = path.join(fullPath, fileName);
+      const fileContents = fs.readFileSync(filePath, "utf8");
+      const matterResult = matter(fileContents);
 
-    // Return object suitable for the order grid
-    return {
-      id: slug,      
-      slug: slug,    
-      ...matterResult.data,
-    };
-  });
-
-  return allData;
+      return {
+        id: slug,      
+        slug: slug,    
+        ...matterResult.data,
+      } as MarkdownData;
+    });
 }

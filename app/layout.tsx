@@ -12,16 +12,15 @@ import HealthBot from "./components/bot/HealthBot";
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
-// ✅ SEO FIX: Added metadataBase and Canonical URL
 export const metadata: Metadata = {
-  metadataBase: new URL('https://dxncare.com'), // 👈 Sets the base domain for all links
+  metadataBase: new URL('https://dxncare.com'),
   title: {
     default: "DXN Care Pakistan - Authentic Ganoderma Products",
-    template: "%s | DXN CARE" // Ensures sub-pages look like "Product Name | DXN Care"
+    template: "%s | DXN CARE"
   },
   description: "Official distributor of DXN products in Pakistan. Shop authentic supplements, coffee, and personal care items with secure cash on delivery.",
   alternates: {
-    canonical: "./", // 👈 This tells Google: "This URL is the master copy" (Fixes duplicate errors)
+    canonical: "./",
   },
 };
 
@@ -35,7 +34,27 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-white text-slate-900 selection:bg-teal-100 selection:text-teal-900">
         
         {/* =========================================
-            1. GOOGLE ADSENSE
+            1. GOOGLE TRANSLATE LOGIC
+           ========================================= */}
+        <Script id="google-translate-init" strategy="afterInteractive">
+          {`
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                // This will search for an element with ID 'google_translate_element'
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+              }, 'google_translate_element');
+            }
+          `}
+        </Script>
+        <Script 
+          src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+          strategy="afterInteractive"
+        />
+
+        {/* =========================================
+            2. GOOGLE ADSENSE
            ========================================= */}
         <Script
           async
@@ -45,47 +64,35 @@ export default function RootLayout({
         />
 
         {/* =========================================
-            2. GOOGLE ANALYTICS (GA4)
+            3. GOOGLE ANALYTICS (GA4)
            ========================================= */}
-        {/* Load the library */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DX070HV469"
           strategy="afterInteractive"
         />
-        {/* Configure the dataLayer */}
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'G-DX070HV469');
           `}
         </Script>
 
-        {/* Navbar */}
+        {/* Hidden element for Google Translate to hook into */}
+        <div id="google_translate_element" style={{ display: 'none', position: 'absolute', top: '-9999px' }}></div>
+
         <NavbarWrapper />
-        
-        {/* Cart Drawer (Now uses Zustand internally) */}
         <CartDrawer />
         
-        {/* Main Content */}
         <div className="flex flex-col min-h-screen">
           {children}
         </div>
 
-        {/* AI Health Bot */}
         <HealthBot />
-
-        {/* Footer */}
         <Footer />
-        
-        {/* Vercel Web Analytics */}
         <Analytics />
-        
-        {/* Vercel Speed Insights */}
         <SpeedInsights />
-        
       </body>
     </html>
   );

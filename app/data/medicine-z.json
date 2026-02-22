@@ -1,0 +1,727 @@
+[
+  {
+    "name": "Z-Tek tablet 10mg",
+    "category": "MEDICINE",
+    "price": 29
+  },
+  {
+    "name": "Zafnol tablet 50mg",
+    "category": "MEDICINE",
+    "price": 72.44
+  },
+  {
+    "name": "Zafon tablet 8 mg",
+    "category": "MEDICINE",
+    "price": 200
+  },
+  {
+    "name": "Zainex tablet 75mg",
+    "category": "MEDICINE",
+    "price": 45
+  },
+  {
+    "name": "Zamlo-H Tablet",
+    "category": "MEDICINE",
+    "price": 65
+  },
+  {
+    "name": "Zanlan syrup 5mg / 5ml",
+    "category": "MEDICINE",
+    "price": 65
+  },
+  {
+    "name": "Zanlan tablet 10mg",
+    "category": "MEDICINE",
+    "price": 42
+  },
+  {
+    "name": "Zanzia tablet 10mg",
+    "category": "MEDICINE",
+    "price": 201.98
+  },
+  {
+    "name": "Zanzia tablet 5mg",
+    "category": "MEDICINE",
+    "price": 85
+  },
+  {
+    "name": "Zatofen Syrup 60ml",
+    "category": "MEDICINE",
+    "price": 125
+  },
+  {
+    "name": "Zatofen Tablet 1mg",
+    "category": "MEDICINE",
+    "price": 300
+  },
+  {
+    "name": "Zauxit capsule 20mg",
+    "category": "MEDICINE",
+    "price": 174.92
+  },
+  {
+    "name": "Zavget Tablet 10mg",
+    "category": "MEDICINE",
+    "price": 399
+  },
+  {
+    "name": "Zavicefta Powder For Concentrate For Solution For Infusion injec",
+    "category": "MEDICINE",
+    "price": 78366
+  },
+  {
+    "name": "Zaxime tablet 400mg",
+    "category": "MEDICINE",
+    "price": 300
+  },
+  {
+    "name": "Zec tablet 10mg",
+    "category": "MEDICINE",
+    "price": 36
+  },
+  {
+    "name": "Zecef suspension 125mg / 50ml",
+    "category": "MEDICINE",
+    "price": 472
+  },
+  {
+    "name": "Zecef tablet 250mg",
+    "category": "MEDICINE",
+    "price": 784.44
+  },
+  {
+    "name": "Zecit syrup 1mg / ml",
+    "category": "MEDICINE",
+    "price": 35
+  },
+  {
+    "name": "Zecit tablet 10mg",
+    "category": "MEDICINE",
+    "price": 35
+  },
+  {
+    "name": "Zedan tablet 15mg",
+    "category": "MEDICINE",
+    "price": 444
+  },
+  {
+    "name": "Zee tablet 250mg",
+    "category": "MEDICINE",
+    "price": 255
+  },
+  {
+    "name": "Zee tablet 500mg",
+    "category": "MEDICINE",
+    "price": 275
+  },
+  {
+    "name": "Zeecin tablet 250 mg",
+    "category": "MEDICINE",
+    "price": 225
+  },
+  {
+    "name": "Zeecin tablet 500mg",
+    "category": "MEDICINE",
+    "price": 192.5
+  },
+  {
+    "name": "Zeegap capsule 100mg",
+    "category": "MEDICINE",
+    "price": 472
+  },
+  {
+    "name": "Zeegap capsule 150mg",
+    "category": "MEDICINE",
+    "price": 543
+  },
+  {
+    "name": "Zeegap capsule 25mg",
+    "category": "MEDICINE",
+    "price": 320
+  },
+  {
+    "name": "Zeegap Capsule 50mg",
+    "category": "MEDICINE",
+    "price": 376
+  },
+  {
+    "name": "Zeegap Capsule 75mg",
+    "category": "MEDICINE",
+    "price": 418
+  },
+  {
+    "name": "Zeenaryl tablet 2mg",
+    "category": "MEDICINE",
+    "price": 184
+  },
+  {
+    "name": "Zeenaryl tablet 4mg",
+    "category": "MEDICINE",
+    "price": 360
+  },
+  {
+    "name": "Zeest MV Tablet",
+    "category": "MEDICINE",
+    "price": 170
+  },
+  {
+    "name": "Zeest Tablet",
+    "category": "OTC",
+    "price": 254
+  },
+  {
+    "name": "Zefo capsule 400mg",
+    "category": "MEDICINE",
+    "price": 324.7
+  },
+  {
+    "name": "Zefrin suspension 100mg",
+    "category": "MEDICINE",
+    "price": 18
+  },
+  {
+    "name": "Zemont tablet 10 mg",
+    "category": "MEDICINE",
+    "price": 225
+  },
+  {
+    "name": "Zenap tablet 500mg",
+    "category": "MEDICINE",
+    "price": 71.5
+  },
+  {
+    "name": "Zenbar capsule 20mg",
+    "category": "MEDICINE",
+    "price": 442
+  },
+  {
+    "name": "Zenbar capsule 30mg",
+    "category": "MEDICINE",
+    "price": 353
+  },
+  {
+    "name": "Zenith tablet",
+    "category": "MEDICINE",
+    "price": 4.16
+  },
+  {
+    "name": "Zentel Suspension 10ml",
+    "category": "MEDICINE",
+    "price": 37
+  },
+  {
+    "name": "Zentel Tablet 200mg",
+    "category": "MEDICINE",
+    "price": 43
+  },
+  {
+    "name": "Zentro tablet 20mg",
+    "category": "MEDICINE",
+    "price": 190
+  },
+  {
+    "name": "Zentro tablet 40mg",
+    "category": "MEDICINE",
+    "price": 310
+  },
+  {
+    "name": "Zenzol suspension 100g",
+    "category": "MEDICINE",
+    "price": 17.3
+  },
+  {
+    "name": "Zenzol suspension 100mg",
+    "category": "MEDICINE",
+    "price": 22
+  },
+  {
+    "name": "Zepose tablet 150mg",
+    "category": "MEDICINE",
+    "price": 322
+  },
+  {
+    "name": "Zepres Plus tablet 10mg / 25mg",
+    "category": "MEDICINE",
+    "price": 221.98
+  },
+  {
+    "name": "Zeptra Ds tablet 160mg / 800mg",
+    "category": "MEDICINE",
+    "price": 12
+  },
+  {
+    "name": "Zerax tablet dispersible 20mg",
+    "category": "MEDICINE",
+    "price": 75
+  },
+  {
+    "name": "Zestoretic 20",
+    "category": "MEDICINE",
+    "price": 1128
+  },
+  {
+    "name": "Zestril tablet 10mg",
+    "category": "MEDICINE",
+    "price": 323.63
+  },
+  {
+    "name": "Zestril tablet 20mg",
+    "category": "MEDICINE",
+    "price": 623.24
+  },
+  {
+    "name": "Zestril tablet 5mg",
+    "category": "MEDICINE",
+    "price": 168.22
+  },
+  {
+    "name": "Zesty tablet 250mg",
+    "category": "MEDICINE",
+    "price": 250
+  },
+  {
+    "name": "Zetamax capsule 250mg",
+    "category": "MEDICINE",
+    "price": 282
+  },
+  {
+    "name": "Zetamax tablet 250mg",
+    "category": "MEDICINE",
+    "price": 223.41
+  },
+  {
+    "name": "Zetro Capsule 250mg",
+    "category": "MEDICINE",
+    "price": 404
+  },
+  {
+    "name": "Zetro Suspension 200mg/5ml",
+    "category": "MEDICINE",
+    "price": 261.69
+  },
+  {
+    "name": "Zetro Tablet 500mg",
+    "category": "MEDICINE",
+    "price": 383.7
+  },
+  {
+    "name": "Zezot capsule 250mg",
+    "category": "MEDICINE",
+    "price": 169
+  },
+  {
+    "name": "Zezot injection 500mg",
+    "category": "MEDICINE",
+    "price": 268
+  },
+  {
+    "name": "Zezot suspension 200mg",
+    "category": "MEDICINE",
+    "price": 222
+  },
+  {
+    "name": "Zezot Tablet 500mg",
+    "category": "MEDICINE",
+    "price": 346
+  },
+  {
+    "name": "Ziapine tablet 100mg",
+    "category": "MEDICINE",
+    "price": 300
+  },
+  {
+    "name": "Ziapine xr tablet 300mg",
+    "category": "MEDICINE",
+    "price": 695
+  },
+  {
+    "name": "Ziclopel capsule 50mg",
+    "category": "MEDICINE",
+    "price": 55
+  },
+  {
+    "name": "Zifi capsule 400mg",
+    "category": "MEDICINE",
+    "price": 325
+  },
+  {
+    "name": "Zilero tablet 2.5mg",
+    "category": "MEDICINE",
+    "price": 570.99
+  },
+  {
+    "name": "Zim tablet 500mg",
+    "category": "MEDICINE",
+    "price": 275
+  },
+  {
+    "name": "Zinacef injection 1.5gm",
+    "category": "MEDICINE",
+    "price": 426.44
+  },
+  {
+    "name": "Zinacef injection 250mg",
+    "category": "MEDICINE",
+    "price": 302.85
+  },
+  {
+    "name": "Zinacef injection 750mg",
+    "category": "MEDICINE",
+    "price": 232.74
+  },
+  {
+    "name": "Zinacef tablet 250mg",
+    "category": "MEDICINE",
+    "price": 1109.52
+  },
+  {
+    "name": "Zincasil syrup",
+    "category": "MEDICINE",
+    "price": 77.15
+  },
+  {
+    "name": "Zincat OD Syrup 60ml",
+    "category": "MEDICINE",
+    "price": 105
+  },
+  {
+    "name": "Zincday Syrup",
+    "category": "MEDICINE",
+    "price": 140
+  },
+  {
+    "name": "Zine tablet 10mg",
+    "category": "MEDICINE",
+    "price": 42
+  },
+  {
+    "name": "Zink tablet",
+    "category": "MEDICINE",
+    "price": 320
+  },
+  {
+    "name": "Zintaxon injection 1gm",
+    "category": "MEDICINE",
+    "price": 160
+  },
+  {
+    "name": "Zithrax injection 500mg",
+    "category": "MEDICINE",
+    "price": 296
+  },
+  {
+    "name": "Zithro capsule 250mg",
+    "category": "MEDICINE",
+    "price": 126.54
+  },
+  {
+    "name": "Zithro capsule 500mg",
+    "category": "MEDICINE",
+    "price": 275
+  },
+  {
+    "name": "Ziton capsule 250mg",
+    "category": "MEDICINE",
+    "price": 293
+  },
+  {
+    "name": "Zitrigine tablet 100mg",
+    "category": "MEDICINE",
+    "price": 687.15
+  },
+  {
+    "name": "Zitro tablet 250mg",
+    "category": "MEDICINE",
+    "price": 150
+  },
+  {
+    "name": "Zivas tablet 3mg",
+    "category": "MEDICINE",
+    "price": 2499.96
+  },
+  {
+    "name": "Zocef injection 500mg",
+    "category": "MEDICINE",
+    "price": 135
+  },
+  {
+    "name": "Zocor tablet 10mg",
+    "category": "MEDICINE",
+    "price": 324.17
+  },
+  {
+    "name": "Zocor tablet 20mg",
+    "category": "MEDICINE",
+    "price": 646.17
+  },
+  {
+    "name": "Zodip Tablet 5mg",
+    "category": "MEDICINE",
+    "price": 63
+  },
+  {
+    "name": "Zofran tablet 8mg",
+    "category": "MEDICINE",
+    "price": 4575
+  },
+  {
+    "name": "Zolam tablet 0.5mg",
+    "category": "MEDICINE",
+    "price": 42.66
+  },
+  {
+    "name": "Zolanix Capsule 150mg",
+    "category": "MEDICINE",
+    "price": 656
+  },
+  {
+    "name": "Zoldic injection 4mg",
+    "category": "MEDICINE",
+    "price": 15000
+  },
+  {
+    "name": "Zoldria injection 4mg",
+    "category": "MEDICINE",
+    "price": 15000
+  },
+  {
+    "name": "Zoledronic Acid AHP vial 4 mg",
+    "category": "MEDICINE",
+    "price": 16150
+  },
+  {
+    "name": "Zoleric capsule 20mg",
+    "category": "MEDICINE",
+    "price": 168
+  },
+  {
+    "name": "Zoleric capsule 40mg",
+    "category": "MEDICINE",
+    "price": 300
+  },
+  {
+    "name": "Zolid plus tablet 15mg / 500mg",
+    "category": "MEDICINE",
+    "price": 296
+  },
+  {
+    "name": "Zolid plus tablet 15mg / 850mg",
+    "category": "MEDICINE",
+    "price": 146
+  },
+  {
+    "name": "Zolid tablet 15mg",
+    "category": "MEDICINE",
+    "price": 350
+  },
+  {
+    "name": "Zolid tablet 30mg",
+    "category": "MEDICINE",
+    "price": 525
+  },
+  {
+    "name": "Zoliget tablet 15 mg / 2 mg",
+    "category": "MEDICINE",
+    "price": 225
+  },
+  {
+    "name": "Zoliget tablet 30 mg / 4 mg",
+    "category": "MEDICINE",
+    "price": 450
+  },
+  {
+    "name": "Zoloft Tablet 50mg",
+    "category": "MEDICINE",
+    "price": 2440
+  },
+  {
+    "name": "Zolp Tablet 10mg",
+    "category": "MEDICINE",
+    "price": 700
+  },
+  {
+    "name": "ZOLREST tablet 600mg",
+    "category": "MEDICINE",
+    "price": 1200
+  },
+  {
+    "name": "Zolt suspension 250mg / 200mg",
+    "category": "MEDICINE",
+    "price": 52
+  },
+  {
+    "name": "Zoltar capsule 20mg",
+    "category": "MEDICINE",
+    "price": 260
+  },
+  {
+    "name": "Zoltar capsule 40mg",
+    "category": "MEDICINE",
+    "price": 281.24
+  },
+  {
+    "name": "Zomax capsule 250mg",
+    "category": "MEDICINE",
+    "price": 230
+  },
+  {
+    "name": "Zomax tablet 500mg",
+    "category": "MEDICINE",
+    "price": 240
+  },
+  {
+    "name": "Zometa injection 4mg",
+    "category": "MEDICINE",
+    "price": 19000
+  },
+  {
+    "name": "Zonas tablet 100mg",
+    "category": "MEDICINE",
+    "price": 209.41
+  },
+  {
+    "name": "Zonlac Injection",
+    "category": "MEDICINE",
+    "price": 600
+  },
+  {
+    "name": "Zonor injection 0.3mg",
+    "category": "MEDICINE",
+    "price": 33.3
+  },
+  {
+    "name": "Zopan DS tablets 500mg",
+    "category": "MEDICINE",
+    "price": 721.2
+  },
+  {
+    "name": "Zopan tablet 250 mg",
+    "category": "MEDICINE",
+    "price": 362.2
+  },
+  {
+    "name": "Zopan tablet 250mg",
+    "category": "MEDICINE",
+    "price": 434
+  },
+  {
+    "name": "Zopan tablet 500mg",
+    "category": "MEDICINE",
+    "price": 200
+  },
+  {
+    "name": "Zopent Tablet 20mg",
+    "category": "MEDICINE",
+    "price": 291.94
+  },
+  {
+    "name": "Zopent Tablet 40mg",
+    "category": "MEDICINE",
+    "price": 775
+  },
+  {
+    "name": "Zotrium tablet 10mg",
+    "category": "MEDICINE",
+    "price": 28.8
+  },
+  {
+    "name": "Zovirax cream",
+    "category": "MEDICINE",
+    "price": 765.81
+  },
+  {
+    "name": "Zovirax tablet 200mg",
+    "category": "MEDICINE",
+    "price": 319
+  },
+  {
+    "name": "Zudic cream",
+    "category": "MEDICINE",
+    "price": 69
+  },
+  {
+    "name": "Zufen suspension 100mg",
+    "category": "MEDICINE",
+    "price": 45
+  },
+  {
+    "name": "Zultracet tablet 37.5mg / 325mg",
+    "category": "MEDICINE",
+    "price": 320
+  },
+  {
+    "name": "Zune tablet 40mg",
+    "category": "MEDICINE",
+    "price": 485
+  },
+  {
+    "name": "Zurig Tablet 40mg",
+    "category": "MEDICINE",
+    "price": 490
+  },
+  {
+    "name": "Zurig tablet 80mg",
+    "category": "MEDICINE",
+    "price": 800
+  },
+  {
+    "name": "Zwitter capsule 75mg",
+    "category": "MEDICINE",
+    "price": 55
+  },
+  {
+    "name": "Zylexx SR tablet 75mg",
+    "category": "MEDICINE",
+    "price": 266
+  },
+  {
+    "name": "Zylexx SR tablets 150mg",
+    "category": "MEDICINE",
+    "price": 399
+  },
+  {
+    "name": "Zyloric Tablet 100mg",
+    "category": "MEDICINE",
+    "price": 36.5
+  },
+  {
+    "name": "Zyloric Tablet 300mg",
+    "category": "MEDICINE",
+    "price": 219
+  },
+  {
+    "name": "Zynol tablet 300mg",
+    "category": "MEDICINE",
+    "price": 77
+  },
+  {
+    "name": "Zyprexa tablet 10mg",
+    "category": "MEDICINE",
+    "price": 16000
+  },
+  {
+    "name": "Zyprexa tablet 5mg",
+    "category": "MEDICINE",
+    "price": 2150
+  },
+  {
+    "name": "Zyrtec Syrup",
+    "category": "MEDICINE",
+    "price": 77.99
+  },
+  {
+    "name": "Zyrtec Tablet 10mg",
+    "category": "MEDICINE",
+    "price": 209
+  },
+  {
+    "name": "Zyto Syrup (200mg/5ml) 15ml",
+    "category": "MEDICINE",
+    "price": 298
+  },
+  {
+    "name": "Zyto Tablet 250mg",
+    "category": "MEDICINE",
+    "price": 354
+  }
+]

@@ -7,3 +7,97 @@
     @apply text-slate-900 bg-white;
   }
 }
+
+/* Hide Google Translate Branding */
+.goog-te-banner-frame.skiptranslate, 
+.goog-te-gadget-icon,
+img.goog-te-gadget-icon {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+.goog-tooltip {
+  display: none !important;
+}
+.goog-tooltip:hover {
+  display: none !important;
+}
+.goog-text-highlight {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ============================================================
+   GOOGLE TRANSLATE UI CLEANUP (HIDE TOP BAR & TOOLTIPS)
+   ============================================================ */
+
+/* 1. Hide the top "Translated to" bar */
+.goog-te-banner-frame.skiptranslate,
+#goog-gt-tt,
+.goog-te-balloon-frame {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* 2. Prevent the page from shifting down when the bar loads */
+body {
+  top: 0px !important;
+}
+
+/* 3. Hide the Google "G" gadget icon */
+.goog-te-gadget-icon {
+  display: none !important;
+}
+
+/* 4. Remove the text highlighting and tooltips on hover */
+.goog-text-highlight {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 5. Hide the translation tooltips shown in your screenshot */
+#google_translate_element img {
+  display: none !important;
+}
+
+/* 6. Specifically hide the "Original text" popup */
+.goog-tooltip, .goog-tooltip:hover {
+    display: none !important;
+}
+.goog-te-menu-value:hover {
+    text-decoration: none !important;
+}
+
+/* --- Aggressive Google Translate Cleanup --- */
+
+/* 1. Hide the Top Banner and all associated frames */
+iframe.goog-te-banner-frame, 
+.goog-te-banner-frame, 
+#goog-gt-tt, 
+.goog-te-balloon-frame,
+.skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* 2. Remove the forced top padding Google adds to the body */
+body {
+    top: 0 !important;
+    position: static !important;
+}
+
+/* 3. Disable hover tooltips on translated text */
+.goog-text-highlight {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* 4. Hide the "Original Text" popup shown in your screenshots */
+#goog-gt-tt, .goog-gt-tt {
+    display: none !important;
+}
