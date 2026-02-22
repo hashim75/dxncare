@@ -10,7 +10,7 @@ created_on: "Sun Feb 22 2026 10:20:00 GMT+0500 (Pakistan Standard Time)"
 updated_on: "Sun Feb 22 2026 10:20:00 GMT+0500 (Pakistan Standard Time)"
 published_on: "Sun Feb 22 2026 10:20:00 GMT+0500 (Pakistan Standard Time)"
 short_description: "General Physician offering expert care in weight loss, clinical nutrition, hypertension, PCOS management, and respiratory infections."
-
+location : "Kot Adu"
 specialization: "General Physician"
 plan_tier: "paid"
 registration_number: "944909-01-M"

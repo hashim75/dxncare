@@ -14,6 +14,7 @@ short_description: "Dr. Iqbal Rehmani is an experienced Homeopathic Doctor with 
 specialization: "General Medicine and Nutrition."
 registration_number: ""
 plan_tier: "paid"
+location : "Khanpur"
 profile_image: "https://cdn.prod.website-files.com/68a581e57b0d5d6252900e4c/68cb9b098a6738f627df19d8_Dr%20Iqbal.avif"
 whatsapp_link: "https://wa.me/923337476033"
 facebook_link: "https://web.facebook.com/iqbal.rehmani.52056"

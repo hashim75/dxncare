@@ -101,7 +101,7 @@ export default async function DoctorDetailPage({ params }: { params: { slug: str
                             </div>
                         )}
                         <div className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg text-xs md:text-sm font-medium backdrop-blur border border-white/5">
-                            <MapPin size={14} className="text-red-400"/> Islamabad
+                            <MapPin size={14} className="text-red-400"/> {doc.location || "Location not specified"}
                         </div>
                     </div>
                 </div>
