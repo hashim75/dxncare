@@ -21,7 +21,7 @@ interface Product {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   try {
-    const product = await getData("products", slug) as Product;
+    const product = await getData("products", slug) as unknown as Product;
     
     return {
       title: `${product.name} | DXNCare Shop`,
@@ -45,7 +45,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   if (!slug) return notFound();
 
   try {
-    const product = await getData("products", slug) as Product;
+    const product = await getData("products", slug) as unknown as Product;
 
     // --- HELPER: CLEAN PRICE ---
     const cleanPrice = product.price ? String(product.price).replace(/[^0-9]/g, '') : "0";
