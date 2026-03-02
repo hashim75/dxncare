@@ -1,203 +1,159 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Truck, Clock, MapPin, Package, HelpCircle, Globe, Mail, CheckCircle2 } from "lucide-react";
-import Link from "next/link";
+import { Truck, MapPin, Globe, AlertTriangle, XCircle, RotateCcw, PackageCheck } from "lucide-react";
 
-const ShippingPage = () => {
-  // Animation Variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { type: "spring", stiffness: 100 }
-    }
+export default function ShippingPage() {
+  
+  const fadeUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
 
   return (
-    <main className="min-h-screen bg-slate-50 pt-24 pb-16 md:pt-32 md:pb-24"> 
+    <main className="min-h-screen bg-[#F8FAFC] pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden"> 
       
-      {/* --- HERO SECTION --- */}
-      <section className="container mx-auto px-4 mb-12 md:mb-24 text-center"> 
+      {/* --- WELCOMING HERO SECTION --- */}
+      <section className="container mx-auto px-4 mb-16 md:mb-24 text-center relative"> 
+        {/* Soft Background Glows */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[300px] bg-teal-400/10 blur-[100px] rounded-full pointer-events-none -z-10" />
+
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto space-y-4 md:space-y-6"
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          className="max-w-4xl mx-auto space-y-4 md:space-y-6"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-teal-100 text-teal-700 text-[10px] md:text-xs font-bold uppercase tracking-wider">
-            <Truck size={14} /> Fast & Reliable
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-50 border border-teal-100 text-teal-700 text-xs font-bold uppercase tracking-widest shadow-sm">
+            <PackageCheck size={16} /> Transparent Policies
           </div>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-jakarta text-slate-900 tracking-tight leading-tight">
-            Shipping <span className="text-teal-600">Policy</span>
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-jakarta text-slate-900 tracking-tight leading-tight">
+            Shipping & <span className="text-teal-600">Returns</span>
           </h1>
-          <p className="text-base md:text-xl text-slate-600 leading-relaxed px-2 md:px-4">
-            We believe getting your wellness essentials should be as stress-free as using them. 
-            Here is everything you need to know about how we get DXN products to your doorstep.
+          <p className="text-base md:text-xl text-slate-500 leading-relaxed px-2 md:px-4 max-w-2xl mx-auto">
+            We want your experience with DXN CARE to be as smooth as possible. Below is the exact, transparent breakdown of how we handle your orders and returns.
           </p>
         </motion.div>
       </section>
 
-      {/* --- VISUAL TIMELINE --- */}
-      <section className="container mx-auto px-4 mb-16 md:mb-32">
-        <div className="bg-white rounded-3xl md:rounded-[3rem] p-6 md:p-16 shadow-sm border border-slate-100 relative overflow-hidden">
-          {/* Background Decor */}
-          <div className="absolute top-0 right-0 w-48 h-48 md:w-96 md:h-96 bg-teal-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-60" />
-          
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-16 text-slate-900 font-jakarta">The Journey to You</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative z-10">
-            {[
-              { icon: Package, title: "Order Placed", desc: "You confirm your wellness essentials." },
-              { icon: Clock, title: "Processing", desc: "We pack your order within 24-48 hours." },
-              { icon: Truck, title: "Shipped", desc: "Handed to our trusted courier partners." },
-              { icon: CheckCircle2, title: "Delivered", desc: "Arrives at your door, ready to use." },
-            ].map((step, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.2 }}
-                className="flex flex-col items-center text-center group relative"
-              >
-                {/* Connector Line (Desktop Only) */}
-                {i !== 3 && (
-                  <div className="hidden md:block absolute top-8 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-0.5 bg-slate-100 -z-10" />
-                )}
-
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-teal-50 text-teal-600 flex items-center justify-center mb-4 md:mb-6 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300 shadow-sm ring-4 ring-white z-10">
-                  <step.icon size={28} className="md:w-9 md:h-9" />
+      {/* --- INNOVATIVE BENTO GRID LAYOUT --- */}
+      <section className="container mx-auto px-4 max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+            
+            {/* 1. Domestic Shipping (Left Column) */}
+            <motion.div 
+                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+                className="md:col-span-6 bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 hover:border-teal-200 transition-colors group relative overflow-hidden"
+            >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-teal-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                <div className="w-14 h-14 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                    <MapPin size={28} />
                 </div>
-                <h3 className="font-bold text-lg md:text-xl text-slate-900 mb-2 md:mb-3">{step.title}</h3>
-                <p className="text-sm md:text-base text-slate-500 leading-relaxed px-2">{step.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* --- DETAILED POLICY GRID --- */}
-      <section className="container mx-auto px-4">
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10"
-        >
-          
-          {/* Card 1: Processing Time */}
-          <motion.div variants={itemVariants} className="bg-white p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] border border-slate-100 hover:border-teal-200 transition-all hover:shadow-xl hover:shadow-teal-900/5 group h-full">
-            <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6">
-              <div className="p-3 md:p-4 bg-blue-50 text-blue-600 rounded-2xl group-hover:scale-110 transition-transform shrink-0">
-                <Clock size={24} className="md:w-7 md:h-7" />
-              </div>
-              <div>
-                <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 md:mb-4 font-jakarta">Processing Time</h3>
-                <p className="text-slate-600 leading-relaxed text-base md:text-lg">
-                  All orders are processed within <strong>1–2 business days</strong> (excluding weekends and holidays). You will receive a notification once your order has shipped.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Card 2: Shipping Rates */}
-          <motion.div variants={itemVariants} className="bg-white p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] border border-slate-100 hover:border-teal-200 transition-all hover:shadow-xl hover:shadow-teal-900/5 group h-full">
-            <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6">
-              <div className="p-3 md:p-4 bg-emerald-50 text-emerald-600 rounded-2xl group-hover:scale-110 transition-transform shrink-0">
-                <Globe size={24} className="md:w-7 md:h-7" />
-              </div>
-              <div>
-                <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 md:mb-4 font-jakarta">Shipping Rates</h3>
-                <ul className="text-slate-600 space-y-2 md:space-y-3 list-disc list-inside text-base md:text-lg">
-                  <li><strong>Standard:</strong> Calculated at checkout.</li>
-                  <li><strong>Free Shipping:</strong> On orders over Rs. 5,000.</li>
-                  <li><strong>International:</strong> Rates vary by zone.</li>
+                <h2 className="text-2xl font-bold text-slate-900 mb-6 font-jakarta">1. Domestic shipping</h2>
+                <ul className="space-y-4 text-slate-600 leading-relaxed">
+                    <li className="flex gap-3">
+                        <strong className="text-teal-700 shrink-0">a.</strong> 
+                        <span>We deliver orders from within Pakistan using reputable courier companies such as TCS, Leopards, or domestically using our own riders. We also deliver</span>
+                    </li>
+                    <li className="flex gap-3">
+                        <strong className="text-teal-700 shrink-0">b.</strong> 
+                        <span>We will deliver your order to the address that you provide when placing the order on our website within 3 to 5 days of placing the order. This timeline is only tentative and we shall not be liable for any delays arising out of any events outside our reasonable control.</span>
+                    </li>
                 </ul>
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
 
-          {/* Card 3: Estimated Delivery */}
-          <motion.div variants={itemVariants} className="bg-white p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] border border-slate-100 hover:border-teal-200 transition-all hover:shadow-xl hover:shadow-teal-900/5 group h-full">
-            <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6">
-              <div className="p-3 md:p-4 bg-purple-50 text-purple-600 rounded-2xl group-hover:scale-110 transition-transform shrink-0">
-                <MapPin size={24} className="md:w-7 md:h-7" />
-              </div>
-              <div className="w-full">
-                <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 md:mb-4 font-jakarta">Estimated Delivery</h3>
-                <div className="space-y-3 md:space-y-4">
-                  <div className="flex justify-between text-sm md:text-base border-b border-slate-100 pb-2 md:pb-3">
-                    <span className="text-slate-500">Major Cities</span>
-                    <span className="font-bold text-slate-900">2–3 Days</span>
-                  </div>
-                  <div className="flex justify-between text-sm md:text-base border-b border-slate-100 pb-2 md:pb-3">
-                    <span className="text-slate-500">Other Cities</span>
-                    <span className="font-bold text-slate-900">3–5 Days</span>
-                  </div>
-                  <div className="flex justify-between text-sm md:text-base">
-                    <span className="text-slate-500">Remote Areas</span>
-                    <span className="font-bold text-slate-900">5–7 Days</span>
-                  </div>
+            {/* 2. International Shipping (Right Column) */}
+            <motion.div 
+                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+                className="md:col-span-6 bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 hover:border-blue-200 transition-colors group relative overflow-hidden"
+            >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                    <Globe size={28} />
                 </div>
-              </div>
-            </div>
-          </motion.div>
+                <h2 className="text-2xl font-bold text-slate-900 mb-6 font-jakarta">2. International shipping</h2>
+                <ul className="space-y-4 text-slate-600 leading-relaxed">
+                    <li className="flex gap-3">
+                        <strong className="text-blue-700 shrink-0">a.</strong> 
+                        <span>We deliver orders outside of Pakistan using reputable courier companies such as DHL or FedEx.</span>
+                    </li>
+                    <li className="flex gap-3">
+                        <strong className="text-blue-700 shrink-0">b.</strong> 
+                        <span>We will deliver your order to the address that you provide when placing the order on our website within 10 to 15 days of placing the order, however this might take longer due to circumstances outside of our control and we shall not be held liable for any such delays.</span>
+                    </li>
+                    <li className="flex gap-3">
+                        <strong className="text-blue-700 shrink-0">c.</strong> 
+                        <span>You may be required to pay customs, duties or other taxes upon receipt of goods received by you that have been shipped from Pakistan.</span>
+                    </li>
+                </ul>
+            </motion.div>
 
-          {/* Card 4: Issues & Support */}
-          <motion.div variants={itemVariants} className="bg-white p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] border border-slate-100 hover:border-teal-200 transition-all hover:shadow-xl hover:shadow-teal-900/5 group h-full">
-            <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6">
-              <div className="p-3 md:p-4 bg-rose-50 text-rose-600 rounded-2xl group-hover:scale-110 transition-transform shrink-0">
-                <HelpCircle size={24} className="md:w-7 md:h-7" />
-              </div>
-              <div>
-                <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 md:mb-4 font-jakarta">Lost or Damaged?</h3>
-                <p className="text-slate-600 leading-relaxed mb-4 md:mb-6 text-base md:text-lg">
-                  DXN Care is not liable for products damaged or lost during shipping, but we will do our best to help. Please save all packaging materials.
+            {/* Complaints (Half Width) */}
+            <motion.div 
+                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+                className="md:col-span-6 bg-amber-50 p-8 md:p-10 rounded-[2.5rem] border border-amber-100"
+            >
+                <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center">
+                        <AlertTriangle size={24} />
+                    </div>
+                    <h2 className="text-2xl font-bold text-amber-900 font-jakarta m-0">Complaints</h2>
+                </div>
+                <p className="text-amber-800 leading-relaxed">
+                    For any complaints or queries in relation to this website, our products or service, you can contact us on this number +92 333 8656601 or on this email support@dxncare.com. We shall use our best endeavors to respond to your complaints or queries within 2 days of receipt. In case of a complaint for any defective or incorrect product, you must ensure that you share proper and complete evidence of receiving an incorrect or defective product such as receipts, pictures and videos.
                 </p>
-                <a href="mailto:support@dxncare.com" className="inline-flex items-center gap-2 text-teal-600 font-bold hover:text-teal-700 transition-colors text-base md:text-lg">
-                  <Mail size={18} /> support@dxncare.com
-                </a>
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
 
-        </motion.div>
-      </section>
+            {/* Cancellations (Half Width) */}
+            <motion.div 
+                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+                className="md:col-span-6 bg-rose-50 p-8 md:p-10 rounded-[2.5rem] border border-rose-100"
+            >
+                <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-rose-100 text-rose-700 rounded-full flex items-center justify-center">
+                        <XCircle size={24} />
+                    </div>
+                    <h2 className="text-2xl font-bold text-rose-900 font-jakarta m-0">Cancellations</h2>
+                </div>
+                <p className="text-rose-800 leading-relaxed">
+                    You may cancel any order within 24 hours of placement. Post expiry of the aforementioned period, no cancellation requests shall be entertained by us.
+                </p>
+            </motion.div>
 
-      {/* --- FAQ / CONTACT CTA --- */}
-      <section className="container mx-auto px-4 mt-16 md:mt-32 text-center">
-        <div className="bg-teal-900 rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 text-white relative overflow-hidden shadow-2xl shadow-teal-900/20">
-           <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/pattern.svg')] opacity-10"></div>
-           <div className="relative z-10 space-y-4 md:space-y-6">
-             <h2 className="text-2xl md:text-4xl font-bold font-jakarta">Still have questions?</h2>
-             <p className="text-teal-100 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-               Our support team is just an email away. Whether it's tracking an order or a shipping inquiry, we're here to help.
-             </p>
-             <div className="pt-4">
-               <Link 
-                 href="/contact" 
-                 className="inline-flex items-center gap-2 md:gap-3 bg-white text-teal-900 px-8 py-3 md:px-10 md:py-4 rounded-full font-bold hover:bg-teal-50 transition-all active:scale-95 shadow-lg text-sm md:text-base"
-               >
-                 Contact Support
-               </Link>
-             </div>
-           </div>
+            {/* Returns, Exchanges and Refunds (Full Width Featured Card) */}
+            <motion.div 
+                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+                className="md:col-span-12 bg-teal-900 text-white p-8 md:p-14 rounded-[2.5rem] md:rounded-[3rem] relative overflow-hidden shadow-2xl shadow-teal-900/20"
+            >
+                {/* Decorative Pattern inside dark card */}
+                <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5 pointer-events-none" />
+                
+                <div className="relative z-10">
+                    <div className="flex items-center gap-4 mb-8">
+                        <div className="w-14 h-14 bg-teal-800 text-teal-200 rounded-2xl flex items-center justify-center shadow-inner">
+                            <RotateCcw size={28} />
+                        </div>
+                        <h2 className="text-3xl font-bold font-jakarta text-white m-0">Returns, Exchanges and Refunds</h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-teal-50 text-base md:text-lg leading-relaxed">
+                        <div className="space-y-6">
+                            <p>We operate a no return, exchange and no refund policy except where the goods you receive are different from what you have ordered on our website or defective or damaged.</p>
+                            <p>All goods being returned need to be sent by courier to Khanpur, Asad Town, House No 2, Rahim Yar Khan, Pakistan.</p>
+                            <p>We only accept returns of goods within 7 days of you placing an order through our website.</p>
+                            <p>Goods that are returned to us must be in a condition that they can be sold again.</p>
+                        </div>
+                        <div className="space-y-6">
+                            <p>We will credit any refund for any goods returned and that are in a saleable condition within 7 to 10 days of receipt of the goods by us.</p>
+                            <p>Instead of a refund, we may also provide you with store credit so that you can exchange the goods you want to return to purchase any other items from our website of the same value.</p>
+                            <p>You will be responsible for paying for your own shipping costs for returning any goods. Shipping costs are non-refundable. If you receive a refund, the cost of return shipping will be deducted from your refund.</p>
+                        </div>
+                    </div>
+                </div>
+            </motion.div>
+
         </div>
       </section>
-
     </main>
   );
-};
-
-export default ShippingPage;
+}

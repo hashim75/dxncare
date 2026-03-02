@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import emailjs from "@emailjs/browser"; 
-import { ArrowLeft, CheckCircle2, Truck, ShieldCheck, Loader2, Pill } from "lucide-react"; // Added Pill icon
+import { ArrowLeft, CheckCircle2, Truck, ShieldCheck, Loader2, Pill } from "lucide-react";
 
 // --- CONFIGURATION ---
 const EMAILJS_CONFIG = {
@@ -19,6 +19,7 @@ export default function CheckoutPage() {
   const { items, clearCart } = useCartStore();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [trackingNumber, setTrackingNumber] = useState(""); // NEW: Store PostEx Tracking Number
 
   // === 1. CALCULATIONS ===
   const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -45,15 +46,55 @@ export default function CheckoutPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // --- A. PREPARE ORDER DATA (Tagged for Allopathic) ---
+    const totalItemsCount = items.reduce((sum, item) => sum + item.quantity, 0);
+
+    // --- A. PREPARE ORDER DATA FOR TEXT ---
     const orderItemsText = items.map(item => {
       // @ts-ignore
       const isMedicine = item.image === "allopathic-icon" || item.category === "Allopathic";
       return `• ${item.name} ${isMedicine ? '(Allopathic)' : ''} (x${item.quantity}) - Rs. ${(item.price * item.quantity).toLocaleString()}`;
     }).join('\n');
 
-    const fullOrderMessage = `
+    try {
+      // ==========================================
+      // --- B. POSTEX API INTEGRATION ---
+      // ==========================================
+     const postexResponse = await fetch('/api/postex/create-order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          orderRefNumber: `DXN-${Date.now()}`, 
+          invoicePayment: finalTotal, 
+          customerName: formData.name, 
+          customerPhone: formData.phone, 
+          deliveryAddress: formData.address, 
+          cityName: formData.city, 
+          invoiceDivision: 1, 
+          items: totalItemsCount, 
+          orderType: "Normal", 
+          orderDetail: orderItemsText,
+          // 👇 ADD THIS LINE RIGHT HERE 👇
+          pickupAddressCode: "001" // Replace with your code from PostEx
+        }),
+      });
+
+      const postexData = await postexResponse.json();
+
+      if (!postexData.success) {
+        throw new Error(`${postexData.message || postexData.error || "Unknown error"}`);
+      }
+
+      // Extract the generated tracking number
+      const newTrackingNumber = postexData.trackingNumber; 
+      setTrackingNumber(newTrackingNumber);
+
+
+      // ==========================================
+      // --- C. EMAIL JS SENDING ---
+      // ==========================================
+      const fullOrderMessage = `
       NEW ORDER RECEIVED 🛍️
+      PostEx Tracking ID: ${newTrackingNumber}
       -------------------------
       Name: ${formData.name}
       Phone: ${formData.phone}
@@ -70,9 +111,8 @@ export default function CheckoutPage() {
       GRAND TOTAL: Rs. ${finalTotal.toLocaleString()}
       
       Notes: ${formData.notes || "None"}
-    `;
+      `;
 
-    try {
       await emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, {
         from_name: formData.name,       
         from_email: formData.email,     
@@ -81,8 +121,13 @@ export default function CheckoutPage() {
         booking_date: new Date().toLocaleDateString() 
       }, EMAILJS_CONFIG.publicKey);
 
+
+      // ==========================================
+      // --- D. WHATSAPP REDIRECTION ---
+      // ==========================================
       const myPhoneNumber = "923338656601"; 
       const whatsappMessage = `*NEW ORDER FROM WEBSITE* 🛍️
+📦 *Tracking Number:* ${newTrackingNumber}
     
 *Customer Details:*
 👤 Name: ${formData.name}
@@ -105,19 +150,21 @@ Tax (4%): Rs. ${tax.toLocaleString()}
 _Please confirm my order._`;
 
       const whatsappUrl = `https://wa.me/${myPhoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-
       window.open(whatsappUrl, "_blank"); 
+      
       setIsSuccess(true);
       clearCart();
       
-    } catch (error) {
+    } catch (error: any) {
       console.error("FAILED to send order:", error);
-      alert("Something went wrong. Please try again.");
+      // 🔥 UPDATED: This will now show the EXACT error message from PostEx
+      alert(`Error: ${error.message || "Failed to connect to PostEx API"}`); 
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  // === 3. SUCCESS SCREEN ===
   if (isSuccess) {
     return (
       <main className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
@@ -125,9 +172,15 @@ _Please confirm my order._`;
           <div className="w-20 h-20 md:w-24 md:h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle2 size={40} className="text-green-600 md:w-12 md:h-12" />
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold font-jakarta text-teal-950 mb-4">Order Placed!</h1>
+          <h1 className="text-3xl md:text-4xl font-bold font-jakarta text-teal-950 mb-2">Order Placed!</h1>
+          
+          <div className="bg-teal-50 border border-teal-100 rounded-xl p-4 mb-6">
+            <p className="text-xs text-teal-700 font-bold uppercase tracking-wider mb-1">Your Tracking Number</p>
+            <p className="text-lg font-bold text-teal-950 tracking-widest">{trackingNumber}</p>
+          </div>
+
           <p className="text-base md:text-lg text-slate-600 mb-8 leading-relaxed">
-            Thank you, <strong>{formData.name}</strong>. We have received your order. We will contact you shortly to confirm delivery.
+            Thank you, <strong>{formData.name}</strong>. Your order is confirmed and automatically dispatched to our courier. You can use your tracking number to track your delivery.
           </p>
           <Link href="/products" className="inline-block bg-teal-950 text-white px-8 py-4 rounded-xl font-bold hover:bg-red-600 transition-colors w-full md:w-auto font-jakarta uppercase tracking-widest text-sm">
             Continue Shopping
@@ -137,6 +190,7 @@ _Please confirm my order._`;
     );
   }
 
+  // === 4. EMPTY CART SCREEN ===
   if (items.length === 0) {
     return (
         <main className="min-h-screen bg-slate-50 pt-32 pb-20 px-4 text-center flex flex-col items-center justify-center">
@@ -147,6 +201,7 @@ _Please confirm my order._`;
     );
   }
 
+  // === 5. MAIN CHECKOUT UI ===
   return (
     <main className="min-h-screen bg-slate-50 pt-24 pb-12 md:pt-32 md:pb-24">
       <div className="container mx-auto px-4">
@@ -175,7 +230,7 @@ _Please confirm my order._`;
                         </div>
                         <div>
                             <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide">Phone Number</label>
-                            <input required name="phone" onChange={handleChange} type="tel" placeholder="0300 1234567" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all" />
+                            <input required name="phone" onChange={handleChange} type="tel" placeholder="03XXXXXXXXX" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all" />
                         </div>
                     </div>
 
@@ -215,7 +270,6 @@ _Please confirm my order._`;
                     {items.map((item) => (
                         <div key={item.id} className="flex gap-4 items-center">
                             <div className="relative w-14 h-14 md:w-16 md:h-16 bg-slate-50 rounded-xl overflow-hidden shrink-0 border border-slate-100 flex items-center justify-center">
-                                {/* --- FIX: Conditional Logic for Allopathic Icon --- */}
                                 {/* @ts-ignore */}
                                 {item.image === "allopathic-icon" || item.category === "Allopathic" ? (
                                   <div className="bg-teal-50 w-full h-full flex items-center justify-center">

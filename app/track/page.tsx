@@ -2,59 +2,45 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { PackageSearch, Mail, Phone, Loader2, CheckCircle2, ArrowRight } from "lucide-react";
-import emailjs from "@emailjs/browser";
+import { PackageSearch, Loader2, ArrowRight, MapPin, Calendar, CreditCard, User, AlertCircle, RefreshCcw, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
-// --- CONFIGURATION ---
-// You can use the same config as your checkout page or create a new template for Tracking Requests
-const EMAILJS_CONFIG = {
-  publicKey: "ykMzk7yOAMHR1Ip8o",
-  serviceId: "service_bhpyljt",
-  templateId: "template_vkr09eu", // Ensure this template accepts tracking details
-};
-
 export default function TrackOrderPage() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-
-  const [formData, setFormData] = useState({
-    email: "",
-    phoneOrOrder: ""
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const [trackingInput, setTrackingInput] = useState("");
+  const [isSearching, setIsSearching] = useState(false);
+  const [trackingData, setTrackingData] = useState<any>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    if (!trackingInput.trim()) return;
 
-    const message = `
-      📦 NEW TRACKING REQUEST 
-      -------------------------
-      Customer Email: ${formData.email}
-      Phone / Order #: ${formData.phoneOrOrder}
-      
-      Please check the system and update the customer on their delivery status.
-    `;
+    setIsSearching(true);
+    setError(null);
+    setTrackingData(null);
 
     try {
-      await emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, {
-        from_name: "DXN Tracking Portal",
-        from_email: formData.email,
-        message: message,
-      }, EMAILJS_CONFIG.publicKey);
+      // Calls the internal Next.js API route we created for PostEx tracking
+      const response = await fetch(`/api/postex/track?trackingNumber=${encodeURIComponent(trackingInput)}`);
+      const data = await response.json();
 
-      setIsSuccess(true);
-      
-    } catch (error) {
-      console.error("FAILED to send tracking request:", error);
-      alert("Something went wrong. Please try again or contact us directly on WhatsApp.");
+      if (data.success) {
+        setTrackingData(data.trackingData); 
+      } else {
+        setError(data.message || "We couldn't find an order with that tracking number.");
+      }
+    } catch (err) {
+      console.error("Tracking error:", err);
+      setError("Failed to connect to the tracking server. Please try again.");
     } finally {
-      setIsSubmitting(false);
+      setIsSearching(false);
     }
+  };
+
+  const resetTracking = () => {
+    setTrackingData(null);
+    setTrackingInput("");
+    setError(null);
   };
 
   return (
@@ -74,78 +60,157 @@ export default function TrackOrderPage() {
                 <PackageSearch size={32} className="text-teal-600" />
             </div>
             <h1 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-3">Track Your Order</h1>
-            <p className="text-slate-500 text-sm md:text-base">Enter your details below and our team will send you a live status update.</p>
+            <p className="text-slate-500 text-sm md:text-base">Enter your PostEx tracking number to see your live delivery status.</p>
         </div>
 
-        {isSuccess ? (
+        {trackingData ? (
+          /* --- SUCCESS STATE: SHOW LIVE TRACKING DATA --- */
           <motion.div 
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="bg-white p-8 rounded-[2rem] shadow-xl shadow-slate-200/50 border border-slate-100 text-center"
+            className="bg-white p-6 md:p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100"
           >
-            <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
-              <CheckCircle2 size={32} className="text-green-500" />
+            <div className="text-center mb-6">
+              <span className="inline-block px-4 py-1.5 bg-teal-50 text-teal-700 text-xs font-bold uppercase tracking-widest rounded-full mb-4">
+                Live Status
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-teal-950 capitalize leading-tight">
+                {trackingData.transactionStatus || "Processing"}
+              </h2>
+              <p className="text-slate-500 text-sm mt-2 font-medium">Tracking ID: {trackingData.trackingNumber}</p>
             </div>
-            <h2 className="text-xl font-bold text-slate-900 mb-2">Request Received!</h2>
-            <p className="text-slate-500 text-sm mb-8 leading-relaxed">
-              We've received your tracking request. Our team is checking your order status and will email or WhatsApp you shortly.
-            </p>
-            <Link 
-              href="/products" 
-              className="inline-flex items-center justify-center gap-2 w-full bg-teal-50 text-teal-700 py-3 rounded-xl font-bold hover:bg-teal-100 transition-colors"
-            >
-              Continue Shopping <ArrowRight size={16} />
-            </Link>
+
+            {/* --- ORDER SUMMARY CARDS --- */}
+            <div className="bg-slate-50 rounded-2xl p-5 space-y-4 mb-8 border border-slate-100">
+              <div className="flex items-center gap-3">
+                <User size={18} className="text-slate-400" />
+                <div className="flex-1">
+                  <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Customer</p>
+                  <p className="text-slate-900 font-medium">{trackingData.customerName}</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <MapPin size={18} className="text-slate-400" />
+                <div className="flex-1">
+                  <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Destination City</p>
+                  <p className="text-slate-900 font-medium">{trackingData.cityName}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <CreditCard size={18} className="text-slate-400" />
+                <div className="flex-1">
+                  <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Amount to Pay (COD)</p>
+                  <p className="text-slate-900 font-medium">Rs. {trackingData.invoicePayment?.toLocaleString()}</p>
+                </div>
+              </div>
+
+              {trackingData.transactionDate && (
+                <div className="flex items-center gap-3">
+                  <Calendar size={18} className="text-slate-400" />
+                  <div className="flex-1">
+                    <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Order Date</p>
+                    <p className="text-slate-900 font-medium">{new Date(trackingData.transactionDate).toLocaleDateString()}</p>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* --- NEW: DETAILED TRACKING TIMELINE --- */}
+            {trackingData.transactionStatusHistory && trackingData.transactionStatusHistory.length > 0 && (
+              <div className="mb-8">
+                <h3 className="text-sm font-bold text-slate-900 mb-5 uppercase tracking-widest border-b border-slate-100 pb-2">Tracking History</h3>
+                
+                <div className="relative border-l-2 border-teal-100 ml-3 space-y-6 pb-2">
+                  {trackingData.transactionStatusHistory.map((status: any, index: number) => {
+                    // Check if it's the most recent status (first item if chronological, or last depending on API)
+                    const isLatest = index === trackingData.transactionStatusHistory.length - 1; 
+
+                    return (
+                      <div key={index} className="relative pl-6">
+                        {/* Timeline Dot */}
+                        <div className={`absolute -left-[9px] top-0.5 w-4 h-4 rounded-full ring-4 ring-white ${isLatest ? 'bg-teal-600' : 'bg-slate-300'}`} />
+                        
+                        {/* Status Message */}
+                        <p className={`text-sm md:text-base font-bold ${isLatest ? 'text-teal-950' : 'text-slate-700'}`}>
+                          {status.transactionStatusMessage}
+                        </p>
+                        
+                        {/* Render date if PostEx provides it in the history object */}
+                        {status.date || status.createdAt || status.statusDate ? (
+                           <p className="text-xs text-slate-500 mt-1 font-medium">
+                             {new Date(status.date || status.createdAt || status.statusDate).toLocaleString()}
+                           </p>
+                        ) : null}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* --- ACTION BUTTONS --- */}
+            <div className="grid grid-cols-2 gap-3 pt-2">
+              <button 
+                onClick={resetTracking}
+                className="flex items-center justify-center gap-2 w-full bg-slate-100 text-slate-700 py-3 md:py-4 rounded-xl font-bold hover:bg-slate-200 transition-colors text-sm"
+              >
+                <RefreshCcw size={16} /> Track Another
+              </button>
+              <Link 
+                href="/products" 
+                className="flex items-center justify-center gap-2 w-full bg-teal-950 text-white py-3 md:py-4 rounded-xl font-bold hover:bg-teal-800 transition-colors text-sm"
+              >
+                Shop <ArrowRight size={16} />
+              </Link>
+            </div>
           </motion.div>
         ) : (
+          /* --- INPUT FORM STATE --- */
           <div className="bg-white p-6 md:p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100">
             <form onSubmit={handleSubmit} className="space-y-5">
               
               <div>
-                <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide ml-1">Email Address</label>
+                <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide ml-1">
+                  Tracking Number
+                </label>
                 <div className="relative">
                     <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none text-slate-400">
-                        <Mail size={18} />
+                        <PackageSearch size={18} />
                     </div>
                     <input 
                         required 
-                        name="email" 
-                        value={formData.email}
-                        onChange={handleChange} 
-                        type="email" 
-                        placeholder="your@email.com" 
-                        className="w-full bg-slate-50 border border-slate-200 rounded-2xl pl-12 pr-4 py-4 text-slate-900 focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all font-medium placeholder:text-slate-400" 
+                        name="trackingInput" 
+                        value={trackingInput}
+                        onChange={(e) => setTrackingInput(e.target.value)} 
+                        type="text" 
+                        placeholder="e.g. CX-1234567890" 
+                        className="w-full bg-slate-50 border border-slate-200 rounded-2xl pl-12 pr-4 py-4 text-slate-900 focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all font-medium placeholder:text-slate-400 uppercase" 
                     />
                 </div>
               </div>
 
-              <div>
-                <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide ml-1">Phone or Order Number</label>
-                <div className="relative">
-                    <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none text-slate-400">
-                        <Phone size={18} />
-                    </div>
-                    <input 
-                        required 
-                        name="phoneOrOrder" 
-                        value={formData.phoneOrOrder}
-                        onChange={handleChange} 
-                        type="text" 
-                        placeholder="e.g. 0300 1234567 or #ORD-123" 
-                        className="w-full bg-slate-50 border border-slate-200 rounded-2xl pl-12 pr-4 py-4 text-slate-900 focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-all font-medium placeholder:text-slate-400" 
-                    />
-                </div>
-              </div>
+              {error && (
+                <motion.div 
+                  initial={{ opacity: 0, y: -10 }} 
+                  animate={{ opacity: 1, y: 0 }} 
+                  className="bg-red-50 text-red-600 p-4 rounded-xl text-sm flex items-start gap-3"
+                >
+                  <AlertCircle size={18} className="shrink-0 mt-0.5" />
+                  <p>{error}</p>
+                </motion.div>
+              )}
 
               <button 
-                  disabled={isSubmitting}
+                  disabled={isSearching || !trackingInput.trim()}
                   type="submit"
                   className="w-full bg-teal-950 text-white py-4 rounded-2xl font-bold text-base shadow-lg shadow-teal-950/20 hover:bg-teal-600 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed active:scale-95 mt-4"
               >
-                  {isSubmitting ? (
-                      <><Loader2 className="animate-spin" size={18} /> Searching Records...</>
+                  {isSearching ? (
+                      <><Loader2 className="animate-spin" size={18} /> Connecting to Courier...</>
                   ) : (
-                      <><PackageSearch size={18} /> Get Tracking Update</>
+                      <><PackageSearch size={18} /> Track Order</>
                   )}
               </button>
             </form>
