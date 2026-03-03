@@ -2,6 +2,7 @@
 slug: "dr-muhammad-qasim"
 name: "Dr. Qasim Iqbal"
 collection_id: "68b2cb42d1ceb4a1b558edd7"
+category: "General Physician"
 locale_id: "68a581e57b0d5d6252900e4b"
 item_id: "68b33c7fc6bc26fb51051e14"
 archived: "false"
@@ -28,4 +29,4 @@ services:
   - "Nutritional assessment & diet counseling"
   - "Weight management & metabolic disease nutrition (DM, HTN)"
 ---
-Dr. Muhammad Qasim had done MBBS from SZMC. He is currently doing specilization in General Surgery.
+Dr. Muhammad Qasim had done MBBS from SZMC. He has expertise in Nutritional advise ,Peads medicine , Gynaecological advise , General surgical care , General medical care , like HTN , DM ,Git disorder , Psychiatric advise.

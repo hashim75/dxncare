@@ -2,6 +2,7 @@
 slug: "dr-rabia-iqbal"
 name: "Dr. Rabia Iqbal"
 collection_id: "68b2cb42d1ceb4a1b558edd7"
+category: "Plastic Surgeon"
 locale_id: "68a581e57b0d5d6252900e4b"
 item_id: "68b33c9da749f198991578c3"
 archived: "false"

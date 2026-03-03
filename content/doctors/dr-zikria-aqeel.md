@@ -2,6 +2,7 @@
 slug: "dr-zikria-aqeel"
 name: "Dr Zikria Aqeel"
 collection_id: "68b2cb42d1ceb4a1b558edd7"
+category: "Urology"
 locale_id: "68a581e57b0d5d6252900e4b"
 item_id: "696fd0a5c6fd2e2f28955d2e"
 archived: "false"
@@ -20,4 +21,4 @@ facebook_link: ""
 linkdln_link: "https://www.linkedin.com/in/zikria-aqeel/"
 ---
 
-Senior Research Writer and Analyst.
+Expert Care in Infertility, Urological Disorders, Kidney Stones & Renal Failure — Restoring Health, Renewing Hope.

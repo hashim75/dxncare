@@ -1,0 +1,28 @@
+---
+slug: "dr-alishba-tariq"
+name: "Dr. Alishba Tariq"
+collection_id: "68b2cb42d1ceb4a1b558edd7"
+category: "ENT and Gynecology"
+locale_id: "68a581e57b0d5d6252900e4b"
+item_id: "68b33c7fc6bc26fb51051e17"
+archived: "false"
+draft: "false"
+created_on: "Mon Mar 02 2026 23:15:00 GMT+0500 (Pakistan Standard Time)"
+updated_on: "Mon Mar 02 2026 23:15:00 GMT+0500 (Pakistan Standard Time)"
+published_on: "Mon Mar 02 2026 23:15:00 GMT+0500 (Pakistan Standard Time)"
+short_description: "Dr. Alishba Tariq, MBBS is a licensed General Practitioner with expertise in ENT and Gynecology care[cite: 730]. She provides comprehensive online consultations for acute and chronic medical conditions."
+specialization: "General Practitioner (ENT, GYNAE SPECIALIST)"
+location : "Pakistan"
+plan_tier: "paid"
+registration_number: "948954-01-M"
+profile_image: "https://cdn.prod.website-files.com/6833690dd0efea69de65146d/69a5e1b0cc0ac5c8e3065098_WhatsApp%20Image%202026-03-02%20at%2023.01.02.avif"
+whatsapp_link: "https://wa.me/923196467533"
+facebook_link: ""
+linkdln_link: ""
+services:
+  - "Online General Practitioner Consultation – Diagnosis and treatment of acute and chronic illnesses, fever, infections, diabetes, hypertension, and preventive health care [cite: 740]"
+  - "ENT Specialist Consultation – Expert online treatment for sinusitis, allergic rhinitis, tonsillitis, sore throat, ear infections, hearing problems, vertigo, and nasal blockage [cite: 741]"
+  - "Chest & Respiratory Care – Management of asthma, bronchitis, pneumonia, chronic cough, chest infections, and breathing difficulties [cite: 742]"
+  - "Gastrointestinal & Gynecology Consultation – Treatment of acid reflux (GERD), gastritis, IBS, abdominal pain, menstrual irregularities, PCOS, pelvic pain, vaginal infections, and hormonal health concerns [cite: 743]"
+---
+Dr. Alishba Tariq, MBBS is a licensed General Practitioner with expertise in ENT (Ear, Nose & Throat) and Gynecology care[cite: 730]. She provides comprehensive online consultations for sinusitis, allergies, throat and ear infections, menstrual disorders, hormonal concerns, and common acute and chronic medical conditions[cite: 731]. Dr. Alishba Tariq is committed to evidence-based, patient-centered telehealth services, offering accurate diagnosis, personalized treatment plans, and confidential medical care[cite: 732].Her preferred consultation hours are 9:00 AM to 11:00.

@@ -2,6 +2,7 @@
 slug: "dr-muhammad-iqbal"
 name: "Dr. Muhammad Iqbal"
 collection_id: "68b2cb42d1ceb4a1b558edd7"
+category: "Homeopathic Doctor"
 locale_id: "68a581e57b0d5d6252900e4b"
 item_id: "68b33c6ae0ae8eda7a87e2ba"
 archived: "false"

@@ -2,6 +2,7 @@
 slug: "dr-maham-fatima"
 name: "Dr. Maham Fatima"
 collection_id: "68b2cb42d1ceb4a1b558edd7"
+category: "Women & Child Health"
 locale_id: "68a581e57b0d5d6252900e4b"
 item_id: "68b33c7fc6bc26fb51051e14"
 archived: "false"

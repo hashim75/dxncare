@@ -19,7 +19,7 @@ interface Doctor {
 
 // 2. DEFINE THE EXACT ORDER (We will match by ID *OR* Partial Name)
 const ORDERED_KEYS = [
-  { id: "muhammad", namePart: "Muhammad" }, // 1. Dr. Muhammad Iqbal
+  { id: "iqbal", namePart: "Iqbal" }, // 1. Dr. Muhammad Iqbal
   { id: "qasim", namePart: "Qasim" },       // 2. Dr. Qasim Iqbal
   { id: "rabia", namePart: "Rabia" },       // 3. Dr. Rabia Iqbal
   { id: "zikria", namePart: "Zikria" },     // 4. Dr. Zikria Aqeel
@@ -41,9 +41,9 @@ export default function DoctorSection({ doctors }: { doctors: Doctor[] }) {
       const sorted = ORDERED_KEYS.map((key) => {
         // Try to find the doctor by ID *OR* by checking if their Name contains the key string
         return doctors.find((doc) => 
-          doc.id.toLowerCase().includes(key.id) || 
-          doc.name.toLowerCase().includes(key.namePart.toLowerCase())
-        );
+    (doc.id && key.id && doc.id.toLowerCase().includes(key.id.toLowerCase())) || 
+    (doc.name && key.namePart && doc.name.toLowerCase().includes(key.namePart.toLowerCase()))
+  );
       }).filter((doc): doc is Doctor => doc !== undefined);
 
       // If we found our specific doctors, use that list. Otherwise use the raw list.

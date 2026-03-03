@@ -1,0 +1,28 @@
+---
+slug: "dr-syeda-saghira-begum"
+name: "Dr. Syeda Saghira Begum Rph"
+category: "Clinical Pharmacist"
+collection_id: "68b2cb42d1ceb4a1b558edd7"
+locale_id: "68a581e57b0d5d6252900e4b"
+item_id: "68b33c7fc6bc26fb51051e19"
+archived: "false"
+draft: "false"
+created_on: "Tue Mar 03 2026 09:10:00 GMT+0500 (Pakistan Standard Time)"
+updated_on: "Tue Mar 03 2026 09:10:00 GMT+0500 (Pakistan Standard Time)"
+published_on: "Tue Mar 03 2026 09:10:00 GMT+0500 (Pakistan Standard Time)"
+short_description: "Registered pharmacist with the Pharmacy Council of Sindh | 6 years of experience at Dvago Pharmacy and Liaquat National Hospital."
+specialization: "Clinical Pharmacist, Nutritionist"
+location: "Sindh"
+plan_tier: "paid"
+registration_number: ""
+profile_image: "https://cdn.prod.website-files.com/6833690dd0efea69de65146d/69a65ee4b9c5b28723b9874a_Picture%201.avif"
+whatsapp_link: "https://wa.me/923158464625"
+facebook_link: "https://www.facebook.com/share/1GVjHDvRY3/"
+linkdln_link: "https://www.linkedin.com/in/syeda-saghira-74050412a"
+services:
+  - "Proper diet plan with respect to disease specifically diabetes, hypothyroidism, pregnancy, hypertension"
+  - "Patient counselling on how take medicine for better therapeutic outcomes, drug-drug interaction, drug-food interaction"
+  - "Dose calculation"
+  - "Drug and poison information centre, OTC management"
+---
+Dr. Syeda Saghira Begum Rph is a registered pharmacist with the Pharmacy Council of Sindh. She brings 6 years of valuable working experience, having previously worked at Dvago Pharmacy and Liaquat National Hospital. She specializes as a clinical pharmacist and nutritionist. Her preferred consultation hours are 9:00 AM to 5:00 PM, and she also manages a drug and poison information center that is available 24 hours.
