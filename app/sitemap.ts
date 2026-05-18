@@ -51,6 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/contact`, lastModified: new Date(), changeFrequency: 'yearly' as const, priority: 0.7 },
     { url: `${BASE_URL}/mission`, lastModified: new Date(), changeFrequency: 'yearly' as const, priority: 0.6 },
     
+    // ---> NEW PRODUCT LANDING PAGES ADDED HERE <---
+    { url: `${BASE_URL}/digestwell`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${BASE_URL}/gainforte`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${BASE_URL}/forcex`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.9 },
+    { url: `${BASE_URL}/mass-muscle-bundle`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.9 },
+    
     // Main Hubs & Directories
     { url: `${BASE_URL}/products`, lastModified: new Date(), changeFrequency: 'daily' as const, priority: 0.9 },
     { url: `${BASE_URL}/dxn-care-products`, lastModified: new Date(), changeFrequency: 'daily' as const, priority: 0.9 },

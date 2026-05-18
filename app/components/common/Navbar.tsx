@@ -9,7 +9,7 @@ import {
   Menu, X, ChevronDown, ArrowRight, Stethoscope, UserPlus, 
   Activity, Brain, Leaf, ShoppingBag, Pill, Info, 
   Target, Star, ShieldCheck, BookOpen, PackageSearch, Phone,
-  ChevronRight, Sparkles
+  ChevronRight, Sparkles, Flame, BatteryCharging, Dumbbell, Package
 } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher"; 
 
@@ -56,6 +56,20 @@ export default function Navbar({ products = [], doctors = [], intelligence = [],
   // --- MEGA MENU SCHEMA ---
   const NAV_SCHEMA = [
     { label: "Home", href: "/" },
+    {
+      label: "Our Products",
+      id: "our-products",
+      items: [
+        { label: "DigestWell", href: "/digestwell", icon: Flame, desc: "Instant herbal relief for gas & acidity" },
+        { label: "GainForte", href: "/gainforte", icon: BatteryCharging, desc: "Natural appetite stimulator & mass syrup" },
+        { label: "Force-X", href: "/forcex", icon: Dumbbell, desc: "Explosive strength & advanced muscle complex" },
+        { label: "GainForte + Force-X Bundle", href: "/mass-muscle-bundle", icon: Package, desc: "The ultimate Mass & Muscle Stack" }
+      ],
+      featuredTitle: "Top Sellers",
+      featuredData: products,
+      featuredBase: "/dxn-care-products",
+      cta: { title: "Want to see more?", desc: "Explore our complete organic range.", link: "/dxn-care-products", linkText: "View All Products" }
+    },
     {
       label: "Health Hub",
       id: "health",
@@ -115,7 +129,6 @@ export default function Navbar({ products = [], doctors = [], intelligence = [],
   // --- MODERN MEGA MENU RENDERER ---
   const renderMegaContent = (menu: any) => {
     return (
-      // FIX: Added max-w-5xl and mx-auto to prevent the menu from stretching awkwardly on large screens
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 max-w-5xl mx-auto w-full">
         {/* LEFT PANE */}
         <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 content-start">
@@ -153,7 +166,6 @@ export default function Navbar({ products = [], doctors = [], intelligence = [],
             
             <div className="space-y-6 mb-8 relative">
               <div className="absolute left-[7px] top-2 bottom-2 w-px bg-slate-200/60 z-0" />
-              {/* FIX: Sliced to 2 instead of 3 */}
               {menu.featuredData?.slice(0, 2).map((feat: any, idx: number) => (
                 <Link key={idx} href={`${menu.featuredBase}/${feat.id || feat.slug}`} className="relative z-10 flex gap-4 group">
                   <div className="w-4 h-4 rounded-full bg-white border-[3px] border-slate-200 group-hover:border-teal-500 mt-1 shrink-0 transition-colors duration-300 shadow-sm" />
@@ -274,7 +286,6 @@ export default function Navbar({ products = [], doctors = [], intelligence = [],
                 className="absolute top-[72px] left-0 w-full bg-white/95 backdrop-blur-2xl border-t border-slate-100 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] origin-top rounded-b-[2.5rem] overflow-hidden flex justify-center"
                 onMouseEnter={() => handleMouseEnter(activeMenu)}
             >
-                {/* FIX: Added width constraints inside the expanded menu */}
                 <div className="w-full p-8 lg:p-10">
                     {renderMegaContent(NAV_SCHEMA.find(m => m.id === activeMenu))}
                 </div>
