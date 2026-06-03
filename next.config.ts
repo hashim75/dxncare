@@ -1,6 +1,10 @@
+// next.config.ts
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // No trailing slash – matches your sitemap URLs
+  trailingSlash: false,
+
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
@@ -10,15 +14,15 @@ const nextConfig: NextConfig = {
     ],
   },
 
+  // ---------- REDIRECTS (301) for all broken URLs ----------
   async redirects() {
     return [
-      // 1. PRODUCT REDIRECTS
+      // ---- EXISTING REDIRECTS (kept & improved) ----
       {
         source: '/buy/:slug*',
         destination: '/products/:slug*',
         permanent: true,
       },
-      // UPDATED: Added /:path* to catch "/dxn-care-products" AND "/dxn-care-products/"
       {
         source: '/dxn-care-products/:path*',
         destination: '/products',
@@ -29,8 +33,6 @@ const nextConfig: NextConfig = {
         destination: '/products/dxn-cordypine',
         permanent: true,
       },
-
-      // 2. BLOG REDIRECTS (unchanged)
       {
         source: '/the-natural-way-to-boost-immunity-why-you-need-dxn-spirulina',
         destination: '/blog/the-natural-way-to-boost-immunity-why-you-need-dxn-spirulina',
@@ -71,8 +73,6 @@ const nextConfig: NextConfig = {
         destination: '/blog/common-causes-of-adult-acne-what-your-diet-has-to-do-with-it',
         permanent: true,
       },
-
-      // 3. BROKEN / DELETED LINKS
       {
         source: '/blog/cancer-',
         destination: '/blog/cancer-prevention-lifestyle-choices-that-lower-your-risk',
@@ -80,8 +80,94 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/blog/struggling-with-weight-discover-how-this-dxn-product-can-help',
-        destination: '/blog', 
+        destination: '/blog',
         permanent: true,
+      },
+
+      // ---- NEW REDIRECTS (from GSC 404 errors & duplicates) ----
+      // Terms page
+      {
+        source: '/terms-and-conditions',
+        destination: '/terms',
+        permanent: true,
+      },
+      // Blogs (plural) → blog (singular)
+      {
+        source: '/blogs',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blogs/:path*',
+        destination: '/blog/:path*',
+        permanent: true,
+      },
+      // Mental health → health-intelligences
+      {
+        source: '/mental-health',
+        destination: '/health-intelligences',
+        permanent: true,
+      },
+      {
+        source: '/mental-health/:path*',
+        destination: '/health-intelligences/:path*',
+        permanent: true,
+      },
+      // Privacy policy
+      {
+        source: '/privacy-policy',
+        destination: '/privacy',
+        permanent: true,
+      },
+      // Missing product pages
+      {
+        source: '/products/dxn-cordyceps',
+        destination: '/products/dxn-cordypine',
+        permanent: true,
+      },
+      {
+        source: '/products/dxn-cordyceps-tablet',
+        destination: '/products/dxn-cordypine',
+        permanent: true,
+      },
+      {
+        source: '/products/dxn-spirulina-tablet',
+        destination: '/products/dxn-spirulina',
+        permanent: true,
+      },
+      // Test page
+      {
+        source: '/test',
+        destination: '/',
+        permanent: true,
+      },
+      // Broken category filters (remove query params)
+      {
+        source: '/blogs',
+        has: [{ type: 'query', key: 'category' }],
+        destination: '/blog',
+        permanent: true,
+      },
+      // Trailing slash removal (optional – ensure consistency with sitemap)
+      {
+        source: '/:path+/',
+        destination: '/:path+',
+        permanent: true,
+      },
+    ];
+  },
+
+  // ---------- HEADERS (canonical domain & security) ----------
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
+          },
+        ],
       },
     ];
   },
