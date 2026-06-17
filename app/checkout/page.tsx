@@ -22,7 +22,7 @@ export default function CheckoutPage() {
   const [trackingNumber, setTrackingNumber] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // NEW: Store compressed image for EmailJS payload
+  // Store compressed image for EmailJS payload
   const [screenshotBase64, setScreenshotBase64] = useState<string | null>(null);
   const [screenshotError, setScreenshotError] = useState("");
 
@@ -63,17 +63,17 @@ export default function CheckoutPage() {
       const img = new window.Image();
       img.src = event.target?.result as string;
       img.onload = () => {
-        // Compress image to bypass EmailJS free tier size limits
+        // Compress image heavily to ensure it passes through EmailJS limits
         const canvas = document.createElement('canvas');
-        const MAX_WIDTH = 600;
+        const MAX_WIDTH = 400; // Smaller width for email safety
         const scaleSize = MAX_WIDTH / img.width;
         canvas.width = MAX_WIDTH;
         canvas.height = img.height * scaleSize;
         const ctx = canvas.getContext('2d');
         ctx?.drawImage(img, 0, 0, canvas.width, canvas.height);
         
-        // Convert to highly compressed JPEG base64
-        const compressedBase64 = canvas.toDataURL('image/jpeg', 0.5); 
+        // Convert to highly compressed JPEG base64 (30% quality)
+        const compressedBase64 = canvas.toDataURL('image/jpeg', 0.3); 
         setScreenshotBase64(compressedBase64);
       };
     };
@@ -156,7 +156,6 @@ export default function CheckoutPage() {
         from_name: formData.name,       
         from_email: formData.email,     
         message: fullOrderMessage,
-        // The base64 string of the image is passed here. Add {{screenshot}} to your EmailJS HTML template inside an <img src="{{screenshot}}" /> tag
         screenshot: screenshotBase64,      
         doctor_name: "DXN Sales Team",  
         booking_date: new Date().toLocaleDateString() 
@@ -177,8 +176,8 @@ export default function CheckoutPage() {
 ${orderItemsText}
 
 ----------------------------
-*💰 GRAND TOTAL: Rs. ${finalTotal.toLocaleString()}*
-*(Advance delivery fee of Rs. 250 has been paid)*
+*💰 TOTAL COD: Rs. ${(subtotal + tax).toLocaleString()}*
+*(Advance delivery fee of Rs. 250 has been paid via screenshot)*
 ----------------------------
 
 _Please confirm my order._`;
@@ -269,28 +268,43 @@ _Please confirm my order._`;
 
                 {/* Account Details Blocks */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                    {/* EASYPAISA */}
                     <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
                         <div className="flex items-center justify-between mb-3">
                             <span className="text-xs font-bold uppercase tracking-widest text-[#00a99d]">Easypaisa</span>
-                            <Image src="/images/easypaisa-icon.png" alt="Easypaisa" width={24} height={24} className="opacity-50" />
+                            <img 
+                                src="https://img.logo.dev/easypaisa.com.pk?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=128&retina=true&format=png" 
+                                alt="Easypaisa" 
+                                className="h-6 w-auto object-contain opacity-80" 
+                            />
                         </div>
                         <p className="text-sm text-slate-500 mb-1">Title: <span className="font-bold text-black">Muhammad Hashim</span></p>
                         <p className="text-lg font-black text-slate-900 tracking-wider">03048862472</p>
                     </div>
 
+                    {/* JAZZCASH */}
                     <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
                         <div className="flex items-center justify-between mb-3">
                             <span className="text-xs font-bold uppercase tracking-widest text-[#ec1b24]">JazzCash</span>
-                            <Image src="/images/jazzcash-icon.png" alt="Jazzcash" width={24} height={24} className="opacity-50" />
+                            <img 
+                                src="https://img.logo.dev/jazzcash.com.pk?token=pk_Or_51lkkSnmQhpX75nkUnA" 
+                                alt="JazzCash" 
+                                className="h-6 w-auto object-contain opacity-80" 
+                            />
                         </div>
                         <p className="text-sm text-slate-500 mb-1">Title: <span className="font-bold text-black">Muhammad Hashim</span></p>
                         <p className="text-lg font-black text-slate-900 tracking-wider">03338656601</p>
                     </div>
 
+                    {/* BANK ALFALAH */}
                     <div className="sm:col-span-2 bg-slate-50 border border-slate-200 rounded-2xl p-5">
                         <div className="flex items-center justify-between mb-3">
                             <span className="text-xs font-bold uppercase tracking-widest text-[#004f98]">Bank Alfalah</span>
-                            <ShieldCheck size={20} className="text-slate-400" />
+                            <img 
+                                src="https://img.logo.dev/pakistansmetoolkit.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=128&retina=true&format=png" 
+                                alt="Bank Alfalah" 
+                                className="h-6 w-auto object-contain opacity-80" 
+                            />
                         </div>
                         <div className="grid sm:grid-cols-2 gap-4">
                             <div>
