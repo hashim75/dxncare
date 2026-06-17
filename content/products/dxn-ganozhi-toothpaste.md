@@ -6,7 +6,7 @@ collection_id: "68aacd1413853ac9700c7e25"
 locale_id: "68a581e57b0d5d6252900e4b"
 item_id: "68e673f6de1b9f67e1ec22ee"
 archived: "false"
-price : 1435
+price : 1730
 draft: "false"
 created_on: "Wed Oct 08 2025 14:23:50 GMT+0000 (Coordinated Universal Time)"
 updated_on: "Thu Oct 09 2025 08:53:21 GMT+0000 (Coordinated Universal Time)"
