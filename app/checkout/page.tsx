@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useCartStore } from "../store/cartStore";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import emailjs from "@emailjs/browser"; 
-import { ArrowLeft, CheckCircle2, Truck, ShieldCheck, Loader2, Pill } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Truck, ShieldCheck, Loader2, Pill, AlertCircle, UploadCloud, FileImage, XCircle } from "lucide-react";
 
 // --- CONFIGURATION ---
 const EMAILJS_CONFIG = {
@@ -19,7 +19,12 @@ export default function CheckoutPage() {
   const { items, clearCart } = useCartStore();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [trackingNumber, setTrackingNumber] = useState(""); // NEW: Store PostEx Tracking Number
+  const [trackingNumber, setTrackingNumber] = useState("");
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // NEW: Store compressed image for EmailJS payload
+  const [screenshotBase64, setScreenshotBase64] = useState<string | null>(null);
+  const [screenshotError, setScreenshotError] = useState("");
 
   // === 1. CALCULATIONS ===
   const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -41,14 +46,54 @@ export default function CheckoutPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // === IMAGE COMPRESSION UTILITY ===
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    if (!file.type.startsWith('image/')) {
+        setScreenshotError("Please upload a valid image file.");
+        return;
+    }
+
+    setScreenshotError("");
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = (event) => {
+      const img = new window.Image();
+      img.src = event.target?.result as string;
+      img.onload = () => {
+        // Compress image to bypass EmailJS free tier size limits
+        const canvas = document.createElement('canvas');
+        const MAX_WIDTH = 600;
+        const scaleSize = MAX_WIDTH / img.width;
+        canvas.width = MAX_WIDTH;
+        canvas.height = img.height * scaleSize;
+        const ctx = canvas.getContext('2d');
+        ctx?.drawImage(img, 0, 0, canvas.width, canvas.height);
+        
+        // Convert to highly compressed JPEG base64
+        const compressedBase64 = canvas.toDataURL('image/jpeg', 0.5); 
+        setScreenshotBase64(compressedBase64);
+      };
+    };
+  };
+
   // === 2. SUBMIT LOGIC ===
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
 
+    // VALIDATION: Enforce Screenshot Upload
+    if (!screenshotBase64) {
+        setScreenshotError("You must upload a screenshot of the advance delivery payment to process your order.");
+        // Scroll to error
+        document.getElementById('payment-section')?.scrollIntoView({ behavior: 'smooth' });
+        return;
+    }
+
+    setIsSubmitting(true);
     const totalItemsCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
-    // --- A. PREPARE ORDER DATA FOR TEXT ---
     const orderItemsText = items.map(item => {
       // @ts-ignore
       const isMedicine = item.image === "allopathic-icon" || item.category === "Allopathic";
@@ -56,9 +101,7 @@ export default function CheckoutPage() {
     }).join('\n');
 
     try {
-      // ==========================================
-      // --- B. POSTEX API INTEGRATION ---
-      // ==========================================
+      // --- A. POSTEX API INTEGRATION ---
      const postexResponse = await fetch('/api/postex/create-order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -73,8 +116,7 @@ export default function CheckoutPage() {
           items: totalItemsCount, 
           orderType: "Normal", 
           orderDetail: orderItemsText,
-          // 👇 ADD THIS LINE RIGHT HERE 👇
-          pickupAddressCode: "001" // Replace with your code from PostEx
+          pickupAddressCode: "001" 
         }),
       });
 
@@ -84,14 +126,11 @@ export default function CheckoutPage() {
         throw new Error(`${postexData.message || postexData.error || "Unknown error"}`);
       }
 
-      // Extract the generated tracking number
       const newTrackingNumber = postexData.trackingNumber; 
       setTrackingNumber(newTrackingNumber);
 
 
-      // ==========================================
-      // --- C. EMAIL JS SENDING ---
-      // ==========================================
+      // --- B. EMAIL JS SENDING ---
       const fullOrderMessage = `
       NEW ORDER RECEIVED 🛍️
       PostEx Tracking ID: ${newTrackingNumber}
@@ -116,15 +155,15 @@ export default function CheckoutPage() {
       await emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, {
         from_name: formData.name,       
         from_email: formData.email,     
-        message: fullOrderMessage,      
+        message: fullOrderMessage,
+        // The base64 string of the image is passed here. Add {{screenshot}} to your EmailJS HTML template inside an <img src="{{screenshot}}" /> tag
+        screenshot: screenshotBase64,      
         doctor_name: "DXN Sales Team",  
         booking_date: new Date().toLocaleDateString() 
       }, EMAILJS_CONFIG.publicKey);
 
 
-      // ==========================================
-      // --- D. WHATSAPP REDIRECTION ---
-      // ==========================================
+      // --- C. WHATSAPP REDIRECTION ---
       const myPhoneNumber = "923338656601"; 
       const whatsappMessage = `*NEW ORDER FROM WEBSITE* 🛍️
 📦 *Tracking Number:* ${newTrackingNumber}
@@ -132,20 +171,15 @@ export default function CheckoutPage() {
 *Customer Details:*
 👤 Name: ${formData.name}
 📞 Phone: ${formData.phone}
-📧 Email: ${formData.email}
 📍 Address: ${formData.address}, ${formData.city}
 
 *Order Summary:*
 ${orderItemsText}
 
 ----------------------------
-Subtotal: Rs. ${subtotal.toLocaleString()}
-Delivery: Rs. ${shipping.toLocaleString()}
-Tax (4%): Rs. ${tax.toLocaleString()}
 *💰 GRAND TOTAL: Rs. ${finalTotal.toLocaleString()}*
+*(Advance delivery fee of Rs. 250 has been paid)*
 ----------------------------
-
-📝 *Notes:* ${formData.notes || "None"}
 
 _Please confirm my order._`;
 
@@ -157,7 +191,6 @@ _Please confirm my order._`;
       
     } catch (error: any) {
       console.error("FAILED to send order:", error);
-      // 🔥 UPDATED: This will now show the EXACT error message from PostEx
       alert(`Error: ${error.message || "Failed to connect to PostEx API"}`); 
     } finally {
       setIsSubmitting(false);
@@ -180,7 +213,7 @@ _Please confirm my order._`;
           </div>
 
           <p className="text-base md:text-lg text-slate-600 mb-8 leading-relaxed">
-            Thank you, <strong>{formData.name}</strong>. Your order is confirmed and automatically dispatched to our courier. You can use your tracking number to track your delivery.
+            Thank you, <strong>{formData.name}</strong>. Your advance delivery payment has been received and your order is confirmed. You can use your tracking number to track your delivery.
           </p>
           <Link href="/products" className="inline-block bg-teal-950 text-white px-8 py-4 rounded-xl font-bold hover:bg-red-600 transition-colors w-full md:w-auto font-jakarta uppercase tracking-widest text-sm">
             Continue Shopping
@@ -214,11 +247,110 @@ _Please confirm my order._`;
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start font-jakarta">
           
-          {/* === LEFT: SHIPPING FORM === */}
-          <div className="lg:col-span-7 order-2 lg:order-1">
+          {/* === LEFT: SHIPPING & PAYMENT FORM === */}
+          <div className="lg:col-span-7 order-2 lg:order-1 space-y-8">
+            
+            {/* 1. ADVANCE PAYMENT NOTICE SECTION */}
+            <div id="payment-section" className="bg-white p-6 md:p-8 rounded-[2rem] shadow-sm border-2 border-red-100 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-[100px] -z-10"></div>
+                
+                <div className="flex items-start gap-4 mb-6">
+                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center shrink-0">
+                        <AlertCircle className="text-red-600" size={24} />
+                    </div>
+                    <div>
+                        <h2 className="text-xl md:text-2xl font-bold text-black mb-1">Advance Delivery Required</h2>
+                        <p className="text-sm text-slate-600 leading-relaxed">
+                            To confirm and process your order, delivery charges of <strong className="text-black">Rs. {shipping}</strong> must be paid in advance. 
+                            The remaining total (Rs. {subtotal + tax}) will be Cash on Delivery.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Account Details Blocks */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
+                        <div className="flex items-center justify-between mb-3">
+                            <span className="text-xs font-bold uppercase tracking-widest text-[#00a99d]">Easypaisa</span>
+                            <Image src="/images/easypaisa-icon.png" alt="Easypaisa" width={24} height={24} className="opacity-50" />
+                        </div>
+                        <p className="text-sm text-slate-500 mb-1">Title: <span className="font-bold text-black">Muhammad Hashim</span></p>
+                        <p className="text-lg font-black text-slate-900 tracking-wider">03048862472</p>
+                    </div>
+
+                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
+                        <div className="flex items-center justify-between mb-3">
+                            <span className="text-xs font-bold uppercase tracking-widest text-[#ec1b24]">JazzCash</span>
+                            <Image src="/images/jazzcash-icon.png" alt="Jazzcash" width={24} height={24} className="opacity-50" />
+                        </div>
+                        <p className="text-sm text-slate-500 mb-1">Title: <span className="font-bold text-black">Muhammad Hashim</span></p>
+                        <p className="text-lg font-black text-slate-900 tracking-wider">03338656601</p>
+                    </div>
+
+                    <div className="sm:col-span-2 bg-slate-50 border border-slate-200 rounded-2xl p-5">
+                        <div className="flex items-center justify-between mb-3">
+                            <span className="text-xs font-bold uppercase tracking-widest text-[#004f98]">Bank Alfalah</span>
+                            <ShieldCheck size={20} className="text-slate-400" />
+                        </div>
+                        <div className="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <p className="text-xs text-slate-500 mb-1">Account Title</p>
+                                <p className="text-sm font-bold text-black">MUHAMMAD HASHIM</p>
+                            </div>
+                            <div>
+                                <p className="text-xs text-slate-500 mb-1">Account Number</p>
+                                <p className="text-sm font-bold text-black tracking-wider">57755002725708</p>
+                            </div>
+                            <div className="sm:col-span-2 border-t border-slate-200 pt-3 mt-1">
+                                <p className="text-xs text-slate-500 mb-1">IBAN</p>
+                                <p className="text-xs md:text-sm font-bold text-black tracking-widest break-all">PK52ALFH5775005002725708</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Screenshot Upload Field */}
+                <div className="border-t border-slate-100 pt-6">
+                    <label className="block text-sm font-bold text-slate-900 mb-3">
+                        Upload Payment Screenshot <span className="text-red-500">*</span>
+                    </label>
+                    <div 
+                        onClick={() => fileInputRef.current?.click()}
+                        className={`w-full border-2 border-dashed rounded-2xl p-6 flex flex-col items-center justify-center cursor-pointer transition-colors ${screenshotBase64 ? 'border-green-500 bg-green-50' : 'border-slate-300 bg-slate-50 hover:bg-slate-100'}`}
+                    >
+                        <input 
+                            type="file" 
+                            accept="image/*" 
+                            ref={fileInputRef} 
+                            onChange={handleImageUpload} 
+                            className="hidden" 
+                        />
+                        {screenshotBase64 ? (
+                            <div className="flex flex-col items-center">
+                                <FileImage size={32} className="text-green-600 mb-2" />
+                                <span className="text-sm font-bold text-green-700">Screenshot Attached</span>
+                                <span className="text-xs text-green-600 underline mt-1">Click to replace</span>
+                            </div>
+                        ) : (
+                            <div className="flex flex-col items-center text-slate-500">
+                                <UploadCloud size={32} className="mb-2 text-slate-400" />
+                                <span className="text-sm font-bold text-slate-700 mb-1">Tap to upload receipt</span>
+                                <span className="text-xs text-slate-500">(JPG, PNG max 5MB)</span>
+                            </div>
+                        )}
+                    </div>
+                    {screenshotError && (
+                        <div className="flex items-center gap-1.5 mt-3 text-red-600 bg-red-50 p-3 rounded-lg text-sm font-bold border border-red-100">
+                            <XCircle size={16} /> {screenshotError}
+                        </div>
+                    )}
+                </div>
+            </div>
+
+            {/* 2. SHIPPING FORM */}
             <div className="bg-white p-6 md:p-8 rounded-[2rem] shadow-sm border border-slate-100">
                 <div className="flex items-center gap-3 mb-8 border-b border-slate-100 pb-4">
-                    <Truck className="text-red-600" size={24} />
+                    <Truck className="text-slate-800" size={24} />
                     <h2 className="text-xl md:text-2xl font-bold text-black">Shipping Details</h2>
                 </div>
 
@@ -245,9 +377,12 @@ _Please confirm my order._`;
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div><label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide">City</label><input required name="city" onChange={handleChange} type="text" placeholder="e.g. Lahore" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all" /></div>
                         <div>
-                             <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide">Payment Method</label>
+                            <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide">City</label>
+                            <input required name="city" onChange={handleChange} type="text" placeholder="e.g. Lahore" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all" />
+                        </div>
+                        <div>
+                             <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide">Product Payment</label>
                              <div className="w-full bg-teal-50 border border-teal-200 rounded-xl px-4 py-3 flex items-center gap-3">
                                 <div className="w-4 h-4 rounded-full bg-teal-600 border-[3px] border-white ring-1 ring-teal-600 shrink-0"></div>
                                 <span className="font-bold text-teal-900 text-sm">Cash on Delivery (COD)</span>
@@ -295,15 +430,23 @@ _Please confirm my order._`;
 
                 <div className="border-t border-slate-100 pt-6 space-y-3 mb-8 text-sm">
                     <div className="flex justify-between text-slate-500 font-medium"><span>Subtotal</span><span>Rs. {subtotal.toLocaleString()}</span></div>
-                    <div className="flex justify-between text-slate-500 font-medium"><span>Delivery Fee</span><span className="text-black font-bold">Rs. {shipping.toLocaleString()}</span></div>
+                    <div className="flex justify-between text-slate-500 font-medium"><span>Delivery Fee (Advance)</span><span className="text-red-600 font-bold">Rs. {shipping.toLocaleString()}</span></div>
                     <div className="flex justify-between text-slate-500 font-medium"><span>Govt Tax (4%)</span><span className="text-black font-bold">Rs. {tax.toLocaleString()}</span></div>
-                    <div className="flex justify-between text-lg md:text-xl font-extrabold text-teal-950 pt-4 border-t border-slate-100"><span>Total</span><span>Rs. {finalTotal.toLocaleString()}</span></div>
+                    <div className="flex justify-between text-lg md:text-xl font-extrabold text-teal-950 pt-4 border-t border-slate-100">
+                        <span>Total COD</span>
+                        <span>Rs. {(subtotal + tax).toLocaleString()}</span>
+                    </div>
                 </div>
 
-                <button form="checkout-form" disabled={isSubmitting} type="submit" className="w-full bg-red-600 text-white py-4 rounded-xl font-bold text-lg shadow-lg shadow-red-500/30 hover:bg-red-700 transition-all flex items-center justify-center gap-2 disabled:opacity-50 active:scale-95">
-                    {isSubmitting ? <><Loader2 className="animate-spin" /> Processing...</> : "Place Order (COD)"}
+                <button 
+                  form="checkout-form" 
+                  disabled={isSubmitting} 
+                  type="submit" 
+                  className="w-full bg-red-600 text-white py-4 rounded-xl font-bold text-lg shadow-lg shadow-red-500/30 hover:bg-red-700 transition-all flex items-center justify-center gap-2 disabled:opacity-50 active:scale-95"
+                >
+                    {isSubmitting ? <><Loader2 className="animate-spin" /> Processing...</> : "Confirm Payment & Order"}
                 </button>
-                <p className="text-center text-[10px] text-slate-400 mt-4 flex items-center justify-center gap-2 font-bold uppercase tracking-widest"><ShieldCheck size={12}/> Secure checkout via WhatsApp</p>
+                <p className="text-center text-[10px] text-slate-400 mt-4 flex items-center justify-center gap-2 font-bold uppercase tracking-widest"><ShieldCheck size={12}/> Secure checkout</p>
             </div>
           </div>
         </div>
