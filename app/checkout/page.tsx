@@ -23,7 +23,6 @@ export default function CheckoutPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [uploadStatus, setUploadStatus] = useState(""); // Gives user feedback during upload
   const [isSuccess, setIsSuccess] = useState(false);
-  const [trackingNumber, setTrackingNumber] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [screenshotBase64, setScreenshotBase64] = useState<string | null>(null);
@@ -110,36 +109,10 @@ export default function CheckoutPage() {
       // This is the secure, public URL to the uploaded screenshot!
       const receiptImageUrl = imgBbResult.data.url; 
 
-      // --- 2. POSTEX API INTEGRATION ---
-      setUploadStatus("Generating Tracking ID...");
-      const postexResponse = await fetch('/api/postex/create-order', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          orderRefNumber: `DXN-${Date.now()}`, 
-          invoicePayment: finalTotal, 
-          customerName: formData.name, 
-          customerPhone: formData.phone, 
-          deliveryAddress: formData.address, 
-          cityName: formData.city, 
-          invoiceDivision: 1, 
-          items: totalItemsCount, 
-          orderType: "Normal", 
-          orderDetail: orderItemsText,
-          pickupAddressCode: "001" 
-        }),
-      });
-
-      const postexData = await postexResponse.json();
-      if (!postexData.success) throw new Error(`${postexData.message || postexData.error || "Unknown error"}`);
-      const newTrackingNumber = postexData.trackingNumber; 
-      setTrackingNumber(newTrackingNumber);
-
-      // --- 3. EMAIL JS SENDING ---
+      // --- 2. EMAIL JS SENDING ---
       setUploadStatus("Sending Email...");
       const fullOrderMessage = `
 NEW ORDER RECEIVED 🛍️
-PostEx Tracking ID: ${newTrackingNumber}
 -------------------------
 Name: ${formData.name}
 Phone: ${formData.phone}
@@ -166,11 +139,10 @@ GRAND TOTAL: Rs. ${finalTotal.toLocaleString()}
         booking_date: new Date().toLocaleDateString() 
       }, EMAILJS_CONFIG.publicKey);
 
-      // --- 4. WHATSAPP REDIRECTION ---
+      // --- 3. WHATSAPP REDIRECTION ---
       setUploadStatus("Opening WhatsApp...");
       const myPhoneNumber = "923338656601"; 
       const whatsappMessage = `*NEW ORDER FROM WEBSITE* 🛍️
-📦 *Tracking Number:* ${newTrackingNumber}
     
 *Customer Details:*
 👤 Name: ${formData.name}
@@ -210,15 +182,10 @@ _Please confirm my order._`;
           <div className="w-20 h-20 md:w-24 md:h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle2 size={40} className="text-green-600 md:w-12 md:h-12" />
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold font-jakarta text-teal-950 mb-2">Order Placed!</h1>
-          
-          <div className="bg-teal-50 border border-teal-100 rounded-xl p-4 mb-6">
-            <p className="text-xs text-teal-700 font-bold uppercase tracking-wider mb-1">Your Tracking Number</p>
-            <p className="text-lg font-bold text-teal-950 tracking-widest">{trackingNumber}</p>
-          </div>
+          <h1 className="text-3xl md:text-4xl font-bold font-jakarta text-teal-950 mb-4">Order Placed!</h1>
 
           <p className="text-base md:text-lg text-slate-600 mb-8 leading-relaxed">
-            Thank you, <strong>{formData.name}</strong>. Your advance delivery payment has been received and your order is confirmed. You can use your tracking number to track your delivery.
+            Thank you, <strong>{formData.name}</strong>. Your advance delivery payment has been received and your order is confirmed. We will process your delivery shortly.
           </p>
           <Link href="/products" className="inline-block bg-teal-950 text-white px-8 py-4 rounded-xl font-bold hover:bg-red-600 transition-colors w-full md:w-auto font-jakarta uppercase tracking-widest text-sm">
             Continue Shopping
