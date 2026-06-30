@@ -6,7 +6,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import emailjs from "@emailjs/browser"; 
-import { ArrowLeft, CheckCircle2, Truck, ShieldCheck, Loader2, Pill, AlertCircle, UploadCloud, FileImage, XCircle } from "lucide-react";
+import { useRouter } from "next/navigation"; // <-- Added Router
+import { trackTiktokEvent, identifyTiktokUser } from "../utils/tiktok"; // <-- Added TikTok tracking
+import { ArrowLeft, Truck, ShieldCheck, Loader2, Pill, AlertCircle, UploadCloud, FileImage, XCircle } from "lucide-react";
 
 // --- CONFIGURATION ---
 const EMAILJS_CONFIG = {
@@ -19,10 +21,10 @@ const EMAILJS_CONFIG = {
 const IMGBB_API_KEY = "4b980fa6ded8baf61a97f99dac579c98"; 
 
 export default function CheckoutPage() {
+  const router = useRouter(); // <-- Initialize router
   const { items, clearCart } = useCartStore();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [uploadStatus, setUploadStatus] = useState(""); // Gives user feedback during upload
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [uploadStatus, setUploadStatus] = useState(""); 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [screenshotBase64, setScreenshotBase64] = useState<string | null>(null);
@@ -57,14 +59,13 @@ export default function CheckoutPage() {
       img.src = event.target?.result as string;
       img.onload = () => {
         const canvas = document.createElement('canvas');
-        const MAX_WIDTH = 800; // Good quality for receipts
+        const MAX_WIDTH = 800; 
         const scaleSize = MAX_WIDTH / img.width;
         canvas.width = MAX_WIDTH;
         canvas.height = img.height * scaleSize;
         const ctx = canvas.getContext('2d');
         ctx?.drawImage(img, 0, 0, canvas.width, canvas.height);
         
-        // We keep it as base64 in state for the preview and API upload
         const compressedBase64 = canvas.toDataURL('image/jpeg', 0.6); 
         setScreenshotBase64(compressedBase64);
       };
@@ -93,7 +94,6 @@ export default function CheckoutPage() {
       // --- 1. UPLOAD SCREENSHOT TO IMGBB ---
       setUploadStatus("Uploading Receipt...");
       
-      // ImgBB requires the base64 string WITHOUT the data header
       const base64Data = screenshotBase64.split(",")[1]; 
       const imgBbFormData = new FormData();
       imgBbFormData.append("image", base64Data);
@@ -106,7 +106,6 @@ export default function CheckoutPage() {
       
       if (!imgBbResult.success) throw new Error("Failed to upload receipt image.");
       
-      // This is the secure, public URL to the uploaded screenshot!
       const receiptImageUrl = imgBbResult.data.url; 
 
       // --- 2. EMAIL JS SENDING ---
@@ -129,12 +128,11 @@ Tax: Rs. ${tax.toLocaleString()}
 GRAND TOTAL: Rs. ${finalTotal.toLocaleString()}
       `;
 
-      // We go back to standard emailjs.send() since we have a normal URL now
       await emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, {
         from_name: formData.name,       
         from_email: formData.email,     
         message: fullOrderMessage,
-        screenshot: receiptImageUrl,  // Sending the live URL here!
+        screenshot: receiptImageUrl,  
         doctor_name: "DXN Sales Team",  
         booking_date: new Date().toLocaleDateString() 
       }, EMAILJS_CONFIG.publicKey);
@@ -162,8 +160,25 @@ _Please confirm my order._`;
       const whatsappUrl = `https://wa.me/${myPhoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
       window.open(whatsappUrl, "_blank"); 
       
-      setIsSuccess(true);
+      // --- 4. TIKTOK TRACKING & REDIRECT ---
+      // Identify user for better ad matching
+      identifyTiktokUser(formData.email, formData.phone);
+      
+      // Track the actual purchase value
+      trackTiktokEvent('Purchase', {
+        contents: items.map(item => ({
+          content_id: item.id || "product",
+          content_name: item.name,
+          content_type: "product",
+          price: item.price,
+          num_items: item.quantity
+        })),
+        value: finalTotal,
+        currency: "PKR"
+      });
+
       clearCart();
+      router.push("/thank-you"); // <-- Redirects to your new Thank You page!
       
     } catch (error: any) {
       console.error("FAILED to send order:", error);
@@ -173,27 +188,6 @@ _Please confirm my order._`;
       setUploadStatus("");
     }
   };
-
-  // === SUCCESS SCREEN ===
-  if (isSuccess) {
-    return (
-      <main className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
-        <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="bg-white p-8 md:p-12 rounded-[2.5rem] text-center max-w-lg w-full shadow-2xl border border-slate-100">
-          <div className="w-20 h-20 md:w-24 md:h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle2 size={40} className="text-green-600 md:w-12 md:h-12" />
-          </div>
-          <h1 className="text-3xl md:text-4xl font-bold font-jakarta text-teal-950 mb-4">Order Placed!</h1>
-
-          <p className="text-base md:text-lg text-slate-600 mb-8 leading-relaxed">
-            Thank you, <strong>{formData.name}</strong>. Your advance delivery payment has been received and your order is confirmed. We will process your delivery shortly.
-          </p>
-          <Link href="/products" className="inline-block bg-teal-950 text-white px-8 py-4 rounded-xl font-bold hover:bg-red-600 transition-colors w-full md:w-auto font-jakarta uppercase tracking-widest text-sm">
-            Continue Shopping
-          </Link>
-        </motion.div>
-      </main>
-    );
-  }
 
   // === EMPTY CART SCREEN ===
   if (items.length === 0) {
