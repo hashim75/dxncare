@@ -1,14 +1,15 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react"; // Removed useRef as it was only used for the file input
 import { useCartStore } from "../store/cartStore";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import emailjs from "@emailjs/browser"; 
-import { useRouter } from "next/navigation"; // <-- Added Router
-import { trackTiktokEvent, identifyTiktokUser } from "../utils/tiktok"; // <-- Added TikTok tracking
-import { ArrowLeft, Truck, ShieldCheck, Loader2, Pill, AlertCircle, UploadCloud, FileImage, XCircle } from "lucide-react";
+import { useRouter } from "next/navigation"; 
+import { trackTiktokEvent, identifyTiktokUser } from "../utils/tiktok"; 
+// Removed unused icons from import to clean up
+import { ArrowLeft, Truck, ShieldCheck, Loader2, Pill } from "lucide-react";
 
 // --- CONFIGURATION ---
 const EMAILJS_CONFIG = {
@@ -17,18 +18,19 @@ const EMAILJS_CONFIG = {
   templateId: "template_vkr09eu", 
 };
 
-// 👇 PASTE YOUR FREE IMGBB API KEY HERE 👇
-const IMGBB_API_KEY = "4b980fa6ded8baf61a97f99dac579c98"; 
+// 👇 IMGBB API KEY (Currently unused since upload is disabled) 👇
+// const IMGBB_API_KEY = "4b980fa6ded8baf61a97f99dac579c98"; 
 
 export default function CheckoutPage() {
-  const router = useRouter(); // <-- Initialize router
+  const router = useRouter(); 
   const { items, clearCart } = useCartStore();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [uploadStatus, setUploadStatus] = useState(""); 
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const [screenshotBase64, setScreenshotBase64] = useState<string | null>(null);
-  const [screenshotError, setScreenshotError] = useState("");
+  
+  // --- COMMENTED OUT UPLOAD STATES ---
+  // const fileInputRef = useRef<HTMLInputElement>(null);
+  // const [screenshotBase64, setScreenshotBase64] = useState<string | null>(null);
+  // const [screenshotError, setScreenshotError] = useState("");
 
   const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const shipping = 250; 
@@ -44,6 +46,8 @@ export default function CheckoutPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // --- COMMENTED OUT IMAGE UPLOAD HANDLER ---
+  /*
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -71,15 +75,19 @@ export default function CheckoutPage() {
       };
     };
   };
+  */
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    // --- COMMENTED OUT SCREENSHOT VALIDATION ---
+    /*
     if (!screenshotBase64) {
         setScreenshotError("You must upload a screenshot of the advance delivery payment to process your order.");
         document.getElementById('payment-section')?.scrollIntoView({ behavior: 'smooth' });
         return;
     }
+    */
 
     setIsSubmitting(true);
     const totalItemsCount = items.reduce((sum, item) => sum + item.quantity, 0);
@@ -91,9 +99,9 @@ export default function CheckoutPage() {
     }).join('\n');
 
     try {
-      // --- 1. UPLOAD SCREENSHOT TO IMGBB ---
+      // --- COMMENTED OUT UPLOAD SCREENSHOT TO IMGBB ---
+      /*
       setUploadStatus("Uploading Receipt...");
-      
       const base64Data = screenshotBase64.split(",")[1]; 
       const imgBbFormData = new FormData();
       imgBbFormData.append("image", base64Data);
@@ -105,8 +113,8 @@ export default function CheckoutPage() {
       const imgBbResult = await imgBbResponse.json();
       
       if (!imgBbResult.success) throw new Error("Failed to upload receipt image.");
-      
       const receiptImageUrl = imgBbResult.data.url; 
+      */
 
       // --- 2. EMAIL JS SENDING ---
       setUploadStatus("Sending Email...");
@@ -132,7 +140,7 @@ GRAND TOTAL: Rs. ${finalTotal.toLocaleString()}
         from_name: formData.name,       
         from_email: formData.email,     
         message: fullOrderMessage,
-        screenshot: receiptImageUrl,  
+        // screenshot: receiptImageUrl,  // <-- Removed since no image is uploaded
         doctor_name: "DXN Sales Team",  
         booking_date: new Date().toLocaleDateString() 
       }, EMAILJS_CONFIG.publicKey);
@@ -151,8 +159,7 @@ GRAND TOTAL: Rs. ${finalTotal.toLocaleString()}
 ${orderItemsText}
 
 ----------------------------
-*💰 TOTAL COD: Rs. ${(subtotal + tax).toLocaleString()}*
-*(Advance delivery fee of Rs. 250 has been paid via screenshot)*
+*💰 TOTAL COD: Rs. ${finalTotal.toLocaleString()}*
 ----------------------------
 
 _Please confirm my order._`;
@@ -215,76 +222,12 @@ _Please confirm my order._`;
           <div className="lg:col-span-7 order-2 lg:order-1 space-y-8">
             <form id="checkout-form" onSubmit={handleSubmit} className="space-y-8">
                 
-                {/* 1. ADVANCE PAYMENT SECTION */}
+                {/* --- COMMENTED OUT ADVANCE PAYMENT SECTION --- */}
+                {/* 
                 <div id="payment-section" className="bg-white p-6 md:p-8 rounded-[2rem] shadow-sm border-2 border-red-100 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-bl-[100px] -z-10"></div>
-                    <div className="flex items-start gap-4 mb-6">
-                        <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center shrink-0">
-                            <AlertCircle className="text-red-600" size={24} />
-                        </div>
-                        <div>
-                            <h2 className="text-xl md:text-2xl font-bold text-black mb-1">Advance Delivery Required</h2>
-                            <p className="text-sm text-slate-600 leading-relaxed">
-                                To confirm and process your order, delivery charges of <strong className="text-black">Rs. {shipping}</strong> must be paid in advance. 
-                                The remaining total (Rs. {subtotal + tax}) will be Cash on Delivery.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
-                            <div className="flex items-center justify-between mb-3">
-                                <span className="text-xs font-bold uppercase tracking-widest text-[#00a99d]">Easypaisa</span>
-                                <img src="https://img.logo.dev/easypaisa.com.pk?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=128&retina=true&format=png" alt="Easypaisa" className="h-6 w-auto object-contain opacity-80" />
-                            </div>
-                            <p className="text-sm text-slate-500 mb-1">Title: <span className="font-bold text-black">Muhammad Hashim</span></p>
-                            <p className="text-lg font-black text-slate-900 tracking-wider">03048862472</p>
-                        </div>
-
-                        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
-                            <div className="flex items-center justify-between mb-3">
-                                <span className="text-xs font-bold uppercase tracking-widest text-[#ec1b24]">JazzCash</span>
-                                <img src="https://img.logo.dev/jazzcash.com.pk?token=pk_Or_51lkkSnmQhpX75nkUnA" alt="JazzCash" className="h-6 w-auto object-contain opacity-80" />
-                            </div>
-                            <p className="text-sm text-slate-500 mb-1">Title: <span className="font-bold text-black">Muhammad Hashim</span></p>
-                            <p className="text-lg font-black text-slate-900 tracking-wider">03338656601</p>
-                        </div>
-
-                        <div className="sm:col-span-2 bg-slate-50 border border-slate-200 rounded-2xl p-5">
-                            <div className="flex items-center justify-between mb-3">
-                                <span className="text-xs font-bold uppercase tracking-widest text-[#004f98]">Bank Alfalah</span>
-                                <img src="https://img.logo.dev/pakistansmetoolkit.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=128&retina=true&format=png" alt="Bank Alfalah" className="h-6 w-auto object-contain opacity-80" />
-                            </div>
-                            <div className="grid sm:grid-cols-2 gap-4">
-                                <div><p className="text-xs text-slate-500 mb-1">Account Title</p><p className="text-sm font-bold text-black">MUHAMMAD HASHIM</p></div>
-                                <div><p className="text-xs text-slate-500 mb-1">Account Number</p><p className="text-sm font-bold text-black tracking-wider">57755002725708</p></div>
-                                <div className="sm:col-span-2 border-t border-slate-200 pt-3 mt-1"><p className="text-xs text-slate-500 mb-1">IBAN</p><p className="text-xs md:text-sm font-bold text-black tracking-widest break-all">PK52ALFH5775005002725708</p></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Screenshot Upload Field */}
-                    <div className="border-t border-slate-100 pt-6">
-                        <label className="block text-sm font-bold text-slate-900 mb-3">Upload Payment Screenshot <span className="text-red-500">*</span></label>
-                        <div onClick={() => fileInputRef.current?.click()} className={`w-full border-2 border-dashed rounded-2xl p-6 flex flex-col items-center justify-center cursor-pointer transition-colors ${screenshotBase64 ? 'border-green-500 bg-green-50' : 'border-slate-300 bg-slate-50 hover:bg-slate-100'}`}>
-                            <input type="file" accept="image/*" ref={fileInputRef} onChange={handleImageUpload} className="hidden" />
-                            {screenshotBase64 ? (
-                                <div className="flex flex-col items-center">
-                                    <FileImage size={32} className="text-green-600 mb-2" />
-                                    <span className="text-sm font-bold text-green-700">Screenshot Attached</span>
-                                    <span className="text-xs text-green-600 underline mt-1">Click to replace</span>
-                                </div>
-                            ) : (
-                                <div className="flex flex-col items-center text-slate-500">
-                                    <UploadCloud size={32} className="mb-2 text-slate-400" />
-                                    <span className="text-sm font-bold text-slate-700 mb-1">Tap to upload receipt</span>
-                                    <span className="text-xs text-slate-500">(JPG, PNG max 5MB)</span>
-                                </div>
-                            )}
-                        </div>
-                        {screenshotError && <div className="flex items-center gap-1.5 mt-3 text-red-600 bg-red-50 p-3 rounded-lg text-sm font-bold border border-red-100"><XCircle size={16} /> {screenshotError}</div>}
-                    </div>
+                    ... Bank Details and Screenshot Upload Logic ...
                 </div>
+                */}
 
                 {/* 2. SHIPPING FORM */}
                 <div className="bg-white p-6 md:p-8 rounded-[2rem] shadow-sm border border-slate-100">
@@ -302,7 +245,7 @@ _Please confirm my order._`;
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div><label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide">City</label><input required name="city" onChange={handleChange} type="text" placeholder="e.g. Lahore" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all" /></div>
                             <div>
-                                 <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide">Product Payment</label>
+                                 <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide">Payment Method</label>
                                  <div className="w-full bg-teal-50 border border-teal-200 rounded-xl px-4 py-3 flex items-center gap-3">
                                     <div className="w-4 h-4 rounded-full bg-teal-600 border-[3px] border-white ring-1 ring-teal-600 shrink-0"></div>
                                     <span className="font-bold text-teal-900 text-sm">Cash on Delivery (COD)</span>
@@ -344,16 +287,17 @@ _Please confirm my order._`;
 
                 <div className="border-t border-slate-100 pt-6 space-y-3 mb-8 text-sm">
                     <div className="flex justify-between text-slate-500 font-medium"><span>Subtotal</span><span>Rs. {subtotal.toLocaleString()}</span></div>
-                    <div className="flex justify-between text-slate-500 font-medium"><span>Delivery Fee (Advance)</span><span className="text-red-600 font-bold">Rs. {shipping.toLocaleString()}</span></div>
+                    {/* Changed from 'Delivery Fee (Advance)' to just 'Delivery Fee' */}
+                    <div className="flex justify-between text-slate-500 font-medium"><span>Delivery Fee</span><span className="text-black font-bold">Rs. {shipping.toLocaleString()}</span></div>
                     <div className="flex justify-between text-slate-500 font-medium"><span>Govt Tax (4%)</span><span className="text-black font-bold">Rs. {tax.toLocaleString()}</span></div>
                     <div className="flex justify-between text-lg md:text-xl font-extrabold text-teal-950 pt-4 border-t border-slate-100">
                         <span>Total COD</span>
-                        <span>Rs. {(subtotal + tax).toLocaleString()}</span>
+                        <span>Rs. {finalTotal.toLocaleString()}</span>
                     </div>
                 </div>
 
                 <button form="checkout-form" disabled={isSubmitting} type="submit" className="w-full bg-red-600 text-white py-4 rounded-xl font-bold text-lg shadow-lg shadow-red-500/30 hover:bg-red-700 transition-all flex items-center justify-center gap-2 disabled:opacity-50 active:scale-95">
-                    {isSubmitting ? <><Loader2 className="animate-spin" /> {uploadStatus || "Processing..."}</> : "Confirm Payment & Order"}
+                    {isSubmitting ? <><Loader2 className="animate-spin" /> {uploadStatus || "Processing..."}</> : "Confirm Order"}
                 </button>
                 <p className="text-center text-[10px] text-slate-400 mt-4 flex items-center justify-center gap-2 font-bold uppercase tracking-widest"><ShieldCheck size={12}/> Secure checkout</p>
             </div>
